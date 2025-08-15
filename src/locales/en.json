@@ -1,0 +1,134 @@
+{
+  "brand": "Atlantis 12",
+  "nav": {
+    "home": "Home",
+    "rooms": "Rooms",
+    "gallery": "Gallery",
+    "contact": "Contact",
+    "book": "Book"
+  },
+  "footer": { "rights": "All rights reserved." },
+  "home": {
+    "hero": {
+      "title": "Atlantis 12",
+      "subtitle": "Guesthouse & Art — Essaouira",
+      "ctaRooms": "See rooms",
+      "ctaBook": "Book now"
+    },
+    "booking": {
+      "title": "Book your stay",
+      "checkin": "Check-in",
+      "checkout": "Check-out",
+      "adults": "Adults",
+      "search": "Search"
+    },
+    "about": {
+      "title": "A guesthouse born from a dream",
+      "text": "The dream of Asmae and Lahcen—coming from complementary worlds, event production for her, painting and jazz for him—was to create a rare retreat that is welcoming, inspiring, and deeply human."
+    },
+    "activities": {
+      "title": "Activities",
+      "items": [
+        {
+          "title": "Thuya forest & wild beach",
+          "desc": "Walk on foot or by camel"
+        },
+        {
+          "title": "Mogador, the singular city",
+          "desc": "Stroll and grasp Essaouira’s soul on a guided walk"
+        },
+        {
+          "title": "A hinterland with many facets",
+          "desc": "Guided tours across varied landscapes and heritage."
+        },
+        {
+          "title": "Massage under the argan trees (or not)",
+          "desc": "Intuitive, tailored massage at Atlantis 12 adapts to you"
+        },
+        {
+          "title": "Intuitive painting workshop",
+          "desc": "Spark your creativity without academic constraints."
+        },
+        {
+          "title": "Tell us what you wish…",
+          "desc": "We’re all ears! Parties, sports, activities…"
+        }
+      ]
+    },
+    "roomsTeaser": {
+      "title": "Rooms & Suites",
+      "seeAll": "See all rooms"
+    },
+    "services": {
+      "title": "Services",
+      "items": [
+        { "title": "Breakfast", "icon": "🍳" },
+        { "title": "Park", "icon": "🌳" },
+        { "title": "Swimming pool", "icon": "🏊" },
+        { "title": "Free Wi-Fi", "icon": "📶" },
+        { "title": "Concierge", "icon": "🛎️" },
+        { "title": "Table d’hôtes", "icon": "🍽️" }
+      ]
+    },
+    "location": {
+      "title": "Location",
+      "intro": "Between peaceful countryside and Essaouira’s medina, Atlantis 12 is easy to reach.",
+      "address": "Douar Laaraïche, Route de Safi, Essaouira, Morocco",
+      "points": [
+        "~20 min from Essaouira medina",
+        "~25 min from Essaouira airport",
+        "On-site parking"
+      ],
+      "openMap": "Open in Google Maps",
+      "contact": "Contact"
+    }
+  },
+  "contact": {
+    "title": "Contact",
+    "subtitle": "Send us a message — we’ll get back to you shortly.",
+    "form": {
+      "title": "Fill in the form",
+      "name": "Full name",
+      "email": "Email",
+      "phone": "Phone (optional)",
+      "message": "Your message",
+      "send": "Send",
+      "success": "Message sent. Thank you!",
+      "error": "Something went wrong. Please try again."
+    },
+    "info": {
+      "address_title": "Address",
+      "address": "Douar Laaraïche, Route de Safi, Essaouira, Morocco",
+      "contact_title": "Contact",
+      "email_label": "Email",
+      "phone_label": "Phone",
+      "whatsapp": "WhatsApp",
+      "open_map": "Open in Google Maps"
+    }
+  },
+  "rooms": {
+    "title": "Rooms & Suites",
+    "subtitle": "Discover our rooms and suites — a balance of nature, craft and comfort.",
+    "modal": {
+      "capacity": "Capacity",
+      "size": "Size",
+      "bed": "Bed",
+      "amenities": "Amenities",
+      "book": "Book this room",
+      "close": "Close"
+    }
+  },
+  "gallery": {
+    "title": "Gallery",
+    "subtitle": "A glimpse of the guesthouse, rooms, pool and gardens.",
+    "filters": {
+      "all": "All",
+      "exteriors": "Exteriors",
+      "rooms": "Rooms",
+      "pool": "Pool",
+      "dining": "Table d’hôtes & Art",
+      "nature": "Garden & Nature"
+    },
+    "empty": "No images for this filter."
+  }
+}

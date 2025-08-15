@@ -1,0 +1,134 @@
+{
+  "brand": "Atlantis 12",
+  "nav": {
+    "home": "Accueil",
+    "rooms": "Chambres",
+    "gallery": "Galerie",
+    "contact": "Contact",
+    "book": "Réserver"
+  },
+  "footer": { "rights": "Tous droits réservés." },
+  "home": {
+    "hero": {
+      "title": "Atlantis 12",
+      "subtitle": "Maison d’hôtes & d’art — Essaouira",
+      "ctaRooms": "Voir les chambres",
+      "ctaBook": "Réserver"
+    },
+    "booking": {
+      "title": "Réserver votre séjour",
+      "checkin": "Arrivée",
+      "checkout": "Départ",
+      "adults": "Adultes",
+      "search": "Rechercher"
+    },
+    "about": {
+      "title": "Une maison d’hôtes née d’un rêve",
+      "text": "Le rêve d’Asmae et de Lahcen, venus de deux univers complémentaires — l’événementiel pour elle, la peinture et le jazz pour lui — était de créer une parenthèse rare, à la fois accueillante, inspirante et profondément humaine."
+    },
+    "activities": {
+      "title": "Activités",
+      "items": [
+        {
+          "title": "Forêt de thuyas et plage sauvage",
+          "desc": "Balade à pieds ou à dos de dromadaire"
+        },
+        {
+          "title": "Mogador, la cité singulière",
+          "desc": "Flâner et saisir l'âme d'Essaouira en balade guidée"
+        },
+        {
+          "title": "Un arrière-pays aux multiples facettes",
+          "desc": "Balades guidées à travers des paysages et des patrimoines variés."
+        },
+        {
+          "title": "Massage sous les arganiers (ou pas)",
+          "desc": "Intuitif, sur mesure, le massage à Atlantis 12 s'adapte à vous"
+        },
+        {
+          "title": "Atelier de peinture intuitive",
+          "desc": "Déclenchez votre propre créativité sans aucune contrainte académique."
+        },
+        {
+          "title": "Faites-nous part de vos envies …",
+          "desc": "Nous sommes à votre écoute ! Fêtes, sports, activités …"
+        }
+      ]
+    },
+    "roomsTeaser": {
+      "title": "Chambres & Suites",
+      "seeAll": "Voir toutes les chambres"
+    },
+    "services": {
+      "title": "Services",
+      "items": [
+        { "title": "Petit-déjeuner", "icon": "🍳" },
+        { "title": "Parc", "icon": "🌳" },
+        { "title": "Piscine", "icon": "🏊" },
+        { "title": "Wi-Fi gratuit", "icon": "📶" },
+        { "title": "Conciergerie", "icon": "🛎️" },
+        { "title": "Table d’hôtes", "icon": "🍽️" }
+      ]
+    },
+    "location": {
+      "title": "Localisation",
+      "intro": "Entre campagne sereine et médina d’Essaouira, Atlantis 12 est facile d’accès.",
+      "address": "Douar Laaraïche, Route de Safi, Essaouira, Maroc",
+      "points": [
+        "À ~20 min de la médina d’Essaouira",
+        "À ~25 min de l’aéroport d’Essaouira",
+        "Parking sur place"
+      ],
+      "openMap": "Ouvrir dans Google Maps",
+      "contact": "Contact"
+    }
+  },
+  "contact": {
+    "title": "Contact",
+    "subtitle": "Écrivez-nous — nous reviendrons vers vous rapidement.",
+    "form": {
+      "title": "Remplissez le formulaire",
+      "name": "Prénom & Nom",
+      "email": "Email",
+      "phone": "Téléphone (optionnel)",
+      "message": "Votre message",
+      "send": "Envoyer",
+      "success": "Message envoyé. Merci !",
+      "error": "Une erreur est survenue. Veuillez réessayer."
+    },
+    "info": {
+      "address_title": "Adresse",
+      "address": "Douar Laaraïche, Route de Safi, Essaouira, Maroc",
+      "contact_title": "Coordonnées",
+      "email_label": "Email",
+      "phone_label": "Téléphone",
+      "whatsapp": "WhatsApp",
+      "open_map": "Ouvrir dans Google Maps"
+    }
+  },
+  "rooms": {
+    "title": "Chambres & Suites",
+    "subtitle": "Découvrez nos chambres et suites — équilibre entre nature, artisanat et confort.",
+    "modal": {
+      "capacity": "Capacité",
+      "size": "Superficie",
+      "bed": "Lit",
+      "amenities": "Services",
+      "book": "Réserver cette chambre",
+      "close": "Fermer"
+    }
+  },
+  "gallery": {
+    "title": "Galerie",
+    "subtitle": "Un aperçu de la maison d’hôtes, des chambres, de la piscine et des jardins.",
+    "filters": {
+      "all": "Tout",
+      "exteriors": "Extérieurs",
+      "rooms": "Chambres",
+      "pool": "Piscine",
+      "dining": "Table d’hôtes & Art",
+      "nature": "Jardin & Nature"
+    },
+    "empty": "Aucune image pour ce filtre."
+  }
+}

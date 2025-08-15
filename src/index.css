@@ -1,0 +1,131 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* -------------------------- */
+/* Base layer (global styles) */
+/* -------------------------- */
+@layer base {
+  html, body, #root { height: 100%; }
+
+  /* Warm parchment background instead of pure white */
+  body {
+    @apply font-sans antialiased;
+    /* uses your "charcoal" if defined in tailwind.config; otherwise falls back to default text color */
+    @apply text-charcoal;
+    background-color: #F7F3EA; /* soft sand */
+  }
+
+  h1, h2, h3, h4 { @apply font-serif; }
+}
+
+/* -------------------------------------- */
+/* Components & design utilities (custom) */
+/* -------------------------------------- */
+@layer components {
+  /* Container helper */
+  .container-std { @apply mx-auto w-full max-w-container px-4; }
+
+  /* Section spacers (tighter to reduce big white gaps) */
+  .section       { @apply py-10 md:py-14; }
+  .section-tight { @apply py-8  md:py-10; }
+
+  /* Card */
+  .card { @apply bg-white rounded-xl2 shadow-soft; }
+
+  /* Warm strip backgrounds */
+  .bg-sand-soft  { background-color: #F2ECDE; }            /* slightly deeper than body */
+  .bg-olive-tint { background-color: rgba(94,107,78,.06); } /* faint green tint */
+
+  /* Optional subtle paper texture */
+  .texture {
+    background-image: url("https://www.transparenttextures.com/patterns/paper-1.png");
+    background-size: 300px 300px;
+  }
+
+  /* Moroccan-inspired divider (SVG wave) */
+  .divider-top { position: relative; }
+  .divider-top::before {
+    content: "";
+    position: absolute; inset-inline: 0; top: -1px; height: 16px;
+    background-image: url("data:image/svg+xml,%3Csvg width='1200' height='16' viewBox='0 0 1200 16' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 16c60-10 120-10 180 0s120 10 180 0 120-10 180 0 120 10 180 0 120-10 180 0 120 10 180 0v0H0Z' fill='%23E9DFC7'/%3E%3C/svg%3E");
+    background-repeat: repeat-x;
+    background-size: 300px 16px;
+    opacity: .9;
+  }
+
+  /* ---------------- */
+  /* Buttons (custom) */
+  /* ---------------- */
+  .btn {
+    @apply inline-flex items-center justify-center gap-2;
+    @apply px-5 py-2.5 rounded-full font-medium tracking-wide;
+    @apply transition-all duration-300 shadow-sm;
+  }
+  .btn:focus-visible {
+    outline: 2px solid rgba(94,107,78,.40); /* olive focus ring */
+    outline-offset: 2px;
+  }
+  .btn:active { transform: scale(.98); }
+
+  /* Primary = olive */
+  .btn-primary {
+    color: #fff;
+    background-color: rgb(94 107 78 / 1);          /* #5E6B4E */
+  }
+  .btn-primary:hover {
+    background-color: rgb(94 107 78 / .92);
+    box-shadow: 0 8px 20px rgba(0,0,0,.10);
+    transform: translateY(-1px);
+  }
+
+  /* Secondary = white pill with olive text/border */
+  .btn-secondary {
+    color: rgb(94 107 78 / 1);
+    background-color: #ffffff;
+    border: 1px solid rgba(94,107,78,.35);
+  }
+  .btn-secondary:hover {
+    background-color: #DDE8D1;                     /* light green you chose */
+    border-color: rgba(94,107,78,.50);
+    box-shadow: 0 8px 20px rgba(0,0,0,.08);
+  }
+
+  /* Ghost = subtle white background */
+  .btn-ghost {
+    color: rgb(94 107 78 / 1);
+    background-color: rgba(255,255,255,.9);
+    border: 1px solid rgba(94,107,78,.25);
+  }
+  .btn-ghost:hover {
+    background-color: #ffffff;
+    box-shadow: 0 6px 14px rgba(0,0,0,.08);
+  }
+
+  /* Outline = transparent with olive border */
+  .btn-outline {
+    color: rgb(94 107 78 / 1);
+    background-color: transparent;
+    border: 1px solid rgba(94,107,78,.60);
+  }
+  .btn-outline:hover {
+    color: #fff;
+    background-color: rgb(94 107 78 / 1);
+    box-shadow: 0 8px 20px rgba(0,0,0,.10);
+  }
+
+  /* Sizes (optional) */
+  .btn-sm { @apply px-4 py-2 text-sm; }
+  .btn-lg { @apply px-6 py-3 text-base; }
+
+  /* Disabled */
+  .btn:disabled { @apply opacity-60 pointer-events-none; }
+}
+
+/* ----------------------- */
+/* Little utility helpers  */
+/* ----------------------- */
+
+/* Hide horizontal scrollbar for carousels (Activities) */
+.scrollbar-hide::-webkit-scrollbar { display: none; }
+.scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
