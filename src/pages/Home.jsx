@@ -17,7 +17,7 @@ export default function Home() {
   return (
     <>
       {/* Optional floating badge linking to Google listing */}
-      <GoogleReviewBadge />
+      {/* <GoogleReviewBadge /> */}
 
       {/* Old-site hero with compact booking (your HomeHero implementation already updated) */}
       <HomeHero />
