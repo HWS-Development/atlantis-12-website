@@ -33,7 +33,7 @@ export default function Home() {
 
       {/* Old names, kept */}
       <ActivitiesHighlight />
-      <RoomsTeaser />
+      {/* <RoomsTeaser /> */}
       <ServicesIcons />
       <LocationMap />
 

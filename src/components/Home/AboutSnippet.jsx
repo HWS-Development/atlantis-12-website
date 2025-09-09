@@ -6,9 +6,9 @@ export default function AboutOverlay() {
   return (
     <section id="about" className="relative overflow-hidden">
       {/* Background image like the old page */}
-      <div className="h-[46vh] md:h-[56vh]">
+      <div className="h-[60vh] md:h-[80vh]">
         <img
-          src="https://images.unsplash.com/photo-1496412705862-e0088f16f791?w=2000&q=80&auto=format&fit=crop"
+          src="/images/food1.jpg"
           alt=""
           className="w-full h-full object-cover"
           loading="lazy"

@@ -25,7 +25,7 @@ export default function RoomsIntroLegacy() {
 
         <div className="rounded-xl2 overflow-hidden shadow-soft">
           <img
-            src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1600&q=80&auto=format&fit=crop"
+            src="/images/rooms/Superior Double Room1.jpg"
             alt={t("home.roomsIntro.imgAlt")}
             className="w-full h-full object-cover"
             loading="lazy"

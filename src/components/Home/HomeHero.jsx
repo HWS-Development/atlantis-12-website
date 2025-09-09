@@ -5,8 +5,8 @@ import { useTranslation } from "react-i18next";
 export default function HomeHero() {
   const { t } = useTranslation();
   const slides = [
-    "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=2000&q=80&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=2000&q=80&auto=format&fit=crop",
+    "/images/exterior.jpg",
+    "/images/view.jpg",
   ];
   const [idx, setIdx] = useState(0);
 
