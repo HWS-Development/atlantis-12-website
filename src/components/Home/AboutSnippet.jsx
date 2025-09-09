@@ -28,11 +28,11 @@ export default function AboutOverlay() {
                 "Le rêve d’Asmae et de Lahcen — deux univers complémentaires, l’événementiel pour elle, la peinture et le jazz pour lui — de créer une parenthèse rare, accueillante, inspirante et profondément humaine."
               )}
             </p>
-            <div className="mt-5">
+            {/* <div className="mt-5">
               <a href="#rooms" className="btn-legacy btn-legacy-primary">
                 {t("home.about.cta", "En savoir plus")}
               </a>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

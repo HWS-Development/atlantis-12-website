@@ -15,7 +15,7 @@ export default function Navbar() {
     <header className="legacy-green text-white">
       <div className="container-std h-12 flex items-center justify-between">
         <Link to="/" className="flex items-center gap-2">
-          <img src="/logo.svg" alt="Atlantis 12" className="h-7" />
+          <img src="/images/logo-1.avif" alt="Atlantis 12" className="h-7" />
         </Link>
 
         <nav className="hidden md:flex items-center gap-4">
