@@ -4,7 +4,7 @@ import LanguageDetector from "i18next-browser-languagedetector";
 import fr from "./locales/fr.json";
 import en from "./locales/en.json";
 
-i18n
+i18n.on('languageChanged', (lng) => { document.documentElement.lang = lng; })
   .use(LanguageDetector)
   .use(initReactI18next)
   .init({

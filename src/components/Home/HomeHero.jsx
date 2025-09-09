@@ -1,81 +1,92 @@
-import { Link } from "react-router-dom";
-import { useTranslation } from "react-i18next";
+// src/components/Home/HomeHero.jsx
 import { useEffect, useState } from "react";
-import BookingWidget from "../Booking/BookingWidget";
+import { useTranslation } from "react-i18next";
 
 export default function HomeHero() {
   const { t } = useTranslation();
-
   const slides = [
-    "/images/exterior.jpg",
-    "/images/rooms/Superior Double Room1.jpg",
-    "/images/view.jpg",
+    "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=2000&q=80&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=2000&q=80&auto=format&fit=crop",
   ];
   const [idx, setIdx] = useState(0);
 
   useEffect(() => {
-    const id = setInterval(() => setIdx((p) => (p + 1) % slides.length), 5000);
+    const id = setInterval(() => setIdx((p) => (p + 1) % slides.length), 6000);
     return () => clearInterval(id);
-  }, [slides.length]);
+  }, []);
 
   return (
-    <>
-      <section className="relative h-[62vh] md:h-[70vh] overflow-hidden">
-        {/* slides */}
-        {slides.map((src, i) => (
-          <div
-            key={i}
-            className={`absolute inset-0 transition-opacity duration-1000  ${
-              i === idx ? "opacity-100" : "opacity-0"
-            }`}
-          >
-            <img src={src} alt={`Slide ${i + 1}`} className="w-full h-full object-cover" />
-            <div className="absolute inset-0 bg-black/45" />
-            <div className="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-black/35 to-transparent" />
-          </div>
-        ))}
+    <section className="relative h-[56vh] md:h-[64vh] overflow-hidden">
+      {slides.map((src, i) => (
+        <div
+          key={i}
+          className={`absolute inset-0 transition-opacity duration-[1200ms] ${
+            i === idx ? "opacity-100" : "opacity-0"
+          }`}
+        >
+          <img src={src} alt="" className="w-full h-full object-cover" />
+          <div className="absolute inset-0 bg-black/30" /> {/* stronger overlay */}
+        </div>
+      ))}
 
-        {/* text block (reserve space for booking on md+) */}
-        <div className="absolute inset-0 z-20 flex items-center">
-          <div className="container-std md:pb-40"> {/* <-- reserves space so title & booking don't overlap */}
-            <div className="max-w-2xl text-white">
-              <h1 className="text-3xl md:text-5xl font-serif drop-shadow mb-2 md:mb-3">
-                {t("home.hero.title")}
-              </h1>
-              <p className="text-base md:text-xl drop-shadow mb-4 md:mb-6">
-                {t("home.hero.subtitle")}
-              </p>
-              {/* <div className="flex flex-wrap gap-3">
-                <Link to="/rooms" className="btn btn-ghost">
-                  {t("home.hero.ctaRooms")}
-                </Link>
-                <a
-                  href="https://atlantis-12-maison-d-hotes-et-d-art.hotelrunner.com/bv3/search"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="btn btn-primary"
-                >
-                  {t("home.hero.ctaBook")}
-                </a>
-              </div> */}
-            </div>
+      {/* green welcome band (kept) */}
+      <div className="absolute top-6 left-1/2 -translate-x-1/2 z-10">
+        <div className="legacy-hero-banner">
+          <div className="uppercase tracking-[.08em] text-xs md:text-sm opacity-90">
+            {t("home.hero.welcome", "Bienvenue à")}
+          </div>
+          <h1 className="font-serif text-2xl md:text-3xl">Atlantis 12</h1>
+          <div className="text-sm md:text-base opacity-90">
+            {t("home.hero.tagline", "maison d’hôtes et d’art — Essaouira")}
           </div>
         </div>
-
-        {/* booking overlay (desktop only) */}
-        <div className="hidden md:block absolute left-1/2 -translate-x-1/2 bottom-4 md:bottom-6 w-[92%] md:w-auto z-30">
-          <div className="container-std !px-0">
-            <div className="md:max-w-4xl mx-auto">
-              <BookingWidget compact />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* mobile booking (rendered below hero so nothing overlaps) */}
-      <div className="md:hidden container-std -mt-6">
-        <BookingWidget />
       </div>
-    </>
+
+      {/* compact booking bar with labels */}
+<div className="absolute bottom-4 left-1/2 -translate-x-1/2 z-10 w-[92%] md:w-auto">
+  <div className="mx-auto md:max-w-4xl">
+    <div className="bg-white/92 backdrop-blur rounded-xl px-3 py-3 md:px-4 md:py-3 shadow-lg">
+      <form
+        action="https://atlantis-12-maison-d-hotes-et-d-art.hotelrunner.com/bv3/search"
+        target="_blank"
+        className="grid grid-cols-2 md:grid-cols-[1fr,1fr,100px,100px,110px] gap-2 md:gap-3 items-end"
+      >
+        <div className="flex flex-col">
+          <label htmlFor="checkin" className="text-[11px] text-black/70 mb-1">
+            {t("home.hero.labels.checkin")}
+          </label>
+          <input id="checkin" type="date" name="checkin" className="field field-sm" />
+        </div>
+
+        <div className="flex flex-col">
+          <label htmlFor="checkout" className="text-[11px] text-black/70 mb-1">
+            {t("home.hero.labels.checkout")}
+          </label>
+          <input id="checkout" type="date" name="checkout" className="field field-sm" />
+        </div>
+
+        <div className="flex flex-col">
+          <label htmlFor="adults" className="text-[11px] text-black/70 mb-1">
+            {t("home.hero.labels.adults")}
+          </label>
+          <input id="adults" type="number" min="1" defaultValue="2" name="adults" className="field field-sm" />
+        </div>
+
+        <div className="flex flex-col">
+          <label htmlFor="children" className="text-[11px] text-black/70 mb-1">
+            {t("home.hero.labels.children")}
+          </label>
+          <input id="children" type="number" min="0" defaultValue="0" name="children" className="field field-sm" />
+        </div>
+
+        <button className="btn-legacy btn-legacy-primary h-9">
+          {t("home.hero.search", "Rechercher")}
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
+
+    </section>
   );
 }

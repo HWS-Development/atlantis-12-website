@@ -1,36 +1,53 @@
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
-export default function RoomsTeaser() {
+export default function RoomsTeaserLegacy() {
   const { t } = useTranslation();
 
-  const rooms = [
-    { id: 1, name: "Suite Atlantique", img: "/images/rooms/Double Room with Garden View1.jpg" },
-    { id: 2, name: "Superior Double Room", img: "/images/rooms/Superior Double Room1.jpg" },
-    { id: 3, name: "Suite Jardin",     img: "/images/rooms/4Double Room with Garden View1.jpg" }
+  const items = [
+    {
+      id: "1",
+      name: "Suite Atlantique",
+      img: "https://images.unsplash.com/photo-1600585154206-0c3b3a99fd3a?w=1200&q=80&auto=format&fit=crop",
+    },
+    {
+      id: "2",
+      name: "Superior Double Room",
+      img: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=80&auto=format&fit=crop",
+    },
+    {
+      id: "3",
+      name: "Suite Jardin",
+      img: "https://images.unsplash.com/photo-1613977257361-609c6a1e9ef9?w=1200&q=80&auto=format&fit=crop",
+    },
   ];
+  const Fallback = "https://images.unsplash.com/photo-1600585154206-0c3b3a99fd3a?w=1200&q=80&auto=format&fit=crop";
 
   return (
-    <section className="container-std py-10 md:py-14">
-      <div className="flex items-end justify-between mb-4">
-        <h2 className="font-serif text-3xl">{t("home.roomsTeaser.title")}</h2>
-        <Link to="/rooms" className="btn btn-ghost">{t("home.roomsTeaser.seeAll")}</Link>
+    <section id="rooms" className="container-std section">
+      <div className="mb-5 flex items-center justify-between">
+        <h2 className="font-serif text-2xl md:text-3xl">
+          {t("home.rooms.title", "Chambres & Suites")}
+        </h2>
+        <Link to="/rooms" className="btn-legacy btn-legacy-primary">
+          {t("home.rooms.all", "Voir toutes les chambres")}
+        </Link>
       </div>
 
-      <div className="grid md:grid-cols-3 gap-4 md:gap-6">
-        {rooms.map((r) => (
-          <Link key={r.id} to={`/rooms#${r.id}`} className="card overflow-hidden group">
-            <div className="aspect-[4/3]">
-              <img
-                src={r.img}
-                alt={r.name}
-                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-              />
-            </div>
-            <div className="p-4">
-              <h3 className="font-serif text-lg">{r.name}</h3>
-            </div>
-          </Link>
+      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {items.map((r) => (
+          <div className="block rounded-xl2 overflow-hidden border border-black/10 bg-white hover:shadow-md transition">
+          <div className="aspect-[4/3] bg-black/[.02]">
+            <img
+              src={r.img}
+              onError={(e)=>{ e.currentTarget.src = Fallback; }}
+              alt={r.name}
+              className="w-full h-full object-cover"
+              loading="lazy"
+            />
+          </div>
+          <div className="p-3"><div className="font-serif">{r.name}</div></div>
+        </div>
         ))}
       </div>
     </section>

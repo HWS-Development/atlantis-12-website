@@ -2,7 +2,9 @@
   "brand": "Atlantis 12",
   "nav": {
     "home": "Accueil",
-    "rooms": "Chambres",
+    "story": "Notre histoire",
+    "rooms": "Chambres & Suites",
+    "experiences": "Expériences",
     "gallery": "Galerie",
     "contact": "Contact",
     "book": "Réserver"
@@ -10,10 +12,13 @@
   "footer": { "rights": "Tous droits réservés." },
   "home": {
     "hero": {
-      "title": "Atlantis 12",
-      "subtitle": "Maison d’hôtes & d’art — Essaouira",
-      "ctaRooms": "Voir les chambres",
-      "ctaBook": "Réserver"
+      "labels": {
+        "checkin": "Arrivée",
+        "checkout": "Départ",
+        "adults": "Adultes",
+        "children": "Enfants"
+      },
+      "search": "Réserver"
     },
     "booking": {
       "title": "Réserver votre séjour",
@@ -81,6 +86,25 @@
       ],
       "openMap": "Ouvrir dans Google Maps",
       "contact": "Contact"
+    },
+    "promo": { "cta": "Retraite Sahara & Créativité" },
+    "roomsIntro": {
+      "title": "Chambres et Suites",
+      "lead": "Une harmonie entre nature et luxe.",
+      "text": "Nos chambres et mini-suites sont conçues pour vous offrir une parenthèse alliant charme berbère, confort moderne et atmosphère unique.",
+      "cta": "En savoir plus",
+      "imgAlt": "Chambre lumineuse avec charpente en bois"
+    },
+    "contact": {
+      "title": "Contact",
+      "name": "Prénom & Nom",
+      "phone": "Téléphone",
+      "email": "Email",
+      "message": "Votre message",
+      "send": "Envoyer",
+      "sending": "Envoi…",
+      "success": "Message envoyé. Merci !",
+      "error": "Une erreur est survenue. Réessayez."
     }
   },
   "contact": {
@@ -130,5 +154,9 @@
       "nature": "Jardin & Nature"
     },
     "empty": "Aucune image pour ce filtre."
+  },
+  "whatsapp": {
+    "cta": "WhatsApp",
+    "bubble": "Contactez-nous sur WhatsApp"
   }
 }

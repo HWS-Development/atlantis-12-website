@@ -8,12 +8,11 @@
 @layer base {
   html, body, #root { height: 100%; }
 
-  /* Warm parchment background instead of pure white */
+  /* Old-site look = white page background */
   body {
     @apply font-sans antialiased;
-    /* uses your "charcoal" if defined in tailwind.config; otherwise falls back to default text color */
-    @apply text-charcoal;
-    background-color: #F7F3EA; /* soft sand */
+    @apply text-black;          /* use your Tailwind color if you prefer */
+    background-color: #ffffff;
   }
 
   h1, h2, h3, h4 { @apply font-serif; }
@@ -23,55 +22,85 @@
 /* Components & design utilities (custom) */
 /* -------------------------------------- */
 @layer components {
-  /* Container helper */
-  .container-std { @apply mx-auto w-full max-w-container px-4; }
+  .container-std { @apply mx-auto w-full max-w-[1140px] px-4; }
+  .section       { @apply py-8 md:py-10; }
+  .section-tight { @apply py-6 md:py-8; }
+  .title-smallcaps { @apply uppercase tracking-[.12em] text-xs text-black/60; }
+  .field-sm { @apply h-9 px-3 py-0.5 text-[13px]; }
 
-  /* Section spacers (tighter to reduce big white gaps) */
-  .section       { @apply py-10 md:py-14; }
-  .section-tight { @apply py-8  md:py-10; }
+  /* Lighter section labels like old site */
+  .section-narrow { @apply py-6  md:py-8; }
 
-  /* Card */
+  /* Plain card (very light border like old site) */
   .card { @apply bg-white rounded-xl2 shadow-soft; }
+  .card-plain { @apply bg-white rounded-xl2 border border-black/10; }
 
-  /* Warm strip backgrounds */
-  .bg-sand-soft  { background-color: #F2ECDE; }            /* slightly deeper than body */
-  .bg-olive-tint { background-color: rgba(94,107,78,.06); } /* faint green tint */
-
-  /* Optional subtle paper texture */
+  /* Optional subtle paper texture (keep available) */
   .texture {
     background-image: url("https://www.transparenttextures.com/patterns/paper-1.png");
     background-size: 300px 300px;
   }
 
-  /* Moroccan-inspired divider (SVG wave) */
-  .divider-top { position: relative; }
-  .divider-top::before {
-    content: "";
-    position: absolute; inset-inline: 0; top: -1px; height: 16px;
-    background-image: url("data:image/svg+xml,%3Csvg width='1200' height='16' viewBox='0 0 1200 16' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 16c60-10 120-10 180 0s120 10 180 0 120-10 180 0 120 10 180 0 120-10 180 0 120 10 180 0v0H0Z' fill='%23E9DFC7'/%3E%3C/svg%3E");
-    background-repeat: repeat-x;
-    background-size: 300px 16px;
-    opacity: .9;
+  /* ------------------------- */
+  /* Legacy palette + helpers  */
+  /* ------------------------- */
+  .legacy-green        { background-color:#2F5F2E; }  /* header band */
+  .legacy-green-700    { background-color:#244A23; }
+  .legacy-orange       { background-color:#E79A2E; }  /* CTA button */
+  .legacy-border       { border-color:rgba(0,0,0,.12); }
+
+  /* Uppercase nav look from old site */
+  .nav-link-legacy {
+    @apply uppercase tracking-[.08em] text-[12px] text-white px-2 py-2 hover:text-white/90;
+  }
+  .nav-link-legacy-active { @apply font-semibold underline underline-offset-4; }
+
+  /* Compact inputs (old booking bar style) */
+  .field {
+    @apply w-full rounded-full border legacy-border bg-white px-4 py-2 text-sm;
   }
 
-  /* ---------------- */
-  /* Buttons (custom) */
-  /* ---------------- */
+  /* Legacy buttons */
+  .btn-legacy {
+    @apply inline-flex items-center justify-center rounded-full px-4 py-2 text-sm font-medium transition;
+  }
+  .btn-legacy-primary { @apply text-white; background-color:#E79A2E; }
+  .btn-legacy-primary:hover { background-color:#d78627; }
+  .btn-legacy-ghost  { @apply bg-white/15 text-white; }
+  .btn-legacy-ghost:hover { @apply bg-white/25; }
+
+  /* Monochrome service badges (old site vibe) */
+  .badge-mono {
+    @apply rounded-xl2 px-5 py-4 text-center bg-[#eae5db] text-black/70;
+  }
+
+  /* Hero welcome banner helper */
+  .legacy-hero-banner {
+    @apply text-center text-white rounded-xl px-6 md:px-10 py-4 shadow-md;
+    background-color: rgba(47,95,46,.95); /* legacy-green/95 */
+  }
+}
+
+/* ----------------------- */
+/* Buttons (your existing) */
+/* ----------------------- */
+/* Keep your modern button set so nothing breaks.
+   You can use either .btn-* or .btn-legacy-* as needed. */
+@layer components {
   .btn {
     @apply inline-flex items-center justify-center gap-2;
     @apply px-5 py-2.5 rounded-full font-medium tracking-wide;
     @apply transition-all duration-300 shadow-sm;
   }
   .btn:focus-visible {
-    outline: 2px solid rgba(94,107,78,.40); /* olive focus ring */
+    outline: 2px solid rgba(94,107,78,.40);
     outline-offset: 2px;
   }
   .btn:active { transform: scale(.98); }
 
-  /* Primary = olive */
   .btn-primary {
     color: #fff;
-    background-color: rgb(94 107 78 / 1);          /* #5E6B4E */
+    background-color: rgb(94 107 78 / 1); /* #5E6B4E */
   }
   .btn-primary:hover {
     background-color: rgb(94 107 78 / .92);
@@ -79,19 +108,17 @@
     transform: translateY(-1px);
   }
 
-  /* Secondary = white pill with olive text/border */
   .btn-secondary {
     color: rgb(94 107 78 / 1);
     background-color: #ffffff;
     border: 1px solid rgba(94,107,78,.35);
   }
   .btn-secondary:hover {
-    background-color: #DDE8D1;                     /* light green you chose */
+    background-color: #DDE8D1;
     border-color: rgba(94,107,78,.50);
     box-shadow: 0 8px 20px rgba(0,0,0,.08);
   }
 
-  /* Ghost = subtle white background */
   .btn-ghost {
     color: rgb(94 107 78 / 1);
     background-color: rgba(255,255,255,.9);
@@ -102,7 +129,6 @@
     box-shadow: 0 6px 14px rgba(0,0,0,.08);
   }
 
-  /* Outline = transparent with olive border */
   .btn-outline {
     color: rgb(94 107 78 / 1);
     background-color: transparent;
@@ -114,18 +140,13 @@
     box-shadow: 0 8px 20px rgba(0,0,0,.10);
   }
 
-  /* Sizes (optional) */
   .btn-sm { @apply px-4 py-2 text-sm; }
   .btn-lg { @apply px-6 py-3 text-base; }
-
-  /* Disabled */
   .btn:disabled { @apply opacity-60 pointer-events-none; }
 }
 
 /* ----------------------- */
 /* Little utility helpers  */
 /* ----------------------- */
-
-/* Hide horizontal scrollbar for carousels (Activities) */
 .scrollbar-hide::-webkit-scrollbar { display: none; }
 .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }

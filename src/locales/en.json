@@ -2,7 +2,9 @@
   "brand": "Atlantis 12",
   "nav": {
     "home": "Home",
-    "rooms": "Rooms",
+    "story": "Our Story",
+    "rooms": "Rooms & Suites",
+    "experiences": "Experiences",
     "gallery": "Gallery",
     "contact": "Contact",
     "book": "Book"
@@ -10,10 +12,13 @@
   "footer": { "rights": "All rights reserved." },
   "home": {
     "hero": {
-      "title": "Atlantis 12",
-      "subtitle": "Guesthouse & Art — Essaouira",
-      "ctaRooms": "See rooms",
-      "ctaBook": "Book now"
+      "labels": {
+        "checkin": "Check-in",
+        "checkout": "Check-out",
+        "adults": "Adults",
+        "children": "Children"
+      },
+      "search": "Book now"
     },
     "booking": {
       "title": "Book your stay",
@@ -81,6 +86,25 @@
       ],
       "openMap": "Open in Google Maps",
       "contact": "Contact"
+    },
+    "promo": { "cta": "Sahara & Creativity Retreat" },
+    "roomsIntro": {
+      "title": "Rooms & Suites",
+      "lead": "A harmony between nature and comfort.",
+      "text": "Our rooms and mini-suites are designed to offer a rare pause—Berber charm, modern comfort and a unique atmosphere.",
+      "cta": "Learn more",
+      "imgAlt": "Bright room with wooden beams"
+    },
+    "contact": {
+      "title": "Contact",
+      "name": "Full name",
+      "phone": "Phone",
+      "email": "Email",
+      "message": "Your message",
+      "send": "Send",
+      "sending": "Sending…",
+      "success": "Message sent. Thank you!",
+      "error": "Something went wrong. Please try again."
     }
   },
   "contact": {
@@ -130,5 +154,9 @@
       "nature": "Garden & Nature"
     },
     "empty": "No images for this filter."
+  },
+  "whatsapp": {
+    "cta": "WhatsApp",
+    "bubble": "Get in touch with us on WhatsApp"
   }
 }

@@ -1,25 +1,44 @@
+// Existing sections (kept as-is)
 import HomeHero from "../components/Home/HomeHero";
-import BookingWidget from "../components/Booking/BookingWidget";
 import AboutSnippet from "../components/Home/AboutSnippet";
 import ActivitiesHighlight from "../components/Home/ActivitiesHighlight";
 import RoomsTeaser from "../components/Home/RoomsTeaser";
 import ServicesIcons from "../components/Home/ServicesIcons";
 import LocationMap from "../components/Home/LocationMap";
 
+// New sections (added, with their own names)
+import PromoStrip from "../components/Home/PromoStrip";
+import RoomsIntro from "../components/Home/RoomsIntro"; // rename file if needed
+import HomeContactInline from "../components/Home/HomeContactInline";
+// Optional small badge — comment out if you don't want it
+import GoogleReviewBadge from "../components/Home/GoogleReviewBadge";
+
 export default function Home() {
   return (
-    <div className="flex flex-col gap-16 md:gap-20">
+    <>
+      {/* Optional floating badge linking to Google listing */}
+      <GoogleReviewBadge />
+
+      {/* Old-site hero with compact booking (your HomeHero implementation already updated) */}
       <HomeHero />
-      {/* <section className="container-std -mt-10 md:-mt-12 relative z-10">
-        <BookingWidget />
-      </section> */}
+
+      {/* New: thin green promo bar (Sahara & Creativity) */}
+      <PromoStrip />
+
+      {/* Old name, updated to overlay style */}
       <AboutSnippet />
-      <section style={{ backgroundColor: '#DDE8D1' }}>
-        <ActivitiesHighlight />
-      </section>
+
+      {/* New: text + tall image “Rooms intro” block, with CTA to /rooms */}
+      <RoomsIntro />
+
+      {/* Old names, kept */}
+      <ActivitiesHighlight />
       <RoomsTeaser />
       <ServicesIcons />
       <LocationMap />
-    </div>
+
+      {/* New: compact contact form at the bottom of Home */}
+      <HomeContactInline />
+    </>
   );
 }

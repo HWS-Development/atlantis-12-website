@@ -6,6 +6,8 @@ import Gallery from "./pages/Gallery";
 import Contact from "./pages/Contact";
 import Navbar from "./components/Layout/Navbar";
 import Footer from "./components/Layout/Footer";
+import ScrollToHash from "./components/Common/ScrollToHash";
+import WhatsAppButton from "./components/Common/WhatsAppButton";
 
 export default function App() {
   return (
@@ -13,6 +15,8 @@ export default function App() {
       <BrowserRouter>
         <div className="min-h-full flex flex-col">
           <Navbar />
+          <ScrollToHash />
+          <WhatsAppButton />
           <main className="flex-1">
             <Routes>
               <Route path="/" element={<Home />} />

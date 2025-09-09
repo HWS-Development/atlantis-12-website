@@ -1,59 +1,56 @@
-import { useState } from "react";
-import { Link, NavLink } from "react-router-dom";
+import { NavLink, Link, useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-
-const BOOK_URL = "https://atlantis-12-maison-d-hotes-et-d-art.hotelrunner.com/bv3/search";
 
 export default function Navbar() {
   const { t, i18n } = useTranslation();
-  const [open, setOpen] = useState(false);
+  const navigate = useNavigate();
 
-  const changeLang = (lng) => i18n.changeLanguage(lng);
-
-  const linkCls = ({ isActive }) =>
-    `px-3 py-2 rounded-md ${isActive ? "text-olive font-semibold" : "text-charcoal/80 hover:text-olive"}`;
+  const goStory = (e) => {
+    e.preventDefault();
+    // go home, then push hash so ScrollToHash handles it
+    navigate("/#about");
+  };
 
   return (
-    <header className="bg-white/80 backdrop-blur sticky top-0 z-50 border-b border-sand">
-      <div className="container-std flex items-center justify-between h-16">
-        <Link to="/" className="font-serif text-2xl"> <img src="/images/logo-1.avif" width={'120'} alt="" srcset="" /> </Link>
+    <header className="legacy-green text-white">
+      <div className="container-std h-12 flex items-center justify-between">
+        <Link to="/" className="flex items-center gap-2">
+          <img src="/logo.svg" alt="Atlantis 12" className="h-7" />
+        </Link>
 
-        <nav className="hidden md:flex items-center gap-1">
-          <NavLink to="/" className={linkCls}>{t("nav.home")}</NavLink>
-          <NavLink to="/rooms" className={linkCls}>{t("nav.rooms")}</NavLink>
-          <NavLink to="/gallery" className={linkCls}>{t("nav.gallery")}</NavLink>
-          <NavLink to="/contact" className={linkCls}>{t("nav.contact")}</NavLink>
-        </nav>
+        <nav className="hidden md:flex items-center gap-4">
+          <NavLink to="/" className="nav-link-legacy">{t("nav.home")}</NavLink>
+          {/* story button */}
+          <a href="/#about" onClick={goStory} className="nav-link-legacy">
+            {t("nav.story")}
+          </a>
+          <NavLink to="/rooms" className="nav-link-legacy">{t("nav.rooms")}</NavLink>
+          <NavLink to="/gallery" className="nav-link-legacy">{t("nav.experiences")}</NavLink>
+          <NavLink to="/contact" className="nav-link-legacy">{t("nav.contact")}</NavLink>
 
-        <div className="hidden md:flex items-center gap-2">
-          <button onClick={() => changeLang("fr")} className="btn btn-ghost text-sm">FR</button>
-          <button onClick={() => changeLang("en")} className="btn btn-ghost text-sm">EN</button>
-          <a href={BOOK_URL} target="_blank" rel="noreferrer" className="btn btn-primary text-sm">
+          <a
+            href="https://atlantis-12-maison-d-hotes-et-d-art.hotelrunner.com/bv3/search"
+            target="_blank" rel="noreferrer"
+            className="btn-legacy btn-legacy-primary ml-2"
+          >
             {t("nav.book")}
           </a>
-        </div>
 
-        {/* Mobile */}
-        <button className="md:hidden px-3 py-2" onClick={() => setOpen(!open)} aria-label="Toggle menu">
-          ☰
-        </button>
-      </div>
-
-      {open && (
-        <div className="md:hidden border-t border-sand">
-          <div className="container-std py-3 space-y-2">
-            <NavLink to="/" onClick={() => setOpen(false)} className="block">{t("nav.home")}</NavLink>
-            <NavLink to="/rooms" onClick={() => setOpen(false)} className="block">{t("nav.rooms")}</NavLink>
-            <NavLink to="/gallery" onClick={() => setOpen(false)} className="block">{t("nav.gallery")}</NavLink>
-            <NavLink to="/contact" onClick={() => setOpen(false)} className="block">{t("nav.contact")}</NavLink>
-            <div className="flex items-center gap-3 pt-2">
-              <button onClick={() => {changeLang("fr"); setOpen(false);}} className="btn btn-ghost text-sm">FR</button>
-              <button onClick={() => {changeLang("en"); setOpen(false);}} className="btn btn-ghost text-sm">EN</button>
-              <a href={BOOK_URL} target="_blank" rel="noreferrer" className="btn btn-primary text-sm">{t("nav.book")}</a>
-            </div>
+          {/* Language switcher */}
+          <div className="ml-3 flex items-center gap-1 bg-white/15 rounded-full px-2 py-1">
+            <button
+              onClick={() => { i18n.changeLanguage("fr"); document.documentElement.lang = "fr"; }}
+              className={`text-white text-xs px-2 py-0.5 rounded-full ${i18n.language==='fr' ? 'bg-white/25' : ''}`}
+              aria-label="Français"
+            >🇫🇷 FR</button>
+            <button
+              onClick={() => { i18n.changeLanguage("en"); document.documentElement.lang = "en"; }}
+              className={`text-white text-xs px-2 py-0.5 rounded-full ${i18n.language==='en' ? 'bg-white/25' : ''}`}
+              aria-label="English"
+            >🇬🇧 EN</button>
           </div>
-        </div>
-      )}
+        </nav>
+      </div>
     </header>
   );
 }
