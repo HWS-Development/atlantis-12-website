@@ -22,7 +22,7 @@ export default function WhatsAppButton() {
       <a
         href="https://wa.me/212000000000" /* TODO: put real number */
         target="_blank" rel="noreferrer"
-        className="fixed right-5 bottom-16 z-40 h-12 w-12 rounded-full bg-[#25D366] text-white
+        className="fixed right-5 bottom-4 z-40 h-12 w-12 rounded-full bg-[#25D366] text-white
                    flex items-center justify-center shadow-xl hover:scale-105 transition"
         aria-label={t("whatsapp.cta")}
         onMouseEnter={() => setOpen(true)}

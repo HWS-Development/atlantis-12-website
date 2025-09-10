@@ -44,7 +44,7 @@ export default function HomeHero() {
       </div>
 
       {/* compact booking bar with labels */}
-      <div className="absolute bottom-20 left-1/2 -translate-x-1/2 z-10 w-[100%] md:w-auto">
+      <div className="absolute bottom-2 md:bottom-20 left-1/2 -translate-x-1/2 z-10 w-[100%] md:w-auto">
         <div className="mx-auto md:max-w-4xl">
           <div className="bg-white/92 backdrop-blur rounded-xl px-3 py-3 md:px-4 md:py-3 shadow-lg">
             <form
