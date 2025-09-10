@@ -11,11 +11,17 @@ import PromoStrip from "../components/Home/PromoStrip";
 import RoomsIntro from "../components/Home/RoomsIntro"; // rename file if needed
 import HomeContactInline from "../components/Home/HomeContactInline";
 // Optional small badge — comment out if you don't want it
+import RetreatModal from "../components/Common/RetreatModal";
+import StickyRetreatButton from "../components/Common/StickyRetreatButton";
 import GoogleReviewBadge from "../components/Home/GoogleReviewBadge";
 
 export default function Home() {
   return (
     <>
+    <GoogleReviewBadge />
+    <RetreatModal />
+    {/* page content */}
+    <StickyRetreatButton />
       {/* Optional floating badge linking to Google listing */}
       {/* <GoogleReviewBadge /> */}
 
@@ -23,7 +29,7 @@ export default function Home() {
       <HomeHero />
 
       {/* New: thin green promo bar (Sahara & Creativity) */}
-      <PromoStrip />
+      {/* <PromoStrip /> */}
 
       {/* Old name, updated to overlay style */}
       <AboutSnippet />

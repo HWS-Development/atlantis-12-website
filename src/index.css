@@ -18,6 +18,13 @@
   h1, h2, h3, h4 { @apply font-serif; }
 }
 
+:root{
+  --fnt: normal normal 700 14px / 1.4em avenir-lt-w01_35-light1475496, sans-serif;
+  --font_1: normal normal normal 16px / 1.4em din-next-w01-light, sans-serif;
+}
+* {
+  font: var(--fnt, var(--font_1));
+}
 /* -------------------------------------- */
 /* Components & design utilities (custom) */
 /* -------------------------------------- */
@@ -26,7 +33,7 @@
   .section       { @apply py-8 md:py-10; }
   .section-tight { @apply py-6 md:py-8; }
   .title-smallcaps { @apply uppercase tracking-[.12em] text-xs text-black/60; }
-  .field-sm { @apply h-9 px-3 py-0.5 text-[13px]; }
+  .field-sm { @apply h-12 px-6 py-2 text-[20px]; }
 
   /* Lighter section labels like old site */
   .section-narrow { @apply py-6  md:py-8; }
@@ -57,7 +64,7 @@
 
   /* Compact inputs (old booking bar style) */
   .field {
-    @apply w-full rounded-full border legacy-border bg-white px-4 py-2 text-sm;
+    @apply w-full rounded-full border legacy-border bg-white px-4 py-2 text-[14px];
   }
 
   /* Legacy buttons */
@@ -77,7 +84,7 @@
   /* Hero welcome banner helper */
   .legacy-hero-banner {
     @apply text-center text-white rounded-xl px-6 md:px-10 py-4 shadow-md;
-    background-color: rgba(47,95,46,.95); /* legacy-green/95 */
+    background-color: rgb(46 125 31 / 72%); /* legacy-green/95 */
   }
 }
 
@@ -150,3 +157,17 @@
 /* ----------------------- */
 .scrollbar-hide::-webkit-scrollbar { display: none; }
 .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+
+/* simple line clamp helpers without the Tailwind plugin */
+.line-clamp-4{
+  display:-webkit-box;
+  -webkit-line-clamp:4;
+  -webkit-box-orient:vertical;
+  overflow:hidden;
+}
+.line-clamp-5{
+  display:-webkit-box;
+  -webkit-line-clamp:5;
+  -webkit-box-orient:vertical;
+  overflow:hidden;
+}

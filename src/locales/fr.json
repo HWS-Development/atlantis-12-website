@@ -12,6 +12,8 @@
   "footer": { "rights": "Tous droits réservés." },
   "home": {
     "hero": {
+      "welcome": "Bienvenue à",
+      "tagline": "maison d'hôtes et d'art",
       "labels": {
         "checkin": "Arrivée",
         "checkout": "Départ",
@@ -29,6 +31,7 @@
     },
     "about": {
       "title": "Une maison d’hôtes née d’un rêve",
+      "cta": "En savoir plus",
       "text": "Le rêve d’Asmae et de Lahcen, venus de deux univers complémentaires — l’événementiel pour elle, la peinture et le jazz pour lui — était de créer une parenthèse rare, à la fois accueillante, inspirante et profondément humaine."
     },
     "activities": {
@@ -140,6 +143,33 @@
       "amenities": "Services",
       "book": "Réserver cette chambre",
       "close": "Fermer"
+    },
+    "view": "Voir la chambre",
+
+    "ipomea": {
+      "name": "L’Ipoméa",
+      "short": "Chambre double authentique avec coin salon et cheminée, entrée privative et murs insonorisés. Elle s’ouvre sur le parc et le patio. Salle de bain en tadelakt avec douche moderne, serviettes moelleuses et produits d’accueil. Grand lit double pour un séjour reposant.",
+      "desc": "Cette chambre double allie authenticité et confort. Son coin salon et sa cheminée invitent à la détente, tandis que son entrée privative et ses murs insonorisés assurent une intimité parfaite. Elle s’ouvre à la fois sur le parc et sur le patio, offrant deux ambiances apaisantes. La salle de bain en tadelakt, dotée d’une douche moderne, met à votre disposition serviettes moelleuses et produits d’accueil. Un grand lit double, habillé d’une belle literie, vous attend pour un séjour reposant."
+    },
+    "plumeria": {
+      "name": "La Pluméria",
+      "short": "Chambre supérieure spacieuse avec salon cheminée, calme garanti (insonorisation), terrasse privative avec vue piscine et nature. Salle de bain en tadelakt avec douche moderne et produits raffinés. Très grand lit double pour des nuits paisibles.",
+      "desc": "Spacieuse et élégante, cette chambre supérieure offre un confort d’exception. Son coin salon avec cheminée crée une atmosphère chaleureuse, idéale pour se détendre. Grâce à sa situation en retrait et à ses murs insonorisés, elle garantit calme et sérénité. Elle s’ouvre sur une terrasse privative avec vue sur la piscine et la nature environnante. La salle de bain en tadelakt, équipée d’une douche moderne, offre des serviettes moelleuses et des produits d’accueil raffinés. Son très grand lit double, habillé d’une literie soignée, vous promet des nuits paisibles au cœur d’Atlantis 12."
+    },
+    "agave": {
+      "name": "L’Agave",
+      "short": "Chambre double authentique avec coin salon et cheminée, entrée privative et murs insonorisés. Ouverture sur parc et patio, salle de bain en tadelakt (douche moderne). Grand lit double pour un séjour reposant.",
+      "desc": "@:rooms.ipomea.desc"
+    },
+    "coquelicot": {
+      "name": "La Coquelicot",
+      "short": "Chambre double cosy avec coin salon et cheminée, entrée privative, murs insonorisés, vues sur parc et patio. Salle de bain en tadelakt avec douche moderne et produits d’accueil. Grand lit double confortable.",
+      "desc": "@:rooms.ipomea.desc"
+    },
+    "orchis": {
+      "name": "L’Orchis",
+      "short": "Chambre double traditionnelle avec salon cheminée, entrée privative et insonorisation. Ouverture sur le parc et le patio. Tadelakt, douche moderne, linge moelleux et produits d’accueil. Grand lit double pour un repos optimal.",
+      "desc": "@:rooms.ipomea.desc"
     }
   },
   "gallery": {
@@ -158,5 +188,207 @@
   "whatsapp": {
     "cta": "WhatsApp",
     "bubble": "Contactez-nous sur WhatsApp"
+  },
+  "aboutPage": {
+    "seoTitle": "Atlantis 12 – Notre histoire",
+    "seoDesc": "L’histoire d’Atlantis 12, maison d’hôtes près d’Essaouira — havre de calme, de créativité et d’hospitalité.",
+    "pdfText": "Retraite Shiatsu & Créativité – ENG.pdf",
+    "pdfHref": "",
+    "paragraphs": [
+      "C’est ainsi qu’est né Atlantis 12 — une maison d’hôtes nichée dans la campagne d’Essaouira, imaginée comme un refuge pour les voyageurs en quête de paix, de beauté et de sens.",
+      "Installé dans une ancienne bergerie berbère restaurée avec soin, Atlantis 12 s’épanouit sur un hectare de nature préservée, entre forêts de thuya, lumière atlantique, chants d’oiseaux et silence apaisant. Une retraite de charme, loin de l’agitation, à quelques minutes pourtant de la médina et de l’océan.",
+      "Asmae a insufflé au lieu son sens de l’accueil, l’attention aux détails et le désir d’offrir une hospitalité chaleureuse, ancrée dans la tradition marocaine et la joie du partage.",
+      "Lahcen, de son côté, a façonné l’espace avec son âme et sa sensibilité d’artiste : textures, matières, volumes et objets choisis dialoguent pour créer une atmosphère unique et inspirante — propice à l’élan créatif comme au repos.",
+      "Atlantis 12 est bien plus qu’un lieu où dormir — c’est un havre, une expérience restauratrice, une pause.",
+      "Un espace pour se reconnecter à soi, à la nature, à sa créativité.",
+      "Un lieu vivant, en mouvement — ouvert aux rencontres, aux émotions, et au silence.",
+      "Bienvenue dans notre rêve éveillé.",
+      "Bienvenue chez vous."
+    ]
+  },
+  "retreat": {
+    "cta": "Retraite Shiatsu & Créativité",
+    "close": "Fermer",
+    "titleLine": "Retraite / Retreat",
+    "name": "Shiatsu & Créativité",
+    "tagFr": "Un séjour exclusif à Essaouira !",
+    "tagEn": "An exclusive stay in Essaouira!",
+    "blurbFr": "Une parenthèse où le toucher apaise, la couleur libère et la nature inspire.",
+    "blurbEn": "Where touch soothes, colors flow, and nature inspires.",
+    "infoFr": "Infos & Tarifs",
+    "infoEn": "Info & Rates",
+    "limitedFr": "Places limitées – 6 à 8 participants seulement",
+    "limitedEn": "Limited spots – only 6 to 8 participants",
+    "book": "RÉSERVER / BOOK",
+    "infoLinkFr": "#",
+    "infoLinkEn": "#",
+    "bookLink": "https://atlantis-12-maison-d-hotes-et-d-art.hotelrunner.com/bv3/search"
+  },
+  "brand": { "name": "Atlantis 12" },
+  "legal": {
+    "terms": {
+      "seoTitle": "Conditions Générales de Vente – Atlantis 12",
+      "seoDesc": "Conditions générales de vente d’Atlantis 12, maison d’hôtes près d’Essaouira.",
+      "title": "Conditions Générales de Vente",
+      "lastUpdated": "Dernière révision : 29/03/2025",
+      "seeCancellation": "Les modalités d’annulation sont disponibles",
+      "sections": [
+        {
+          "title": "Objet",
+          "paragraphs": [
+            "Ces conditions définissent les droits et obligations entre vous (le client) et Atlantis 12 lors d’une réservation de services via notre site internet. En réservant, vous acceptez ces conditions."
+          ]
+        },
+        {
+          "title": "Informations sur Atlantis 12",
+          "bullets": [
+            "Site Web : www.atlantis12essaouira.com",
+            "Société : Atlantis 12 SARL",
+            "Adresse : Douar Laariach, Ounagha, Essaouira, Maroc",
+            "RC : 6083 – TVA : 51835008",
+            "Contact :",
+            "• Tél : +212 626 29 22 85",
+            "• Email : a.benabdeljalil@atlantis12essaouira.com",
+            "• Adresse postale : B.P. 1319, Essaouira Gare, Maroc",
+            "Hébergeur : Wix.com",
+            "Responsable de publication : Mme Asmae Benabdeljalil"
+          ]
+        },
+        {
+          "title": "Acceptation",
+          "paragraphs": [
+            "En accédant aux services, vous confirmez avoir lu et accepté les présentes conditions."
+          ]
+        },
+        {
+          "title": "Droit applicable",
+          "paragraphs": [
+            "Le droit marocain s’applique. En cas de litige, les tribunaux marocains sont compétents. Seule la version française de ce document fait foi."
+          ]
+        },
+        {
+          "title": "Services proposés",
+          "paragraphs": [
+            "Atlantis 12 propose :"
+          ],
+          "bullets": [
+            "Hébergement",
+            "Prestations annexes : petit-déjeuner, table d’hôtes, balades à dos de dromadaire, ateliers, massages, etc.",
+            "Descriptions et photos sont fournies à titre informatif et peuvent différer de la réalité."
+          ]
+        },
+        {
+          "title": "Tarifs et taxes",
+          "bullets": [
+            "Le prix total s’affiche lors de la sélection des dates.",
+            "Il est en dirhams marocains, TVA incluse.",
+            "D’autres taxes (ex. taxe de séjour) sont à régler sur place.",
+            "Des frais de change peuvent s’appliquer si le paiement se fait dans une autre devise.",
+            "Le prix peut changer en fonction de la TVA ou nouvelles taxes légales."
+          ]
+        },
+        {
+          "title": "Réservation et paiement",
+          "paragraphs": [
+            "Étapes :"
+          ],
+          "bullets": [
+            "1. Sélection des services et dates sur le site",
+            "2. Affichage d’un récapitulatif",
+            "3. Validation de la commande",
+            "4. Envoi d’un lien de paiement par virement (si applicable)",
+            "5. Réservation confirmée par e-mail sous 24h après réception du paiement",
+            "Les services non réglés en ligne doivent être payés sur place au départ."
+          ]
+        },
+        {
+          "title": "Conditions d’annulation",
+          "paragraphs": [
+            "Les modalités d’annulation sont disponibles en bas du site internet."
+          ]
+        },
+        {
+          "title": "Obligations du client",
+          "bullets": [
+            "À l’arrivée, une pièce d’identité et une fiche de police sont exigées.",
+            "Le client doit respecter le règlement intérieur.",
+            "En cas de non-respect ou de comportement inapproprié, l’établissement peut expulser le client sans remboursement."
+          ]
+        },
+        {
+          "title": "Responsabilités",
+          "bullets": [
+            "Atlantis 12 n’est pas responsable :",
+            "• En cas de force majeure (ex. catastrophes naturelles, pandémie, etc.).",
+            "• D’aucune compensation si un événement hors de leur contrôle empêche la réalisation du séjour.",
+            "• Si un tiers, une erreur du client ou un problème technique empêche la bonne exécution de la réservation.",
+            "• Des travaux dans l’établissement pouvant être effectués, et Atlantis 12 informera les clients autant que possible."
+          ]
+        },
+        {
+          "title": "Propriété intellectuelle",
+          "paragraphs": [
+            "Tous les contenus du site sont protégés par les lois de propriété intellectuelle. Toute reproduction sans autorisation est interdite."
+          ]
+        },
+        {
+          "title": "Modifications",
+          "paragraphs": [
+            "Les conditions générales peuvent être modifiées à tout moment. La version en ligne s’applique à toutes les nouvelles réservations."
+          ]
+        },
+        {
+          "title": "Validité partielle",
+          "paragraphs": [
+            "Si une clause est jugée illégale ou inapplicable, les autres restent valides."
+          ]
+        },
+        {
+          "title": "Preuve",
+          "paragraphs": [
+            "L’acceptation en ligne et les informations saisies ont la même valeur légale qu’une signature manuscrite. Les échanges sont archivés de manière sécurisée et servent de preuve."
+          ]
+        }
+      ]
+    },
+    "cancellation": {
+      "seoTitle": "Politique d’Annulation – Atlantis 12",
+      "seoDesc": "Politique d’annulation d’Atlantis 12 pour les réservations.",
+      "title": "Politique d’Annulation",
+      "intro": "Nous comprenons que des imprévus peuvent survenir. Voici nos conditions d’annulation, établies pour assurer à la fois votre flexibilité et notre organisation.",
+      "rows": [
+        {
+          "left": "Annulation gratuite",
+          "right": "Toute annulation effectuée au moins 7 jours avant la date d’arrivée donne droit à un remboursement intégral de l’acompte versé, sans frais."
+        },
+        {
+          "left": "Annulation tardive",
+          "right": "En cas d’annulation effectuée entre 6 et 2 jours avant l’arrivée, 50 % de l’acompte sera conservé à titre de dédommagement. Pour les séjours de 4 nuits et plus, ce pourcentage peut être ajusté selon la période ou la chambre réservée."
+        },
+        {
+          "left": "Annulation de dernière minute ou non-présentation",
+          "right": "En cas d’annulation moins de 1 jour avant l’arrivée, ou en cas de non-présentation (no-show), l’acompte est conservé en totalité."
+        },
+        {
+          "left": "Modification de dates",
+          "right": "Nous faisons de notre mieux pour vous proposer une solution de report de séjour, sous réserve de disponibilité, si la demande est faite au moins 7 jours à l’avance. Aucun frais ne sera appliqué pour une modification effectuée dans un délai raisonnable."
+        }
+      ]
+    }
+  },
+  "retreatPage": {
+    "seoTitle": "Retraite Shiatsu & Créativité – Atlantis 12",
+    "title": "Retraite Shiatsu & Créativité",
+    "subtitle": "Essaouira · 6 jours / 5 nuits",
+    "iframeTitle": "Brochure de la retraite (PDF)",
+    "pdfFallback": "Si le PDF ne s’affiche pas correctement, vous pouvez l’ouvrir dans un nouvel onglet.",
+    "openInNew": "Ouvrir le PDF",
+    "download": "Télécharger le PDF",
+    "bookCta": "Réserver",
+    "bookLink": "https://atlantis-12-maison-d-hotes-et-d-art.hotelrunner.com/bv3/search",
+    "pdf": {
+      "fr": "/pdf/Retraite-Shiatsu-Creativite-FR.pdf",
+      "en": "/pdf/Retreat-Shiatsu-Creativity-EN.pdf"
+    }
   }
 }

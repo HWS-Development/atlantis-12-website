@@ -11,10 +11,13 @@ export default {
         sea: "#4A8FA6",
         terra: "#B56A50",
         charcoal: "#2B2B2B",
+        legacy:{ green:'#2F5F2E', orange:'#E79A2E' }
       },
       fontFamily: {
-        serif: ['"Cormorant Garamond"', "serif"],
-        sans: ["Inter", "system-ui", "sans-serif"],
+        serif: ['Cormorant Garamond','Georgia','serif'],
+        sans: [
+          'Avenir', 'Avenir Next', 'Avenir LT Std',
+          'system-ui','-apple-system','Segoe UI','Helvetica Neue','Arial','sans-serif'],
       },
       maxWidth: {
         container: "1200px",

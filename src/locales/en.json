@@ -12,6 +12,8 @@
   "footer": { "rights": "All rights reserved." },
   "home": {
     "hero": {
+      "welcome": "Welcome to",
+      "tagline": "guesthouse & art",
       "labels": {
         "checkin": "Check-in",
         "checkout": "Check-out",
@@ -29,6 +31,7 @@
     },
     "about": {
       "title": "A guesthouse born from a dream",
+      "cta": "Learn more",
       "text": "The dream of Asmae and Lahcen—coming from complementary worlds, event production for her, painting and jazz for him—was to create a rare retreat that is welcoming, inspiring, and deeply human."
     },
     "activities": {
@@ -140,6 +143,33 @@
       "amenities": "Amenities",
       "book": "Book this room",
       "close": "Close"
+    },
+    "view": "View room",
+
+    "ipomea": {
+      "name": "L’Ipoméa",
+      "short": "Authentic double room with sitting area and fireplace, private entrance and soundproofing. Opens to both park and patio. Tadelakt bathroom with modern shower, soft towels and amenities. Large double bed for a restful stay.",
+      "desc": "This double room combines authenticity and comfort. Its sitting area and fireplace invite you to unwind, while the private entrance and soundproof walls ensure complete privacy. The room opens onto both the park and the patio, offering two soothing perspectives. The tadelakt bathroom, featuring a modern shower, provides soft towels and welcoming amenities. A large double bed with fine bedding awaits you for a restful stay."
+    },
+    "plumeria": {
+      "name": "La Pluméria",
+      "short": "Spacious superior room with fireplace lounge, soundproof calm, private terrace with views over the pool and nature. Tadelakt bathroom with modern shower and refined amenities. Very large double bed for peaceful nights.",
+      "desc": "Spacious and elegant, this superior room offers exceptional comfort. Its sitting area with a fireplace creates a warm and inviting atmosphere, perfect for relaxing. Thanks to its secluded location and soundproof walls, it ensures peace and tranquility. The room opens onto a private terrace with beautiful views of the pool and surrounding nature. The tadelakt bathroom, featuring a modern shower, comes with soft towels and refined amenities. A very large double bed, dressed in fine bedding, promises peaceful nights in the heart of Atlantis 12."
+    },
+    "agave": {
+      "name": "L’Agave",
+      "short": "Authentic double with lounge and fireplace, private entrance and soundproofing. Opens to both park and patio. Tadelakt bathroom with modern shower; soft towels and amenities; large double bed.",
+      "desc": "@:rooms.ipomea.desc"
+    },
+    "coquelicot": {
+      "name": "La Coquelicot",
+      "short": "Cosy double room with fireplace lounge, private entrance and soundproofing; views over park and patio. Tadelakt bathroom with modern shower and amenities. Large double bed.",
+      "desc": "@:rooms.ipomea.desc"
+    },
+    "orchis": {
+      "name": "L’Orchis",
+      "short": "Traditional double with seating area and fireplace, private entrance and soundproofing. Opens to park and patio. Tadelakt bathroom, modern shower, plush towels and amenities. Large double bed.",
+      "desc": "@:rooms.ipomea.desc"
     }
   },
   "gallery": {
@@ -158,5 +188,193 @@
   "whatsapp": {
     "cta": "WhatsApp",
     "bubble": "Get in touch with us on WhatsApp"
+  },
+  "aboutPage": {
+    "seoTitle": "Atlantis 12 – Our Story",
+    "seoDesc": "The story of Atlantis 12, a guesthouse near Essaouira—haven of calm, creativity and hospitality.",
+    "pdfText": "Retreat Shiatsu & Creativity – ENG.pdf",
+    "pdfHref": "",
+    "paragraphs": [
+      "This is how Atlantis 12 was born — a guesthouse nestled in the Essaouira countryside, envisioned as a refuge for travelers seeking peace, beauty, and meaning.",
+      "Tucked inside a lovingly restored former Berber sheepfold, Atlantis 12 unfolds across one hectare of preserved nature, between thuya forests, Atlantic light, birdsong, and soothing silence. A charming retreat, far from the hustle and bustle, yet just minutes from the medina and the sea.",
+      "Asmae has infused the place with her gift for hospitality, her attention to detail, and her desire to offer a heartfelt welcome, rooted in Moroccan tradition and the joy of sharing.",
+      "Lahcen, for his part, has shaped the space with his artistic soul and sensibility: textures, materials, volumes, and carefully chosen objects converse to create a unique and inspiring atmosphere — ideal for both creative flow and restful retreat.",
+      "Atlantis 12 is far more than a place to stay — it’s a haven, a restorative experience, a pause.",
+      "A space to reconnect with yourself, with nature, with your creativity.",
+      "A living, evolving place — open to encounters, emotions, and silence.",
+      "Welcome to our waking dream.",
+      "Welcome home."
+    ]
+  },
+  "retreat": {
+    "cta": "Shiatsu & Creativity",
+    "close": "Close",
+    "titleLine": "Shiatsu & Creativity Retreat",
+    "name": "Shiatsu & Creativity",
+    "tagFr": "Un séjour exclusif à Essaouira !",
+    "tagEn": "An exclusive stay in Essaouira!",
+    "blurbFr": "Une parenthèse où le toucher apaise, la couleur libère et la nature inspire.",
+    "blurbEn": "Where touch soothes, colors flow, and nature inspires.",
+    "infoFr": "Infos & Tarifs",
+    "infoEn": "Info & Rates",
+    "limitedFr": "Places limitées – 6 à 8 participants seulement",
+    "limitedEn": "Limited spots – only 6 to 8 participants",
+    "book": "BOOK / RÉSERVER",
+    "infoLinkFr": "#",
+    "infoLinkEn": "#",
+    "bookLink": "https://atlantis-12-maison-d-hotes-et-d-art.hotelrunner.com/bv3/search"
+  },
+  "brand": { "name": "Atlantis 12" },
+  "legal": {
+    "terms": {
+      "seoTitle": "Terms & Conditions – Atlantis 12",
+      "seoDesc": "General terms and conditions for bookings at Atlantis 12 near Essaouira.",
+      "title": "Terms & Conditions",
+      "lastUpdated": "Last updated: 29/03/2025",
+      "seeCancellation": "Cancellation terms are available",
+      "sections": [
+        {
+          "title": "Purpose",
+          "paragraphs": [
+            "These terms define the rights and obligations between you (the guest) and Atlantis 12 when booking services through our website. By booking, you agree to these terms."
+          ]
+        },
+        {
+          "title": "About Atlantis 12",
+          "bullets": [
+            "Website: www.atlantis12essaouira.com",
+            "Company: Atlantis 12 SARL",
+            "Address: Douar Laariach, Ounagha, Essaouira, Morocco",
+            "RC: 6083 – VAT: 51835008",
+            "Contact:",
+            "• Phone: +212 626 29 22 85",
+            "• Email: a.benabdeljalil@atlantis12essaouira.com",
+            "• Postal: B.P. 1319, Essaouira Gare, Morocco",
+            "Host: Wix.com",
+            "Publishing manager: Mrs. Asmae Benabdeljalil"
+          ]
+        },
+        {
+          "title": "Acceptance",
+          "paragraphs": ["By accessing our services, you confirm you have read and accepted these terms."]
+        },
+        {
+          "title": "Governing law",
+          "paragraphs": [
+            "Moroccan law applies. In case of dispute, Moroccan courts have jurisdiction. Only the French version of this document shall prevail."
+          ]
+        },
+        {
+          "title": "Services provided",
+          "paragraphs": ["Atlantis 12 provides:"],
+          "bullets": [
+            "Accommodation",
+            "Additional services: breakfast, table d’hôtes, camel rides, workshops, massages, etc.",
+            "Descriptions and photos are indicative and may differ from reality."
+          ]
+        },
+        {
+          "title": "Rates & taxes",
+          "bullets": [
+            "Total price is shown during date selection.",
+            "Prices are in Moroccan dirhams, VAT included.",
+            "Other taxes (e.g., city tax) are payable on site.",
+            "Currency exchange fees may apply if payment is made in another currency.",
+            "Prices may change due to VAT or new legal taxes."
+          ]
+        },
+        {
+          "title": "Booking & payment",
+          "paragraphs": ["Steps:"],
+          "bullets": [
+            "1. Select services and dates on the website",
+            "2. Review the summary",
+            "3. Confirm the order",
+            "4. A payment link may be sent (bank transfer where applicable)",
+            "5. Booking confirmed by e-mail within 24h after receipt of payment",
+            "Services not paid online must be settled on site upon departure."
+          ]
+        },
+        {
+          "title": "Cancellation terms",
+          "paragraphs": ["Cancellation rules are available at the bottom of the website."]
+        },
+        {
+          "title": "Guest obligations",
+          "bullets": [
+            "A valid ID and police form are required upon arrival.",
+            "Guests must respect the house rules.",
+            "In case of non-compliance or inappropriate behavior, the property may expel the guest without refund."
+          ]
+        },
+        {
+          "title": "Liability",
+          "bullets": [
+            "Atlantis 12 is not liable:",
+            "• In cases of force majeure (e.g., natural disasters, pandemics, etc.).",
+            "• For events beyond our control that prevent the stay from taking place.",
+            "• Where a third party, guest error or technical issue prevents proper performance of the booking.",
+            "• For works carried out on the premises; Atlantis 12 will inform guests as far as possible."
+          ]
+        },
+        {
+          "title": "Intellectual property",
+          "paragraphs": ["All website content is protected by intellectual property laws. Reproduction without authorization is prohibited."]
+        },
+        {
+          "title": "Changes",
+          "paragraphs": ["Terms may be updated at any time. The online version applies to all new bookings."]
+        },
+        {
+          "title": "Severability",
+          "paragraphs": ["If any clause is deemed illegal or unenforceable, the remaining clauses remain valid."]
+        },
+        {
+          "title": "Proof",
+          "paragraphs": [
+            "Online acceptance and submitted information have the same legal value as a handwritten signature. Exchanges are securely archived and serve as proof."
+          ]
+        }
+      ]
+    },
+    "cancellation": {
+      "seoTitle": "Cancellation Policy – Atlantis 12",
+      "seoDesc": "Cancellation terms for stays booked at Atlantis 12.",
+      "title": "Cancellation Policy",
+      "intro": "We understand plans can change. Here are our cancellation terms designed to balance your flexibility and our organization.",
+      "rows": [
+        {
+          "left": "Free cancellation",
+          "right": "Any cancellation at least 7 days before arrival entitles you to a full refund of the deposit with no fees."
+        },
+        {
+          "left": "Late cancellation",
+          "right": "For cancellations between 6 and 2 days before arrival, 50% of the deposit will be retained as compensation. For stays of 4 nights or more, this percentage may be adjusted depending on the period or the room reserved."
+        },
+        {
+          "left": "Last-minute cancellation / no-show",
+          "right": "For cancellations less than 1 day before arrival, or in case of no-show, the deposit is retained in full."
+        },
+        {
+          "left": "Date changes",
+          "right": "We do our best to offer a rescheduling solution subject to availability if requested at least 7 days in advance. No fees apply for changes made within a reasonable time."
+        }
+      ]
+    }
+  },
+  "retreatPage": {
+    "seoTitle": "Shiatsu & Creativity Retreat – Atlantis 12",
+    "title": "Shiatsu & Creativity Retreat",
+    "subtitle": "Essaouira · 6 days / 5 nights",
+    "iframeTitle": "Retreat brochure (PDF)",
+    "pdfFallback": "If the PDF doesn’t render, you can open it in a new tab.",
+    "openInNew": "Open PDF",
+    "download": "Download PDF",
+    "bookCta": "Book now",
+    "bookLink": "https://atlantis-12-maison-d-hotes-et-d-art.hotelrunner.com/bv3/search",
+    "pdf": {
+      "fr": "/pdf/Retraite-Shiatsu-Creativite-FR.pdf",
+      "en": "/pdf/Retreat-Shiatsu-Creativity-EN.pdf"
+    }
   }
 }

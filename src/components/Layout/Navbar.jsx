@@ -1,31 +1,32 @@
-import { NavLink, Link, useNavigate } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
 export default function Navbar() {
   const { t, i18n } = useTranslation();
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
-  const goStory = (e) => {
-    e.preventDefault();
-    // go home, then push hash so ScrollToHash handles it
-    navigate("/#about");
-  };
+  // const goStory = (e,path) => {
+  //   e.preventDefault();
+  //   // go home, then push hash so ScrollToHash handles it
+  //   navigate(path);
+  // };
 
   return (
     <header className="legacy-green text-white">
-      <div className="container-std h-12 flex items-center justify-between">
+      <div className="container-std h-20 flex items-center justify-between">
         <Link to="/" className="flex items-center gap-2">
-          <img src="/images/logo-1.avif" alt="Atlantis 12" className="h-7" />
+          <img src="/images/logo-1.avif" alt="Atlantis 12" className="h-12" />
         </Link>
 
         <nav className="hidden md:flex items-center gap-4">
           <NavLink to="/" className="nav-link-legacy">{t("nav.home")}</NavLink>
           {/* story button */}
-          <a href="/#about" onClick={goStory} className="nav-link-legacy">
+          <a href="/#about" className="nav-link-legacy">
             {t("nav.story")}
           </a>
-          <NavLink to="/rooms" className="nav-link-legacy">{t("nav.rooms")}</NavLink>
-          <NavLink to="/gallery" className="nav-link-legacy">{t("nav.experiences")}</NavLink>
+          <a  href="/#experience" className="nav-link-legacy" >{t("nav.experiences")}</a>
+          <NavLink  to="/rooms"  className="nav-link-legacy">{t("nav.rooms")}</NavLink>
+          <NavLink to="/gallery" className="nav-link-legacy">{t("nav.gallery")}</NavLink>
           <NavLink to="/contact" className="nav-link-legacy">{t("nav.contact")}</NavLink>
 
           <a
