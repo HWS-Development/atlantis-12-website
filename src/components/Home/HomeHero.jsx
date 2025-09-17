@@ -16,7 +16,7 @@ export default function HomeHero() {
   }, []);
 
   return (
-    <section className="relative h-[56vh] md:h-[90vh] overflow-hidden">
+    <section className="relative h-[64vh] md:h-[90vh] overflow-hidden">
       {slides.map((src, i) => (
         <div
           key={i}
@@ -30,57 +30,59 @@ export default function HomeHero() {
       ))}
 
       {/* green welcome band (kept) */}
-      <div className="absolute w-full top-36 z-10">
+      <div className="absolute w-full top-10 md:top-36 z-10  ">
         <div className="legacy-hero-banner">
-          <div className="uppercase tracking-[.08em] text-xl md:text-2xl opacity-90">
+          <div className="uppercase tracking-[.08em] text-xl md:text-2xl opacity-90 italic">
             {t("home.hero.welcome", "Bienvenue à")}
           </div>
           <br />
           <h1 className="font-serif text-2xl md:text-4xl">Atlantis 12</h1>
-          <div className="text-xl md:text-2xl opacity-90">
+          <div className="text-xl md:text-2xl opacity-90 italic">
             {t("home.hero.tagline", "maison d’hôtes et d’art — Essaouira")}
           </div>
         </div>
       </div>
 
       {/* compact booking bar with labels */}
-      <div className="absolute bottom-2 md:bottom-20 left-1/2 -translate-x-1/2 z-10 w-[100%] md:w-auto">
-        <div className="mx-auto md:max-w-4xl">
-          <div className="bg-white/92 backdrop-blur rounded-xl px-3 py-3 md:px-4 md:py-3 shadow-lg">
+      <div className="absolute bottom-2 md:bottom-60 left-1/2 -translate-x-1/2 z-10  md:w-auto ">
+        <div className="mx-auto">
+          <div className="hero-form-bg backdrop-blur rounded-xl px-6 py-3 md:px-4 md:py-3 shadow-lg">
             <form
               action="https://atlantis-12-maison-d-hotes-et-d-art.hotelrunner.com/bv3/search"
               target="_blank"
-              className="grid grid-cols-2 md:grid-cols-[1fr,1fr,100px,100px,110px] gap-2 md:gap-3 items-end"
+              className="grid grid-cols-1 md:grid-cols-[1fr,1fr,180px,200px] gap-2 md:gap-3 items-end"
             >
               <div className="flex flex-col">
                 <label htmlFor="checkin" className="text-[14px] text-black/90 mb-1">
                   {t("home.hero.labels.checkin")}
                 </label>
-                <input id="checkin" type="date" name="checkin" className="field field-sm" />
+                <input id="checkin" type="date" name="checkin" className="field field-sm md:!w-60" />
               </div>
 
               <div className="flex flex-col">
                 <label htmlFor="checkout" className="text-[14px] text-black/90 mb-1">
                   {t("home.hero.labels.checkout")}
                 </label>
-                <input id="checkout" type="date" name="checkout" className="field field-sm" />
+                <input id="checkout" type="date" name="checkout" className="field field-sm md:!w-60" />
+              </div>
+              <div className="flex w-full justify-around">
+                <div className="flex flex-col">
+                  <label htmlFor="adults" className="text-[14px] text-black/90 mb-1">
+                    {t("home.hero.labels.adults")}
+                  </label>
+                  <input id="adults" type="number" min="1" defaultValue="2" name="adults" className="field field-sm md:!w-20" />
+                </div>
+
+                <div className="flex flex-col">
+                  <label htmlFor="children" className="text-[14px] text-black/90 mb-1">
+                    {t("home.hero.labels.children")}
+                  </label>
+                  <input id="children" type="number" min="0" defaultValue="0" name="children" className="field field-sm md:!w-20" />
+                </div>
+
               </div>
 
-              <div className="flex flex-col">
-                <label htmlFor="adults" className="text-[14px] text-black/90 mb-1">
-                  {t("home.hero.labels.adults")}
-                </label>
-                <input id="adults" type="number" min="1" defaultValue="2" name="adults" className="field field-sm" />
-              </div>
-
-              <div className="flex flex-col">
-                <label htmlFor="children" className="text-[14px] text-black/90 mb-1">
-                  {t("home.hero.labels.children")}
-                </label>
-                <input id="children" type="number" min="0" defaultValue="0" name="children" className="field field-sm" />
-              </div>
-
-              <button className="btn-legacy btn-legacy-primary h-12">
+              <button className="btn-legacy btn-legacy-primary h-12 md:!w-52">
                 {t("home.hero.search", "Rechercher")}
               </button>
             </form>

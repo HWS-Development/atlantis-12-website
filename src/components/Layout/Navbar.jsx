@@ -25,7 +25,7 @@ export default function Navbar() {
         }`}
         aria-label="Français"
       >
-        🇫🇷 FR
+        FR
       </button>
       <button
         onClick={() => {
@@ -37,7 +37,7 @@ export default function Navbar() {
         }`}
         aria-label="English"
       >
-        🇬🇧 EN
+        EN
       </button>
     </div>
   );
@@ -60,13 +60,13 @@ export default function Navbar() {
           <a href="/#about" className="nav-link-legacy">
             {t("nav.story")}
           </a>
+
+          <NavLink to="/#rooms" className="nav-link-legacy">
+            {t("nav.rooms")}
+          </NavLink>
           <a href="/#experience" className="nav-link-legacy">
             {t("nav.experiences")}
           </a>
-
-          <NavLink to="/rooms" className="nav-link-legacy">
-            {t("nav.rooms")}
-          </NavLink>
           <NavLink to="/gallery" className="nav-link-legacy">
             {t("nav.gallery")}
           </NavLink>
@@ -78,7 +78,7 @@ export default function Navbar() {
             href="https://atlantis-12-maison-d-hotes-et-d-art.hotelrunner.com/bv3/search"
             target="_blank"
             rel="noreferrer"
-            className="btn-legacy btn-legacy-primary ml-2"
+            className="btn-legacy btn-legacy-primary ml-2 text-[13px]"
           >
             {t("nav.book")}
           </a>
@@ -150,6 +150,13 @@ export default function Navbar() {
             >
               {t("nav.story")}
             </a>
+            <Link
+              to="/#rooms"
+              onClick={() => setOpen(false)}
+              className="block nav-link-legacy !text-base"
+            >
+              {t("nav.rooms")}
+            </Link>
             <a
               href="/#experience"
               onClick={() => setOpen(false)}
@@ -157,13 +164,6 @@ export default function Navbar() {
             >
               {t("nav.experiences")}
             </a>
-            <Link
-              to="/rooms"
-              onClick={() => setOpen(false)}
-              className="block nav-link-legacy !text-base"
-            >
-              {t("nav.rooms")}
-            </Link>
             <Link
               to="/gallery"
               onClick={() => setOpen(false)}

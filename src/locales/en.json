@@ -7,7 +7,7 @@
     "experiences": "Experiences",
     "gallery": "Gallery",
     "contact": "Contact",
-    "book": "Book"
+    "book": "BOOK NOW"
   },
   "footer": { "rights": "All rights reserved." },
   "home": {
@@ -149,27 +149,27 @@
     "ipomea": {
       "name": "L’Ipoméa",
       "short": "Authentic double room with sitting area and fireplace, private entrance and soundproofing. Opens to both park and patio. Tadelakt bathroom with modern shower, soft towels and amenities. Large double bed for a restful stay.",
-      "desc": "This double room combines authenticity and comfort. Its sitting area and fireplace invite you to unwind, while the private entrance and soundproof walls ensure complete privacy. The room opens onto both the park and the patio, offering two soothing perspectives. The tadelakt bathroom, featuring a modern shower, provides soft towels and welcoming amenities. A large double bed with fine bedding awaits you for a restful stay."
+      "desc": "A warm double room with lounge and fireplace, featuring a private entrance. It opens onto the patio, while its bay window overlooks the park, creating an atmosphere both intimate and connected to nature. The tadelakt bathroom combines tradition and modernity with a contemporary shower, soft towels and refined amenities. Large double bed for a restful stay."
     },
     "plumeria": {
       "name": "La Pluméria",
-      "short": "Spacious superior room with fireplace lounge, soundproof calm, private terrace with views over the pool and nature. Tadelakt bathroom with modern shower and refined amenities. Very large double bed for peaceful nights.",
-      "desc": "Spacious and elegant, this superior room offers exceptional comfort. Its sitting area with a fireplace creates a warm and inviting atmosphere, perfect for relaxing. Thanks to its secluded location and soundproof walls, it ensures peace and tranquility. The room opens onto a private terrace with beautiful views of the pool and surrounding nature. The tadelakt bathroom, featuring a modern shower, comes with soft towels and refined amenities. A very large double bed, dressed in fine bedding, promises peaceful nights in the heart of Atlantis 12."
+      "short": "Authentic and warm, with fireplace, views of the patio and park.",
+      "desc": "A spacious superior room with lounge and fireplace, set slightly apart to offer calm and privacy. Its private terrace opens onto the pool and surrounding nature. The tadelakt bathroom blends authenticity with modern comfort, featuring an elegant shower and refined care products. A very large double bed promises peaceful nights under Essaouira’s starry skies."
     },
     "agave": {
       "name": "L’Agave",
-      "short": "Authentic double with lounge and fireplace, private entrance and soundproofing. Opens to both park and patio. Tadelakt bathroom with modern shower; soft towels and amenities; large double bed.",
-      "desc": "@:rooms.ipomea.desc"
+      "short": "Bright and welcoming, with fireplace and direct access to the patio.",
+      "desc": "A bright and authentic double room with lounge and fireplace. Its independent entrance leads to the patio, while a bay window opens onto the park — perfect for enjoying the outdoors. Tadelakt bathroom with modern shower and plush linens. Large double bed, ideal for comfortable rest after a day of discovery. "
     },
     "coquelicot": {
       "name": "La Coquelicot",
-      "short": "Cosy double room with fireplace lounge, private entrance and soundproofing; views over park and patio. Tadelakt bathroom with modern shower and amenities. Large double bed.",
-      "desc": "@:rooms.ipomea.desc"
+      "short": "Cosy and intimate, with fireplace, views of the garden and patio.",
+      "desc": "A cosy double room with intimate charm, including lounge and fireplace. Its private entrance leads to the patio, and the bay window opens onto the park, creating a warm and relaxing atmosphere. Tadelakt bathroom with elegant shower and thoughtful amenities. Large double bed inviting you to unwind and enjoy peaceful nights."
     },
     "orchis": {
       "name": "L’Orchis",
-      "short": "Traditional double with seating area and fireplace, private entrance and soundproofing. Opens to park and patio. Tadelakt bathroom, modern shower, plush towels and amenities. Large double bed.",
-      "desc": "@:rooms.ipomea.desc"
+      "short": "Traditional and elegant, with fireplace, views of the park and open to the patio.",
+      "desc": "A traditional double room with lounge and fireplace, and a private entrance opening onto the patio. Its bay window offers views of the park, immersing you in both nature and local architecture. Tadelakt bathroom with modern shower, soft linens and refined amenities. Large double bed for restful, serene nights."
     }
   },
   "gallery": {
@@ -180,7 +180,7 @@
       "exteriors": "Exteriors",
       "rooms": "Rooms",
       "pool": "Pool",
-      "dining": "Table d’hôtes & Art",
+      "dining": "Table d’hôtes",
       "nature": "Garden & Nature"
     },
     "empty": "No images for this filter."

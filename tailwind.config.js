@@ -11,7 +11,7 @@ export default {
         sea: "#4A8FA6",
         terra: "#B56A50",
         charcoal: "#2B2B2B",
-        legacy:{ green:'#2F5F2E', orange:'#E79A2E' }
+        legacy:{ green:'#2F5F2E', orange:'#E68006' }
       },
       fontFamily: {
         serif: ['Cormorant Garamond','Georgia','serif'],

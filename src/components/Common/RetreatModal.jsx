@@ -46,11 +46,11 @@ export default function RetreatModal() {
               <div className="uppercase tracking-wide text-sm text-black/70 mb-1">
                 {t("retreat.titleLine")}
               </div>
-              <h2 className="font-serif text-3xl md:text-[40px] text-[#2F5F2E] font-semibold">
+              <h2 className="font-serif text-3xl md:text-[40px] text-[#2F5F2E]">
                 {t("retreat.name")}
               </h2>
 
-              <p className="mt-4 text-[#E0791F] font-semibold text-lg">
+              <p className="mt-4 text-[#E0791F] text-lg">
                 {t("retreat.tagFr")}
               </p>
               <p className="italic text-[#E0791F] -mt-1">
@@ -69,14 +69,14 @@ export default function RetreatModal() {
               <Link
                 to="/retreat"
                 className="inline-flex items-center justify-center border border-[#2F5F2E]
-                           text-[#2F5F2E] rounded-md py-2.5 font-semibold"
+                           text-[#2F5F2E] rounded-md py-2.5"
               >
                 {t("retreat.infoFr")}
               </Link>
               <Link
                 to="/retreat"
                 className="inline-flex items-center justify-center border border-[#2F5F2E]
-                           text-[#2F5F2E] rounded-md py-2.5 font-semibold"
+                           text-[#2F5F2E] rounded-md py-2.5"
               >
                 {t("retreat.infoEn")}
               </Link>
@@ -92,7 +92,7 @@ export default function RetreatModal() {
                 href='https://atlantis-12-maison-d-hotes-et-d-art.hotelrunner.com/bv3/search'
                 target="_blank" rel="noreferrer"
                 className="inline-flex items-center justify-center
-                           bg-[#E79A2E] text-white rounded-md py-3 px-6 font-bold"
+                           bg-[#E68007] text-white rounded-md py-3 px-6 font-bold"
               >
                 {t("retreat.book")}
               </a>

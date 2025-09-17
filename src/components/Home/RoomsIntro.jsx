@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 export default function RoomsIntroLegacy() {
   const { t } = useTranslation();
   return (
-    <section className="container-std section">
+    <section className="container-std section" id="rooms">
       <div className="grid md:grid-cols-2 gap-8 items-center">
         <div>
           <h2 className="font-serif text-2xl md:text-3xl mb-3">

@@ -24,7 +24,7 @@ export default function RoomsTeaserLegacy() {
   const Fallback = "https://images.unsplash.com/photo-1600585154206-0c3b3a99fd3a?w=1200&q=80&auto=format&fit=crop";
 
   return (
-    <section id="rooms" className="container-std section">
+    <section id="room" className="container-std section">
       <div className="mb-5 flex items-center justify-between">
         <h2 className="font-serif text-2xl md:text-3xl">
           {t("home.rooms.title", "Chambres & Suites")}

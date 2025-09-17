@@ -7,7 +7,7 @@
     "experiences": "Expériences",
     "gallery": "Galerie",
     "contact": "Contact",
-    "book": "Réserver"
+    "book": "RÉSERVER"
   },
   "footer": { "rights": "Tous droits réservés." },
   "home": {
@@ -148,28 +148,28 @@
 
     "ipomea": {
       "name": "L’Ipoméa",
-      "short": "Chambre double authentique avec coin salon et cheminée, entrée privative et murs insonorisés. Elle s’ouvre sur le parc et le patio. Salle de bain en tadelakt avec douche moderne, serviettes moelleuses et produits d’accueil. Grand lit double pour un séjour reposant.",
-      "desc": "Cette chambre double allie authenticité et confort. Son coin salon et sa cheminée invitent à la détente, tandis que son entrée privative et ses murs insonorisés assurent une intimité parfaite. Elle s’ouvre à la fois sur le parc et sur le patio, offrant deux ambiances apaisantes. La salle de bain en tadelakt, dotée d’une douche moderne, met à votre disposition serviettes moelleuses et produits d’accueil. Un grand lit double, habillé d’une belle literie, vous attend pour un séjour reposant."
+      "short": "Authentique et chaleureuse, avec cheminée, vue sur le patio et le parc.",
+      "desc": "double chaleureuse avec coin salon et cheminée, dotée d’une entrée privative. Elle s’ouvre sur le patio et sa baie vitrée offre une vue sur le parc arboré, créant une atmosphère à la fois intime et ouverte sur la nature. Salle de bain en tadelakt avec douche contemporaine, serviettes moelleuses et produits d’accueil raffinés. Grand lit double pour un séjour reposant."
     },
     "plumeria": {
       "name": "La Pluméria",
-      "short": "Chambre supérieure spacieuse avec salon cheminée, calme garanti (insonorisation), terrasse privative avec vue piscine et nature. Salle de bain en tadelakt avec douche moderne et produits raffinés. Très grand lit double pour des nuits paisibles.",
-      "desc": "Spacieuse et élégante, cette chambre supérieure offre un confort d’exception. Son coin salon avec cheminée crée une atmosphère chaleureuse, idéale pour se détendre. Grâce à sa situation en retrait et à ses murs insonorisés, elle garantit calme et sérénité. Elle s’ouvre sur une terrasse privative avec vue sur la piscine et la nature environnante. La salle de bain en tadelakt, équipée d’une douche moderne, offre des serviettes moelleuses et des produits d’accueil raffinés. Son très grand lit double, habillé d’une literie soignée, vous promet des nuits paisibles au cœur d’Atlantis 12."
+      "short": "Spacieuse et raffinée, avec cheminée et terrasse privative sur la piscine et la nature.",
+      "desc": "supérieure spacieuse avec salon et cheminée, légèrement en retrait pour offrir calme et intimité. Sa terrasse privative s’ouvre sur la piscine et la nature environnante. La salle de bain en tadelakt allie authenticité et modernité avec douche élégante et produits de soin raffinés. Très grand lit double, promesse de nuits paisibles sous le ciel étoilé d’Essaouira."
     },
     "agave": {
       "name": "L’Agave",
-      "short": "Chambre double authentique avec coin salon et cheminée, entrée privative et murs insonorisés. Ouverture sur parc et patio, salle de bain en tadelakt (douche moderne). Grand lit double pour un séjour reposant.",
-      "desc": "@:rooms.ipomea.desc"
+      "short": "Lumineuse et accueillante, avec cheminée et accès direct au patio.",
+      "desc": "double lumineuse et authentique, avec salon et cheminée. Son entrée indépendante donne sur le patio et sa baie vitrée s’ouvre sur le parc, idéale pour profiter pleinement de l’extérieur. Salle de bain en tadelakt avec douche moderne et linge douillet. Grand lit double, parfait pour un repos confortable après une journée de découvertes."
     },
     "coquelicot": {
       "name": "La Coquelicot",
-      "short": "Chambre double cosy avec coin salon et cheminée, entrée privative, murs insonorisés, vues sur parc et patio. Salle de bain en tadelakt avec douche moderne et produits d’accueil. Grand lit double confortable.",
-      "desc": "@:rooms.ipomea.desc"
+      "short": "Cosy et intimiste, avec cheminée, vue sur le jardin et le patio.",
+      "desc": "double cosy au charme intimiste, avec salon et cheminée. L’entrée privative s’ouvre sur le patio et sa baie vitrée donne sur le parc, créant une atmosphère conviviale et reposante. Salle de bain en tadelakt avec douche élégante et produits d’accueil soignés. Grand lit double invitant à la détente et à des nuits paisibles."
     },
     "orchis": {
       "name": "L’Orchis",
-      "short": "Chambre double traditionnelle avec salon cheminée, entrée privative et insonorisation. Ouverture sur le parc et le patio. Tadelakt, douche moderne, linge moelleux et produits d’accueil. Grand lit double pour un repos optimal.",
-      "desc": "@:rooms.ipomea.desc"
+      "short": "Traditionnelle et élégante, avec cheminée, vue sur le parc et ouverte sur le patio.",
+      "desc": "double au caractère traditionnel, avec salon et cheminée. L’entrée privative donne sur le patio et sa baie vitrée ouvre sur le parc, offrant une immersion directe dans la nature et l’architecture locale. Salle de bain en tadelakt avec douche contemporaine, linge moelleux et produits d’accueil raffinés. Grand lit double pour un repos optimal."
     }
   },
   "gallery": {
@@ -180,7 +180,7 @@
       "exteriors": "Extérieurs",
       "rooms": "Chambres",
       "pool": "Piscine",
-      "dining": "Table d’hôtes & Art",
+      "dining": "Table d’hôtes",
       "nature": "Jardin & Nature"
     },
     "empty": "Aucune image pour ce filtre."
