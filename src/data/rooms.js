@@ -7,7 +7,7 @@ export const rooms = [
   ],
     nameKey:"rooms.ipomea.name", shortKey:"rooms.ipomea.short",
     descKey:"rooms.ipomea.desc", weight:1, featured:false,
-    amenities:["Wi-Fi","Garden & patio access","Soundproof","Private entrance"],
+    amenities:["Garden & patio access","Soundproof","Private entrance"],
     capacity:2, size:"25 m²", bed:"1 queen bed"
   },
   { id:"plumeria", slug:"la-plumeria", images:[
@@ -19,7 +19,7 @@ export const rooms = [
   ],
     nameKey:"rooms.plumeria.name", shortKey:"rooms.plumeria.short",
     descKey:"rooms.plumeria.desc", weight:2, featured:true,
-    amenities:["Wi-Fi","Pool & nature view","Soundproof","Private terrace"],
+    amenities:["Pool & nature view","Soundproof","Private terrace"],
     capacity:2, size:"50 m²", bed:"1 king bed"
   },
   { id:"agave", slug:"l-agave", images:[
@@ -30,7 +30,7 @@ export const rooms = [
   ],
     nameKey:"rooms.agave.name", shortKey:"rooms.agave.short",
     descKey:"rooms.agave.desc", weight:3, featured:false,
-    amenities:["Wi-Fi","Garden & patio","Soundproof","Private entrance"],
+    amenities:["Garden & patio","Soundproof","Private entrance"],
     capacity:2, size:"25 m²", bed:"1 queen bed"
   },
   { id:"coquelicot", slug:"la-coquelicot", images:[
@@ -40,7 +40,7 @@ export const rooms = [
   ],
     nameKey:"rooms.coquelicot.name", shortKey:"rooms.coquelicot.short",
     descKey:"rooms.coquelicot.desc", weight:4, featured:false,
-    amenities:["Wi-Fi","Garden & patio","Soundproof","Private entrance"],
+    amenities:["Garden & patio","Soundproof","Private entrance"],
     capacity:2, size:"25 m²", bed:"1 queen bed"
   },
   { id:"orchis", slug:"l-orchis", images:[
@@ -50,7 +50,7 @@ export const rooms = [
   ],
     nameKey:"rooms.orchis.name", shortKey:"rooms.orchis.short",
     descKey:"rooms.orchis.desc", weight:5, featured:false,
-    amenities:["Wi-Fi","Garden & patio","Soundproof","Private entrance"],
+    amenities:["Garden & patio","Soundproof","Private entrance"],
     capacity:2, size:"25 m²", bed:"1 queen bed"
   },
   ];

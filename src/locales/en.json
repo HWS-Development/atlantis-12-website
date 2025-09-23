@@ -73,7 +73,7 @@
         { "title": "Breakfast", "icon": "🍳" },
         { "title": "Park", "icon": "🌳" },
         { "title": "Swimming pool", "icon": "🏊" },
-        { "title": "Free Wi-Fi", "icon": "📶" },
+        { "title": "Wi-Fi", "icon": "📶" },
         { "title": "Concierge", "icon": "🛎️" },
         { "title": "Table d’hôtes", "icon": "🍽️" }
       ]
@@ -148,28 +148,28 @@
 
     "ipomea": {
       "name": "L’Ipoméa",
-      "short": "Authentic double room with sitting area and fireplace, private entrance and soundproofing. Opens to both park and patio. Tadelakt bathroom with modern shower, soft towels and amenities. Large double bed for a restful stay.",
-      "desc": "A warm double room with lounge and fireplace, featuring a private entrance. It opens onto the patio, while its bay window overlooks the park, creating an atmosphere both intimate and connected to nature. The tadelakt bathroom combines tradition and modernity with a contemporary shower, soft towels and refined amenities. Large double bed for a restful stay."
+      "short": "An authentic retreat where stone walls and a glowing fireplace invite quietude.",
+      "desc": "A warm double room with a lounge area and fireplace, featuring a private entrance. It opens onto the patio, and its large bay window offers sweeping views of the wooded park, creating an atmosphere that is both intimate and connected to nature. The tadelakt bathroom includes a modern shower, soft towels, and refined amenities. A queen-size bed ensures a stay of comfort and serenity."
     },
     "plumeria": {
       "name": "La Pluméria",
-      "short": "Authentic and warm, with fireplace, views of the patio and park.",
-      "desc": "A spacious superior room with lounge and fireplace, set slightly apart to offer calm and privacy. Its private terrace opens onto the pool and surrounding nature. The tadelakt bathroom blends authenticity with modern comfort, featuring an elegant shower and refined care products. A very large double bed promises peaceful nights under Essaouira’s starry skies."
+      "short": "A spacious and refined suite, promising long evenings by the fire or on the private terrace.",
+      "desc": "A spacious superior suite in a boho-chic style, featuring a lounge area and fireplace, set slightly apart to offer peace and privacy. Its private terrace opens onto the pool and thuya trees, inviting you to enjoy the surrounding nature. The bathroom, adorned with teal cement tiles, blends authenticity with modern comfort, offering an elegant shower and refined amenities. A king-size bed promises restful nights beneath the starry skies of Atlantis 12."
     },
     "agave": {
       "name": "L’Agave",
-      "short": "Bright and welcoming, with fireplace and direct access to the patio.",
-      "desc": "A bright and authentic double room with lounge and fireplace. Its independent entrance leads to the patio, while a bay window opens onto the park — perfect for enjoying the outdoors. Tadelakt bathroom with modern shower and plush linens. Large double bed, ideal for comfortable rest after a day of discovery. "
+      "short": "A sun-filled room that gently opens onto the patio.",
+      "desc": "A bright and authentic double room with a lounge area and fireplace, featuring a private entrance. It opens onto the patio, and its large bay window frames views of the wooded park—perfect for enjoying the outdoors to the fullest. The tadelakt bathroom includes a modern shower and soft linens. A queen-size bed ensures a comfortable stay after a day of exploration. "
     },
     "coquelicot": {
       "name": "La Coquelicot",
-      "short": "Cosy and intimate, with fireplace, views of the garden and patio.",
-      "desc": "A cosy double room with intimate charm, including lounge and fireplace. Its private entrance leads to the patio, and the bay window opens onto the park, creating a warm and relaxing atmosphere. Tadelakt bathroom with elegant shower and thoughtful amenities. Large double bed inviting you to unwind and enjoy peaceful nights."
+      "short": "An intimate cocoon, embraced by the serenity of the garden and patio.",
+      "desc": "A cosy double room with intimate charm, featuring a lounge area and fireplace. The private entrance opens onto the patio, while the large bay window overlooks the wooded park, creating an atmosphere both welcoming and serene. The tadelakt bathroom includes an elegant shower and refined amenities. A queen-size bed invites relaxation and restful nights."
     },
     "orchis": {
       "name": "L’Orchis",
-      "short": "Traditional and elegant, with fireplace, views of the park and open to the patio.",
-      "desc": "A traditional double room with lounge and fireplace, and a private entrance opening onto the patio. Its bay window offers views of the park, immersing you in both nature and local architecture. Tadelakt bathroom with modern shower, soft linens and refined amenities. Large double bed for restful, serene nights."
+      "short": "An elegant alcove of tradition, gazing out over the park and patio.",
+      "desc": "A double room with traditional charm, featuring a lounge area and fireplace. The private entrance opens onto the patio, while the large bay window overlooks the park, offering a direct immersion in nature and local architecture. The tadelakt bathroom includes a modern shower, soft linens, and refined amenities. A queen-size bed ensures the perfect rest."
     }
   },
   "gallery": {

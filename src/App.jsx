@@ -10,15 +10,15 @@ import ScrollToHash from "./components/Common/ScrollToHash";
 import WhatsAppButton from "./components/Common/WhatsAppButton";
 import About from "./pages/About";
 
-import Retreat from "./pages/Retreat";
+// import Retreat from "./pages/Retreat";
 import TermsConditions from "./pages/TermsConditions";
 import CancellationPolicy from "./pages/CancellationPolicy";
-import { useEffect } from "react";
+// import { useEffect } from "react";
 
 export default function App() {
-  useEffect(() => {
-    window.dispatchEvent(new CustomEvent("retreat:open"));
-  }, [])
+  // useEffect(() => {
+  //   window.dispatchEvent(new CustomEvent("retreat:open"));
+  // }, [])
   return (
     // <HelmetProvider>  {/* remove if not using react-helmet-async */}
       <BrowserRouter>
@@ -35,7 +35,7 @@ export default function App() {
               <Route path="/contact" element={<Contact />} />
               <Route path="/terms" element={<TermsConditions />} />
               <Route path="/cancellation" element={<CancellationPolicy />} />
-              <Route path="/retreat" element={<Retreat />} />
+              {/* <Route path="/retreat" element={<Retreat />} /> */}
               {/* 404 fallback */}
               <Route
                 path="*"

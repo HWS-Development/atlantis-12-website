@@ -12,7 +12,7 @@ export default function About() {
         <meta name="description" content={t("aboutPage.seoDesc")} />
       </Helmet> */}
 
-      <section className="container-std section">
+      <section className="container-std section text-center text-lg italic text-black/70 ">
         <article className="max-w-3xl mx-auto">
           {paras.map((p, i) => (
             <p key={i} className={`mb-3 ${i < 6 ? "italic" : ""}`}>

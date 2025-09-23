@@ -18,19 +18,21 @@ export default function RoomCard({ room, onOpen, featured = false }) {
       </div>
 
       {/* Body */}
-      <div className={`p-4 ${featured ? "md:p-5" : ""}`}>
-        <h3 className={`font-serif ${featured ? "text-2xl" : "text-xl"} mb-2`}>
-          {t(room.nameKey)}
-        </h3>
+      <div className={`flex flex-col justify-between  p-4  ${featured ? "md:p-5" : ""}`}>
+        <div className="min-h-20">
+          <h3 className={`font-serif ${featured ? "text-2xl" : "text-xl"} mb-2`}>
+            {t(room.nameKey)}
+          </h3>
 
-        {/* short excerpt only */}
-        <p
-          className={`text-[14.5px] text-black/75 leading-relaxed ${
-            featured ? "line-clamp-5" : "line-clamp-4"
-          }`}
-        >
-          {t(room.shortKey)}
-        </p>
+          {/* short excerpt only */}
+          <p
+            className={`text-[14.5px] text-black/75 leading-relaxed ${
+              featured ? "line-clamp-5" : "line-clamp-4"
+            }`}
+          >
+            {t(room.shortKey)}
+          </p>
+        </div>
 
         <div className="mt-3">
           <button

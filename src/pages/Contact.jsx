@@ -55,15 +55,16 @@ export default function Contact() {
 
   return (
     <section className="container-std py-10 md:py-14">
+
+      <div className="grid md:grid-cols-3 gap-6">
+        {/* Form */}
+      <div className="md:col-span-2">
       <header className="mb-8">
         <h1 className="font-serif text-3xl md:text-4xl">{t("contact.title")}</h1>
         <p className="text-charcoal/75 mt-2">{t("contact.subtitle")}</p>
       </header>
-
-      <div className="grid md:grid-cols-3 gap-6">
-        {/* Form */}
-        <form ref={formRef} onSubmit={onSubmit} className="md:col-span-2 card p-5 md:p-6 space-y-4">
-        <h1 className="font-serif text-3xl md:text-4xl py-6 text-center">{t("contact.form.title")}</h1>
+        <form ref={formRef} onSubmit={onSubmit} className=" card p-5 md:p-6 space-y-4">
+        {/* <h1 className="font-serif text-3xl md:text-4xl py-6 text-center">{t("contact.form.title")}</h1> */}
           <div>
             <label className="block text-sm mb-1">{t("contact.form.name")}</label>
             <input
@@ -122,6 +123,8 @@ export default function Contact() {
             )}
           </div>
         </form>
+        
+      </div>
 
         {/* Info + Map */}
         <aside className="card p-5 md:p-6 flex flex-col gap-4">

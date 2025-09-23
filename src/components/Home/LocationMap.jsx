@@ -9,7 +9,7 @@ export default function LocationLegacy() {
 
   return (
     <section className="container-std section">
-  <h2 className="title-smallcaps mb-4">Location</h2>
+  <h2 className="title-smallcaps mb-4 font-bold">Location</h2>
   <div className="grid md:grid-cols-3 gap-6">
     <div className="md:col-span-2 rounded-xl2 overflow-hidden shadow-soft border border-black/10">
           <iframe

@@ -32,7 +32,7 @@ export default function HomeHero() {
       {/* green welcome band (kept) */}
       <div className="absolute w-full top-10 md:top-36 z-10  ">
         <div className="legacy-hero-banner">
-          <div className="uppercase tracking-[.08em] text-xl md:text-2xl opacity-90 italic">
+          <div className=" tracking-[.08em] text-xl md:text-2xl opacity-90 italic">
             {t("home.hero.welcome", "Bienvenue à")}
           </div>
           <br />
@@ -46,7 +46,7 @@ export default function HomeHero() {
       {/* compact booking bar with labels */}
       <div className="absolute bottom-2 md:bottom-60 left-1/2 -translate-x-1/2 z-10  md:w-auto ">
         <div className="mx-auto">
-          <div className="hero-form-bg backdrop-blur rounded-xl px-6 py-3 md:px-4 md:py-3 shadow-lg">
+          <div className="hero-form-bg rounded-xl px-6 py-3 md:px-4 md:py-3 ">
             <form
               action="https://atlantis-12-maison-d-hotes-et-d-art.hotelrunner.com/bv3/search"
               target="_blank"

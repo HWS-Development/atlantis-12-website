@@ -43,7 +43,7 @@ export default function Navbar() {
   );
 
   return (
-    <header className="legacy-green text-white">
+    <header className="legacy-green text-white font-bold">
       <div className="container-std h-20 flex items-center justify-between">
         {/* Logo */}
         <Link to="/" className="flex items-center gap-2">

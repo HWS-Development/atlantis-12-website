@@ -39,7 +39,7 @@ export default function HomeContactInline() {
 
   return (
     <section id="contact" className="container-std section">
-      <h2 className="title-smallcaps text-[26px] text-center mb-6">
+      <h2 className="title-smallcaps text-[26px] text-center mb-6 font-bold">
         {t("home.contact.title")}
       </h2>
 
