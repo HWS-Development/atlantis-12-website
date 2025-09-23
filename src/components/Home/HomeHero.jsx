@@ -32,11 +32,11 @@ export default function HomeHero() {
       {/* green welcome band (kept) */}
       <div className="absolute w-full top-10 md:top-36 z-10  ">
         <div className="legacy-hero-banner">
-          <div className=" tracking-[.08em] text-xl md:text-2xl opacity-90 italic">
+          <div className=" tracking-[.08em] text-xl md:text-2xl opacity-90 italic font-bold">
             {t("home.hero.welcome", "Bienvenue à")}
           </div>
           <br />
-          <h1 className="font-serif text-2xl md:text-4xl">Atlantis 12</h1>
+          <h1 className="font-serif text-2xl md:text-4xl uppercase font-bold">Atlantis 12</h1>
           <div className="text-xl md:text-2xl opacity-90 italic">
             {t("home.hero.tagline", "maison d’hôtes et d’art — Essaouira")}
           </div>

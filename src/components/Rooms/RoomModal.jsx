@@ -80,7 +80,7 @@ export default function RoomModal({ room, onClose }) {
                 <ul className="flex flex-wrap gap-2">
                   {room.amenities.map((a, i) => (
                     <li key={i} className="px-3 py-1 rounded-full bg-sand-soft text-sm">
-                      {a}
+                      {t(a)}
                     </li>
                   ))}
                 </ul>

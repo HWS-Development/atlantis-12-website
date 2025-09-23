@@ -112,7 +112,8 @@
   },
   "contact": {
     "title": "Contact",
-    "subtitle": "Send us a message — we’ll get back to you shortly.",
+    "subtitle1": "We would be delighted to hear from you.",
+    "subtitle2": "Leave us a message and we will get back to you as soon as possible.",
     "form": {
       "title": "Fill in the form",
       "name": "Full name",
@@ -171,6 +172,13 @@
       "short": "An elegant alcove of tradition, gazing out over the park and patio.",
       "desc": "A double room with traditional charm, featuring a lounge area and fireplace. The private entrance opens onto the patio, while the large bay window overlooks the park, offering a direct immersion in nature and local architecture. The tadelakt bathroom includes a modern shower, soft linens, and refined amenities. A queen-size bed ensures the perfect rest."
     }
+  },
+  "amenities": {
+    "gardenPatio": "Garden & patio access",
+    "soundproof": "Soundproof",
+    "privateEntrance": "Private entrance",
+    "poolView": "Pool & nature view",
+    "privateTerrace": "Private terrace"
   },
   "gallery": {
     "title": "Gallery",

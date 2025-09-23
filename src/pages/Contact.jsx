@@ -61,7 +61,8 @@ export default function Contact() {
       <div className="md:col-span-2">
       <header className="mb-8">
         <h1 className="font-serif text-3xl md:text-4xl">{t("contact.title")}</h1>
-        <p className="text-charcoal/75 mt-2">{t("contact.subtitle")}</p>
+        <p className="text-charcoal/75 mt-2">{t("contact.subtitle1")}</p>
+        <p className="text-charcoal/75 mt-2">{t("contact.subtitle2")}</p>
       </header>
         <form ref={formRef} onSubmit={onSubmit} className=" card p-5 md:p-6 space-y-4">
         {/* <h1 className="font-serif text-3xl md:text-4xl py-6 text-center">{t("contact.form.title")}</h1> */}

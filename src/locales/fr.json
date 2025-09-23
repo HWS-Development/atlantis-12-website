@@ -112,7 +112,8 @@
   },
   "contact": {
     "title": "Contact",
-    "subtitle": "Écrivez-nous — nous reviendrons vers vous rapidement.",
+    "subtitle1": "Nous serons ravis d’échanger avec vous.",
+    "subtitle2": " Laissez-nous un message et nous reviendrons vers vous dans les plus brefs délais.",
     "form": {
       "title": "Remplissez le formulaire",
       "name": "Prénom & Nom",
@@ -223,6 +224,13 @@
     "infoLinkFr": "#",
     "infoLinkEn": "#",
     "bookLink": "https://atlantis-12-maison-d-hotes-et-d-art.hotelrunner.com/bv3/search"
+  },
+  "amenities": {
+    "gardenPatio": "Accès au jardin et au patio",
+    "soundproof": "Insonorisé",
+    "privateEntrance": "Entrée privée",
+    "poolView": "Vue sur la piscine et la nature",
+    "privateTerrace": "Terrasse privée"
   },
   "brand": { "name": "Atlantis 12" },
   "legal": {
