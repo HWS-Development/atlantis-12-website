@@ -9,6 +9,7 @@ import Footer from "./components/Layout/Footer";
 import ScrollToHash from "./components/Common/ScrollToHash";
 import WhatsAppButton from "./components/Common/WhatsAppButton";
 import About from "./pages/About";
+import ScrollToTop from "./components/ui/ScrollToTop";
 
 // import Retreat from "./pages/Retreat";
 import TermsConditions from "./pages/TermsConditions";
@@ -25,6 +26,7 @@ export default function App() {
       <BrowserRouter>
         <div className="min-h-full flex flex-col">
           <Navbar />
+        <ScrollToTop />
           <ScrollToHash />
           <WhatsAppButton />
           <main className="flex-1">
