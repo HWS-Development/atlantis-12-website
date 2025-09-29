@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
+import PageHero from "../components/Common/PageHero";
 
 function Section({ title, paragraphs = [], bullets = [] }) {
   return (
@@ -30,6 +31,12 @@ export default function TermsConditions() {
 
   return (
     <>
+      <PageHero
+        image="/images/view.jpg"
+        align="left"
+        height="md"
+        overlay="dark"
+      />
       <header className="container-std section-tight">
         <h1 className="text-2xl md:text-3xl font-serif text-center">
           {t("legal.terms.title")}

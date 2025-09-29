@@ -1,12 +1,12 @@
 {
-  "brand": "Atlantis 12",
   "nav": {
     "home": "Accueil",
-    "story": "Notre histoire",
-    "rooms": "Chambres & Suites",
-    "experiences": "Expériences",
-    "gallery": "Galerie",
-    "contact": "Contact",
+    "story": "MAISON D'HÔTES",
+    "rooms": "HÉBERGEMENTS",
+    "experiences": "ACTIVITÉS",
+    "gallery": "MAISON D'ART",
+    "table": "TABLE D'HÔTES",
+    "contact": "CONTACT",
     "book": "RÉSERVER"
   },
   "footer": { "rights": "Tous droits réservés." },
@@ -30,9 +30,9 @@
       "search": "Rechercher"
     },
     "about": {
-      "title": "Une maison d’hôtes née d’un rêve",
+      "title": "une maison d’hôtes née d’un rêve",
       "cta": "En savoir plus",
-      "text": "Le rêve d’Asmae et de Lahcen, venus de deux univers complémentaires — l’événementiel pour elle, la peinture et le jazz pour lui — était de créer une parenthèse rare, à la fois accueillante, inspirante et profondément humaine."
+      "text": "Le rêve d’Asmae et de Lahcen, venus de deux univers complémentaires, l’événementiel pour elle, la peinture et le jazz et la peinture pour lui, était de créer une parenthèse rare, à la fois accueillante, inspirante et profondément humaine."
     },
     "activities": {
       "title": "Activités",
@@ -67,6 +67,13 @@
       "title": "Chambres & Suites",
       "seeAll": "Voir toutes les chambres"
     },
+    "roomsIntro": {
+      "title": "Les hébergements d’atlantis 12",
+      "lead": "un sanctuaire de calme et de beauté",
+      "text": "Au cœur des arbres et d’une ancienne bergerie berbère restaurée, notre maison d’hôtes à Essaouira propose des suites et chambres uniques, alliant confort moderne et authenticité.Dans ces espaces lumineux, avec cheminée, terrasse ou patio privé, la pierre et le bois se marient à une décoration bohème et artistique. Que vous optiez pour une petite suite intime ou une chambre supérieure spacieuse, chaque hébergement est conçu pour offrir calme, élégance et convivialité. Les murs de pierre typiques d’Essaouira apportent chaleur et caractère, tandis que les fenêtres et baies vitrées s’ouvrent sur le jardin, la piscine ou la forêt de thuyas, invitant à la détente et à la contemplation.Un cadre raffiné, inspiré par l’art et la nature, pour vivre un séjour inoubliable à Essaouira.",
+      "cta": "En savoir plus",
+      "imgAlt": "Maison d’art Atlantis"
+    },
     "services": {
       "title": "Services",
       "items": [
@@ -91,13 +98,6 @@
       "contact": "Contact"
     },
     "promo": { "cta": "Retraite Sahara & Créativité" },
-    "roomsIntro": {
-      "title": "Chambres et Suites",
-      "lead": "Une harmonie entre nature et luxe.",
-      "text": "Nos chambres et mini-suites sont conçues pour vous offrir une parenthèse alliant charme berbère, confort moderne et atmosphère unique.",
-      "cta": "En savoir plus",
-      "imgAlt": "Chambre lumineuse avec charpente en bois"
-    },
     "contact": {
       "title": "Contact",
       "name": "Prénom & Nom",
@@ -398,5 +398,17 @@
       "fr": "/pdf/Retraite-Shiatsu-Creativite-FR.pdf",
       "en": "/pdf/Retreat-Shiatsu-Creativity-EN.pdf"
     }
+  },
+  "table": {
+    "heroAlt": "Table d’hôtes — Atlantis 12",
+    "title": "La Table d’Hôtes",
+    "sub": "Saveurs authentiques et convivialité",
+    "p1": "La table d’hôtes est au cœur de l’expérience Atlantis : un moment de partage, de générosité et de découvertes culinaires. Inspirée des traditions marocaines, andalouses, berbères et juives, notre cuisine célèbre la richesse des produits frais et de saison.",
+    "p2": "Nos repas sont préparés à partir du potager, du marché local ou de la pêche du jour. Nous ne congelons pas : s’il n’y a pas de pêche, il n’y a pas de poisson au menu. C’est ce respect du produit qui garantit l’authenticité et la qualité de chaque assiette.",
+    "p3": "Autour d’une grande tablée conviviale, ou dans une ambiance plus intime sur demande, nos hôtes se retrouvent pour savourer couscous, tajines, poissons grillés, salades colorées et pâtisseries maison. Chaque dîner est unique, pensé selon la saison et les arrivages.",
+    "p4": "C’est pour cette raison que nos repas se font uniquement sur réservation : afin de vous offrir une cuisine fraîche, sincère et généreuse, fidèle à l’esprit d’Atlantis.",
+    "galleryAlt1": "Brochettes et mezze colorés",
+    "galleryAlt2": "Tajine et douceurs de saison",
+    "galleryAlt3": "Pâtisserie maison croustillante"
   }
 }

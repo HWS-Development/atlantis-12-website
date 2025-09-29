@@ -14,6 +14,7 @@ export default {
         legacy:{ green:'#2F5F2E', orange:'#E68006' }
       },
       fontFamily: {
+        dancing: ['"Dancing Script"', 'cursive'],
         serif: ['Cormorant Garamond','Georgia','serif'],
         sans: [
           'Avenir', 'Avenir Next', 'Avenir LT Std',

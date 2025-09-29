@@ -13,6 +13,7 @@ import About from "./pages/About";
 // import Retreat from "./pages/Retreat";
 import TermsConditions from "./pages/TermsConditions";
 import CancellationPolicy from "./pages/CancellationPolicy";
+import TableDHotes from "./pages/TableDHotes";
 // import { useEffect } from "react";
 
 export default function App() {
@@ -33,6 +34,7 @@ export default function App() {
               <Route path="/rooms" element={<Rooms />} />
               <Route path="/gallery" element={<Gallery />} />
               <Route path="/contact" element={<Contact />} />
+              <Route path="/table" element={<TableDHotes />} />
               <Route path="/terms" element={<TermsConditions />} />
               <Route path="/cancellation" element={<CancellationPolicy />} />
               {/* <Route path="/retreat" element={<Retreat />} /> */}

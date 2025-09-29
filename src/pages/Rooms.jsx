@@ -3,6 +3,7 @@ import { useTranslation } from "react-i18next";
 import { rooms } from "../data/rooms";
 import RoomCard from "../components/Rooms/RoomCard";
 import RoomModal from "../components/Rooms/RoomModal";
+import PageHero from "../components/Common/PageHero";
 
 export default function Rooms() {
   const [openId, setOpenId] = useState(null);
@@ -47,6 +48,15 @@ export default function Rooms() {
     .sort((a, b) => (a.weight ?? 999) - (b.weight ?? 999));
 
   return (
+    <>
+      <PageHero
+        image="/images/view.jpg"
+        title={t("rooms.title")}
+        subtitle={t("rooms.subtitle")}
+        align="left"
+        height="md"
+        overlay="dark"
+      />
     <section className="container-std py-10 md:py-14">
       <header className="mb-6">
         <h1 className="font-serif text-3xl md:text-4xl">{t("rooms.title")}</h1>
@@ -73,5 +83,6 @@ export default function Rooms() {
 
       {selectedRoom && <RoomModal room={selectedRoom} onClose={closeRoom} />}
     </section>
+    </>
   );
 }

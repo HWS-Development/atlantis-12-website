@@ -2,11 +2,12 @@
   "brand": "Atlantis 12",
   "nav": {
     "home": "Home",
-    "story": "Our Story",
-    "rooms": "Rooms & Suites",
-    "experiences": "Experiences",
-    "gallery": "Gallery",
-    "contact": "Contact",
+    "story": "GUESTHOUSE",
+    "rooms": "ACCOMMODATIONS",
+    "experiences": "ACTIVITIES",
+    "gallery": "HOUSE OF ART",
+    "contact": "CONTACT",
+    "table": "TABLE D'HÔTES",
     "book": "BOOK NOW"
   },
   "footer": { "rights": "All rights reserved." },
@@ -30,9 +31,9 @@
       "search": "Search"
     },
     "about": {
-      "title": "A guesthouse born from a dream",
+      "title": "a guesthouse born from a dream",
       "cta": "Learn more",
-      "text": "The dream of Asmae and Lahcen—coming from complementary worlds, event production for her, painting and jazz for him—was to create a rare retreat that is welcoming, inspiring, and deeply human."
+      "text": "The dream of Asmae and Lahcen, who came from two complementary worlds, event management for her, and painting and jazz for him, was to create a rare interlude, both welcoming, inspiring, and profoundly human."
     },
     "activities": {
       "title": "Activities",
@@ -92,11 +93,11 @@
     },
     "promo": { "cta": "Sahara & Creativity Retreat" },
     "roomsIntro": {
-      "title": "Rooms & Suites",
-      "lead": "A harmony between nature and comfort.",
-      "text": "Our rooms and mini-suites are designed to offer a rare pause—Berber charm, modern comfort and a unique atmosphere.",
+      "title": "The accommodations at Atlantis 12",
+      "lead": "a sanctuary of calm and beauty",
+      "text": "Nestled among the trees and within a restored Berber sheepfold, our guesthouse in Essaouira offers unique suites and rooms, combining modern comfort with authenticity. In these bright spaces, featuring fireplaces, terraces or private patios, stone and wood blend with a bohemian and artistic décor. Whether you choose an intimate small suite or a spacious superior room, each accommodation is designed to offer calm, elegance, and conviviality. The typical stone walls of Essaouira bring warmth and character, while the windows and glass doors open onto the garden, the pool, or the thuya forest, inviting relaxation and contemplation. A refined setting, inspired by art and nature, for an unforgettable stay in Essaouira.",
       "cta": "Learn more",
-      "imgAlt": "Bright room with wooden beams"
+      "imgAlt": "Atlantis art house"
     },
     "contact": {
       "title": "Contact",
@@ -384,5 +385,17 @@
       "fr": "/pdf/Retraite-Shiatsu-Creativite-FR.pdf",
       "en": "/pdf/Retreat-Shiatsu-Creativity-EN.pdf"
     }
+  },
+  "table": {
+    "heroAlt": "Table d’hôtes — Atlantis 12",
+    "title": "La Table d’Hôtes",
+    "sub": "Authentic flavors & conviviality",
+    "p1": "Our table d’hôtes lies at the heart of the Atlantis experience: a moment of sharing, generosity, and culinary discovery. Inspired by Moroccan, Andalusian, Berber and Jewish traditions, our cuisine celebrates fresh, seasonal produce.",
+    "p2": "Meals are prepared from our garden, the local market, or the day’s catch. We don’t freeze: if there’s no catch, there’s no fish on the menu. This respect for the product guarantees the authenticity and quality of every plate.",
+    "p3": "Around a large convivial table—or in a more intimate setting on request—guests gather to enjoy couscous, tagines, grilled fish, colorful salads and homemade pastries. Each dinner is unique, shaped by the season and what’s available.",
+    "p4": "For that reason, meals are served by reservation only: to offer you fresh, sincere and generous cuisine, true to the spirit of Atlantis.",
+    "galleryAlt1": "Colorful skewers and mezze",
+    "galleryAlt2": "Tagine and seasonal delights",
+    "galleryAlt3": "Crisp homemade pastry"
   }
 }

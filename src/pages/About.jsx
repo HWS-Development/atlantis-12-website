@@ -1,5 +1,6 @@
 // import { Helmet } from "react-helmet-async";
 import { useTranslation } from "react-i18next";
+import PageHero from "../components/Common/PageHero";
 
 export default function About() {
   const { t } = useTranslation();
@@ -12,6 +13,13 @@ export default function About() {
         <meta name="description" content={t("aboutPage.seoDesc")} />
       </Helmet> */}
 
+      <PageHero
+        image="/images/view.jpg"
+        title={t("nav.story")}
+        align="left"
+        height="md"
+        overlay="dark"
+      />
       <section className="container-std section text-center text-lg italic text-black/70 ">
         <article className="max-w-3xl mx-auto">
           {paras.map((p, i) => (

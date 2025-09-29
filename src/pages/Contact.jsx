@@ -1,6 +1,7 @@
 import { useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import emailjs from "@emailjs/browser";
+import PageHero from "../components/Common/PageHero";
 
 const MAP_LINK = "https://maps.app.goo.gl/6EN1hJTrw8mtqWaf6";
 const MAP_EMBED =
@@ -54,132 +55,141 @@ export default function Contact() {
   };
 
   return (
-    <section className="container-std py-10 md:py-14">
+    <>
+      <PageHero
+        image="/images/view.jpg"
+        title={t("contact.title")}
+        align="left"
+        height="md"
+        overlay="dark"
+      />
+      <section className="container-std py-10 md:py-14">
 
-      <div className="grid md:grid-cols-3 gap-6">
-        {/* Form */}
-      <div className="md:col-span-2">
-      <header className="mb-8">
-        <h1 className="font-serif text-3xl md:text-4xl">{t("contact.title")}</h1>
-        <p className="text-charcoal/75 mt-2">{t("contact.subtitle1")}</p>
-        <p className="text-charcoal/75 mt-2">{t("contact.subtitle2")}</p>
-      </header>
-        <form ref={formRef} onSubmit={onSubmit} className=" card p-5 md:p-6 space-y-4">
-        {/* <h1 className="font-serif text-3xl md:text-4xl py-6 text-center">{t("contact.form.title")}</h1> */}
-          <div>
-            <label className="block text-sm mb-1">{t("contact.form.name")}</label>
-            <input
-              name="name"
-              type="text"
-              className={`w-full border rounded-xl2 px-3 py-2 ${errors.name ? "border-red-400" : ""}`}
-              placeholder="Jane Doe"
-            />
-          </div>
-
-          <div className="grid sm:grid-cols-2 gap-4">
+        <div className="grid md:grid-cols-3 gap-6">
+          {/* Form */}
+        <div className="md:col-span-2">
+        <header className="mb-8">
+          <h1 className="font-serif text-3xl md:text-4xl">{t("contact.title")}</h1>
+          <p className="text-charcoal/75 mt-2">{t("contact.subtitle1")}</p>
+          <p className="text-charcoal/75 mt-2">{t("contact.subtitle2")}</p>
+        </header>
+          <form ref={formRef} onSubmit={onSubmit} className=" card p-5 md:p-6 space-y-4">
+          {/* <h1 className="font-serif text-3xl md:text-4xl py-6 text-center">{t("contact.form.title")}</h1> */}
             <div>
-              <label className="block text-sm mb-1">{t("contact.form.email")}</label>
+              <label className="block text-sm mb-1">{t("contact.form.name")}</label>
               <input
-                name="email"
-                type="email"
-                className={`w-full border rounded-xl2 px-3 py-2 ${errors.email ? "border-red-400" : ""}`}
-                placeholder="you@example.com"
+                name="name"
+                type="text"
+                className={`w-full border rounded-xl2 px-3 py-2 ${errors.name ? "border-red-400" : ""}`}
+                placeholder="Jane Doe"
               />
             </div>
+
+            <div className="grid sm:grid-cols-2 gap-4">
+              <div>
+                <label className="block text-sm mb-1">{t("contact.form.email")}</label>
+                <input
+                  name="email"
+                  type="email"
+                  className={`w-full border rounded-xl2 px-3 py-2 ${errors.email ? "border-red-400" : ""}`}
+                  placeholder="you@example.com"
+                />
+              </div>
+              <div>
+                <label className="block text-sm mb-1">{t("contact.form.phone")}</label>
+                <input
+                  name="phone"
+                  type="tel"
+                  className="w-full border rounded-xl2 px-3 py-2"
+                  placeholder="+212 6 12 34 56 78"
+                />
+              </div>
+            </div>
+
             <div>
-              <label className="block text-sm mb-1">{t("contact.form.phone")}</label>
-              <input
-                name="phone"
-                type="tel"
-                className="w-full border rounded-xl2 px-3 py-2"
-                placeholder="+212 6 12 34 56 78"
+              <label className="block text-sm mb-1">{t("contact.form.message")}</label>
+              <textarea
+                name="message"
+                rows="5"
+                className={`w-full border rounded-xl2 px-3 py-2 ${errors.message ? "border-red-400" : ""}`}
+                placeholder="..."
               />
             </div>
-          </div>
 
-          <div>
-            <label className="block text-sm mb-1">{t("contact.form.message")}</label>
-            <textarea
-              name="message"
-              rows="5"
-              className={`w-full border rounded-xl2 px-3 py-2 ${errors.message ? "border-red-400" : ""}`}
-              placeholder="..."
-            />
-          </div>
+            <div className="flex items-center gap-3">
+              <button
+                type="submit"
+                className="btn btn-primary px-8 py-3"
+                disabled={status === "sending"}
+              >
+                {status === "sending" ? "..." : t("contact.form.send")}
+              </button>
 
-          <div className="flex items-center gap-3">
-            <button
-              type="submit"
-              className="btn btn-primary px-8 py-3"
-              disabled={status === "sending"}
-            >
-              {status === "sending" ? "..." : t("contact.form.send")}
-            </button>
-
-            {status === "success" && (
-              <span className="text-green-700">{t("contact.form.success")}</span>
-            )}
-            {status === "error" && (
-              <span className="text-red-600">{t("contact.form.error")}</span>
-            )}
-          </div>
-        </form>
-        
-      </div>
-
-        {/* Info + Map */}
-        <aside className="card p-5 md:p-6 flex flex-col gap-4">
-          <div>
-            <h3 className="font-serif text-xl mb-2">{t("contact.info.address_title")}</h3>
-            <p className="text-sm text-charcoal/80">{t("contact.info.address")}</p>
-          </div>
-
-          <div>
-            <h3 className="font-serif text-xl mb-2">{t("contact.info.contact_title")}</h3>
-            <ul className="space-y-1 text-sm text-charcoal/80">
-              <li>
-                <strong>{t("contact.info.email_label")}:</strong>{" "}
-                <a className="underline" href="mailto:resa@atlantis12essaouira.com">resa@atlantis12essaouira.com</a>
-              </li>
-              <li>
-                <strong>{t("contact.info.phone_label")}:</strong>{" "}
-                <a className="underline" href="tel:+212612345678">+212 666 29 22 85</a>
-              </li>
-              <li>
-                <strong>{t("contact.info.whatsapp")}:</strong>{" "}
-                <a className="underline" href="https://wa.me/212666292285" target="_blank" rel="noreferrer">
-                  +212 666 29 22 85
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          <div className="rounded-xl2 overflow-hidden shadow-soft">
-            <div className="relative w-full h-[260px] md:h-[300px]">
-              <iframe
-                title="Atlantis 12 Map"
-                src={MAP_EMBED}
-                className="absolute inset-0 w-full h-full"
-                style={{ border: 0 }}
-                loading="lazy"
-                allowFullScreen
-                referrerPolicy="no-referrer-when-downgrade"
-              />
+              {status === "success" && (
+                <span className="text-green-700">{t("contact.form.success")}</span>
+              )}
+              {status === "error" && (
+                <span className="text-red-600">{t("contact.form.error")}</span>
+              )}
             </div>
-          </div>
+          </form>
+          
+        </div>
 
-          <div>
-            <a
-              href={MAP_LINK}
-              target="_blank"
-              rel="noreferrer"
-              className="btn btn-secondary "
-            >
-              {t("contact.info.open_map")}
-            </a>
-          </div>
-        </aside>
-      </div>
-    </section>
+          {/* Info + Map */}
+          <aside className="card p-5 md:p-6 flex flex-col gap-4">
+            <div>
+              <h3 className="font-serif text-xl mb-2">{t("contact.info.address_title")}</h3>
+              <p className="text-sm text-charcoal/80">{t("contact.info.address")}</p>
+            </div>
+
+            <div>
+              <h3 className="font-serif text-xl mb-2">{t("contact.info.contact_title")}</h3>
+              <ul className="space-y-1 text-sm text-charcoal/80">
+                <li>
+                  <strong>{t("contact.info.email_label")}:</strong>{" "}
+                  <a className="underline" href="mailto:resa@atlantis12essaouira.com">resa@atlantis12essaouira.com</a>
+                </li>
+                <li>
+                  <strong>{t("contact.info.phone_label")}:</strong>{" "}
+                  <a className="underline" href="tel:+212612345678">+212 666 29 22 85</a>
+                </li>
+                <li>
+                  <strong>{t("contact.info.whatsapp")}:</strong>{" "}
+                  <a className="underline" href="https://wa.me/212666292285" target="_blank" rel="noreferrer">
+                    +212 666 29 22 85
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <div className="rounded-xl2 overflow-hidden shadow-soft">
+              <div className="relative w-full h-[260px] md:h-[300px]">
+                <iframe
+                  title="Atlantis 12 Map"
+                  src={MAP_EMBED}
+                  className="absolute inset-0 w-full h-full"
+                  style={{ border: 0 }}
+                  loading="lazy"
+                  allowFullScreen
+                  referrerPolicy="no-referrer-when-downgrade"
+                />
+              </div>
+            </div>
+
+            <div>
+              <a
+                href={MAP_LINK}
+                target="_blank"
+                rel="noreferrer"
+                className="btn btn-secondary "
+              >
+                {t("contact.info.open_map")}
+              </a>
+            </div>
+          </aside>
+        </div>
+      </section>
+    </>
   );
 }
