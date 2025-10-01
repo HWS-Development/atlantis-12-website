@@ -32,11 +32,11 @@ export default function AboutSnippet() {
           "
         >
           {/* small script-like brand line */}
-          <div className="font-serif italic text-[28px] md:text-[36px] text-black/80 leading-snug">
-            <span className="tracking-wide">atlantis,</span>
+          <div className="font-serif text-[28px] md:text-[36px] text-black/80 leading-snug">
+            <span className="tracking-wide !font-dancing">atlantis 12,</span>
           </div>
 
-          <h2 className="mt-2 font-serif text-xl md:text-2xl text-black/85">
+          <h2 className="mt-2 font-serif text-xl md:text-lg font-bold text-black/85">
             {t("home.about.title", "une maison d’hôtes née d’un rêve")}
           </h2>
 

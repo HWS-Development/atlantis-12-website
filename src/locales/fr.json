@@ -32,7 +32,7 @@
     "about": {
       "title": "une maison d’hôtes née d’un rêve",
       "cta": "En savoir plus",
-      "text": "Le rêve d’Asmae et de Lahcen, venus de deux univers complémentaires, l’événementiel pour elle, la peinture et le jazz et la peinture pour lui, était de créer une parenthèse rare, à la fois accueillante, inspirante et profondément humaine."
+      "text": "Le rêve d’Asmae et de Lahcen, venus de deux univers complémentaires, l’événementiel pour elle, la peinture et le jazz pour lui, était de créer une parenthèse rare, à la fois accueillante, inspirante et profondément humaine."
     },
     "activities": {
       "title": "Activités",
@@ -232,7 +232,7 @@
     "poolView": "Vue sur la piscine et la nature",
     "privateTerrace": "Terrasse privée"
   },
-  "brand": { "name": "Atlantis 12" },
+  "brand": { "name": "atlantis 12" },
   "legal": {
     "terms": {
       "seoTitle": "Conditions Générales de Vente – Atlantis 12",

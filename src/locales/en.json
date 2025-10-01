@@ -1,5 +1,4 @@
 {
-  "brand": "Atlantis 12",
   "nav": {
     "home": "Home",
     "story": "GUESTHOUSE",
@@ -233,7 +232,7 @@
     "infoLinkEn": "#",
     "bookLink": "https://atlantis-12-maison-d-hotes-et-d-art.hotelrunner.com/bv3/search"
   },
-  "brand": { "name": "Atlantis 12" },
+  "brand": { "name": "atlantis 12" },
   "legal": {
     "terms": {
       "seoTitle": "Terms & Conditions – Atlantis 12",

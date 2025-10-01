@@ -6,7 +6,7 @@ export default function HomeHero() {
   const { t } = useTranslation();
   // swap these with your interior hero images
   const slides = [
-    "/images/exterior.jpg"
+    "/images/home herp.jpeg"
   ];
 
   const [idx, setIdx] = useState(0);
@@ -44,14 +44,14 @@ export default function HomeHero() {
           <img
             src="/images/logo atlantis final - blanc sans mot.png"
             alt="Atlantis 12 — maison d’hôtes et d’art"
-            className="mx-auto w-[220px] md:w-[320px] drop-shadow-md"
+            className="mx-auto w-[150px] md:w-[160px] drop-shadow-md mb-4"
           />
           {/* Fallback (remove if using the SVG above) */}
           
-          <h1 className="font-serif text-4xl md:text-6xl tracking-wide drop-shadow-md !font-dancing">
+          <h1 className="text-4xl md:text-6xl tracking-wide drop-shadow-md !font-dancing">
             {t('brand.name')}
           </h1>
-          <p className="mt-2 text-lg md:text-xl opacity-90 italic">
+          <p className="mt-2 text-lg md:text-xl opacity-90 font-bold">
             {t('home.hero.tagline')}
           </p>
          
