@@ -410,5 +410,30 @@
     "galleryAlt1": "Brochettes et mezze colorés",
     "galleryAlt2": "Tajine et douceurs de saison",
     "galleryAlt3": "Pâtisserie maison croustillante"
+  },
+  "maison": {
+    "title": "La maison d’hôtes",
+    "subtitle": "L’esprit d’Essaouira, entre silence, beauté et accueil",
+
+    "p1": "Née du rêve commun d’Asmae et de Lahcen, Atlantis 12 est une maison d’hôtes à Essaouira, au Maroc, nichée entre la nature sauvage et l’océan. Plus qu’un lieu d’hébergement, c’est une expérience sensible et artistique, où chaque détail raconte une histoire.",
+    "p2": "Dans ce havre aux inspirations berbères, l’architecture traditionnelle se mêle à la lumière changeante d’Essaouira. Les œuvres d’art, créées ou exposées sur place, dialoguent avec les gestes simples et chaleureux de l’accueil.",
+    "p3": "À Atlantis 12, le silence apaise, la beauté inspire, et chaque séjour devient un moment de partage, de création ou de contemplation.",
+    "p4": "Que vous soyez en quête d’un séjour authentique, d’un lieu de retraite ou d’un hébergement artistique près de la mer, notre maison d’hôtes vous ouvre ses portes avec cœur.",
+
+    "quote": "Entre le vent et la pierre,\nil y a\nun silence qui inspire.",
+
+    "footer": "Ici, tout se partage : la lumière, le pain, et la paix des lieux."
+    
+  },
+  "maisonDArt": {
+  "heroAlt": "La maison d’art - Atlantis 12",
+  "title": "La maison d’art",
+  "subtitle": "Si l’hospitalité est le premier visage d’Atlantis 12, l’art en est le cœur battant.",
+    "p1": "Derrière les chambres et les jardins, Atlantis s’affirme aussi comme une Maison d’Art, où la créativité est vécue, partagée et célébrée au quotidien.",
+    "p2": "Peintures, sculptures, objets singuliers et musique dialoguent avec la pierre et la lumière d’Essaouira, insufflant au lieu une atmosphère à la fois inspirante et apaisante.",
+    "p3": "L’atelier accueille régulièrement des artistes en résidence, ouverts à l’expérimentation et à la rencontre.",
+    "p4": "Expositions, concerts improvisés et soirées jazz ponctuent la vie d’Atlantis, transformant chaque séjour en une expérience culturelle et sensorielle.",
+    "tagline": "Ainsi, Atlantis 12 conjugue deux vocations : refuge de calme et de beauté, et lieu de création vivante."
   }
 }
+

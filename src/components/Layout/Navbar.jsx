@@ -5,8 +5,9 @@ import { useTranslation } from "react-i18next";
 export default function Navbar() {
   const { t } = useTranslation();
   const [open, setOpen] = useState(false);
+  const [submenu, setSubmenu] = useState(false);
 
-  // --- NEW: sticky topbar states ---
+  // --- sticky topbar states ---
   const { pathname } = useLocation();
   const isHome = pathname === "/";
   const [sticky, setSticky] = useState(false);
@@ -18,18 +19,19 @@ export default function Navbar() {
     return () => (document.body.style.overflow = prev || "");
   }, [open]);
 
-  // --- NEW: enable sticky header on non-home pages ---
+  // sticky header for non-home pages
   useEffect(() => {
     if (isHome) {
       setSticky(false);
       return;
     }
     const onScroll = () => setSticky(window.scrollY > 10);
-    onScroll(); // run once on mount/route change
+    onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, [isHome]);
 
+  /** BOOK BUTTON */
   const BookBtn = ({ className = "" }) => (
     <a
       href="https://atlantis-12-maison-d-hotes-et-d-art.hotelrunner.com/bv3/search"
@@ -41,13 +43,14 @@ export default function Navbar() {
     </a>
   );
 
+  /** LANGUAGE SWITCHER */
   function LangPill({ className = "" }) {
     const { i18n } = useTranslation();
     const [openSel, setOpenSel] = useState(false);
 
     const langs = [
       { code: "fr", label: "FR", flag: "/images/frenchflagframed.svg" },
-      { code: "en", label: "EN", flag: "/images/vecteezy_american-flag-on-white-background_4693397.svg" }, // placeholder
+      { code: "en", label: "EN", flag: "/images/vecteezy_american-flag-on-white-background_4693397.svg" },
     ];
     const current = langs.find((l) => l.code === i18n.language) || langs[0];
 
@@ -68,6 +71,7 @@ export default function Navbar() {
             <path d="M6 9l6 6 6-6" />
           </svg>
         </button>
+
         {openSel && (
           <div className="absolute right-0 mt-1 w-28 bg-white rounded-lg shadow-lg overflow-hidden z-50">
             {langs.map((l) => (
@@ -88,13 +92,14 @@ export default function Navbar() {
 
   return (
     <>
-      {/* ===== Existing floating controls over hero (KEEP) ===== */}
+      {/* ===== Floating controls on homepage ===== */}
       <div className="fixed inset-x-0 top-0 z-40 pointer-events-none relative">
         <div className="pointer-events-auto absolute right-20 top-5 flex items-center gap-3">
           <LangPill />
         </div>
+
         <div className="h-0">
-          {/* Burger (top-left) */}
+          {/* BURGER BUTTON */}
           <button
             type="button"
             onClick={() => setOpen(true)}
@@ -106,130 +111,167 @@ export default function Navbar() {
             </svg>
           </button>
 
-          {/* Right-side actions */}
           <div className="pointer-events-auto absolute right-40 top-24 flex items-center gap-3">
             <BookBtn />
           </div>
         </div>
       </div>
 
-      {/* ===== NEW: Sticky topbar for non-home pages ===== */}
+      {/* ===== Sticky topbar (non-home pages) ===== */}
       {!isHome && (
         <div
           className={`fixed inset-x-0 top-0 z-50 transition-transform duration-300 ${
             sticky ? "translate-y-0" : "-translate-y-full"
           }`}
         >
-          <div className="bg-[#8EA17D] opacity-90 text-white shadow-sm py-2 ">
+          <div className="bg-[#8EA17D] opacity-90 text-white shadow-sm py-2">
             <div className="container-std h-14 flex items-center justify-between">
-                <button
-                  type="button"
-                  onClick={() => setOpen(true)}
-                  aria-label="Open menu"
-                  className="inline-grid place-items-center w-10 h-10 rounded-full bg-white/85 hover:bg-white shadow"
-                >
-                  <svg width="24" height="24" viewBox="0 0 24 24" stroke="#2F2F2F" fill="none">
-                    <path strokeWidth="2" strokeLinecap="round" d="M4 7h16M4 12h16M4 17h16" />
-                  </svg>
-                </button>
+              {/* Burger */}
+              <button
+                type="button"
+                onClick={() => setOpen(true)}
+                aria-label="Open menu"
+                className="inline-grid place-items-center w-10 h-10 rounded-full bg-white/85 hover:bg-white shadow"
+              >
+                <svg width="24" height="24" viewBox="0 0 24 24" stroke="#2F2F2F" fill="none">
+                  <path strokeWidth="2" strokeLinecap="round" d="M4 7h16M4 12h16M4 17h16" />
+                </svg>
+              </button>
+
               <Link to="/" className="flex items-center gap-2">
                 <img src="/images/logo atlantis final - blanc sans mot.png" alt="Atlantis 12" className="h-9" />
               </Link>
 
               <div className="flex items-center gap-3">
-              <BookBtn className="bg-white/90" />
-                {/* <LangPill /> */}
+                <BookBtn className="bg-white/90" />
               </div>
             </div>
           </div>
         </div>
       )}
 
-      {/* ===== Overlay + LEFT MENU PANEL (unchanged) ===== */}
+      {/* ============ NEW LEFT PANEL MENU ============== */}
       <div
-        className={`fixed inset-0 z-50 transition ${open ? "pointer-events-auto" : "pointer-events-none"}`}
+        className={`fixed inset-0 z-50 transition ${
+          open ? "pointer-events-auto" : "pointer-events-none"
+        }`}
         aria-hidden={!open}
       >
+        {/* BACKDROP */}
         <div
-          className={`absolute inset-0 bg-black/20 transition-opacity ${open ? "opacity-100" : "opacity-0"}`}
+          className={`absolute inset-0 bg-black/10 transition-opacity ${
+            open ? "opacity-100" : "opacity-0"
+          }`}
           onClick={() => setOpen(false)}
         />
 
+        {/* LEFT PANEL BEIGE */}
         <div
-          className={`absolute bg-white/90 left-0 pt-16 h-full w-[86vw] max-w-[460px] p-6 transition-transform duration-300 ${
+          className={`absolute left-0 top-0 h-full w-[85vw] max-w-[420px] bg-[#F5EFDD] p-8 pt-16 transition-transform duration-300 ${
             open ? "translate-x-0" : "-translate-x-full"
           }`}
         >
-          <div className="bg-[#8EA17D] text-white w-full p-6 md:p-8 shadow-xl">
-            <nav className="space-y-3">
-              <MenuItem onClick={() => setOpen(false)} to="/">
-                {t("nav.home").toUpperCase()}
-              </MenuItem>
-              <a href="/#about" onClick={() => setOpen(false)} className="block text-md md:text-lg font-semibold tracking-wide">
-                {t("nav.story").toUpperCase()}
-              </a>
-              <a href="/#rooms" onClick={() => setOpen(false)} className="block text-md md:text-lg font-semibold tracking-wide">
-                {t("nav.rooms").toUpperCase()}
-              </a>
-              <NavLink to="/gallery" onClick={() => setOpen(false)} className="block text-md md:text-lg font-semibold tracking-wide">
-                {t("nav.gallery").toUpperCase()}
-              </NavLink>
-              <a href="/#experience" onClick={() => setOpen(false)} className="block text-md md:text-lg font-semibold tracking-wide">
-                {t("nav.experiences").toUpperCase()}
-              </a>
-              <NavLink to="/table" onClick={() => setOpen(false)} className="block text-md md:text-lg font-semibold tracking-wide">
-                {t("nav.table")}
-              </NavLink>
-              <NavLink to="/contact" onClick={() => setOpen(false)} className="block text-md md:text-lg font-semibold tracking-wide">
-                {t("nav.contact").toUpperCase()}
-              </NavLink>
-              <a
-                href="https://atlantis-12-maison-d-hotes-et-d-art.hotelrunner.com/bv3/search"
-                target="_blank"
-                rel="noreferrer"
-                className="block text-md md:text-lg font-semibold tracking-wide"
-                onClick={() => setOpen(false)}
-              >
-                {t("nav.book").toUpperCase()}
-              </a>
-            </nav>
-          </div>
+          {/* Close Button */}
+          <button
+            onClick={() => setOpen(false)}
+            aria-label="Close menu"
+            className="absolute top-6 left-6 inline-grid place-items-center w-10 h-10 text-black"
+          >
+            <svg width="28" height="28" viewBox="0 0 24 24" stroke="black" fill="none">
+              <path strokeWidth="2" strokeLinecap="round" d="M6 6l12 12M18 6L6 18" />
+            </svg>
+          </button>
 
-          <div className="mt-6 flex items-center gap-6 pl-2">
+          {/* MENU CONTENT */}
+          <nav className="mt-10 text-[#553D2A] font-light text-[20px] space-y-6">
+
+            <MenuItem onClick={() => setOpen(false)} to="/">
+              Bienvenue !
+            </MenuItem>
+
+            {/* DROPDOWN — LA MAISON D'HÔTES */}
+            <div>
+              <button
+                onClick={() => setSubmenu((v) => !v)}
+                className="flex items-center justify-between w-full"
+              >
+                <span>La maison d’hôtes</span>
+
+                <svg
+                  width="18"
+                  height="18"
+                  fill="none"
+                  stroke="#553D2A"
+                  strokeWidth="2"
+                  className={`transition-transform ${submenu ? "rotate-180" : ""}`}
+                >
+                  <path d="M6 9l6 6 6-6" />
+                </svg>
+              </button>
+
+              {submenu && (
+                <div className="ml-6 mt-4 space-y-4 text-[18px]">
+                  <MenuItem to="/rooms" onClick={() => setOpen(false)}>
+                    HÉBERGEMENTS
+                  </MenuItem>
+
+                  <MenuItem to="/table" onClick={() => setOpen(false)}>
+                    LA TABLE D’HÔTES
+                  </MenuItem>
+
+                  <a
+                    href="/#experience"
+                    onClick={() => setOpen(false)}
+                    className="block hover:opacity-60"
+                  >
+                    ACTIVITÉS
+                  </a>
+                </div>
+              )}
+            </div>
+
+            <MenuItem to="/gallery" onClick={() => setOpen(false)}>
+              La maison d’art
+            </MenuItem>
+
+            <MenuItem to="/contact" onClick={() => setOpen(false)}>
+              Contact
+            </MenuItem>
+
+            <a
+              href="https://atlantis-12-maison-d-hotes-et-d-art.hotelrunner.com/bv3/search"
+              target="_blank"
+              rel="noreferrer"
+              onClick={() => setOpen(false)}
+              className="block font-medium hover:opacity-60"
+            >
+              RÉSERVER
+            </a>
+          </nav>
+
+          {/* INSTAGRAM ICON BOTTOM */}
+          <div className="absolute bottom-10 left-10 flex items-center gap-6">
             <a
               href="https://instagram.com"
               target="_blank"
               rel="noreferrer"
-              className="inline-grid place-items-center w-12 h-12 rounded-full bg-white text-black hover:bg-white/90 shadow"
-              aria-label="Instagram"
+              className="inline-grid place-items-center w-12 h-12 rounded-full bg-black text-white"
             >
-              {/* (…instagram svg…) */}
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M7 2h10a5 5 0 015 5v10a5 5 0 01-5 5H7a5 5 0 01-5-5V7a5 5 0 015-5zm5 5a5 5 0 100 10 5 5 0 000-10zm6-1a1 1 0 100 2 1 1 0 000-2z"/></svg>
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M7 2h10a5 5 0 015 5v10a5 5 0 01-5 5H7a5 5 0 01-5-5V7a5 5 0 015-5zm5 5a5 5 0 100 10 5 5 0 000-10zm6-1a1 1 0 100 2 1 1 0 000-2z" />
+              </svg>
             </a>
-            <SocialIcon href="https://facebook.com" label="Facebook">
-              <path d="M14 9h3V6h-3a4 4 0 00-4 4v3H7v3h3v8h3v-8h3l1-3h-4v-3a1 1 0 011-1z" />
-            </SocialIcon>
           </div>
-
-          <button
-            onClick={() => setOpen(false)}
-            aria-label="Close menu"
-            className="absolute left-[calc(86vw_>_460px?460px:86vw)] top-[5px] right-6 ml-4 inline-grid place-items-center w-12 h-12 rounded-full bg-white/85 hover:bg-white shadow-md"
-          >
-            <svg width="28" height="28" viewBox="0 0 24 24" stroke="#2F2F2F" fill="none">
-              <path strokeWidth="2" strokeLinecap="round" d="M6 6l12 12M18 6L6 18" />
-            </svg>
-          </button>
         </div>
       </div>
     </>
   );
 }
 
-/** Helpers */
+/* ===== Helpers ===== */
 function MenuItem({ to, children, onClick }) {
   return (
-    <NavLink to={to} onClick={onClick} className="block text-md md:text-lg font-semibold tracking-wide">
+    <NavLink to={to} onClick={onClick} className="block hover:opacity-60">
       {children}
     </NavLink>
   );

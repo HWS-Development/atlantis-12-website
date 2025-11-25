@@ -1,103 +1,86 @@
-import { useEffect, useMemo, useState } from "react";
+// src/pages/MaisonDArt.jsx
 import { useTranslation } from "react-i18next";
-import Lightbox from "../components/Gallery/Lightbox";
-import { galleryItems } from "../data/gallery";
-import PageHero from "../components/Common/PageHero";
-
-const CATS = ["all", "exteriors", "rooms", "pool", "dining", "nature"];
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/navigation";
+import { Navigation } from "swiper/modules";
 
 export default function Gallery() {
   const { t } = useTranslation();
-  const [cat, setCat] = useState("all");
-  const [lbIndex, setLbIndex] = useState(null); // null = closed
-
-  const filtered = useMemo(
-    () => (cat === "all" ? galleryItems : galleryItems.filter((i) => i.category === cat)),
-    [cat]
-  );
-
-  // Open by hash (e.g., /gallery#g-room-2)
-  useEffect(() => {
-    const openFromHash = () => {
-      const id = window.location.hash.replace("#", "");
-      if (!id) return setLbIndex(null);
-      const idx = filtered.findIndex((i) => i.id === id);
-      setLbIndex(idx >= 0 ? idx : null);
-    };
-    openFromHash();
-    window.addEventListener("hashchange", openFromHash);
-    return () => window.removeEventListener("hashchange", openFromHash);
-  }, [filtered]);
-
-  const openAt = (idx) => {
-    setLbIndex(idx);
-    const id = filtered[idx].id;
-    if (window.location.hash !== `#${id}`) history.pushState(null, "", `#${id}`);
-  };
-  const close = () => {
-    setLbIndex(null);
-    if (window.location.hash) history.replaceState(null, "", " ");
-  };
-  const next = () => setLbIndex((p) => (p === null ? 0 : (p + 1) % filtered.length));
-  const prev = () => setLbIndex((p) => (p === null ? 0 : (p - 1 + filtered.length) % filtered.length));
 
   return (
-    <>
-      <PageHero
-        image="/images/view.jpg"
-        title={t("rooms.title")}
-        subtitle={t("rooms.subtitle")}
-        align="left"
-        height="md"
-        overlay="dark"
-      />
-      <section className="container-std py-10 md:py-14">
-        {/* Header */}
-        <header className="mb-6">
-          <h1 className="font-serif text-3xl md:text-4xl">{t("gallery.title")}</h1>
-          <p className="text-charcoal/75 mt-2">{t("gallery.subtitle")}</p>
-        </header>
+    <div className="flex flex-col">
 
-        {/* Filters */}
-        <div className="flex flex-wrap gap-2 mb-6">
-          {CATS.map((c) => (
-            <button
-              key={c}
-              onClick={() => { setCat(c); close(); }}
-              className={`btn btn-sm ${cat === c ? "btn-primary" : "btn-outline"}`}
-            >
-              {t(`gallery.filters.${c}`)}
-            </button>
-          ))}
-        </div>
-
-        {/* Masonry grid (CSS columns) */}
-        {filtered.length === 0 ? (
-          <div className="text-charcoal/70">{t("gallery.empty")}</div>
-        ) : (
-          <div className="columns-1 sm:columns-2 lg:columns-3 gap-4 [column-fill:_balance]">
-            {filtered.map((item, idx) => (
-              <button
-                key={item.id}
-                onClick={() => openAt(idx)}
-                className="mb-4 w-full break-inside-avoid group relative"
-                aria-label={`Open `}
-              >
-                <img
-                  src={item.src}
-                  className="w-full h-auto rounded-xl2 shadow-soft transition-transform duration-500 group-hover:scale-[1.01]"
-                />
-                <div className="absolute inset-0 rounded-xl2 bg-black/0 group-hover:bg-black/10 transition" />
-              </button>
-            ))}
-          </div>
-        )}
-
-        {/* Lightbox */}
-        {lbIndex !== null && (
-          <Lightbox items={filtered} index={lbIndex} onClose={close} onPrev={prev} onNext={next} />
-        )}
+      {/* HERO */}
+      <section className="relative h-[48vh] md:h-[60vh] overflow-hidden">
+        <img
+          src="/images/home herp.jpeg"
+          alt={t("maisonDArt.heroAlt")}
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-black/20" />
       </section>
-    </>
+
+      {/* TITLE + CONTENT */}
+      <section className="bg-white py-14 md:py-20">
+        <div className="max-w-4xl mx-auto text-center px-6 space-y-7">
+
+          <h1 className="font-dancing text-4xl md:text-5xl">
+              <span className="tracking-wide !font-dancing">{t("maisonDArt.title")}</span>
+
+            
+          </h1>
+
+          <p className="text-black/70 font-semibold leading-relaxed">
+            {t("maisonDArt.subtitle")}
+          </p>
+
+          <div className="text-[15px] md:text-base leading-7 text-black/80 space-y-6">
+            <p>{t("maisonDArt.p1")}</p>
+            <p>{t("maisonDArt.p2")}</p>
+            <p>{t("maisonDArt.p3")}</p>
+            <p>{t("maisonDArt.p4")}</p>
+          </div>
+
+          <p className="font-semibold text-black/80 mt-4">
+            {t("maisonDArt.tagline")}
+          </p>
+        </div>
+      </section>
+
+      {/* GALLERY SWIPER */}
+      <section className="bg-white pb-20">
+        <div className="max-w-6xl mx-auto px-6">
+          <Swiper
+            modules={[Navigation]}
+            navigation
+            spaceBetween={20}
+            slidesPerView={1.2}
+            breakpoints={{
+              640: { slidesPerView: 2.2 },
+              1024: { slidesPerView: 3.2 },
+              1440: { slidesPerView: 4.2 }
+            }}
+          >
+            <SwiperSlide>
+              <img src="/images/about-us.jpg" className="rounded-xl2 object-cover h-[380px] w-full" />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img src="/images/exterior.jpg" className="rounded-xl2 object-cover h-[380px] w-full" />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img src="/images/exterior1.jpg" className="rounded-xl2 object-cover h-[380px] w-full" />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img src="/images/exterior2.jpg" className="rounded-xl2 object-cover h-[380px] w-full" />
+            </SwiperSlide>
+             <SwiperSlide>
+              <img src="/images/exterior2.jpg" className="rounded-xl2 object-cover h-[380px] w-full" />
+            </SwiperSlide>
+          </Swiper>
+        </div>
+      </section>
+
+    </div>
   );
 }

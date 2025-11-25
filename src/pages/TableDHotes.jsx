@@ -24,7 +24,8 @@ export default function TableDHotes() {
         <div className="container-std max-w-4xl mx-auto py-12 md:py-16 text-center">
           {/* Handwritten-looking headline (uses your serif or script font if available) */}
           <h1 className="font-serif text-4xl md:text-5xl mb-3">
-            {t("table.title")}
+                                  <span className="tracking-wide !font-dancing">{t("table.title")}</span>
+
           </h1>
           <div className="text-black/70 font-semibold mb-8">
             {t("table.sub")}
@@ -41,36 +42,63 @@ export default function TableDHotes() {
       </section>
 
       {/* 3-IMAGE STRIP */}
-      <section className="bg-[#F7F3EA]">
-        <div className="container-std py-8 md:py-12">
-          <div className="grid gap-4 md:gap-6 md:grid-cols-3">
-            <figure className="rounded-xl2 overflow-hidden shadow-soft">
-              <img
-                src="/images/food.jpg"      // <-- replace with your image
-                alt={t("table.galleryAlt1")}
-                className="w-full h-56 md:h-64 object-cover"
-                loading="lazy"
-              />
-            </figure>
-            <figure className="rounded-xl2 overflow-hidden shadow-soft">
-              <img
-                src="/images/food1.jpg"      // <-- replace
-                alt={t("table.galleryAlt2")}
-                className="w-full h-56 md:h-64 object-cover"
-                loading="lazy"
-              />
-            </figure>
-            <figure className="rounded-xl2 overflow-hidden shadow-soft">
-              <img
-                src="/images/food2.jpg"      // <-- replace
-                alt={t("table.galleryAlt3")}
-                className="w-full h-56 md:h-64 object-cover"
-                loading="lazy"
-              />
-            </figure>
-          </div>
-        </div>
-      </section>
+      {/* STACKED GALLERY (1 / 2 / 2 layout like your screenshot) */}
+<section className="bg-[#F7F3EA] py-10">
+  <div className="container-std max-w-5xl mx-auto space-y-6">
+
+    {/* TOP BIG IMAGE */}
+    <figure className="rounded-xl2 overflow-hidden shadow-soft">
+      <img
+        src="/images/food-big.jpg"  // replace with your top big image
+        alt={t('table.galleryAlt1')}
+        className="w-full h-[360px] md:h-[420px] object-cover"
+        loading="lazy"
+      />
+    </figure>
+
+    {/* MIDDLE ROW — 2 images */}
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <figure className="rounded-xl2 overflow-hidden shadow-soft">
+        <img
+          src="/images/food-mid1.jpg"
+          alt={t('table.galleryAlt2')}
+          className="w-full h-[260px] md:h-[300px] object-cover"
+          loading="lazy"
+        />
+      </figure>
+      <figure className="rounded-xl2 overflow-hidden shadow-soft">
+        <img
+          src="/images/food-mid2.jpg"
+          alt={t('table.galleryAlt3')}
+          className="w-full h-[260px] md:h-[300px] object-cover"
+          loading="lazy"
+        />
+      </figure>
+    </div>
+
+    {/* BOTTOM ROW — 2 images */}
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <figure className="rounded-xl2 overflow-hidden shadow-soft">
+        <img
+          src="/images/food-bottom1.jpg"
+          alt={t('table.galleryAlt4')}
+          className="w-full h-[260px] md:h-[300px] object-cover"
+          loading="lazy"
+        />
+      </figure>
+      <figure className="rounded-xl2 overflow-hidden shadow-soft">
+        <img
+          src="/images/food-bottom2.jpg"
+          alt={t('table.galleryAlt5')}
+          className="w-full h-[260px] md:h-[300px] object-cover"
+          loading="lazy"
+        />
+      </figure>
+    </div>
+
+  </div>
+</section>
+
     </div>
   );
 }

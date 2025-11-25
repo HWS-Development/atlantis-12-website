@@ -396,5 +396,28 @@
     "galleryAlt1": "Colorful skewers and mezze",
     "galleryAlt2": "Tagine and seasonal delights",
     "galleryAlt3": "Crisp homemade pastry"
+  },
+  "maison": {
+    "title": "The Guest House",
+    "subtitle": "The spirit of Essaouira — silence, beauty and warmth",
+
+    "p1": "Born from the shared dream of Asmae and Lahcen, Atlantis 12 is a guest house in Essaouira, Morocco, nestled between wild nature and the ocean. More than accommodation, it is a sensitive and artistic experience where every detail tells a story.",
+    "p2": "In this haven inspired by Berber traditions, traditional architecture blends with the shifting light of Essaouira. Artworks created or exhibited on site converse with the simple, warm gestures of hospitality.",
+    "p3": "At Atlantis 12, silence soothes, beauty inspires, and every stay becomes a moment of sharing, creativity, or contemplation.",
+    "p4": "Whether you’re seeking an authentic stay, a retreat, or an artistic place by the sea, our guest house opens its doors to you with heart.",
+
+    "quote": "Between the wind and the stone,\nthere is\na silence that inspires.",
+
+    "footer": "Here, everything is shared: the light, the bread, and the peace of the place."
+  },
+  "maisonDArt": {
+    "heroAlt": "The Art House - Atlantis 12",
+    "title": "The Art House",
+    "subtitle": "If hospitality is the first face of Atlantis 12, art is its beating heart.",
+    "p1": "Beyond the rooms and gardens, Atlantis also stands as an Art House where creativity is lived, shared and celebrated every day.",
+    "p2": "Paintings, sculptures, unique objects and music converse with the stone and the light of Essaouira, giving the place an inspiring and soothing atmosphere.",
+    "p3": "The atelier regularly hosts resident artists, open to experimentation and creative encounters.",
+    "p4": "Exhibitions, improvised concerts and jazz evenings bring Atlantis to life, turning each stay into a cultural and sensory experience.",
+    "tagline": "Thus, Atlantis 12 blends two vocations: a refuge of beauty and calm, and a living space of artistic creation."
   }
 }

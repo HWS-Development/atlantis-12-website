@@ -14,6 +14,8 @@ import HomeContactInline from "../components/Home/HomeContactInline";
 // import RetreatModal from "../components/Common/RetreatModal";
 // import StickyRetreatButton from "../components/Common/StickyRetreatButton";
 import GoogleReviewBadge from "../components/Home/GoogleReviewBadge";
+import LaMaisonDHotes from "../components/Home/LaMaisonDHotes";
+
 
 export default function Home() {
   return (
@@ -27,6 +29,8 @@ export default function Home() {
 
       {/* Old-site hero with compact booking (your HomeHero implementation already updated) */}
       <HomeHero />
+
+      <LaMaisonDHotes />
 
       {/* New: thin green promo bar (Sahara & Creativity) */}
       {/* <PromoStrip /> */}
