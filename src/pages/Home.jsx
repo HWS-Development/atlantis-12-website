@@ -42,7 +42,7 @@ export default function Home() {
       <RoomsIntro />
 
       {/* Old names, kept */}
-      <ActivitiesHighlight />
+      {/* <ActivitiesHighlight /> */}
       {/* <RoomsTeaser /> */}
       <ServicesIcons />
       <LocationMap />

@@ -219,13 +219,11 @@ export default function Navbar() {
                     LA TABLE D’HÔTES
                   </MenuItem>
 
-                  <a
-                    href="/#experience"
-                    onClick={() => setOpen(false)}
-                    className="block hover:opacity-60"
-                  >
-                    ACTIVITÉS
-                  </a>
+                 
+                  <NavLink to="/activites" onClick={() => setOpen(false)} 
+ className="block hover:opacity-60">
+  ACTIVITÉS
+</NavLink>
                 </div>
               )}
             </div>

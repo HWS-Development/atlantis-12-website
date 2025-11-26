@@ -63,19 +63,25 @@ export default function Gallery() {
             }}
           >
             <SwiperSlide>
-              <img src="/images/about-us.jpg" className="rounded-xl2 object-cover h-[380px] w-full" />
+              <img src="/images/Screenshot 2025-11-26 130125.png" className="rounded-xl2 object-cover h-[380px] w-full" />
             </SwiperSlide>
             <SwiperSlide>
-              <img src="/images/exterior.jpg" className="rounded-xl2 object-cover h-[380px] w-full" />
+              <img src="/images/Screenshot 2025-11-26 130035.png" className="rounded-xl2 object-cover h-[380px] w-full" />
             </SwiperSlide>
             <SwiperSlide>
-              <img src="/images/exterior1.jpg" className="rounded-xl2 object-cover h-[380px] w-full" />
+              <img src="/images/Screenshot 2025-11-26 130047.png" className="rounded-xl2 object-cover h-[380px] w-full" />
             </SwiperSlide>
             <SwiperSlide>
-              <img src="/images/exterior2.jpg" className="rounded-xl2 object-cover h-[380px] w-full" />
+              <img src="/images/Screenshot 2025-11-26 130059.png" className="rounded-xl2 object-cover h-[380px] w-full" />
             </SwiperSlide>
              <SwiperSlide>
-              <img src="/images/exterior2.jpg" className="rounded-xl2 object-cover h-[380px] w-full" />
+              <img src="/images/Screenshot 2025-11-26 130113.png" className="rounded-xl2 object-cover h-[380px] w-full" />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img src="/images/Screenshot 2025-11-26 130138.png" className="rounded-xl2 object-cover h-[380px] w-full" />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img src="/images/Screenshot 2025-11-26 130147.png" className="rounded-xl2 object-cover h-[380px] w-full" />
             </SwiperSlide>
           </Swiper>
         </div>

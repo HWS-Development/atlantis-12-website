@@ -10,6 +10,8 @@ import ScrollToHash from "./components/Common/ScrollToHash";
 import WhatsAppButton from "./components/Common/WhatsAppButton";
 import About from "./pages/About";
 import ScrollToTop from "./components/ui/ScrollToTop";
+import Activites from "./pages/Activites";
+
 
 // import Retreat from "./pages/Retreat";
 import TermsConditions from "./pages/TermsConditions";
@@ -34,6 +36,8 @@ export default function App() {
               <Route path="/" element={<Home />} />
               <Route path="/about" element={<About />} /> 
               <Route path="/rooms" element={<Rooms />} />
+              <Route path="/activites" element={<Activites />} />
+
               <Route path="/gallery" element={<Gallery />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/table" element={<TableDHotes />} />
