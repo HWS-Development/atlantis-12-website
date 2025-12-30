@@ -16,7 +16,7 @@ export default function AboutSnippet() {
       "
       aria-label={t('home.about.title', 'Une maison d’hôtes née d’un rêve')}
     >
-      {/* subtle dark vignette to make text pop */}
+      {/* subtle dark vignette to m */}
       <div className="absolute inset-0 bg-black/30" />
 
       {/* center wrapper */}
