@@ -9,7 +9,7 @@ import Footer from "./components/Layout/Footer";
 import ScrollToHash from "./components/Common/ScrollToHash";
 import WhatsAppButton from "./components/Common/WhatsAppButton";
 import About from "./pages/About";
-import ScrollToTop from "./components/ui/ScrollToTop";
+import ScrollToTop from "./components/UI/ScrollToTop";
 import Activites from "./pages/Activites";
 
 
