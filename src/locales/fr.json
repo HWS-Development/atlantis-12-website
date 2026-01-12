@@ -98,6 +98,27 @@
       "contact": "Contact"
     },
     "promo": { "cta": "Retraite Sahara & Créativité" },
+    "philosophy": {
+      "createConnection": {
+        "title": "Créer du lien ...",
+        "imageAlt": "Nature et fleurs",
+        "text": "À Atlantis 12, nous croyons que le voyage prend tout son sens lorsqu’il devient une rencontre.Rencontre avec un lieu, avec une culture, avec des personnes, avec un rythme différent.Nous avons imaginé cette maison comme un espace de partage, de présence et d’attention, où l’on prend le temps de se parler, de se comprendre, de s’écouter.Autour d’une table, d’un feu, d’un atelier, d’une promenade dans le jardin, les liens se tissent simplement, naturellement.Ici, chacun est invité à être pleinement là, avec soi, avec les autres, avec le moment.",
+        "quote": "Parce que ce sont souvent ces liens invisibles qui rendent un séjour inoubliable."
+      
+      },
+      "preserveRare": {
+        "title": "Préserver ce qui est rare ...",
+        "imageAlt": "Nature préservée",
+        "text": "Niché au cœur d’un parc naturel protégé, Atlantis 12 est un écolodge de charme, engagé dans une approche respectueuse de l’environnement et du tourisme durable.Chaque our, nous cherchons à faire exister un tourisme plus, plus mesuré, plus conscient, en cohérence avec la fragilité du lieu..C’est une démarche discrète, faite de choix quotidiens et d’attentions simples.Nous vous invitons à y prendre part, par une attention portée aux ressources essentielles, l’eau, l’énergie, le silence, le vivant, à travers de simples gestes qui contribuent à préserver cet équilibre.Fermer un robinet, éteindre une lumière, respecter les rythmes du lieu… autant de manières de prendre soin de ce qui est précieux.",
+        "quote": "Merci d’honorer avec nous l’équilibre délicat de ce lieu.."
+      },
+      "welcomeHarmony": {
+        "title": "Accueillir en harmonie ...",
+        "imageAlt": "Chat à Atlantis 12",
+        "text": "Afin de préserver la quiétude, le rythme et l’atmosphère paisible des lieux, nous avons choisi d’accueillir les enfants à partir de 12 ans.Le domaine est déjà habité par nos chiens, nos chats et nos poules, qui participent à l’équilibre vivant de la maison,c’est pourquoi nous ne pouvons malheureusement pas accueillir d’autres animaux.Ces choix nous permettent de préserver une ambiance sereine, respectueuse de chacun et du lieu qui nous accueille",
+        "quote": "Merci de votre compréhension et de votre attention à cette harmonie que nous cultivons au quotidien."
+      }
+    },
     "contact": {
       "title": "Contact",
       "name": "Prénom & Nom",
@@ -134,45 +155,38 @@
       "open_map": "Ouvrir dans Google Maps"
     }
   },
-  "rooms": {
-    "title": "Chambres & Suites",
-    "subtitle": "Découvrez nos chambres et suites — équilibre entre nature, artisanat et confort.",
-    "modal": {
-      "capacity": "Capacité",
-      "size": "Superficie",
-      "bed": "Lit",
-      "amenities": "Services",
-      "book": "Réserver cette chambre",
-      "close": "Fermer"
-    },
-    "view": "Voir la chambre",
-
+ "rooms": {
+  "title": "Les hébergements",
+  "subtitle": "Sanctuaires de lumière et de silence",
+  "p1": "Chaque chambre d’Atlantis 12 est une invitation au repos et à la lumière.",
+  "p2": "Ouvertes sur la forêt, enveloppées de matières naturelles et de silence, elles offrent un écrin intime où le temps semble ralentir.",
+  "p3": "Des lieux pour faire une pause, rêver, et laisser la lumière d’Essaouira inspirer doucement le cœur.",
+  "cta": "Voir les disponibilités",
+  "footer": "Le calme, la lumière, l’essentiel.",
+  "items": {
     "ipomea": {
-      "name": "L’Ipoméa",
-      "short": "Un refuge authentique où la chaleur des pierres et de la cheminée invite à la quiétude.",
-      "desc": "Chambre double chaleureuse avec coin salon et cheminée, dotée d’une entrée privative. Elle s’ouvre sur le patio, et sa grande baie vitrée offre une vue dégagée sur le parc arboré, créant une atmosphère intime et ouverte sur la nature. La salle de bain en tadelakt dispose d’une douche contemporaine, de serviettes moelleuses et de produits d’accueil raffinés. Grand lit double pour un séjour tout en confort et en sérénité."
-    },
-    "plumeria": {
-      "name": "La Pluméria",
-      "short": "Une suite spacieuse et raffinée, promesse de longues soirées au coin du feu ou sur la terrasse privée.",
-      "desc": "Suite supérieure spacieuse au style boho-chic, avec salon et cheminée, légèrement en retrait pour préserver calme et intimité. Sa terrasse privative s’ouvre sur la piscine et les thuyas, invitant à savourer la nature environnante. La salle de bain en carreaux de ciment bleu canard allie authenticité et modernité avec douche élégante et produits de soin raffinés. Très grand lit double, promesse de nuits paisibles sous le ciel étoilé d’Atlantis 12."
-    },
-    "agave": {
-      "name": "L’Agave",
-      "short": "Une chambre baignée de lumière, qui s’ouvre avec douceur sur le patio.",
-      "desc": "Chambre double lumineuse et authentique avec coin salon et cheminée, dotée d’une entrée indépendante. Elle s’ouvre sur le patio, et sa grande baie vitrée offre une vue sur le parc arboré, idéale pour profiter pleinement de la nature. La salle de bain en tadelakt dispose d’une douche moderne et de linge douillet. Grand lit double, parfait pour un séjour confortable après une journée de découvertes."
+      "title": "L’Ipoméa",
+      "desc": "Mini-suite lumineuse aux tons apaisants, avec cheminée, salon et salle de bain en tadelakt."
     },
     "coquelicot": {
-      "name": "La Coquelicot",
-      "short": "Un cocon intime, bercé par la sérénité du jardin et du patio.",
-      "desc": "Chambre double cosy au charme intimiste, avec coin salon et cheminée. L’entrée privative s’ouvre sur le patio, et la baie vitrée offre une vue sur le parc arboré, créant une atmosphère à la fois conviviale et reposante. La salle de bain en tadelakt dispose d’une douche élégante et de produits d’accueil soignés. Grand lit double invitant à la détente et à des nuits paisibles."
+      "title": "La Coquelicot",
+      "desc": "Un refuge romantique baigné de lumière, où chaque détail célèbre la beauté du geste artisanal."
     },
     "orchis": {
-      "name": "L’Orchis",
-      "short": "Une alcôve élégante aux lignes traditionnelles, tournée vers le parc et le patio.",
-      "desc": "Chambre double au charme traditionnel, avec coin salon et cheminée. L’entrée privative s’ouvre sur le patio, et la grande baie vitrée offre une vue sur le parc, pour une immersion dans la nature et l’architecture locale. La salle de bain en tadelakt dispose d’une douche contemporaine, de linge moelleux et de produits d’accueil raffinés. Grand lit double pour un repos optimal."
+      "title": "L’Orchis",
+      "desc": "Un cocon chaleureux mêlant confort et charme marocain."
+    },
+    "agave": {
+      "title": "L’Agave",
+      "desc": "Chambre empreinte de douceur, où la pierre et le coton s’unissent en harmonie apaisante."
+    },
+    "plumeria": {
+      "title": "La Plumeria",
+      "desc": "Suite supérieure avec salon, cheminée et terrasse privée, spacieuse et élégante."
     }
-  },
+  }
+}
+,
   "gallery": {
     "title": "Galerie",
     "subtitle": "Un aperçu de la maison d’hôtes, des chambres, de la piscine et des jardins.",

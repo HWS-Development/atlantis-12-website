@@ -1,88 +1,143 @@
-import { useEffect, useMemo, useState } from "react";
+import React from "react";
 import { useTranslation } from "react-i18next";
-import { rooms } from "../data/rooms";
-import RoomCard from "../components/Rooms/RoomCard";
-import RoomModal from "../components/Rooms/RoomModal";
-import PageHero from "../components/Common/PageHero";
+
+const rooms = [
+  {
+    key: "ipomea",
+    image: "/images/rooms/ipomea.jpg",
+  },
+  {
+    key: "coquelicot",
+    image: "/images/rooms/coquelicot.jpg",
+  },
+  {
+    key: "orchis",
+    image: "/images/rooms/orchis.jpg",
+  },
+  {
+    key: "agave",
+    image: "/images/rooms/agave.jpg",
+  },
+];
 
 export default function Rooms() {
-  const [openId, setOpenId] = useState(null);
   const { t } = useTranslation();
 
-  const openRoom = (id) => {
-    setOpenId(id);
-    if (window.location.hash !== `#${id}`) history.pushState(null, "", `#${id}`);
-  };
-  const closeRoom = () => {
-    setOpenId(null);
-    if (window.location.hash) history.replaceState(null, "", " ");
-  };
-
-  useEffect(() => {
-    const handleHash = () => {
-      const id = window.location.hash.replace("#", "");
-      if (id && rooms.find((r) => r.id === id)) setOpenId(id);
-      else setOpenId(null);
-    };
-    handleHash();
-    window.addEventListener("hashchange", handleHash);
-    return () => window.removeEventListener("hashchange", handleHash);
-  }, []);
-
-  // Decorate a room with translated name + full description for the modal
-  const decorate = (r) => ({
-    ...r,
-    name: t(r.nameKey),
-    description: t(r.descKey || r.shortKey),
-  });
-
-  const selectedRoom = useMemo(() => {
-    const raw = rooms.find((r) => r.id === openId);
-    return raw ? decorate(raw) : null;
-  }, [openId, t]);
-
-  // Split into featured hero + others for a tidy layout
-  const hero = rooms.find((r) => r.featured);
-  const others = rooms
-    .filter((r) => !r.featured)
-    .sort((a, b) => (a.weight ?? 999) - (b.weight ?? 999));
-
   return (
-    <>
-      <PageHero
-        image="/images/view.jpg"
-        title={t("rooms.title")}
-        subtitle={t("rooms.subtitle")}
-        align="left"
-        height="md"
-        overlay="dark"
-      />
-    <section className="container-std py-10 md:py-14">
-      <header className="mb-6">
-        <h1 className="font-serif text-3xl md:text-4xl">{t("rooms.title")}</h1>
-        <p className="text-charcoal/75 mt-2">{t("rooms.subtitle")}</p>
-      </header>
+    <main className="bg-white">
 
-      {/* Hero (La Pluméria) */}
-      {hero && (
-        <div className="mb-6">
-          <RoomCard
-            room={hero}
-            featured
-            onOpen={openRoom}
-          />
-        </div>
-      )}
-
-      {/* 2x2 grid for the other four */}
-      <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-2">
-        {others.map((room) => (
-          <RoomCard key={room.id} room={room} onOpen={openRoom} />
-        ))}
+      {/* ===== HERO IMAGE ===== */}
+      <div className="w-full h-[340px] md:h-[420px] overflow-hidden">
+        <img
+          src="/images/rooms/409ce7_4febeb2f90464e69900f042f5a6e1329~mv2.avif"
+          alt={t("rooms.title")}
+          className="w-full h-full object-cover"
+        />
       </div>
 
-      {selectedRoom && <RoomModal room={selectedRoom} onClose={closeRoom} />}
-    </section>
-    </>
+      {/* ===== INTRO ===== */}
+      <section className="max-w-4xl mx-auto px-4 py-14 text-center">
+        <h1 className="font-script text-3xl md:text-4xl text-[#8b5e34] mb-2">
+       
+       <span className="tracking-wide !font-dancing">{t("rooms.title")}</span>
+
+        </h1>
+
+        <p className="font-semibold mb-6">
+          {t("rooms.subtitle")}
+        </p>
+
+        <div className="text-black/80 space-y-4 text-sm md:text-base leading-relaxed">
+          <p>{t("rooms.p1")}</p>
+          <p>{t("rooms.p2")}</p>
+          <p>{t("rooms.p3")}</p>
+        </div>
+      </section>
+
+      {/* ===== ROOMS GRID ===== */}
+      <section className="max-w-5xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-10">
+        {rooms.map((room) => (
+          <div key={room.key} className="text-center">
+            <div className="relative group overflow-hidden">
+              <img
+                src={room.image}
+                alt={t(`rooms.items.${room.key}.title`)}
+                className="w-full h-[320px] object-cover"
+              />
+
+              {/* Hover button */}
+             <a
+  href="https://atlantis-12-maison-d-hotes-et-d-art.hotelrunner.com/bv3/search"
+  target="_blank"
+  rel="noreferrer"
+  className="
+    absolute inset-0 flex items-center justify-center
+    opacity-0 group-hover:opacity-100
+    transition
+    bg-black/10
+  "
+>
+  <span
+    className="bg-white px-6 py-2 rounded-full shadow hover:bg-[#DDC5AD] text-sm font-medium text-[#5a3e28] transition"
+  >
+   {t("rooms.cta")}
+  </span>
+</a>  
+            </div>
+
+
+            <h3 className="font-script text-xl text-[#8b5e34] mt-6">
+            
+                     <span className="tracking-wide !font-dancing">  {t(`rooms.items.${room.key}.title`)}</span>
+
+            </h3>
+
+            <p className="text-sm text-black/70 mt-2">
+              {t(`rooms.items.${room.key}.desc`)}
+            </p>
+          </div>
+        ))}
+      </section>
+
+      {/* ===== FEATURED ROOM ===== */}
+      <section className="max-w-3xl mx-auto px-4 py-16 text-center">
+        <div className="relative group overflow-hidden mb-6">
+          <img
+            src="/images/rooms/plumeria.jpg"
+            alt={t("rooms.items.plumeria.title")}
+            className="w-full h-[420px] object-cover"
+          />
+
+          <a
+            href="https://atlantis-12-maison-d-hotes-et-d-art.hotelrunner.com/bv3/search"
+            target="_blank"
+            rel="noreferrer"
+            className="
+              absolute inset-0 flex items-center justify-center
+              opacity-0 group-hover:opacity-100
+              transition bg-black/10
+            "
+          >
+            <span className="bg-white px-6 py-2 rounded-full shadow hover:bg-[#DDC5AD] text-sm font-medium text-[#5a3e28] transition">
+              {t("rooms.cta")}
+            </span>
+          </a>
+        </div>
+
+        <h3 className="font-script text-4xl text-[#8b5e34]">
+       
+                 <span className="tracking-wide !font-dancing">  {t("rooms.items.plumeria.title")}</span>
+
+        </h3>
+
+        <p className="text-sm text-black/70 mt-2">
+          {t("rooms.items.plumeria.desc")}
+        </p>
+
+        <p className="mt-10 font-semibold">
+          {t("rooms.footer")}
+        </p>
+      </section>
+    </main>
   );
 }

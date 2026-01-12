@@ -91,6 +91,28 @@
       "contact": "Contact"
     },
     "promo": { "cta": "Sahara & Creativity Retreat" },
+    "philosophy": {
+      "createConnection": {
+        "title": "Create connection ...",
+        "imageAlt": "Nature and flowers",
+        "text": "Travel finds its meaning in encounters: with places, cultures, people, different rhythms.\n\nAtlantis 12 is a space for sharing, presence and attention. Here, we take time to converse, to understand, to listen. Around a table, a fire, a workshop or a walk in the garden, connections form naturally.\n\nWe invite you to be fully present, to savor each moment, to let yourself be carried by the simplicity and authenticity of exchanges. For it is these invisible connections that make a stay unforgettable.",
+        "quote": "Thank you for your understanding and for your attention to the harmony we cultivate every day."
+
+      },
+      "preserveRare": {
+        "title": "Preserve what is rare ...",
+        "imageAlt": "Preserved nature",
+        "text": "Atlantis 12 is a charming ecolodge nestled in a protected natural park, committed to environmental respect and sustainable tourism.\n\nOur approach to tourism is conscious and measured, mindful of the fragility of the place. We invite you to participate, through simple daily gestures and attentions: preserving essential resources — water, energy, silence, living things.\n\nClosing taps, turning off lights, respecting the rhythms of the place… So many small gestures that preserve the delicate balance of this space.",
+        "quote": "Thank you for honoring with us the delicate balance of this place."
+      },
+      "welcomeHarmony": {
+        "title": "Welcome in harmony ...",
+        "imageAlt": "Cat at Atlantis 12",
+        "text": "To preserve the tranquility and peaceful atmosphere of the premises, we welcome children from 12 years old.\n\nThe house is already home to dogs, cats and chickens, which contribute to the living balance of the place. We therefore cannot accommodate other animals.\n\nThese choices help preserve a serene and respectful atmosphere, for everyone and for the welcoming place.\n\n",
+"quote": "Because it is often these invisible bonds that make a stay unforgettable."
+
+      }
+    },
     "roomsIntro": {
       "title": "The accommodations at Atlantis 12",
       "lead": "a sanctuary of calm and beauty",
@@ -134,45 +156,38 @@
       "open_map": "Open in Google Maps"
     }
   },
-  "rooms": {
-    "title": "Rooms & Suites",
-    "subtitle": "Discover our rooms and suites — a balance of nature, craft and comfort.",
-    "modal": {
-      "capacity": "Capacity",
-      "size": "Size",
-      "bed": "Bed",
-      "amenities": "Amenities",
-      "book": "Book this room",
-      "close": "Close"
-    },
-    "view": "View room",
-
+ "rooms": {
+  "title": "Accommodations",
+  "subtitle": "Sanctuaries of light and silence",
+  "p1": "Each room at Atlantis 12 is an invitation to rest and light.",
+  "p2": "Opening onto the forest, wrapped in natural materials and quiet, they offer an intimate haven where time seems to slow down.",
+  "p3": "Places to pause, to dream, and to let the light of Essaouira gently inspire the heart.",
+  "cta": "Check availability",
+  "footer": "Calm, light, the essential.",
+  "items": {
     "ipomea": {
-      "name": "L’Ipoméa",
-      "short": "An authentic retreat where stone walls and a glowing fireplace invite quietude.",
-      "desc": "A warm double room with a lounge area and fireplace, featuring a private entrance. It opens onto the patio, and its large bay window offers sweeping views of the wooded park, creating an atmosphere that is both intimate and connected to nature. The tadelakt bathroom includes a modern shower, soft towels, and refined amenities. A queen-size bed ensures a stay of comfort and serenity."
-    },
-    "plumeria": {
-      "name": "La Pluméria",
-      "short": "A spacious and refined suite, promising long evenings by the fire or on the private terrace.",
-      "desc": "A spacious superior suite in a boho-chic style, featuring a lounge area and fireplace, set slightly apart to offer peace and privacy. Its private terrace opens onto the pool and thuya trees, inviting you to enjoy the surrounding nature. The bathroom, adorned with teal cement tiles, blends authenticity with modern comfort, offering an elegant shower and refined amenities. A king-size bed promises restful nights beneath the starry skies of Atlantis 12."
-    },
-    "agave": {
-      "name": "L’Agave",
-      "short": "A sun-filled room that gently opens onto the patio.",
-      "desc": "A bright and authentic double room with a lounge area and fireplace, featuring a private entrance. It opens onto the patio, and its large bay window frames views of the wooded park—perfect for enjoying the outdoors to the fullest. The tadelakt bathroom includes a modern shower and soft linens. A queen-size bed ensures a comfortable stay after a day of exploration. "
+      "title": "L’Ipoméa",
+      "desc": "A bright junior suite in soothing tones, featuring a fireplace, a sitting area, and a tadelakt bathroom."
     },
     "coquelicot": {
-      "name": "La Coquelicot",
-      "short": "An intimate cocoon, embraced by the serenity of the garden and patio.",
-      "desc": "A cosy double room with intimate charm, featuring a lounge area and fireplace. The private entrance opens onto the patio, while the large bay window overlooks the wooded park, creating an atmosphere both welcoming and serene. The tadelakt bathroom includes an elegant shower and refined amenities. A queen-size bed invites relaxation and restful nights."
+      "title": "Le Coquelicot",
+      "desc": "A romantic retreat bathed in light, where every detail celebrates the beauty of craftsmanship."
     },
     "orchis": {
-      "name": "L’Orchis",
-      "short": "An elegant alcove of tradition, gazing out over the park and patio.",
-      "desc": "A double room with traditional charm, featuring a lounge area and fireplace. The private entrance opens onto the patio, while the large bay window overlooks the park, offering a direct immersion in nature and local architecture. The tadelakt bathroom includes a modern shower, soft linens, and refined amenities. A queen-size bed ensures the perfect rest."
+      "title": "L’Orchis",
+      "desc": "A warm cocoon blending comfort with Moroccan charm."
+    },
+    "agave": {
+      "title": "L’Agave",
+      "desc": "A gentle room where stone and cotton come together in calming harmony."
+    },
+    "plumeria": {
+      "title": "La Plumeria",
+      "desc": "A spacious and elegant superior suite with a lounge, fireplace, and private terrace."
     }
-  },
+  }
+}
+,
   "amenities": {
     "gardenPatio": "Garden & patio access",
     "soundproof": "Soundproof",

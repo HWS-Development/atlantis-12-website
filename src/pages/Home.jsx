@@ -15,6 +15,7 @@ import HomeContactInline from "../components/Home/HomeContactInline";
 // import StickyRetreatButton from "../components/Common/StickyRetreatButton";
 import GoogleReviewBadge from "../components/Home/GoogleReviewBadge";
 import LaMaisonDHotes from "../components/Home/LaMaisonDHotes";
+import PhilosophySections from "../components/Home/PhilosophySections";
 
 
 export default function Home() {
@@ -32,14 +33,17 @@ export default function Home() {
 
       <LaMaisonDHotes />
 
+      {/* Philosophy sections with alternating layout */}
+      <PhilosophySections />
+
       {/* New: thin green promo bar (Sahara & Creativity) */}
       {/* <PromoStrip /> */}
 
       {/* Old name, updated to overlay style */}
-      <AboutSnippet />
+      {/* <AboutSnippet /> */}
 
-      {/* New: text + tall image “Rooms intro” block, with CTA to /rooms */}
-      <RoomsIntro />
+      {/* New: text + tall image "Rooms intro" block, with CTA to /rooms */}
+     {/*  <RoomsIntro /> */}
 
       {/* Old names, kept */}
       {/* <ActivitiesHighlight /> */}
