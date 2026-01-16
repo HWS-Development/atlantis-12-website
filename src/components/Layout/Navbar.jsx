@@ -212,17 +212,18 @@ export default function Navbar() {
               {submenu && (
                 <div className="ml-6 mt-4 space-y-4 text-[18px]">
                   <MenuItem to="/rooms" onClick={() => setOpen(false)}>
-                    HÉBERGEMENTS
+                    Les hébergements                    
                   </MenuItem>
 
                   <MenuItem to="/table" onClick={() => setOpen(false)}>
-                    LA TABLE D’HÔTES
+                   
+                    la table d’hôtes
                   </MenuItem>
 
                  
                   <NavLink to="/activites" onClick={() => setOpen(false)} 
  className="block hover:opacity-60">
-  ACTIVITÉS
+  Expériences
 </NavLink>
                 </div>
               )}
