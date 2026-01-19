@@ -23,7 +23,7 @@ export default function TableDHotes() {
       <section className="bg-white">
         <div className="container-std max-w-4xl mx-auto py-12 md:py-16 text-center">
           {/* Handwritten-looking headline (uses your serif or script font if available) */}
-          <h1 className="font-serif text-4xl md:text-5xl mb-3">
+          <h1 className="font-serif text-4xl md:text-5xl mb-3   text-[#8b5e34]">
                                   <span className="tracking-wide !font-dancing">{t("table.title")}</span>
 
           </h1>
@@ -44,10 +44,10 @@ export default function TableDHotes() {
       {/* 3-IMAGE STRIP */}
       {/* STACKED GALLERY (1 / 2 / 2 layout like your screenshot) */}
 <section className="bg-[#F7F3EA] py-10">
-  <div className="container-std max-w-5xl mx-auto space-y-6">
+  <div className="container-std max-w-5xl mx-auto space-y-4">
 
     {/* TOP BIG IMAGE */}
-    <figure className="rounded-xl2 overflow-hidden shadow-soft">
+    <figure className="overflow-hidden shadow-soft">
       <img
         src="/images/food-big.jpg"  // replace with your top big image
         alt={t('table.galleryAlt1')}
@@ -57,16 +57,16 @@ export default function TableDHotes() {
     </figure>
 
     {/* MIDDLE ROW — 2 images */}
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-      <figure className="rounded-xl2 overflow-hidden shadow-soft">
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
+      <figure className=" overflow-hidden shadow-soft">
         <img
           src="/images/food-mid1.jpg"
           alt={t('table.galleryAlt2')}
-          className="w-full h-[260px] md:h-[300px] object-cover"
+          className="w-full h-[260px] md:h-[600px] object-cover"
           loading="lazy"
         />
       </figure>
-      <figure className="rounded-xl2 overflow-hidden shadow-soft">
+      <figure className=" overflow-hidden shadow-soft">
         <img
           src="/images/food-mid2.jpg"
           alt={t('table.galleryAlt3')}
@@ -76,20 +76,50 @@ export default function TableDHotes() {
       </figure>
     </div>
 
-    {/* BOTTOM ROW — 2 images */}
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-      <figure className="rounded-xl2 overflow-hidden shadow-soft">
+    {/* MIDDLE ROW — 2 images */}
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
+      <figure className=" overflow-hidden shadow-soft">
         <img
-          src="/images/food-bottom1.jpg"
-          alt={t('table.galleryAlt4')}
+          src="/images/food-mid1.jpg"
+          alt={t('table.galleryAlt2')}
+          className="w-full h-[260px] md:h-[600px] object-cover"
+          loading="lazy"
+        />
+      </figure>
+      <figure className=" overflow-hidden shadow-soft">
+        <img
+          src="/images/food-mid2.jpg"
+          alt={t('table.galleryAlt3')}
           className="w-full h-[260px] md:h-[300px] object-cover"
           loading="lazy"
         />
       </figure>
-      <figure className="rounded-xl2 overflow-hidden shadow-soft">
+    </div>
+
+     <figure className="overflow-hidden shadow-soft">
+      <img
+        src="/images/food-big.jpg"  // replace with your top big image
+        alt={t('table.galleryAlt1')}
+        className="w-full h-[360px] md:h-[420px] object-cover"
+        loading="lazy"
+      />
+    </figure>
+
+
+      {/* MIDDLE ROW — 2 images */}
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
+      <figure className=" overflow-hidden shadow-soft">
         <img
-          src="/images/food-bottom2.jpg"
-          alt={t('table.galleryAlt5')}
+          src="/images/food-mid1.jpg"
+          alt={t('table.galleryAlt2')}
+          className="w-full h-[260px] md:h-[600px] object-cover"
+          loading="lazy"
+        />
+      </figure>
+      <figure className=" overflow-hidden shadow-soft">
+        <img
+          src="/images/food-mid2.jpg"
+          alt={t('table.galleryAlt3')}
           className="w-full h-[260px] md:h-[300px] object-cover"
           loading="lazy"
         />
@@ -98,6 +128,8 @@ export default function TableDHotes() {
 
   </div>
 </section>
+
+
 
     </div>
   );

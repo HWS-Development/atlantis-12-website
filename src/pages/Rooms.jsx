@@ -39,7 +39,7 @@ export default function Rooms() {
       <section className="max-w-4xl mx-auto px-4 py-14 text-center">
         <h1 className="font-script text-3xl md:text-4xl text-[#8b5e34] mb-2">
        
-       <span className="tracking-wide !font-dancing">{t("rooms.title")}</span>
+       <span className="tracking-wide !font-dancing ">{t("rooms.title")}</span>
 
         </h1>
 
@@ -88,7 +88,7 @@ export default function Rooms() {
 
             <h3 className="font-script text-xl text-[#8b5e34] mt-6">
             
-                     <span className="tracking-wide !font-dancing">  {t(`rooms.items.${room.key}.title`)}</span>
+                     <span className="tracking-wide !font-dancing text-3xl md:text-4xl font-semibold">  {t(`rooms.items.${room.key}.title`)}</span>
 
             </h3>
 
@@ -124,15 +124,20 @@ export default function Rooms() {
           </a>
         </div>
 
-        <h3 className="font-script text-4xl text-[#8b5e34]">
+        <h3 className="font-script text-3xl text-[#8b5e34]">
        
-                 <span className="tracking-wide !font-dancing">  {t("rooms.items.plumeria.title")}</span>
+<span className="tracking-wide !font-dancing text-3xl md:text-4xl font-semibold">
+  {t("rooms.items.plumeria.title")}
+</span>
 
         </h3>
 
-        <p className="text-sm text-black/70 mt-2">
-          {t("rooms.items.plumeria.desc")}
-        </p>
+     <p className="text-sm text-black/70 mt-2 line-clamp-2 md:line-clamp-3">
+  {t("rooms.items.plumeria.desc")}
+</p>
+
+
+
 
         <p className="mt-10 font-semibold">
           {t("rooms.footer")}

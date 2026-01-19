@@ -56,7 +56,7 @@ export default function PhilosophySections() {
 
             {/* TEXT */}
             <div className="w-full md:w-1/2">
-              <h3 className="font-dancing text-2xl md:text-3xl text-black mb-6">
+              <h3 className="font-dancing text-2xl md:text-xl text-black m">
                 {t(section.titleKey)}
               </h3>
 

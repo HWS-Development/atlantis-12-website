@@ -158,31 +158,31 @@
  "rooms": {
   "title": "Les hébergements",
   "subtitle": "Sanctuaires de lumière et de silence",
-  "p1": "Chaque chambre d’Atlantis 12 est une invitation au repos et à la lumière.",
-  "p2": "Ouvertes sur la forêt, enveloppées de matières naturelles et de silence, elles offrent un écrin intime où le temps semble ralentir.",
-  "p3": "Des lieux pour faire une pause, rêver, et laisser la lumière d’Essaouira inspirer doucement le cœur.",
+  "p1": "Chaque chambre d’Atlantis 12 est une invitation au repos et à la lumière.Ouvertes sur la forêt, enveloppées de matières naturelles et de silence, elles offrent un écrin intime où le temps semble ralentir.",
+  "p2": "L'Ipoméa, l'Agave, l'Orchis, la Coquelicot , nos quatre suites junior et et la Pluméria, notre chambre supérieure,allient confort, artisanat marocain et authenticité.",
+  "p3": "Les murs de pierre préservent le silence, la lumière douce diffuse une clarté apaisante, et chaque détail célèbre la lenteur, la beauté du geste artisanal et la sérénité des lieux.Des lieux pour faire une pause, rêver, et laisser la lumière d’Essaouira inspirer doucement le cœur.",
   "cta": "Voir les disponibilités",
   "footer": "Le calme, la lumière, l’essentiel.",
   "items": {
     "ipomea": {
       "title": "L’Ipoméa",
-      "desc": "Mini-suite lumineuse aux tons apaisants, avec cheminée, salon et salle de bain en tadelakt."
+      "desc": "Mini-suite lumineuse aux tons apaisants, avec cheminée, salon et salle de bain en tadelakt. L’authenticité des matières naturelles y invite au repos et à la rêverie."
     },
     "coquelicot": {
       "title": "La Coquelicot",
-      "desc": "Un refuge romantique baigné de lumière, où chaque détail célèbre la beauté du geste artisanal."
+      "desc": "Un refuge romantique baigné de lumière, où chaque détail célèbre la beauté du geste artisanal.Parfaite pour ralentir et se reconnecter à l’essentiel."
     },
     "orchis": {
       "title": "L’Orchis",
-      "desc": "Un cocon chaleureux mêlant confort et charme marocain."
+      "desc": "Un cocon chaleureux mêlant confort et charme marocain.Ses teintes naturelles et sa cheminée créent une atmosphère intime et sereine."
     },
     "agave": {
       "title": "L’Agave",
-      "desc": "Chambre empreinte de douceur, où la pierre et le coton s’unissent en harmonie apaisante."
+      "desc": "Chambre empreinte de douceur, où la pierre et le coton s’unissent dans une harmonie apaisante.Idéale pour un séjour à deux, entre calme et lumière"
     },
     "plumeria": {
       "title": "La Plumeria",
-      "desc": "Suite supérieure avec salon, cheminée et terrasse privée, spacieuse et élégante."
+      "desc": "Suite supérieure avec salon, cheminée et terrasse privée.Spacieuse et élégante, elle offre une parenthèse de sérénité et de raffinement à deux pas d’Essaouira."
     }
   }
 }

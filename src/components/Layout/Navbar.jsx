@@ -37,7 +37,7 @@ export default function Navbar() {
       href="https://atlantis-12-maison-d-hotes-et-d-art.hotelrunner.com/bv3/search"
       target="_blank"
       rel="noreferrer"
-      className={`inline-flex items-center justify-center rounded-full px-5 py-2 hover:bg-white/90 text-black/80 font-semibold shadow-sm ${className}`}
+      className={`inline-flex items-center justify-center rounded-full px-5 py-2  bg-white/90 hover:bg-[#8b5e34] text-black/80 font-semibold shadow-sm ${className}`}
     >
       {t("nav.book")}
     </a>
