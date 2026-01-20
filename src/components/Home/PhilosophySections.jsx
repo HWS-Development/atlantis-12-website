@@ -6,7 +6,7 @@ export default function PhilosophySections() {
   const sections = [
     {
       id: "create-connection",
-      image: "/images/philosophy-tree-1.jpg",
+      image: "/images/Screenshot 2026-01-20 141706.png",
       imageAlt: t("home.philosophy.createConnection.imageAlt"),
       titleKey: "home.philosophy.createConnection.title",
       textKey: "home.philosophy.createConnection.text",

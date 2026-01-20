@@ -251,7 +251,7 @@ export default function Navbar() {
           {/* INSTAGRAM ICON BOTTOM */}
           <div className="absolute bottom-10 left-10 flex items-center gap-6">
             <a
-              href="https://instagram.com"
+              href="https://www.instagram.com/atlantis12_essaouira/"
               target="_blank"
               rel="noreferrer"
               className="inline-grid place-items-center w-12 h-12 rounded-full bg-black text-white"
