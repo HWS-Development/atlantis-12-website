@@ -217,7 +217,7 @@ export default function Navbar() {
 
                   <MenuItem to="/table" onClick={() => setOpen(false)}>
                    
-                    la table d’hôtes
+                    La table d’hôtes
                   </MenuItem>
 
                  
