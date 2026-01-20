@@ -34,23 +34,23 @@ export default function LaMaisonDHotes() {
         {/* ===== IMAGE GRID (WITH CENTER QUOTE IMAGE) ===== */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 mb-10">
 
-          <img src="/images/maison1.jpg" className="w-full h-[260px] object-cover rounded-lg" />
-          <img src="/images/maison2.jpg" className="w-full h-[260px] object-cover rounded-lg" />
-          <img src="/images/maison3.jpg" className="w-full h-[260px] object-cover rounded-lg" />
+          <img src="/images/Screenshot 2026-01-20 132324.png" className="w-full h-[300px] object-cover rounded-lg" />
+          <img src="/images/Screenshot 2026-01-20 132336.png" className="w-full h-[300px] object-cover rounded-lg" />
+          <img src="/images/Screenshot 2026-01-20 132347.png" className="w-full h-[300px] object-cover rounded-lg" />
 
-          <img src="/images/maison4.jpg" className="w-full h-[260px] object-cover rounded-lg" />
+          <img src="/images/Screenshot 2026-01-20 132359.png" className="w-full h-[300px] object-cover rounded-lg" />
 
           {/* CENTER IMAGE (QUOTE IMAGE, NOT TEXT) */}
           <img
-            src="/images/quote-image.jpg"    // ⬅️ Replace with your real file
+            src="/images/Screenshot 2026-01-20 132409.png"    // ⬅️ Replace with your real file
             alt="Inspirational quote"
-            className="w-full h-[260px] object-cover rounded-lg"
+            className="w-full h-[300px] object-cover rounded-lg"
           />
 
-          <img src="/images/maison5.jpg" className="w-full h-[260px] object-cover rounded-lg" />
-          <img src="/images/maison6.jpg" className="w-full h-[260px] object-cover rounded-lg" />
-          <img src="/images/maison7.jpg" className="w-full h-[260px] object-cover rounded-lg" />
-          <img src="/images/maison8.jpg" className="w-full h-[260px] object-cover rounded-lg" />
+          <img src="/images/Screenshot 2026-01-20 132422.png" className="w-full h-[300px] object-cover rounded-lg" />
+          <img src="/images/Screenshot 2026-01-20 132431.png" className="w-full h-[300px] object-cover rounded-lg" />
+          <img src="/images/Screenshot 2026-01-20 132440.png" className="w-full h-[300px] object-cover rounded-lg" />
+          <img src="/images/Screenshot 2026-01-20 132450.png" className="w-full h-[300px] object-cover rounded-lg" />
 
         </div>
 

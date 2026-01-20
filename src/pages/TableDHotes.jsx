@@ -49,9 +49,9 @@ export default function TableDHotes() {
     {/* TOP BIG IMAGE */}
     <figure className="overflow-hidden shadow-soft">
       <img
-        src="/images/food-big.jpg"  // replace with your top big image
+        src="/images/Screenshot 2026-01-20 133451.png"  // replace with your top big image
         alt={t('table.galleryAlt1')}
-        className="w-full h-[360px] md:h-[420px] object-cover"
+        className="w-full h-[360px] md:h-[550px] object-cover"
         loading="lazy"
       />
     </figure>
@@ -60,17 +60,17 @@ export default function TableDHotes() {
     <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
       <figure className=" overflow-hidden shadow-soft">
         <img
-          src="/images/food-mid1.jpg"
+          src="/images/Screenshot 2026-01-20 133510.png"
           alt={t('table.galleryAlt2')}
-          className="w-full h-[260px] md:h-[600px] object-cover"
+          className="w-full h-[260px] md:h-[635px] object-cover"
           loading="lazy"
         />
       </figure>
       <figure className=" overflow-hidden shadow-soft">
         <img
-          src="/images/food-mid2.jpg"
+          src="/images/Screenshot 2026-01-20 133521.png"
           alt={t('table.galleryAlt3')}
-          className="w-full h-[260px] md:h-[300px] object-cover"
+          className="w-full h-[260px] md:h-[635px] object-cover"
           loading="lazy"
         />
       </figure>
@@ -80,17 +80,17 @@ export default function TableDHotes() {
     <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
       <figure className=" overflow-hidden shadow-soft">
         <img
-          src="/images/food-mid1.jpg"
+          src="/images/Screenshot 2026-01-20 133546.png"
           alt={t('table.galleryAlt2')}
-          className="w-full h-[260px] md:h-[600px] object-cover"
+          className="w-full h-[260px] md:h-[635px] object-cover"
           loading="lazy"
         />
       </figure>
       <figure className=" overflow-hidden shadow-soft">
         <img
-          src="/images/food-mid2.jpg"
+          src="/images/Screenshot 2026-01-20 133534.png"
           alt={t('table.galleryAlt3')}
-          className="w-full h-[260px] md:h-[300px] object-cover"
+          className="w-full h-[260px] md:h-[635px] object-cover"
           loading="lazy"
         />
       </figure>
@@ -98,9 +98,9 @@ export default function TableDHotes() {
 
      <figure className="overflow-hidden shadow-soft">
       <img
-        src="/images/food-big.jpg"  // replace with your top big image
+        src="/images/Screenshot 2026-01-20 133558.png"  // replace with your top big image
         alt={t('table.galleryAlt1')}
-        className="w-full h-[360px] md:h-[420px] object-cover"
+        className="w-full h-[360px] md:h-[600px] object-cover"
         loading="lazy"
       />
     </figure>
@@ -110,7 +110,7 @@ export default function TableDHotes() {
     <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
       <figure className=" overflow-hidden shadow-soft">
         <img
-          src="/images/food-mid1.jpg"
+          src="/images/Screenshot 2026-01-20 133621.png"
           alt={t('table.galleryAlt2')}
           className="w-full h-[260px] md:h-[600px] object-cover"
           loading="lazy"
@@ -118,9 +118,9 @@ export default function TableDHotes() {
       </figure>
       <figure className=" overflow-hidden shadow-soft">
         <img
-          src="/images/food-mid2.jpg"
+          src="/images/Screenshot 2026-01-20 133612.png"
           alt={t('table.galleryAlt3')}
-          className="w-full h-[260px] md:h-[300px] object-cover"
+          className="w-full h-[260px] md:h-[600px] object-cover"
           loading="lazy"
         />
       </figure>

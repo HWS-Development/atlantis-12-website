@@ -10,7 +10,7 @@ export default function Activites() {
       {/* ===== HERO IMAGE ===== */}
       <div className="w-full h-[420px] md:h-[520px] overflow-hidden">
         <img
-          src="/images/home herp.jpeg"
+          src="/images/409ce7_e97346edf0664695a5cf6a498dccf59f~mv2.avif"
           alt="Activités Atlantis"
           className="w-full h-full object-cover"
         />
@@ -40,15 +40,15 @@ export default function Activites() {
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
 
           {/* Replace with your images to match client design */}
-          <img src="/images/activites/img1.jpg" className="w-full h-[260px] object-cover" />
-          <img src="/images/activites/img2.jpg" className="w-full h-[260px] object-cover" />
-          <img src="/images/activites/img3.jpg" className="w-full h-[260px] object-cover" />
-          <img src="/images/activites/img4.jpg" className="w-full h-[260px] object-cover" />
-          <img src="/images/activites/img5.jpg" className="w-full h-[260px] object-cover" />
-          <img src="/images/activites/img6.jpg" className="w-full h-[260px] object-cover" />
-          <img src="/images/activites/img7.jpg" className="w-full h-[260px] object-cover" />
-          <img src="/images/activites/img8.jpg" className="w-full h-[260px] object-cover" />
-          <img src="/images/activites/img9.jpg" className="w-full h-[260px] object-cover" />
+          <img src="/images/Screenshot 2026-01-20 134804.png" className="w-full h-[350px] object-cover" />
+          <img src="/images/Screenshot 2026-01-20 134814.png" className="w-full h-[350px] object-cover" />
+          <img src="/images/Screenshot 2026-01-20 134826.png" className="w-full h-[350px] object-cover" />
+          <img src="/images/Screenshot 2026-01-20 134838.png" className="w-full h-[350px] object-cover" />
+          <img src="/images/Screenshot 2026-01-20 134847.png" className="w-full h-[350px] object-cover" />
+          <img src="/images/Screenshot 2026-01-20 134857.png" className="w-full h-[350px] object-cover" />
+          <img src="/images/Screenshot 2026-01-20 134937.png" className="w-full h-[350px] object-cover" />
+          <img src="/images/Screenshot 2026-01-20 134946.png" className="w-full h-[350px] object-cover" />
+          <img src="/images/Screenshot 2026-01-20 134954.png" className="w-full h-[350px] object-cover" />
 
         </div>
       </div>

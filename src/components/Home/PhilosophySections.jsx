@@ -15,7 +15,7 @@ export default function PhilosophySections() {
     },
     {
       id: "preserve-rare",
-      image: "/images/philosophy-tree-2.jpg",
+      image: "/images/Screenshot 2026-01-20 133148.png",
       imageAlt: t("home.philosophy.preserveRare.imageAlt"),
       titleKey: "home.philosophy.preserveRare.title",
       textKey: "home.philosophy.preserveRare.text",
@@ -24,7 +24,7 @@ export default function PhilosophySections() {
     },
     {
       id: "welcome-harmony",
-      image: "/images/philosophy-cat.jpg",
+      image: "/images/Screenshot 2026-01-20 133224.png",
       imageAlt: t("home.philosophy.welcomeHarmony.imageAlt"),
       titleKey: "home.philosophy.welcomeHarmony.title",
       textKey: "home.philosophy.welcomeHarmony.text",

@@ -4,19 +4,19 @@ import { useTranslation } from "react-i18next";
 const rooms = [
   {
     key: "ipomea",
-    image: "/images/rooms/ipomea.jpg",
+    image: "/images/rooms/Screenshot 2026-01-20 140225.png",
   },
   {
     key: "coquelicot",
-    image: "/images/rooms/coquelicot.jpg",
+    image: "/images/rooms/Screenshot 2026-01-20 140235.png",
   },
   {
     key: "orchis",
-    image: "/images/rooms/orchis.jpg",
+    image: "/images/rooms/Screenshot 2026-01-20 140243.png",
   },
   {
     key: "agave",
-    image: "/images/rooms/agave.jpg",
+    image: "/images/rooms/Screenshot 2026-01-20 140259.png",
   },
 ];
 
@@ -27,7 +27,7 @@ export default function Rooms() {
     <main className="bg-white">
 
       {/* ===== HERO IMAGE ===== */}
-      <div className="w-full h-[340px] md:h-[420px] overflow-hidden">
+      <div className="w-full h-[340px] md:h-[500px] overflow-hidden">
         <img
           src="/images/rooms/409ce7_4febeb2f90464e69900f042f5a6e1329~mv2.avif"
           alt={t("rooms.title")}
@@ -62,7 +62,7 @@ export default function Rooms() {
               <img
                 src={room.image}
                 alt={t(`rooms.items.${room.key}.title`)}
-                className="w-full h-[320px] object-cover"
+                className="w-full h-[400px] object-cover"
               />
 
               {/* Hover button */}
@@ -100,12 +100,12 @@ export default function Rooms() {
       </section>
 
       {/* ===== FEATURED ROOM ===== */}
-      <section className="max-w-3xl mx-auto px-4 py-16 text-center">
+      <section className="max-w-5xl mx-auto px-2 py-16 text-center">
         <div className="relative group overflow-hidden mb-6">
           <img
-            src="/images/rooms/plumeria.jpg"
+            src="/images/rooms/409ce7_751da624774c41e3be834451482cc9bd~mv2.avif"
             alt={t("rooms.items.plumeria.title")}
-            className="w-full h-[420px] object-cover"
+            className="w-full h-[360px] object-cover"
           />
 
           <a
