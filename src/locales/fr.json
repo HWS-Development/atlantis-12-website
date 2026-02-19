@@ -9,12 +9,21 @@
     "contact": "CONTACT",
     "book": "RÉSERVER"
   },
-  "footer": { "rights": "Tous droits réservés." },
+  "footer": {
+    "rights": "Tous droits réservés.",
+    "address": "Douar Laariach, Ounagha, Essaouira, Maroc",
+    "map": "Plan",
+    "terms": "Conditions Générales de Vente",
+    "privacy": "Politique de confidentialité",
+    "cancellation": "Politique d'annulation",
+    "lang": "EN"
+  },
   "home": {
     "hero": {
       "welcome": "Bienvenue à",
       "tagline": "maison d'hôtes et d'art",
       "labels": {
+        "subtitle": " Entre forêt et océan, à quelques minutes d’Essaouira.",
         "checkin": "Arrivée",
         "checkout": "Départ",
         "adults": "Adultes",
@@ -77,12 +86,12 @@
     "services": {
       "title": "Services",
       "items": [
-        { "title": "Petit-déjeuner", "icon": "🍳" },
-        { "title": "Parc", "icon": "🌳" },
-        { "title": "Piscine", "icon": "🏊" },
-        { "title": "Wi-Fi", "icon": "📶" },
-        { "title": "Conciergerie", "icon": "🛎️" },
-        { "title": "Table d’hôtes", "icon": "🍽️" }
+        { "key": "breakfast", "title": "Petit-déjeuner", "image": "/images/services/Screenshot 2026-02-19 154841.png" },
+        { "key": "nature", "title": "Parc naturel", "image": "/images/services/Screenshot 2026-02-19 154858.png" },
+        { "key": "pool", "title": "Piscine", "image": "/images/services/Screenshot 2026-02-19 154850.png" },
+        { "key": "wifi", "title": "Wi-Fi gratuit", "image": "/images/services/Screenshot 2026-02-19 154831.png" },
+        { "key": "concierge", "title": "Conciergerie", "image": "/images/services/Screenshot 2026-02-19 154909.png" },
+        { "key": "table", "title": "Table d’hôtes", "image": "/images/services/Screenshot 2026-02-19 154919.png" }
       ]
     },
     "location": {
@@ -203,6 +212,19 @@
   "whatsapp": {
     "cta": "WhatsApp",
     "bubble": "Contactez-nous sur WhatsApp"
+  },
+  "whyBookBox": {
+    "title": "Pourquoi réserver sur notre site web ?",
+    "titleLine1": "Pourquoi réserver",
+    "titleLine2": "sur notre site web ?",
+    "close": "Fermer",
+    "open": "Ouvrir : Pourquoi réserver sur notre site web ?",
+    "items": {
+      "bestPrice": "Meilleur tarif garanti",
+      "fullBoard": "Pension complète possible",
+      "secure": "Réservation en ligne sécurisée",
+      "service": "Service personnalisé"
+    }
   },
   "aboutPage": {
     "seoTitle": "Atlantis 12 – Notre histoire",

@@ -8,9 +8,9 @@ export default function TableDHotes() {
     <div className="flex flex-col">
 
       {/* HERO (full-bleed image) */}
-      <section className="relative h-[48vh] md:h-[64vh] overflow-hidden">
+      <section className="relative h-[48vh] md:h-[80vh] overflow-hidden">
         <img
-          src="/images/view.jpg"              // <-- replace with your hero image
+          src="/images/Screenshot 2026-02-19 155559.png"              // <-- replace with your hero image
           alt={t("table.heroAlt")}
           className="absolute inset-0 w-full h-full object-cover"
           loading="eager"

@@ -49,6 +49,12 @@ export default function Activites() {
           <img src="/images/Screenshot 2026-01-20 134937.png" className="w-full h-[350px] object-cover" />
           <img src="/images/Screenshot 2026-01-20 134946.png" className="w-full h-[350px] object-cover" />
           <img src="/images/Screenshot 2026-01-20 134954.png" className="w-full h-[350px] object-cover" />
+          <img src="/images/Screenshot 2026-02-19 162322.png" className="w-full h-[350px] object-cover" />
+          <img src="/images/Screenshot 2026-02-19 162233.png" className="w-full h-[350px] object-cover" />
+          <img src="/images/Screenshot 2026-02-19 162243.png" className="w-full h-[350px] object-cover" />
+          <img src="/images/Screenshot 2026-02-19 162251.png" className="w-full h-[350px] object-cover" />
+          <img src="/images/Screenshot 2026-02-19 162301.png" className="w-full h-[350px] object-cover" />
+          <img src="/images/Screenshot 2026-02-19 162311.png" className="w-full h-[350px] object-cover" />
 
         </div>
       </div>

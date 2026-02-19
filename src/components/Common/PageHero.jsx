@@ -65,6 +65,10 @@ export default function PageHero({
 
               {/* Custom slot (buttons / forms / etc.) */}
               {children && <div className="mt-4 md:mt-6">{children}</div>}
+
+              <p className="mt-2 md:mt-3 text-white/90 text-sm md:text-base">
+                  {subtitle}
+                </p>
             </div>
           </div>
         </div>

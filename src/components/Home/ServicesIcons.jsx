@@ -23,13 +23,13 @@ export default function ServicesIcons() {
               "
             >
               <div className="flex flex-col items-center gap-3 p-5">
-                <span
-                  aria-hidden
-                  className="inline-grid place-content-center w-11 h-11 rounded-full
-                             bg-[#E8F0E2] ring-1 ring-[#5E6B4E]/15"
-                >
-                  <span className="text-lg">{s.icon}</span>
-                </span>
+                <div className="relative w-full aspect-square max-w-[150px] rounded-xl overflow-hidden bg-gray-100">
+                  <img
+                    src={s.image}
+                    alt={s.title}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
                 <p className="text-sm font-medium text-black/80 text-center">{s.title}</p>
               </div>
             </button>

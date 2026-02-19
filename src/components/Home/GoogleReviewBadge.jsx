@@ -5,7 +5,7 @@ export default function GoogleReviewBadge() {
     <a
       href={MAP_LINK}
       target="_blank" rel="noreferrer"
-      className="fixed left-3 bottom-[12px] z-40 bg-white rounded-lg shadow-lg
+      className="fixed right-3 bottom-3 z-40 bg-white rounded-lg shadow-lg
                  border border-black/10 px-3 py-2 flex items-center gap-3 hover:shadow-xl transition"
       aria-label="Open Google reviews"
     >

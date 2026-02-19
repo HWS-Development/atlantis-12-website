@@ -5,11 +5,12 @@ import { useTranslation } from "react-i18next";
 export default function Navbar() {
   const { t } = useTranslation();
   const [open, setOpen] = useState(false);
-  const [submenu, setSubmenu] = useState(false);
 
   // --- sticky topbar states ---
   const { pathname } = useLocation();
   const isHome = pathname === "/";
+  const isGallery = pathname === "/gallery";
+
   const [sticky, setSticky] = useState(false);
 
   // lock scroll when menu is open
@@ -104,7 +105,7 @@ export default function Navbar() {
             type="button"
             onClick={() => setOpen(true)}
             aria-label="Open menu"
-            className="pointer-events-auto absolute left-40 top-24 inline-grid place-items-center w-12 h-12 rounded-full hover:bg-white/85 shadow-md"
+            className="pointer-events-auto absolute left-40 top-24 inline-grid place-items-center w-12 h-12 rounded-full bg-white/85 hover:bg-[#8b5e34] shadow-md"
           >
             <svg width="28" height="28" viewBox="0 0 24 24" stroke="#000000" fill="none">
               <path strokeWidth="2" strokeLinecap="round" d="M4 7h16M4 12h16M4 17h16" />
@@ -124,7 +125,11 @@ export default function Navbar() {
             sticky ? "translate-y-0" : "-translate-y-full"
           }`}
         >
-          <div className="bg-[#8EA17D] opacity-90 text-white shadow-sm py-2">
+          <div
+            className={`${
+              isGallery ? "bg-black" : "bg-[#8b5e34]"
+            } opacity-90 text-white shadow-sm py-2`}
+          >
             <div className="container-std h-14 flex items-center justify-between">
               {/* Burger */}
               <button
@@ -150,7 +155,7 @@ export default function Navbar() {
         </div>
       )}
 
-      {/* ============ NEW LEFT PANEL MENU ============== */}
+      {/* ============ LEFT PANEL MENU ============== */}
       <div
         className={`fixed inset-0 z-50 transition ${
           open ? "pointer-events-auto" : "pointer-events-none"
@@ -165,9 +170,9 @@ export default function Navbar() {
           onClick={() => setOpen(false)}
         />
 
-        {/* LEFT PANEL BEIGE */}
+        {/* LEFT PANEL — MARRON avec textes blancs en gras */}
         <div
-          className={`absolute left-0 top-0 h-full w-[85vw] max-w-[420px] bg-[#F5EFDD] p-8 pt-16 transition-transform duration-300 ${
+          className={`absolute left-0 top-0 h-full w-[85vw] max-w-[420px] bg-[#6B3F1F] p-8 pt-16 transition-transform duration-300 ${
             open ? "translate-x-0" : "-translate-x-full"
           }`}
         >
@@ -175,92 +180,46 @@ export default function Navbar() {
           <button
             onClick={() => setOpen(false)}
             aria-label="Close menu"
-            className="absolute top-6 left-6 inline-grid place-items-center w-10 h-10 text-black"
+            className="absolute top-6 left-6 inline-grid place-items-center w-10 h-10 text-white"
           >
-            <svg width="28" height="28" viewBox="0 0 24 24" stroke="black" fill="none">
+            <svg width="28" height="28" viewBox="0 0 24 24" stroke="white" fill="none">
               <path strokeWidth="2" strokeLinecap="round" d="M6 6l12 12M18 6L6 18" />
             </svg>
           </button>
 
           {/* MENU CONTENT */}
-          <nav className="mt-10 text-[#553D2A] font-light text-[20px] space-y-6">
-
+          <nav className="mt-10 text-white font-bold text-[20px] space-y-6">
             <MenuItem onClick={() => setOpen(false)} to="/">
               Bienvenue !
             </MenuItem>
 
-            {/* DROPDOWN — LA MAISON D'HÔTES */}
+            {/* LA MAISON D'HÔTES — sous-menus toujours visibles */}
             <div>
-              <button
-                onClick={() => setSubmenu((v) => !v)}
-                className="flex items-center justify-between w-full"
-              >
-                <span>La maison d’hôtes</span>
+              <span className="block">La maison d'hôtes</span>
 
-                <svg
-                  width="18"
-                  height="18"
-                  fill="none"
-                  stroke="#553D2A"
-                  strokeWidth="2"
-                  className={`transition-transform ${submenu ? "rotate-180" : ""}`}
+              <div className=" mt-4 space-y-4 text-[20px] font-bold">
+                <MenuItem to="/rooms" onClick={() => setOpen(false)}>
+                  Les hébergements
+                </MenuItem>
+
+                <MenuItem to="/table" onClick={() => setOpen(false)}>
+                  La table d'hôtes
+                </MenuItem>
+
+                <NavLink
+                  to="/activites"
+                  onClick={() => setOpen(false)}
+                  className="block hover:opacity-60"
                 >
-                  <path d="M6 9l6 6 6-6" />
-                </svg>
-              </button>
-
-              {submenu && (
-                <div className="ml-6 mt-4 space-y-4 text-[18px]">
-                  <MenuItem to="/rooms" onClick={() => setOpen(false)}>
-                    Les hébergements                    
-                  </MenuItem>
-
-                  <MenuItem to="/table" onClick={() => setOpen(false)}>
-                   
-                    La table d’hôtes
-                  </MenuItem>
-
-                 
-                  <NavLink to="/activites" onClick={() => setOpen(false)} 
- className="block hover:opacity-60">
-  Expériences
-</NavLink>
-                </div>
-              )}
+                  Expériences
+                </NavLink>
+              </div>
             </div>
 
             <MenuItem to="/gallery" onClick={() => setOpen(false)}>
-              La maison d’art
+              La maison d'art
             </MenuItem>
-
-            <MenuItem to="/contact" onClick={() => setOpen(false)}>
-              Contact
-            </MenuItem>
-
-            <a
-              href="https://atlantis-12-maison-d-hotes-et-d-art.hotelrunner.com/bv3/search"
-              target="_blank"
-              rel="noreferrer"
-              onClick={() => setOpen(false)}
-              className="block font-medium hover:opacity-60"
-            >
-              RÉSERVER
-            </a>
           </nav>
-
-          {/* INSTAGRAM ICON BOTTOM */}
-          <div className="absolute bottom-10 left-10 flex items-center gap-6">
-            <a
-              href="https://www.instagram.com/atlantis12_essaouira/"
-              target="_blank"
-              rel="noreferrer"
-              className="inline-grid place-items-center w-12 h-12 rounded-full bg-black text-white"
-            >
-              <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M7 2h10a5 5 0 015 5v10a5 5 0 01-5 5H7a5 5 0 01-5-5V7a5 5 0 015-5zm5 5a5 5 0 100 10 5 5 0 000-10zm6-1a1 1 0 100 2 1 1 0 000-2z" />
-              </svg>
-            </a>
-          </div>
         </div>
       </div>
     </>
@@ -273,21 +232,5 @@ function MenuItem({ to, children, onClick }) {
     <NavLink to={to} onClick={onClick} className="block hover:opacity-60">
       {children}
     </NavLink>
-  );
-}
-
-function SocialIcon({ href, label, children }) {
-  return (
-    <a
-      href={href}
-      target="_blank"
-      rel="noreferrer"
-      aria-label={label}
-      className="inline-grid place-items-center w-12 h-12 rounded-full bg-white text-black hover:bg-white/90 shadow"
-    >
-      <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
-        {children}
-      </svg>
-    </a>
   );
 }

@@ -7,7 +7,7 @@ import Contact from "./pages/Contact";
 import Navbar from "./components/Layout/Navbar";
 import Footer from "./components/Layout/Footer";
 import ScrollToHash from "./components/Common/ScrollToHash";
-import WhatsAppButton from "./components/Common/WhatsAppButton";
+import WhyBookBox from "./components/Common/WhyBookBox";
 import About from "./pages/About";
 import ScrollToTop from "./components/UI/ScrollToTop";
 import Activites from "./pages/Activites";
@@ -28,9 +28,9 @@ export default function App() {
       <BrowserRouter>
         <div className="min-h-full flex flex-col">
           <Navbar />
-        <ScrollToTop />
+          <ScrollToTop />
           <ScrollToHash />
-          <WhatsAppButton />
+          <WhyBookBox />
           <main className="flex-1">
             <Routes>
               <Route path="/" element={<Home />} />
