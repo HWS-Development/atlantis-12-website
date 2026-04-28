@@ -105,7 +105,7 @@ export default function Navbar() {
             type="button"
             onClick={() => setOpen(true)}
             aria-label="Open menu"
-            className="pointer-events-auto absolute left-[120px] md:left-[160px] top-24 inline-grid place-items-center w-12 h-12 rounded-full bg-white hover:bg-[#c48a55] shadow-md"
+            className="pointer-events-auto absolute left-[90px] md:left-[130px] top-24 inline-grid place-items-center w-12 h-12 rounded-full bg-white hover:bg-[#c48a55] shadow-md"
           >
             <svg width="28" height="28" viewBox="0 0 24 24" stroke="currentColor" fill="none" className="text-[#c48a55] group-hover:text-white transition-colors duration-300">
               <path strokeWidth="2" strokeLinecap="round" d="M4 7h16M4 12h16M4 17h16" />
