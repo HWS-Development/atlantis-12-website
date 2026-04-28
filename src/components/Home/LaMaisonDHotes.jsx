@@ -13,9 +13,7 @@ export default function LaMaisonDHotes() {
           className="font-[DancingScript] text-4xl md:text-5xl text-[#7a5a39] font-normal mb-2"
           style={{ fontFamily: "'Dancing Script', cursive" }}
         >
-                        <span className="tracking-wide !font-dancing">{t("maison.title")}</span>
-
-          
+        <span className="tracking-wide !font-dancing">{t("maison.title")}</span>
         </h2>
 
         {/* ===== SUBTITLE ===== */}

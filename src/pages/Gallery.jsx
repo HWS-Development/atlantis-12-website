@@ -12,7 +12,7 @@ export default function Gallery() {
     <div className="flex flex-col">
 
       {/* HERO */}
-      <section className="relative h-[48vh] md:h-[60vh] overflow-hidden">
+      <section className="relative h-[340px] md:h-[500px] overflow-hidden">
         <img
           src="/images/home herp.jpeg"
           alt={t("maisonDArt.heroAlt")}
@@ -25,26 +25,29 @@ export default function Gallery() {
       <section className="bg-white py-14 md:py-20">
         <div className="max-w-4xl mx-auto text-center px-6 space-y-7">
 
-          <h1 className="font-dancing text-4xl md:text-5xl">
-              <span className="tracking-wide !font-dancing">{t("maisonDArt.title")}</span>
+          <h2
+            className="font-[DancingScript] text-4xl md:text-5xl text-[#7a5a39] font-normal mb-2"
+            style={{ fontFamily: "'Dancing Script', cursive" }}
+          >
+          <span className="tracking-wide !font-dancing">{t("maisonDArt.title")}</span>
+  
+          </h2>
 
-            
-          </h1>
-
-          <p className="text-black/70 font-semibold leading-relaxed">
+          <p className="text-black font-semibold tracking-wide mb-10">
             {t("maisonDArt.subtitle")}
           </p>
 
-          <div className="text-[15px] md:text-base leading-7 text-black/80 space-y-6">
-            <p>{t("maisonDArt.p1")}</p>
+          <div className="text-black/80 leading-relaxed space-y-6 text-[10px] md:text-base mb-16">
+            <p className="whitespace-pre-line">{t("maisonDArt.p1")}</p>
             <p>{t("maisonDArt.p2")}</p>
             <p>{t("maisonDArt.p3")}</p>
-            <p>{t("maisonDArt.p4")}</p>
-          </div>
-
-          <p className="font-semibold text-black/80 mt-4">
+            <p className="whitespace-pre-line">{t("maisonDArt.p4")}</p>
+            <p className="whitespace-pre-line">
             {t("maisonDArt.tagline")}
           </p>
+          </div>
+
+          
         </div>
       </section>
 

@@ -8,7 +8,7 @@ export default function TableDHotes() {
     <div className="flex flex-col">
 
       {/* HERO (full-bleed image) */}
-      <section className="relative h-[48vh] md:h-[80vh] overflow-hidden">
+      <section className="relative h-[340px] md:h-[500px] overflow-hidden">
         <img
           src="/images/Screenshot 2026-02-19 155559.png"              // <-- replace with your hero image
           alt={t("table.heroAlt")}
@@ -23,20 +23,24 @@ export default function TableDHotes() {
       <section className="bg-white">
         <div className="container-std max-w-4xl mx-auto py-12 md:py-16 text-center">
           {/* Handwritten-looking headline (uses your serif or script font if available) */}
-          <h1 className="font-serif text-4xl md:text-5xl mb-3   text-[#8b5e34]">
-                                  <span className="tracking-wide !font-dancing">{t("table.title")}</span>
-
-          </h1>
-          <div className="text-black/70 font-semibold mb-8">
+          <h2
+          className="font-[DancingScript] text-4xl md:text-5xl text-[#7a5a39] font-normal mb-2"
+          style={{ fontFamily: "'Dancing Script', cursive" }}
+          >
+            <span className="tracking-wide !font-dancing">{t("table.title")}</span>
+          </h2>
+         
+          <p className="text-black font-semibold tracking-wide mb-10">
             {t("table.sub")}
-          </div>
+          </p>
 
           {/* Paragraphs */}
-          <div className="space-y-6 text-[15px] md:text-base leading-7 text-black/80">
+          <div className="text-black/80 leading-relaxed space-y-6 text-[10px] md:text-base mb-16 whitespace-pre-line">
             <p>{t("table.p1")}</p>
             <p>{t("table.p2")}</p>
             <p>{t("table.p3")}</p>
             <p>{t("table.p4")}</p>
+            <p>{t("table.p5")}</p>
           </div>
         </div>
       </section>
@@ -49,7 +53,7 @@ export default function TableDHotes() {
     {/* TOP BIG IMAGE */}
     <figure className="overflow-hidden shadow-soft">
       <img
-        src="/images/Screenshot 2026-01-20 133451.png"  // replace with your top big image
+        src="/images/11.jpg"  // replace with your top big image
         alt={t('table.galleryAlt1')}
         className="w-full h-[360px] md:h-[550px] object-cover"
         loading="lazy"

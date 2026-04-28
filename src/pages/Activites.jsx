@@ -8,7 +8,7 @@ export default function Activites() {
     <section className="bg-white pt-0">
 
       {/* ===== HERO IMAGE ===== */}
-      <div className="w-full h-[420px] md:h-[520px] overflow-hidden">
+      <div className="w-full h-[340px] md:h-[500px] overflow-hidden">
         <img
           src="/images/409ce7_e97346edf0664695a5cf6a498dccf59f~mv2.avif"
           alt="Activités Atlantis"
@@ -18,20 +18,24 @@ export default function Activites() {
 
       {/* ===== TITLE + SUBTITLE ===== */}
       <div className="max-w-4xl mx-auto text-center px-6 py-12 md:py-16">
-        <h2 className="font-serif text-3xl md:text-4xl text-[#865c2c] italic mb-2">
-                      <span className="tracking-wide !font-dancing">{t("activites.title")}</span>
+        <h2
+          className="font-[DancingScript] text-4xl md:text-5xl text-[#7a5a39] font-normal mb-2"
+          style={{ fontFamily: "'Dancing Script', cursive" }}
+        >
+        <span className="tracking-wide !font-dancing">{t("activites.title")}</span>
 
         </h2>
 
-        <p className="text-black/80 font-semibold mb-8">
+        <p className="text-black font-semibold tracking-wide mb-10">
           {t("activites.subtitle")}
         </p>
 
         {/* ===== PARAGRAPHS ===== */}
-        <div className="text-black/80 leading-relaxed space-y-6 text-[15px] md:text-base">
+        <div className="text-black/80 leading-relaxed space-y-6 text-[10px] md:text-base mb-16 whitespace-pre-line">
           <p>{t("activites.p1")}</p>
           <p>{t("activites.p2")}</p>
           <p>{t("activites.p3")}</p>
+          <p>{t("activites.p4")}</p>
         </div>
       </div>
 
@@ -46,6 +50,9 @@ export default function Activites() {
           <img src="/images/Screenshot 2026-01-20 134838.png" className="w-full h-[350px] object-cover" />
           <img src="/images/Screenshot 2026-01-20 134847.png" className="w-full h-[350px] object-cover" />
           <img src="/images/Screenshot 2026-01-20 134857.png" className="w-full h-[350px] object-cover" />
+          <img src="/images/Screenshot 2026-01-20 134907.png" className="w-full h-[350px] object-cover" />
+          <img src="/images/Screenshot 2026-01-20 134916.png" className="w-full h-[350px] object-cover" />
+          <img src="/images/Screenshot 2026-01-20 134926.png" className="w-full h-[350px] object-cover" />
           <img src="/images/Screenshot 2026-01-20 134937.png" className="w-full h-[350px] object-cover" />
           <img src="/images/Screenshot 2026-01-20 134946.png" className="w-full h-[350px] object-cover" />
           <img src="/images/Screenshot 2026-01-20 134954.png" className="w-full h-[350px] object-cover" />

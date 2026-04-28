@@ -1,6 +1,7 @@
 import { useTranslation } from "react-i18next";
+import { useLocation } from "react-router-dom";
 
-const MAP_LINK = "https://www.google.com/maps/place/Atlantis+12+Maison+d'h%C3%B4tes+%26+d'art/@31.5418119,-9.6901462,17z";
+const MAP_LINK = "https://maps.app.goo.gl/6EN1hJTrw8mtqWaf6";
 const INSTAGRAM = "https://www.instagram.com/atlantis12_essaouira/";
 const WHATSAPP = "https://wa.me/212666292285";
 const EMAIL = "mailto:resa@atlantis12essaouira.com";
@@ -9,6 +10,9 @@ const PHONE = "tel:+212666292285";
 export default function Footer() {
   const { t, i18n } = useTranslation();
 
+  const { pathname } = useLocation();
+  const isGallery = pathname === "/gallery";
+
   const switchLang = () => {
     const next = i18n.language === "fr" ? "en" : "fr";
     i18n.changeLanguage(next);
@@ -16,7 +20,12 @@ export default function Footer() {
   };
 
   return (
-    <footer className="bg-[#8b5e34] text-white text-center py-10 md:py-12">
+    <footer       
+      className={`${
+        isGallery ? "bg-black" : "bg-[#8b5e34]"
+      } text-white text-center py-10 md:py-12`}
+      >
+
       <div className="container-std flex flex-col items-center gap-6">
         {/* Logo + brand */}
         <div className="flex flex-col items-center gap-2">
@@ -40,15 +49,15 @@ export default function Footer() {
 
         {/* Social icons */}
         <div className="flex items-center justify-center gap-3">
-          <a
-            href="https://www.facebook.com/atlantis12essaouira"
+           <a
+            href={MAP_LINK}
             target="_blank"
             rel="noreferrer"
-            aria-label="Facebook"
+            aria-label="Google Maps"
             className="w-10 h-10 rounded-full bg-white text-[#8b5e34] hover:bg-white/90 flex items-center justify-center transition"
           >
-            <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+            <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
             </svg>
           </a>
           <a

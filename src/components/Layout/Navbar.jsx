@@ -38,7 +38,7 @@ export default function Navbar() {
       href="https://atlantis-12-maison-d-hotes-et-d-art.hotelrunner.com/bv3/search"
       target="_blank"
       rel="noreferrer"
-      className={`inline-flex items-center justify-center rounded-full px-5 py-2  bg-white/90 hover:bg-[#8b5e34] text-black/80 font-semibold shadow-sm ${className}`}
+      className={`inline-flex items-center justify-center rounded-full px-5 py-2 bg-white text-[#c48a55] hover:bg-[#c48a55] hover:text-white font-semibold shadow-sm ${className}`}
     >
       {t("nav.book")}
     </a>
@@ -99,20 +99,20 @@ export default function Navbar() {
           <LangPill />
         </div>
 
-        <div className="h-0">
+        <div className="h-0 group">
           {/* BURGER BUTTON */}
           <button
             type="button"
             onClick={() => setOpen(true)}
             aria-label="Open menu"
-            className="pointer-events-auto absolute left-40 top-24 inline-grid place-items-center w-12 h-12 rounded-full bg-white/85 hover:bg-[#8b5e34] shadow-md"
+            className="pointer-events-auto absolute left-[120px] md:left-[160px] top-24 inline-grid place-items-center w-12 h-12 rounded-full bg-white hover:bg-[#c48a55] shadow-md"
           >
-            <svg width="28" height="28" viewBox="0 0 24 24" stroke="#000000" fill="none">
+            <svg width="28" height="28" viewBox="0 0 24 24" stroke="currentColor" fill="none" className="text-[#c48a55] group-hover:text-white transition-colors duration-300">
               <path strokeWidth="2" strokeLinecap="round" d="M4 7h16M4 12h16M4 17h16" />
             </svg>
           </button>
 
-          <div className="pointer-events-auto absolute right-40 top-24 flex items-center gap-3">
+          <div className="pointer-events-auto absolute right-[60px] md:right-[100px] top-24 flex items-center gap-3">
             <BookBtn />
           </div>
         </div>
@@ -130,15 +130,15 @@ export default function Navbar() {
               isGallery ? "bg-black" : "bg-[#8b5e34]"
             } opacity-90 text-white shadow-sm py-2`}
           >
-            <div className="container-std h-14 flex items-center justify-between">
+            <div className="container-std h-14 flex items-center justify-between group">
               {/* Burger */}
               <button
                 type="button"
                 onClick={() => setOpen(true)}
                 aria-label="Open menu"
-                className="inline-grid place-items-center w-10 h-10 rounded-full bg-white/85 hover:bg-white shadow"
+                className="inline-grid place-items-center w-10 h-10 rounded-full bg-white hover:bg-[#c48a55] shadow"
               >
-                <svg width="24" height="24" viewBox="0 0 24 24" stroke="#2F2F2F" fill="none">
+                <svg width="24" height="24" viewBox="0 0 24 24" stroke="currentColor" fill="none" className="text-[#c48a55] group-hover:text-white transition-colors duration-300">
                   <path strokeWidth="2" strokeLinecap="round" d="M4 7h16M4 12h16M4 17h16" />
                 </svg>
               </button>
@@ -190,20 +190,20 @@ export default function Navbar() {
           {/* MENU CONTENT */}
           <nav className="mt-10 text-white font-bold text-[20px] space-y-6">
             <MenuItem onClick={() => setOpen(false)} to="/">
-              Bienvenue !
+              {t("menu.welcome")} 
             </MenuItem>
 
             {/* LA MAISON D'HÔTES — sous-menus toujours visibles */}
             <div>
-              <span className="block">La maison d'hôtes</span>
+              <span className="block">{t("menu.guesthouse")}</span>
 
               <div className=" mt-4 space-y-4 text-[20px] font-bold">
                 <MenuItem to="/rooms" onClick={() => setOpen(false)}>
-                  Les hébergements
+                 {t("menu.rooms")}
                 </MenuItem>
 
                 <MenuItem to="/table" onClick={() => setOpen(false)}>
-                  La table d'hôtes
+                  {t("menu.table")}
                 </MenuItem>
 
                 <NavLink
@@ -211,13 +211,13 @@ export default function Navbar() {
                   onClick={() => setOpen(false)}
                   className="block hover:opacity-60"
                 >
-                  Expériences
+                 {t("menu.experiences")}
                 </NavLink>
               </div>
             </div>
 
             <MenuItem to="/gallery" onClick={() => setOpen(false)}>
-              La maison d'art
+              {t("menu.art")}
             </MenuItem>
           </nav>
         </div>

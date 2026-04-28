@@ -124,17 +124,21 @@ export default function Rooms() {
 
       {/* ===== INTRO ===== */}
       <section className="max-w-4xl mx-auto px-4 py-14 text-center">
-        <h1 className="font-script text-3xl md:text-4xl text-[#8b5e34] mb-2">
+        <h2
+          className="font-[DancingScript] text-4xl md:text-5xl text-[#7a5a39] font-normal mb-2"
+          style={{ fontFamily: "'Dancing Script', cursive" }}
+        >
        
-       <span className="tracking-wide !font-dancing ">{t("rooms.title")}</span>
+        <span className="tracking-wide !font-dancing ">{t("rooms.title")}</span>
 
-        </h1>
+        </h2>
 
-        <p className="font-semibold mb-6">
+        <p className="text-black font-semibold tracking-wide mb-10">
           {t("rooms.subtitle")}
         </p>
 
-        <div className="text-black/80 space-y-4 text-sm md:text-base leading-relaxed">
+
+        <div className="text-black/80 leading-relaxed space-y-6 text-[10px] md:text-base mb-16 whitespace-pre-line">
           <p>{t("rooms.p1")}</p>
           <p>{t("rooms.p2")}</p>
           <p>{t("rooms.p3")}</p>

@@ -9,6 +9,14 @@
     "contact": "CONTACT",
     "book": "RÉSERVER"
   },
+  "menu": {
+    "welcome": "Bienvenue !",
+    "guesthouse": "La maison d'hôtes",
+    "rooms": "Les hébergements",
+    "table": "La table d'hôtes",
+    "experiences": "Expériences",
+    "art": "La maison d'art"
+  },
   "footer": {
     "rights": "Tous droits réservés.",
     "address": "Douar Laariach, Ounagha, Essaouira, Maroc",
@@ -17,6 +25,9 @@
     "privacy": "Politique de confidentialité",
     "cancellation": "Politique d'annulation",
     "lang": "EN"
+  },
+  "googleBadge": {
+    "title": "Atlantis 12, maison d’hôtes"
   },
   "home": {
     "hero": {
@@ -89,7 +100,7 @@
         { "key": "breakfast", "title": "Petit-déjeuner", "image": "/images/services/Screenshot 2026-02-19 154841.png" },
         { "key": "nature", "title": "Parc naturel", "image": "/images/services/Screenshot 2026-02-19 154858.png" },
         { "key": "pool", "title": "Piscine", "image": "/images/services/Screenshot 2026-02-19 154850.png" },
-        { "key": "wifi", "title": "Wi-Fi gratuit", "image": "/images/services/Screenshot 2026-02-19 154831.png" },
+        { "key": "wifi", "title": "Wifi gratuit", "image": "/images/services/Screenshot 2026-02-19 154831.png" },
         { "key": "concierge", "title": "Conciergerie", "image": "/images/services/Screenshot 2026-02-19 154909.png" },
         { "key": "table", "title": "Table d’hôtes", "image": "/images/services/Screenshot 2026-02-19 154919.png" }
       ]
@@ -168,8 +179,8 @@
   "title": "Les hébergements",
   "subtitle": "Sanctuaires de lumière et de silence",
   "p1": "Chaque chambre d’Atlantis 12 est une invitation au repos et à la lumière.Ouvertes sur la forêt, enveloppées de matières naturelles et de silence, elles offrent un écrin intime où le temps semble ralentir.",
-  "p2": "L'Ipoméa, l'Agave, l'Orchis, la Coquelicot , nos quatre suites junior et et la Pluméria, notre chambre supérieure,allient confort, artisanat marocain et authenticité.",
-  "p3": "Les murs de pierre préservent le silence, la lumière douce diffuse une clarté apaisante, et chaque détail célèbre la lenteur, la beauté du geste artisanal et la sérénité des lieux.Des lieux pour faire une pause, rêver, et laisser la lumière d’Essaouira inspirer doucement le cœur.",
+  "p2": "L'Ipoméa, l'Agave, l'Orchis, la Coquelicot , nos quatre suites junior et et la Pluméria, notre chambre supérieure,allient confort, artisanat marocain et authenticité.\nLes murs de pierre préservent le silence, la lumière douce diffuse une clarté apaisante, et chaque détail célèbre la lenteur, la beauté du geste artisanal et la sérénité des lieux.",
+  "p3": "Faire une pause, rêver, et laisser la lumière d’Essaouira inspirer doucement le cœur.",
   "cta": "Voir les disponibilités",
   "footer": "Le calme, la lumière, l’essentiel.",
   "items": {
@@ -438,11 +449,12 @@
   "table": {
     "heroAlt": "Table d’hôtes — Atlantis 12",
     "title": "La Table d’Hôtes",
-    "sub": "Saveurs authentiques et convivialité",
-    "p1": "La table d’hôtes est au cœur de l’expérience Atlantis : un moment de partage, de générosité et de découvertes culinaires. Inspirée des traditions marocaines, andalouses, berbères et juives, notre cuisine célèbre la richesse des produits frais et de saison.",
-    "p2": "Nos repas sont préparés à partir du potager, du marché local ou de la pêche du jour. Nous ne congelons pas : s’il n’y a pas de pêche, il n’y a pas de poisson au menu. C’est ce respect du produit qui garantit l’authenticité et la qualité de chaque assiette.",
-    "p3": "Autour d’une grande tablée conviviale, ou dans une ambiance plus intime sur demande, nos hôtes se retrouvent pour savourer couscous, tajines, poissons grillés, salades colorées et pâtisseries maison. Chaque dîner est unique, pensé selon la saison et les arrivages.",
-    "p4": "C’est pour cette raison que nos repas se font uniquement sur réservation : afin de vous offrir une cuisine fraîche, sincère et généreuse, fidèle à l’esprit d’Atlantis.",
+    "sub": "Saveurs, partage et lumière​",
+    "p1": "La table d’hôtes est au cœur de l’expérience Atlantis 12 : un moment de convivialité, de générosité et de découvertes culinaires.",
+    "p2":"Inspirée des traditions andalouses, berbères et juives, notre cuisine met à l’honneur la richesse de la gastronomie marocaine et la fraîcheur des produits locaux. Chaque repas naît du potager, du marché ou de la pêche du jour, dans le respect du produit et du rythme des saisons.",
+    "p3": "Autour d’une grande tablée conviviale ou dans une ambiance plus intime, nos hôtes savourent couscous parfumés, tajines mijotés, poissons grillés, salades colorées et pâtisseries maison.",
+    "p4": "Chaque repas est pensé comme une création unique, guidée par la saison, les arrivages et l’inspiration de nos cuisiniers.",
+    "p5": "C’est pourquoi nos dîners sont proposés uniquement sur réservation : pour vous offrir une cuisine fraîche, sincère et généreuse, fidèle à l’esprit d’Atlantis 12.",
     "galleryAlt1": "Brochettes et mezze colorés",
     "galleryAlt2": "Tajine et douceurs de saison",
     "galleryAlt3": "Pâtisserie maison croustillante"
@@ -451,7 +463,7 @@
     "title": "La maison d’hôtes",
     "subtitle": "L’esprit d’Essaouira, entre silence, beauté et accueil",
 
-    "p1": "Née du rêve commun d’Asmae et de Lahcen, Atlantis 12 est une maison d’hôtes à Essaouira, au Maroc, nichée entre la nature sauvage et l’océan. Plus qu’un lieu d’hébergement, c’est une expérience sensible et artistique, où chaque détail raconte une histoire.",
+    "p1": "Née du rêve commun d’Asmae et de Lahcen, Atlantis 12 est une maison d’hôtes en région Essaouira, au Maroc, nichée entre la nature sauvage et l’océan. Plus qu’un lieu d’hébergement, c’est une expérience sensible et artistique, où chaque détail raconte une histoire.",
     "p2": "Dans ce havre aux inspirations berbères, l’architecture traditionnelle se mêle à la lumière changeante d’Essaouira. Les œuvres d’art, créées ou exposées sur place, dialoguent avec les gestes simples et chaleureux de l’accueil.",
     "p3": "À Atlantis 12, le silence apaise, la beauté inspire, et chaque séjour devient un moment de partage, de création ou de contemplation.",
     "p4": "Que vous soyez en quête d’un séjour authentique, d’un lieu de retraite ou d’un hébergement artistique près de la mer, notre maison d’hôtes vous ouvre ses portes avec cœur.",
@@ -465,11 +477,11 @@
   "heroAlt": "La maison d’art - Atlantis 12",
   "title": "La maison d’art",
   "subtitle": "Si l’hospitalité est le premier visage d’Atlantis 12, l’art en est le cœur battant.",
-    "p1": "Derrière les chambres et les jardins, Atlantis s’affirme aussi comme une Maison d’Art, où la créativité est vécue, partagée et célébrée au quotidien.",
-    "p2": "Peintures, sculptures, objets singuliers et musique dialoguent avec la pierre et la lumière d’Essaouira, insufflant au lieu une atmosphère à la fois inspirante et apaisante.",
-    "p3": "L’atelier accueille régulièrement des artistes en résidence, ouverts à l’expérimentation et à la rencontre.",
-    "p4": "Expositions, concerts improvisés et soirées jazz ponctuent la vie d’Atlantis, transformant chaque séjour en une expérience culturelle et sensorielle.",
-    "tagline": "Ainsi, Atlantis 12 conjugue deux vocations : refuge de calme et de beauté, et lieu de création vivante."
+    "p1": "Derrière les chambres et les jardins, Atlantis s’affirme aussi comme une Maison d’Art, où la créativité est vécue, partagée et célébrée au quotidien.\nPeintures, sculptures, objets singuliers et musique dialoguent avec la pierre et la lumière d’Essaouira, insufflant au lieu une atmosphère à la fois inspirante et apaisante.",
+    "p2": "L’atelier accueille régulièrement des artistes en résidence, ouverts à l’expérimentation et à la rencontre, et Lahcen propose des ateliers de peinture intuitive pour inviter chacun à explorer son imaginaire.",
+    "p3": "Expositions, concerts improvisés et soirées jazz ponctuent la vie d’Atlantis, transformant chaque séjour en une expérience culturelle et sensorielle.",
+    "p4": "Pour prolonger l’émotion au-delà du séjour, certaines œuvres sont disponibles à la vente :\nun fragment d’Atlantis 12 à emporter chez soi.",
+    "tagline": "Ainsi, Atlantis 12 conjugue deux vocations :\nrefuge de calme et de beauté, et lieu de création vivante où hospitalité et art se répondent et s’enrichissent mutuellement."
   },
   "activites": {
   "title": "Expériences",
@@ -477,7 +489,7 @@
   "p1": "Le jour, on se ressource au bord de la piscine, on flâne dans le jardin, on s’abandonne à un massage sous les arganiers, on rêve sur le rooftop face à l’immensité de la forêt, ou l’on explore sa créativité lors d’un atelier de peinture intuitive.",
   "p2": "Les plus curieux partent à la découverte d’Essaouira et de ses environs : chevauchées au coucher du soleil, balades à dos de dromadaire vers les plages sauvages, surf ou kitesurf sur les meilleurs spots de la côte Atlantique, escapades en quad dans la campagne et les dunes, ou encore flâneries dans la médina et ses échoppes d’artisanat marocain.",
   "p3": "À la tombée du soir, l’atmosphère change de rythme : Lahcen saisit parfois sa guitare pour improviser un moment musical avec des amis ; d’autres soirs, le ciel étoilé déploie son spectacle depuis la terrasse ; et quand l’envie de sortir vous appelle, nous partageons avec joie nos meilleures adresses pour prolonger la nuit à Essaouira.",
-  "p4": "Atlantis 12 est le point de départ idéal pour conjuguer détente, création et découverte. Une maison d’hôtes à Essaouira pensée pour vivre autrement, au rythme de vos envies."
+  "p4": "Atlantis 12 est le point de départ idéal pour conjuguer détente, création et découverte.\nUne maison d’hôtes à Essaouira pensée pour vivre autrement, au rythme de vos envies."
 }
 
 }
