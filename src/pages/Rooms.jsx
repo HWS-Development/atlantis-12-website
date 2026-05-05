@@ -27,7 +27,7 @@ const rooms = [
       "/images/LaCoquelicot/La Coquelicot/_DSC8494-HDR.jpg",
       "/images/LaCoquelicot/La Coquelicot/_DSC8497-HDR-Modifier.jpg",
       "/images/LaCoquelicot/La Coquelicot/_DSC8503.jpg",
-      ""
+      
     ],
   },
   {
