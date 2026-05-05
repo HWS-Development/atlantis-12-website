@@ -64,7 +64,7 @@ export default function TableDHotes() {
     <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
       <figure className=" overflow-hidden shadow-soft">
         <img
-          src="/images/Screenshot 2026-01-20 133510.png"
+          src="/images/restaurant/restaurant/_DSC8576-HDR.jpg"
           alt={t('table.galleryAlt2')}
           className="w-full h-[260px] md:h-[635px] object-cover"
           loading="lazy"
@@ -72,7 +72,7 @@ export default function TableDHotes() {
       </figure>
       <figure className=" overflow-hidden shadow-soft">
         <img
-          src="/images/Screenshot 2026-01-20 133521.png"
+          src="/images/restaurant/restaurant/_DSC8946-HDR-Avec accentuation-Bruit.jpg"
           alt={t('table.galleryAlt3')}
           className="w-full h-[260px] md:h-[635px] object-cover"
           loading="lazy"
@@ -84,7 +84,7 @@ export default function TableDHotes() {
     <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
       <figure className=" overflow-hidden shadow-soft">
         <img
-          src="/images/Screenshot 2026-01-20 133546.png"
+          src="/images/Dinner/Dinner/_DSC8963-HDR-Avec accentuation-Bruit.jpg"
           alt={t('table.galleryAlt2')}
           className="w-full h-[260px] md:h-[635px] object-cover"
           loading="lazy"
@@ -92,7 +92,7 @@ export default function TableDHotes() {
       </figure>
       <figure className=" overflow-hidden shadow-soft">
         <img
-          src="/images/Screenshot 2026-01-20 133534.png"
+          src="/images/breakfast/breakfast/_DSC9016.jpg"
           alt={t('table.galleryAlt3')}
           className="w-full h-[260px] md:h-[635px] object-cover"
           loading="lazy"
@@ -102,7 +102,7 @@ export default function TableDHotes() {
 
      <figure className="overflow-hidden shadow-soft">
       <img
-        src="/images/Screenshot 2026-01-20 133558.png"  // replace with your top big image
+        src="/images/Dinner/Dinner/_DSC8957-Avec accentuation-Bruit.jpg"
         alt={t('table.galleryAlt1')}
         className="w-full h-[360px] md:h-[600px] object-cover"
         loading="lazy"
@@ -114,7 +114,7 @@ export default function TableDHotes() {
     <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
       <figure className=" overflow-hidden shadow-soft">
         <img
-          src="/images/Screenshot 2026-01-20 133621.png"
+          src="/images/Dinner/Dinner/_DSC8989-Avec accentuation-Bruit.jpg"
           alt={t('table.galleryAlt2')}
           className="w-full h-[260px] md:h-[600px] object-cover"
           loading="lazy"
@@ -122,7 +122,7 @@ export default function TableDHotes() {
       </figure>
       <figure className=" overflow-hidden shadow-soft">
         <img
-          src="/images/Screenshot 2026-01-20 133612.png"
+          src="/images/Dinner/Dinner/_DSC8991-Avec accentuation-Bruit.jpg"
           alt={t('table.galleryAlt3')}
           className="w-full h-[260px] md:h-[600px] object-cover"
           loading="lazy"

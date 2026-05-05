@@ -14,7 +14,7 @@ export default function Gallery() {
       {/* HERO */}
       <section className="relative h-[340px] md:h-[500px] overflow-hidden">
         <img
-          src="/images/home herp.jpeg"
+          src="/images/Rooftop&Garden/Rooftop & Garden/_DSC8645-HDR.jpg"
           alt={t("maisonDArt.heroAlt")}
           className="absolute inset-0 w-full h-full object-cover"
         />

@@ -5,8 +5,8 @@ import { useTranslation } from "react-i18next";
 // Ajoutez vos photos dans public/images/ puis mettez les chemins ici
 const slides = [
   "/images/home herp.jpeg",
-  "/images/hero-2.jpg",
-  "/images/hero-3.jpg",
+  "/images/Screenshot 2026-01-20 132450.png",
+  "/images/Screenshot 2026-01-20 133451.png",
 ];
 
 export default function HomeHero() {

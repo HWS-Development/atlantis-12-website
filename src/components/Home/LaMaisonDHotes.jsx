@@ -32,9 +32,9 @@ export default function LaMaisonDHotes() {
         {/* ===== IMAGE GRID (WITH CENTER QUOTE IMAGE) ===== */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 mb-10">
 
-          <img src="/images/Screenshot 2026-01-20 132324.png" className="w-full h-[300px] object-cover rounded-lg" />
-          <img src="/images/Screenshot 2026-01-20 132336.png" className="w-full h-[300px] object-cover rounded-lg" />
-          <img src="/images/Screenshot 2026-01-20 132347.png" className="w-full h-[300px] object-cover rounded-lg" />
+          <img src="/images/Screenshot 2025-11-26 130047.png" className="w-full h-[300px] object-cover rounded-lg" />
+          <img src="/images/Screenshot 2026-01-20 132450.png" className="w-full h-[300px] object-cover rounded-lg" />
+          <img src="/images/view.jpg" className="w-full h-[300px] object-cover rounded-lg" />
 
           <img src="/images/Screenshot 2026-01-20 132359.png" className="w-full h-[300px] object-cover rounded-lg" />
 
@@ -47,8 +47,8 @@ export default function LaMaisonDHotes() {
 
           <img src="/images/Screenshot 2026-01-20 132422.png" className="w-full h-[300px] object-cover rounded-lg" />
           <img src="/images/Screenshot 2026-01-20 132431.png" className="w-full h-[300px] object-cover rounded-lg" />
-          <img src="/images/Screenshot 2026-01-20 132440.png" className="w-full h-[300px] object-cover rounded-lg" />
-          <img src="/images/Screenshot 2026-01-20 132450.png" className="w-full h-[300px] object-cover rounded-lg" />
+          <img src="/images/Screenshot 2026-01-20 133558.png" className="w-full h-[300px] object-cover rounded-lg" />
+          <img src="/images/Screenshot 2026-02-19 162251.png" className="w-full h-[300px] object-cover rounded-lg" />
 
         </div>
 

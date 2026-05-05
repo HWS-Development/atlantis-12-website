@@ -10,7 +10,7 @@ export default function Activites() {
       {/* ===== HERO IMAGE ===== */}
       <div className="w-full h-[340px] md:h-[500px] overflow-hidden">
         <img
-          src="/images/409ce7_e97346edf0664695a5cf6a498dccf59f~mv2.avif"
+          src="/images/Piscine/Piscine/_DSC8674-HDR.jpg"
           alt="Activités Atlantis"
           className="w-full h-full object-cover"
         />

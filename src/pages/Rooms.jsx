@@ -6,39 +6,67 @@ const rooms = [
   {
     key: "ipomea",
     images: [
-      "/images/rooms/Screenshot 2026-01-20 140225.png",
-      "/images/rooms/Screenshot 2026-01-20 140225.png",
-      "/images/rooms/Screenshot 2026-01-20 140225.png",
+      "/images/LIpoméa/L’Ipoméa/_DSC8325-HDR.jpg",
+      "/images/LIpoméa/L’Ipoméa/_DSC8328-HDR-Panorama-Modifier.jpg",
+      "/images/LIpoméa/L’Ipoméa/_DSC8352-HDR-Panorama.jpg",
+      "/images/LIpoméa/L’Ipoméa/_DSC8340-HDR-Panorama-Modifier.jpg",
+      "/images/LIpoméa/L’Ipoméa/_DSC8364-HDR.jpg",
+      "/images/LIpoméa/L’Ipoméa/_DSC8367-HDR-Panorama-Modifier.jpg",
+      "/images/LIpoméa/L’Ipoméa/_DSC8379-HDR-Modifier.jpg",
+      "/images/LIpoméa/L’Ipoméa/_DSC8388-HDR.jpg",
     ],
   },
   {
     key: "coquelicot",
     images: [
-      "/images/rooms/Screenshot 2026-01-20 140235.png",
-      "/images/rooms/Screenshot 2026-01-20 140235.png",
-      "/images/rooms/Screenshot 2026-01-20 140235.png",
+      "/images/LaCoquelicot/La Coquelicot/_DSC8458-HDR.jpg",
+      "/images/LaCoquelicot/La Coquelicot/_DSC8470-HDR-Panorama-Modifier.jpg",
+      "/images/LaCoquelicot/La Coquelicot/_DSC8473-HDR-Panorama-Modifier.jpg",
+      "/images/LaCoquelicot/La Coquelicot/_DSC8479-HDR.jpg",
+      "/images/LaCoquelicot/La Coquelicot/_DSC8482-HDR.jpg",
+      "/images/LaCoquelicot/La Coquelicot/_DSC8494-HDR.jpg",
+      "/images/LaCoquelicot/La Coquelicot/_DSC8497-HDR-Modifier.jpg",
+      "/images/LaCoquelicot/La Coquelicot/_DSC8503.jpg",
+      ""
     ],
   },
   {
     key: "orchis",
     images: [
-      "/images/rooms/Screenshot 2026-01-20 140243.png",
-      "/images/rooms/Screenshot 2026-01-20 140243.png",
-      "/images/rooms/Screenshot 2026-01-20 140243.png",
+      "/images/LOrchis/L’Orchis/_DSC8536-HDR.jpg",
+      "/images/LOrchis/L’Orchis/_DSC8539-HDR.jpg",
+      "/images/LOrchis/L’Orchis/_DSC8542-HDR.jpg",
+      "/images/LOrchis/L’Orchis/_DSC8545-HDR.jpg",
+      "/images/LOrchis/L’Orchis/_DSC8548-HDR.jpg",
+      "/images/LOrchis/L’Orchis/_DSC8560-HDR.jpg",
+      "/images/LOrchis/L’Orchis/_DSC8563-HDR-Modifier.jpg",
+      "/images/LOrchis/L’Orchis/_DSC8566.jpg",
     ],
   },
   {
     key: "agave",
     images: [
-      "/images/rooms/Screenshot 2026-01-20 140259.png",
-      "/images/rooms/Screenshot 2026-01-20 140259.png",
-      "/images/rooms/Screenshot 2026-01-20 140259.png",
+      "/images/LAgave/L’Agave/_DSC8397-HDR-Panorama.jpg",
+      "/images/LAgave/L’Agave/_DSC8406-HDR-Panorama.jpg",
+      "/images/LAgave/L’Agave/_DSC8409-HDR.jpg",
+      "/images/LAgave/L’Agave/_DSC8412-HDR.jpg",
+      "/images/LAgave/L’Agave/_DSC8421-HDR-Panorama-Modifier.jpg",
+      "/images/LAgave/L’Agave/_DSC8439-HDR.jpg",
+      "/images/LAgave/L’Agave/_DSC8450.jpg",
+      "/images/LAgave/L’Agave/_DSC8451.jpg",
     ],
   },
 ];
 
-const plumeriaImg = "/images/rooms/409ce7_751da624774c41e3be834451482cc9bd~mv2.avif";
-const plumeriaImages = [plumeriaImg, plumeriaImg, plumeriaImg];
+//const plumeriaImg = "/images/LaPluméria/La Pluméria/_DSC8300-HDR.jpg";
+const plumeriaImages = ["/images/LaPluméria/La Pluméria/_DSC8231-HDR.jpg",
+      "/images/LaPluméria/La Pluméria/_DSC8234-HDR.jpg",
+      "/images/LaPluméria/La Pluméria/_DSC8243-HDR-Panorama-Modifier.jpg",
+      "/images/LaPluméria/La Pluméria/_DSC8249-HDR-Panorama-Modifier.jpg",
+      "/images/LaPluméria/La Pluméria/_DSC8273-HDR.jpg",
+      "/images/LaPluméria/La Pluméria/_DSC8276-HDR.jpg",
+      "/images/LaPluméria/La Pluméria/_DSC8279-HDR.jpg",
+      "/images/LaPluméria/La Pluméria/_DSC8282-HDR-Panorama-Modifier.jpg",];
 
 function RoomSlider({ images, alt, className = "", cta, ctaLabel }) {
   const [idx, setIdx] = useState(0);
@@ -116,7 +144,7 @@ export default function Rooms() {
       {/* ===== HERO IMAGE ===== */}
       <div className="w-full h-[340px] md:h-[500px] overflow-hidden">
         <img
-          src="/images/rooms/409ce7_4febeb2f90464e69900f042f5a6e1329~mv2.avif"
+          src="/images/LaPluméria/La Pluméria/_DSC8243-HDR-Panorama-Modifier.jpg"
           alt={t("rooms.title")}
           className="w-full h-full object-cover"
         />
