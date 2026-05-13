@@ -611,24 +611,29 @@
     "p4": "Atlantis 12 is the ideal starting point to blend relaxation, creativity and discovery.\nA guesthouse in Essaouira designed to experience life differently — at the rhythm of your desires."
   },
   "bottomBar": {
-    "why": {
-      "title": "Why book on our website?",
-      "li1": "Direct rate — no platform commission.",
-      "li2": "Immediate confirmation from us, by email or WhatsApp.",
-      "li3": "A real conversation: we tailor your stay (transfers, meals, experiences) to your wishes.",
-      "li4": "Simple, flexible cancellation — no middleman.",
-      "contact": "For any question:"
-    },
-    "reserve": {
-      "title": "Book your stay",
-      "intro": "Send us your dates and number of travellers — we'll get back to you quickly with a confirmation and the practical details."
-    },
-    "email": "Email",
-    "whatsapp": "WhatsApp",
+    "close": "Close",
     "bar": {
       "cta": "Book your stay",
       "whyDesktop": "why book on our website?",
       "whyMobile": "Why here?"
+    },
+    "why": {
+      "title": "Why book with us?",
+      "li1": "Best rate guaranteed",
+      "li2": "Full board available",
+      "li3": "Secure online booking",
+      "li4": "Personalised service"
+    },
+    "reserve": {
+      "title": "Book a stay"
+    },
+    "form": {
+      "arrival": "Arrival",
+      "departure": "Departure",
+      "room": "Room",
+      "anyRoom": "All rooms",
+      "guests": "Guests",
+      "cta": "Check availability"
     }
   },
   "roomsPage": {

@@ -1,7 +1,11 @@
-// Global fixed bottom bar — present on every page of atlantis12essaouira.com
-// Markup mirrors reference/<page>/body.pretty.html (last <div class="fixed bottom-0 …">)
+// Global fixed bottom bar — matches live atlantis12essaouira.com:
+//   - Default: green bar with "RÉSERVER VOTRE SÉJOUR" (left) and "pourquoi réserver sur notre site ?" (right)
+//   - Click left button: full-width white panel slides up with date pickers + room select + guests + CTA
+//   - Click right button: floating white card above the bar with checkmark bullets ("Pourquoi réserver avec nous ?")
+//   - CTA "VÉRIFIER LES DISPONIBILITÉS" redirects to HotelRunner search.
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
+import ROOMS, { BOOK_URL } from "../../data/rooms";
 
 const CalendarIcon = () => (
   <svg
@@ -58,79 +62,215 @@ const PlusIcon = ({ open }) => (
   </svg>
 );
 
+const CloseIcon = () => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="1.5"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    className="w-5 h-5"
+  >
+    <path d="M18 6 6 18" />
+    <path d="m6 6 12 12" />
+  </svg>
+);
+
+const CheckIcon = () => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    className="w-4 h-4 text-foreground/70 flex-shrink-0"
+  >
+    <path d="M20 6 9 17l-5-5" />
+  </svg>
+);
+
+// Default check-in = today + 7d, check-out = today + 14d (matches screenshot example).
+function defaultDates() {
+  const fmt = (d) => d.toISOString().slice(0, 10);
+  const a = new Date();
+  a.setDate(a.getDate() + 7);
+  const b = new Date();
+  b.setDate(b.getDate() + 14);
+  return { arrival: fmt(a), departure: fmt(b) };
+}
+
 export default function BottomReservationBar() {
   const { t } = useTranslation();
   const [reserveOpen, setReserveOpen] = useState(false);
   const [whyOpen, setWhyOpen] = useState(false);
 
+  const init = defaultDates();
+  const [arrival, setArrival] = useState(init.arrival);
+  const [departure, setDeparture] = useState(init.departure);
+  const [roomSlug, setRoomSlug] = useState(""); // "" = any
+  const [guests, setGuests] = useState(2);
+
+  const submitBooking = (e) => {
+    e?.preventDefault?.();
+    // HotelRunner BV3 search; pass dates and adults (best-effort param names).
+    const url = new URL(BOOK_URL);
+    url.searchParams.set("check_in", arrival);
+    url.searchParams.set("check_out", departure);
+    url.searchParams.set("adults", String(guests));
+    if (roomSlug) url.searchParams.set("room", roomSlug);
+    window.open(url.toString(), "_blank", "noopener,noreferrer");
+  };
+
   return (
     <div className="fixed bottom-0 left-0 right-0 z-40 m-0 p-0">
-      {/* Why-book panel (expanded above the bar) */}
+      {/* "Pourquoi réserver" — floating white card, right-aligned above the bar */}
       {whyOpen && (
-        <div className="bg-card border-t border-primary/15 px-6 md:px-12 py-6 md:py-8 max-h-[60vh] overflow-y-auto">
-          <div className="max-w-3xl mx-auto space-y-4">
-            <p className="font-display text-2xl md:text-3xl text-foreground">
-              {t("bottomBar.why.title", "Pourquoi réserver sur notre site ?")}
-            </p>
-            <ul className="font-body text-sm leading-relaxed text-foreground/75 space-y-2 list-disc pl-5">
-              <li>{t("bottomBar.why.li1", "Tarif direct, sans commission de plateforme.")}</li>
-              <li>{t("bottomBar.why.li2", "Confirmation immédiate de notre part, par email ou WhatsApp.")}</li>
-              <li>
-                {t(
-                  "bottomBar.why.li3",
-                  "Une vraie conversation : nous adaptons votre séjour (transferts, repas, expériences) à vos envies."
-                )}
-              </li>
-              <li>{t("bottomBar.why.li4", "Annulation simple et flexible, sans intermédiaire.")}</li>
-            </ul>
-            <p className="font-body text-xs text-foreground/50 pt-2">
-              {t("bottomBar.why.contact", "Pour toute question :")}{" "}
-              <a className="underline" href="mailto:contact@atlantis12essaouira.com">
-                contact@atlantis12essaouira.com
-              </a>{" "}
-              ·{" "}
-              <a className="underline" href="https://wa.me/212666292285" target="_blank" rel="noreferrer">
-                WhatsApp +212 666 29 22 85
-              </a>
-            </p>
-          </div>
-        </div>
-      )}
-
-      {/* Reservation widget panel (expanded above the bar) */}
-      {reserveOpen && (
-        <div className="bg-background border-t border-primary/15 px-6 md:px-12 py-6 md:py-8 max-h-[70vh] overflow-y-auto">
-          <div className="max-w-3xl mx-auto space-y-4">
-            <p className="font-display text-2xl md:text-3xl text-foreground">
-              {t("bottomBar.reserve.title", "Réserver votre séjour")}
-            </p>
-            <p className="font-body text-sm text-foreground/65">
-              {t(
-                "bottomBar.reserve.intro",
-                "Écrivez-nous vos dates et le nombre de voyageurs — nous revenons vers vous rapidement avec une confirmation et les détails pratiques."
-              )}
-            </p>
-            <div className="flex flex-wrap gap-3 pt-2">
-              <a
-                href="mailto:contact@atlantis12essaouira.com?subject=Demande%20de%20r%C3%A9servation%20%E2%80%94%20Atlantis%2012"
-                className="font-body text-xs tracking-[0.3em] uppercase text-primary border border-primary/40 px-6 py-2.5 hover:bg-primary/10 transition-colors"
+        <div className="pointer-events-none absolute bottom-full right-0 left-0 flex justify-end px-4 md:px-10 pb-3">
+          <div className="pointer-events-auto bg-white shadow-xl border border-black/5 px-7 py-6 w-full max-w-md">
+            <div className="flex items-start justify-between mb-4">
+              <p className="font-display text-2xl text-foreground">
+                {t("bottomBar.why.title", "Pourquoi réserver avec nous ?")}
+              </p>
+              <button
+                type="button"
+                aria-label={t("bottomBar.close", "Fermer")}
+                onClick={() => setWhyOpen(false)}
+                className="text-foreground/40 hover:text-foreground transition-colors -mt-1"
               >
-                {t("bottomBar.email", "Email")}
-              </a>
-              <a
-                href="https://wa.me/212666292285"
-                target="_blank"
-                rel="noreferrer"
-                className="font-body text-xs tracking-[0.3em] uppercase text-primary border border-primary/40 px-6 py-2.5 hover:bg-primary/10 transition-colors"
-              >
-                {t("bottomBar.whatsapp", "WhatsApp")}
-              </a>
+                <CloseIcon />
+              </button>
             </div>
+            <ul className="space-y-3">
+              {[
+                t("bottomBar.why.li1", "Meilleur tarif garanti"),
+                t("bottomBar.why.li2", "Pension complète possible"),
+                t("bottomBar.why.li3", "Réservation en ligne sécurisée"),
+                t("bottomBar.why.li4", "Service personnalisé"),
+              ].map((label, i) => (
+                <li key={i} className="flex items-center gap-3">
+                  <CheckIcon />
+                  <span className="font-body text-[15px] text-primary">{label}</span>
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
       )}
 
-      {/* Bar itself — verbatim layout */}
+      {/* "Réserver un séjour" — full-width white panel above the bar */}
+      {reserveOpen && (
+        <div className="bg-white border-t border-black/5 shadow-[0_-4px_20px_rgba(0,0,0,0.04)]">
+          <div className="max-w-5xl mx-auto px-6 md:px-10 py-7 md:py-9">
+            <div className="flex items-start justify-between mb-5">
+              <p className="font-display text-2xl md:text-3xl text-foreground">
+                {t("bottomBar.reserve.title", "Réserver un séjour")}
+              </p>
+              <button
+                type="button"
+                aria-label={t("bottomBar.close", "Fermer")}
+                onClick={() => setReserveOpen(false)}
+                className="text-foreground/40 hover:text-foreground transition-colors mt-2"
+              >
+                <CloseIcon />
+              </button>
+            </div>
+
+            <form
+              onSubmit={submitBooking}
+              className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5"
+            >
+              <div>
+                <label className="block font-body text-[11px] tracking-[0.25em] uppercase text-foreground/60 mb-2">
+                  {t("bottomBar.form.arrival", "Arrivée")}
+                </label>
+                <input
+                  type="date"
+                  value={arrival}
+                  onChange={(e) => setArrival(e.target.value)}
+                  className="w-full border border-foreground/15 px-3 py-2.5 font-body text-sm text-foreground/80 focus:outline-none focus:border-primary"
+                />
+              </div>
+
+              <div>
+                <label className="block font-body text-[11px] tracking-[0.25em] uppercase text-foreground/60 mb-2">
+                  {t("bottomBar.form.departure", "Départ")}
+                </label>
+                <input
+                  type="date"
+                  value={departure}
+                  min={arrival}
+                  onChange={(e) => setDeparture(e.target.value)}
+                  className="w-full border border-foreground/15 px-3 py-2.5 font-body text-sm text-foreground/80 focus:outline-none focus:border-primary"
+                />
+              </div>
+
+              <div>
+                <label className="block font-body text-[11px] tracking-[0.25em] uppercase text-foreground/60 mb-2">
+                  {t("bottomBar.form.room", "Chambre")}
+                </label>
+                <select
+                  value={roomSlug}
+                  onChange={(e) => setRoomSlug(e.target.value)}
+                  className="w-full border border-foreground/15 px-3 py-2.5 font-body text-sm text-foreground/80 focus:outline-none focus:border-primary bg-white"
+                >
+                  <option value="">{t("bottomBar.form.anyRoom", "Toutes les chambres")}</option>
+                  {ROOMS.map((r) => (
+                    <option key={r.slug} value={r.slug}>
+                      {r.name}
+                    </option>
+                  ))}
+                </select>
+              </div>
+
+              <div>
+                <label className="block font-body text-[11px] tracking-[0.25em] uppercase text-foreground/60 mb-2">
+                  {t("bottomBar.form.guests", "Voyageurs")}
+                </label>
+                <div className="flex items-center border border-foreground/15">
+                  <button
+                    type="button"
+                    aria-label="-"
+                    onClick={() => setGuests((g) => Math.max(1, g - 1))}
+                    className="px-3 py-2.5 font-body text-base text-foreground/60 hover:text-primary transition-colors"
+                  >
+                    −
+                  </button>
+                  <span className="flex-1 text-center font-body text-sm text-foreground/80">
+                    {guests}
+                  </span>
+                  <button
+                    type="button"
+                    aria-label="+"
+                    onClick={() => setGuests((g) => Math.min(10, g + 1))}
+                    className="px-3 py-2.5 font-body text-base text-foreground/60 hover:text-primary transition-colors"
+                  >
+                    +
+                  </button>
+                </div>
+              </div>
+
+              <div className="sm:col-span-2 lg:col-span-4">
+                <button
+                  type="submit"
+                  className="font-body text-xs tracking-[0.3em] uppercase text-white bg-primary px-8 py-3.5 hover:bg-secondary transition-colors duration-300"
+                >
+                  {t("bottomBar.form.cta", "Vérifier les disponibilités")}
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      )}
+
+      {/* Bar itself */}
       <div
         className="flex items-center justify-between py-3.5 bg-primary text-primary-foreground gap-4 m-0"
         style={{
@@ -171,10 +311,10 @@ export default function BottomReservationBar() {
             setReserveOpen(false);
           }}
         >
-          <span className="font-display hidden md:block" style={{ fontSize: "0.85rem" }}>
+          <span className="font-display italic hidden md:block" style={{ fontSize: "0.95rem" }}>
             {t("bottomBar.bar.whyDesktop", "pourquoi réserver sur notre site ?")}
           </span>
-          <span className="font-display block md:hidden" style={{ fontSize: "0.75rem" }}>
+          <span className="font-display italic block md:hidden" style={{ fontSize: "0.8rem" }}>
             {t("bottomBar.bar.whyMobile", "Pourquoi ici ?")}
           </span>
           <PlusIcon open={whyOpen} />

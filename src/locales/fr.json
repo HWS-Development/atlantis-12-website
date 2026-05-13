@@ -611,24 +611,29 @@
     "p4": "Atlantis 12 est le point de départ idéal pour conjuguer détente, création et découverte.\nUne maison d’hôtes à Essaouira pensée pour vivre autrement, au rythme de vos envies."
   },
   "bottomBar": {
-    "why": {
-      "title": "Pourquoi réserver sur notre site ?",
-      "li1": "Tarif direct, sans commission de plateforme.",
-      "li2": "Confirmation immédiate de notre part, par email ou WhatsApp.",
-      "li3": "Une vraie conversation : nous adaptons votre séjour (transferts, repas, expériences) à vos envies.",
-      "li4": "Annulation simple et flexible, sans intermédiaire.",
-      "contact": "Pour toute question :"
-    },
-    "reserve": {
-      "title": "Réserver votre séjour",
-      "intro": "Écrivez-nous vos dates et le nombre de voyageurs — nous revenons vers vous rapidement avec une confirmation et les détails pratiques."
-    },
-    "email": "Email",
-    "whatsapp": "WhatsApp",
+    "close": "Fermer",
     "bar": {
       "cta": "Réserver votre séjour",
       "whyDesktop": "pourquoi réserver sur notre site ?",
       "whyMobile": "Pourquoi ici ?"
+    },
+    "why": {
+      "title": "Pourquoi réserver avec nous ?",
+      "li1": "Meilleur tarif garanti",
+      "li2": "Pension complète possible",
+      "li3": "Réservation en ligne sécurisée",
+      "li4": "Service personnalisé"
+    },
+    "reserve": {
+      "title": "Réserver un séjour"
+    },
+    "form": {
+      "arrival": "Arrivée",
+      "departure": "Départ",
+      "room": "Chambre",
+      "anyRoom": "Toutes les chambres",
+      "guests": "Voyageurs",
+      "cta": "Vérifier les disponibilités"
     }
   },
   "roomsPage": {
