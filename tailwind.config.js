@@ -5,21 +5,31 @@ export default {
   theme: {
     extend: {
       colors: {
-        sand: "#EAE3D2",
-        stone: "#D8CBB2",
-        // olive: "#5E6B4E",
-        olive: "rgb(94 107 78 / <alpha-value>)",
-        sea: "#4A8FA6",
-        terra: "#B56A50",
-        charcoal: "#2B2B2B",
-        legacy:{ green:'#2F5F2E', orange:'#E68006' }
+        // Live-site palette (atlantis12essaouira.com)
+        background: "#FFFFFF",
+        foreground: "rgb(47 63 44 / <alpha-value>)",       // body text + headings
+        primary: "rgb(47 63 44 / <alpha-value>)",          // dark olive
+        "primary-soft": "rgb(73 98 70 / <alpha-value>)",   // softer olive (button color)
+        secondary: "rgb(44 62 37 / <alpha-value>)",        // footer / image gradient
+        accent: "rgb(143 175 126 / <alpha-value>)",        // muted green (footer label)
+        sage: "rgb(107 143 94 / <alpha-value>)",           // sage (#6B8F5E)
+        cream: "rgb(245 240 232 / <alpha-value>)",         // cream/beige
+        card: "rgb(245 240 232 / <alpha-value>)",          // card surface (cream)
+        border: "rgba(47, 63, 44, .15)",
       },
       fontFamily: {
+        // body = Raleway, display = Dancing Script (matches live site exactly)
+        body: ['Raleway', 'system-ui', '-apple-system', 'Segoe UI', 'sans-serif'],
+        display: ['"Dancing Script"', 'cursive'],
+        // legacy aliases kept so existing pages don't break while we migrate
+        sans: ['Raleway', 'system-ui', 'sans-serif'],
+        serif: ['"Dancing Script"', 'Georgia', 'serif'],
         dancing: ['"Dancing Script"', 'cursive'],
-        serif: ['Cormorant Garamond','Georgia','serif'],
-        sans: [
-          'Avenir', 'Avenir Next', 'Avenir LT Std',
-          'system-ui','-apple-system','Segoe UI','Helvetica Neue','Arial','sans-serif'],
+      },
+      letterSpacing: {
+        tightest: "-0.02em",
+        widerx: "0.15em",
+        widestx: "0.4em",
       },
       maxWidth: {
         container: "1200px",
@@ -32,7 +42,5 @@ export default {
       },
     },
   },
-  plugins: [
-
-  ],
+  plugins: [],
 };

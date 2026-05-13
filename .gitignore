@@ -22,3 +22,7 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Scraped reference HTML (dev-only, used for content verification)
+reference/
+

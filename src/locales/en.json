@@ -7,7 +7,11 @@
     "gallery": "HOUSE OF ART",
     "contact": "CONTACT",
     "table": "TABLE D'HÔTES",
-    "book": "BOOK NOW"
+    "book": "BOOK NOW",
+    "guesthouse": "Guesthouse",
+    "house": "The House",
+    "essaouira": "Essaouira",
+    "art": "House of Art"
   },
   "menu": {
     "welcome": "Welcome!",
@@ -27,7 +31,21 @@
     "terms": "Terms & Conditions",
     "privacy": "Privacy Policy",
     "cancellation": "Cancellation Policy",
-    "lang": "FR"
+    "lang": "FR",
+    "contact": "Contact",
+    "weather": "Weather",
+    "wind": "Wind",
+    "weatherQuote": "“The wind of Essaouira doesn't blow — it tells stories.”",
+    "explore": "Explore",
+    "explorer": {
+      "house": "The House",
+      "rooms": "The Rooms",
+      "table": "The Table",
+      "art": "The Art"
+    },
+    "essaouiraLine1": "What we (truly) love",
+    "essaouiraLine2": "in Essaouira",
+    "tagline": "Guesthouse & House of Art — Essaouira, Morocco"
   },
   "home": {
     "hero": {
@@ -40,7 +58,9 @@
         "adults": "Adults",
         "children": "Children"
       },
-      "search": "Book now"
+      "search": "Book now",
+      "eyebrow": "Near Essaouira, Morocco",
+      "scrollDown": "Scroll down"
     },
     "booking": {
       "title": "Book your stay",
@@ -90,12 +110,36 @@
     "services": {
       "title": "Services",
       "items": [
-        { "key": "breakfast", "title": "Breakfast", "image": "/images/services/Screenshot 2026-02-19 154841.png" },
-        { "key": "nature", "title": "Nature park", "image": "/images/services/Screenshot 2026-02-19 154858.png" },
-        { "key": "pool", "title": "Swimming pool", "image": "/images/services/Screenshot 2026-02-19 154850.png" },
-        { "key": "wifi", "title": "Free Wifi", "image": "/images/services/Screenshot 2026-02-19 154831.png" },
-        { "key": "concierge", "title": "Concierge", "image": "/images/services/Screenshot 2026-02-19 154909.png" },
-        { "key": "table", "title": "Table d’hôtes", "image": "/images/services/Screenshot 2026-02-19 154919.png" }
+        {
+          "key": "breakfast",
+          "title": "Breakfast",
+          "image": "/images/services/Screenshot 2026-02-19 154841.png"
+        },
+        {
+          "key": "nature",
+          "title": "Nature park",
+          "image": "/images/services/Screenshot 2026-02-19 154858.png"
+        },
+        {
+          "key": "pool",
+          "title": "Swimming pool",
+          "image": "/images/services/Screenshot 2026-02-19 154850.png"
+        },
+        {
+          "key": "wifi",
+          "title": "Free Wifi",
+          "image": "/images/services/Screenshot 2026-02-19 154831.png"
+        },
+        {
+          "key": "concierge",
+          "title": "Concierge",
+          "image": "/images/services/Screenshot 2026-02-19 154909.png"
+        },
+        {
+          "key": "table",
+          "title": "Table d’hôtes",
+          "image": "/images/services/Screenshot 2026-02-19 154919.png"
+        }
       ]
     },
     "location": {
@@ -110,14 +154,15 @@
       "openMap": "Open in Google Maps",
       "contact": "Contact"
     },
-    "promo": { "cta": "Sahara & Creativity Retreat" },
+    "promo": {
+      "cta": "Sahara & Creativity Retreat"
+    },
     "philosophy": {
       "createConnection": {
         "title": "Create connection ...",
         "imageAlt": "Nature and flowers",
         "text": "Travel finds its meaning in encounters: with places, cultures, people, different rhythms.\n\nAtlantis 12 is a space for sharing, presence and attention. Here, we take time to converse, to understand, to listen. Around a table, a fire, a workshop or a walk in the garden, connections form naturally.\n\nWe invite you to be fully present, to savor each moment, to let yourself be carried by the simplicity and authenticity of exchanges. For it is these invisible connections that make a stay unforgettable.",
         "quote": "Thank you for your understanding and for your attention to the harmony we cultivate every day."
-
       },
       "preserveRare": {
         "title": "Preserve what is rare ...",
@@ -129,8 +174,7 @@
         "title": "Welcome in harmony ...",
         "imageAlt": "Cat at Atlantis 12",
         "text": "To preserve the tranquility and peaceful atmosphere of the premises, we welcome children from 12 years old.\n\nThe house is already home to dogs, cats and chickens, which contribute to the living balance of the place. We therefore cannot accommodate other animals.\n\nThese choices help preserve a serene and respectful atmosphere, for everyone and for the welcoming place.\n\n",
-"quote": "Because it is often these invisible bonds that make a stay unforgettable."
-
+        "quote": "Because it is often these invisible bonds that make a stay unforgettable."
       }
     },
     "roomsIntro": {
@@ -150,6 +194,43 @@
       "sending": "Sending…",
       "success": "Message sent. Thank you!",
       "error": "Something went wrong. Please try again."
+    },
+    "intro": {
+      "body": "Atlantis 12 is a guesthouse and art house at the gates of Essaouira. A rare place where Moroccan hospitality, contemporary creation and the thuya forest meet and answer one another. Five unique rooms, a sincere table d’hôtes, and works of art that inhabit every corner.",
+      "titleLine1": "A house between the ocean",
+      "titleLine2": "and the thuyas",
+      "ctaHouse": "Discover the house",
+      "ctaArt": "The art gallery"
+    },
+    "reviews": {
+      "items": [
+        {
+          "quote": "« Wir hatten einen wundervollen Aufenthalt... Die vielen liebevollen Details in der Unterkunft – schöne Kunstwerke, geschmackvolle Bilder und Dekorationen, bei denen man sofort merkt, wie viel Mühe und Herz in alles gesteckt wurde. Das Essen war fabelhaft. Das unglaublich freundliche und herzliche Personal – man fühlt sich direkt willkommen. Merci beaucoup pour tout ! »",
+          "breakdown": "Rooms 5/5 · Service 5/5 · Location 5/5"
+        },
+        {
+          "quote": "« Asmae est une hôte extraordinaire, le souci du détail se voit dans toutes ses attentions. La chambre est magnifique avec une superbe chaleureuse cheminée, la cuisine juste délicieuse et les espaces sont propices au calme et à la relaxation. Je recommande les yeux fermés ! »",
+          "breakdown": ""
+        },
+        {
+          "quote": "« We had a lovely stay with Asmae and her crew. She has a top notch chef who made my gluten free diet so easy! The room we stayed in was absolutely wonderful. So quiet, spacious and bright. I loved going up on the roof and viewing the surrounding area between us and the ocean. Merci, Asmae ! »",
+          "breakdown": ""
+        }
+      ],
+      "eyebrow": "What they say",
+      "title": "Travellers' words",
+      "verified": "3 verified reviews",
+      "recommend": "100% recommend",
+      "placeholder": "Add your reviews in locales/en.json → home.reviews.items[].quote",
+      "prev": "Previous review",
+      "next": "Next review",
+      "googleCta": "See all our Google reviews"
+    },
+    "rooms": {
+      "eyebrow": "The 5 rooms",
+      "title": "Each room, a work of art",
+      "cta": "See all the rooms",
+      "all": "See all the rooms"
     }
   },
   "contact": {
@@ -176,38 +257,37 @@
       "open_map": "Open in Google Maps"
     }
   },
- "rooms": {
-  "title": "Accommodations",
-  "subtitle": "Sanctuaries of light and silence",
-  "p1": "Each room at Atlantis 12 is an invitation to rest and light.",
-  "p2": "L'Ipoméa, the Agave, the Orchis, the Coquelicot, our four junior suites, and the Pluméria, our superior room, combine comfort, Moroccan craftsmanship and authenticity.\nThe stone walls preserve silence, the soft light diffuses a soothing clarity, and every detail celebrates slowness, the beauty of artisanal craftsmanship and the serenity of the place.",
-  "p3": "Take a break, dream, and let the light of Essaouira gently inspire the heart.",
-  "cta": "Check availability",
-  "footer": "Calm, light, the essential.",
-  "items": {
-    "ipomea": {
-      "title": "L’Ipoméa",
-      "desc": "A bright mini-suite in soothing tones, with a fireplace, living room and bathroom in tadelakt. The authenticity of the natural materials invites rest and reverie."
-    },
-    "coquelicot": {
-      "title": "Le Coquelicot",
-      "desc": "A romantic, light-filled retreat where every detail celebrates the beauty of craftsmanship.Perfect for slowing down and reconnecting with what truly matters."
-    },
-    "orchis": {
-      "title": "L’Orchis",
-      "desc": "A warm and inviting haven blending comfort with Moroccan charm.Its natural hues and fireplace create an intimate and serene atmosphere."
-    },
-    "agave": {
-      "title": "L’Agave",
-      "desc": "A room imbued with serenity, where stone and cotton blend in soothing harmony.Ideal for a couple's getaway, offering tranquility and light."
-    },
-    "plumeria": {
-      "title": "La Plumeria",
-      "desc": "Superior suite with living room, fireplace, and private terrace.Spacious and elegant, it offers a haven of serenity and refinement just a stone's throw from Essaouira."
+  "rooms": {
+    "title": "Accommodations",
+    "subtitle": "Sanctuaries of light and silence",
+    "p1": "Each room at Atlantis 12 is an invitation to rest and light.",
+    "p2": "L'Ipoméa, the Agave, the Orchis, the Coquelicot, our four junior suites, and the Pluméria, our superior room, combine comfort, Moroccan craftsmanship and authenticity.\nThe stone walls preserve silence, the soft light diffuses a soothing clarity, and every detail celebrates slowness, the beauty of artisanal craftsmanship and the serenity of the place.",
+    "p3": "Take a break, dream, and let the light of Essaouira gently inspire the heart.",
+    "cta": "Check availability",
+    "footer": "Calm, light, the essential.",
+    "items": {
+      "ipomea": {
+        "title": "L’Ipoméa",
+        "desc": "A bright mini-suite in soothing tones, with a fireplace, living room and bathroom in tadelakt. The authenticity of the natural materials invites rest and reverie."
+      },
+      "coquelicot": {
+        "title": "Le Coquelicot",
+        "desc": "A romantic, light-filled retreat where every detail celebrates the beauty of craftsmanship.Perfect for slowing down and reconnecting with what truly matters."
+      },
+      "orchis": {
+        "title": "L’Orchis",
+        "desc": "A warm and inviting haven blending comfort with Moroccan charm.Its natural hues and fireplace create an intimate and serene atmosphere."
+      },
+      "agave": {
+        "title": "L’Agave",
+        "desc": "A room imbued with serenity, where stone and cotton blend in soothing harmony.Ideal for a couple's getaway, offering tranquility and light."
+      },
+      "plumeria": {
+        "title": "La Plumeria",
+        "desc": "Superior suite with living room, fireplace, and private terrace.Spacious and elegant, it offers a haven of serenity and refinement just a stone's throw from Essaouira."
+      }
     }
-  }
-}
-,
+  },
   "amenities": {
     "gardenPatio": "Garden & patio access",
     "soundproof": "Soundproof",
@@ -280,7 +360,9 @@
     "infoLinkEn": "#",
     "bookLink": "https://atlantis-12-maison-d-hotes-et-d-art.hotelrunner.com/bv3/search"
   },
-  "brand": { "name": "atlantis 12" },
+  "brand": {
+    "name": "atlantis 12"
+  },
   "legal": {
     "terms": {
       "seoTitle": "Terms & Conditions – Atlantis 12",
@@ -312,7 +394,9 @@
         },
         {
           "title": "Acceptance",
-          "paragraphs": ["By accessing our services, you confirm you have read and accepted these terms."]
+          "paragraphs": [
+            "By accessing our services, you confirm you have read and accepted these terms."
+          ]
         },
         {
           "title": "Governing law",
@@ -322,7 +406,9 @@
         },
         {
           "title": "Services provided",
-          "paragraphs": ["Atlantis 12 provides:"],
+          "paragraphs": [
+            "Atlantis 12 provides:"
+          ],
           "bullets": [
             "Accommodation",
             "Additional services: breakfast, table d’hôtes, camel rides, workshops, massages, etc.",
@@ -341,7 +427,9 @@
         },
         {
           "title": "Booking & payment",
-          "paragraphs": ["Steps:"],
+          "paragraphs": [
+            "Steps:"
+          ],
           "bullets": [
             "1. Select services and dates on the website",
             "2. Review the summary",
@@ -353,7 +441,9 @@
         },
         {
           "title": "Cancellation terms",
-          "paragraphs": ["Cancellation rules are available at the bottom of the website."]
+          "paragraphs": [
+            "Cancellation rules are available at the bottom of the website."
+          ]
         },
         {
           "title": "Guest obligations",
@@ -375,15 +465,21 @@
         },
         {
           "title": "Intellectual property",
-          "paragraphs": ["All website content is protected by intellectual property laws. Reproduction without authorization is prohibited."]
+          "paragraphs": [
+            "All website content is protected by intellectual property laws. Reproduction without authorization is prohibited."
+          ]
         },
         {
           "title": "Changes",
-          "paragraphs": ["Terms may be updated at any time. The online version applies to all new bookings."]
+          "paragraphs": [
+            "Terms may be updated at any time. The online version applies to all new bookings."
+          ]
         },
         {
           "title": "Severability",
-          "paragraphs": ["If any clause is deemed illegal or unenforceable, the remaining clauses remain valid."]
+          "paragraphs": [
+            "If any clause is deemed illegal or unenforceable, the remaining clauses remain valid."
+          ]
         },
         {
           "title": "Proof",
@@ -449,33 +545,338 @@
   "maison": {
     "title": "The Guest House",
     "subtitle": "The spirit of Essaouira — silence, beauty and warmth",
-    
     "p1": "Born from the shared dream of Asmae and Lahcen, Atlantis 12 is a guesthouse located in the Essaouira region of Morocco, nestled between wild nature and the ocean. More than accommodation, it is a sensitive and artistic experience where every detail tells a story.",
     "p2": "In this haven inspired by Berber traditions, traditional architecture blends with the shifting light of Essaouira. Artworks created or exhibited on site converse with the simple, warm gestures of hospitality.",
     "p3": "At Atlantis 12, silence soothes, beauty inspires, and every stay becomes a moment of sharing, creativity, or contemplation.",
     "p4": "Whether you’re seeking an authentic stay, a retreat, or an artistic place by the sea, our guest house opens its doors to you with heart.",
-
     "quote": "Between the wind and the stone,\nthere is\na silence that inspires.",
-
     "footer": "Here, everything is shared: the light, the bread, and the peace of the place."
   },
   "maisonDArt": {
-  "heroAlt": "House of Art - Atlantis 12",
-  "title": "The House of Art",
-  "subtitle": "If hospitality is the first face of Atlantis 12, art is its beating heart.",
-  "p1": "Behind the rooms and gardens, Atlantis also asserts itself as a House of Art, where creativity is lived, shared, and celebrated every day.\nPaintings, sculptures, unique objects and music interact with the stone and light of Essaouira, infusing the place with an atmosphere that is both inspiring and soothing.",
-  "p2": "The studio regularly welcomes artists in residence, open to experimentation and encounters, and Lahcen offers intuitive painting workshops to invite everyone to explore their imagination.",
-  "p3": "Exhibitions, spontaneous concerts and jazz evenings punctuate life at Atlantis, transforming each stay into a cultural and sensory experience.",
-  "p4": "To extend the emotion beyond the stay, some artworks are available for purchase:\na fragment of Atlantis 12 to take home.",
-  "tagline": "Thus, Atlantis 12 brings together two vocations:\na haven of calm and beauty, and a place of living creation where hospitality and art respond to and enrich one another."
+    "heroAlt": "House of Art - Atlantis 12",
+    "title": "The House of Art",
+    "subtitle": "If hospitality is the first face of Atlantis 12, art is its beating heart.",
+    "p1": "Behind the rooms and gardens, Atlantis also asserts itself as a House of Art, where creativity is lived, shared, and celebrated every day.\nPaintings, sculptures, unique objects and music interact with the stone and light of Essaouira, infusing the place with an atmosphere that is both inspiring and soothing.",
+    "p2": "The studio regularly welcomes artists in residence, open to experimentation and encounters, and Lahcen offers intuitive painting workshops to invite everyone to explore their imagination.",
+    "p3": "Exhibitions, spontaneous concerts and jazz evenings punctuate life at Atlantis, transforming each stay into a cultural and sensory experience.",
+    "p4": "To extend the emotion beyond the stay, some artworks are available for purchase:\na fragment of Atlantis 12 to take home.",
+    "tagline": "Thus, Atlantis 12 brings together two vocations:\na haven of calm and beauty, and a place of living creation where hospitality and art respond to and enrich one another."
   },
   "activites": {
-  "title": "Experiences",
-  "subtitle": "An invitation to unique and meaningful moments.",
-  "p1": "During the day, you can rejuvenate by the pool, wander through the garden, surrender to a massage beneath the argan trees, dream away on the rooftop facing the immensity of the forest, or explore your creativity during an intuitive painting workshop.",
-  "p2": "The more adventurous set out to discover Essaouira and its surroundings: sunset horseback rides, camel treks to the wild beaches, surfing or kitesurfing on the best spots of the Atlantic coast, quad excursions through the countryside and dunes, or leisurely strolls through the medina and its Moroccan craft boutiques.",
-  "p3": "At nightfall, the atmosphere shifts: Lahcen sometimes picks up his guitar to improvise a musical moment with friends; on other evenings, the star-filled sky puts on a magical show from the terrace; and when the desire to go out calls, we happily share our best local addresses to enjoy Essaouira’s vibrant evenings.",
-  "p4": "Atlantis 12 is the ideal starting point to blend relaxation, creativity and discovery.\nA guesthouse in Essaouira designed to experience life differently — at the rhythm of your desires."
-}
-
+    "title": "Experiences",
+    "subtitle": "An invitation to unique and meaningful moments.",
+    "p1": "During the day, you can rejuvenate by the pool, wander through the garden, surrender to a massage beneath the argan trees, dream away on the rooftop facing the immensity of the forest, or explore your creativity during an intuitive painting workshop.",
+    "p2": "The more adventurous set out to discover Essaouira and its surroundings: sunset horseback rides, camel treks to the wild beaches, surfing or kitesurfing on the best spots of the Atlantic coast, quad excursions through the countryside and dunes, or leisurely strolls through the medina and its Moroccan craft boutiques.",
+    "p3": "At nightfall, the atmosphere shifts: Lahcen sometimes picks up his guitar to improvise a musical moment with friends; on other evenings, the star-filled sky puts on a magical show from the terrace; and when the desire to go out calls, we happily share our best local addresses to enjoy Essaouira’s vibrant evenings.",
+    "p4": "Atlantis 12 is the ideal starting point to blend relaxation, creativity and discovery.\nA guesthouse in Essaouira designed to experience life differently — at the rhythm of your desires."
+  },
+  "bottomBar": {
+    "why": {
+      "title": "Why book on our website?",
+      "li1": "Direct rate — no platform commission.",
+      "li2": "Immediate confirmation from us, by email or WhatsApp.",
+      "li3": "A real conversation: we tailor your stay (transfers, meals, experiences) to your wishes.",
+      "li4": "Simple, flexible cancellation — no middleman.",
+      "contact": "For any question:"
+    },
+    "reserve": {
+      "title": "Book your stay",
+      "intro": "Send us your dates and number of travellers — we'll get back to you quickly with a confirmation and the practical details."
+    },
+    "email": "Email",
+    "whatsapp": "WhatsApp",
+    "bar": {
+      "cta": "Book your stay",
+      "whyDesktop": "why book on our website?",
+      "whyMobile": "Why here?"
+    }
+  },
+  "roomsPage": {
+    "heroEyebrow": "Rooms & suites — Essaouira",
+    "heroTitle1": "Five spaces,",
+    "heroTitle2": "five worlds",
+    "heroAlt": "Plumeria, the suite — Atlantis 12, Essaouira",
+    "intro1": "Five rooms, five worlds, each named after a wild plant",
+    "intro2": "of the Atlantic coast.",
+    "intro3": "Stone walls, tadelakt, raw thuya wood, Essaouira's soft light: the spaces of Atlantis 12 are sanctuaries of materials and silence, opening",
+    "intro4": "onto the park and patio.",
+    "intro5": "Settle in, dream, and let the house do the rest.",
+    "labelSuperior": "Superior Room",
+    "labelJunior": "Junior Suite"
+  },
+  "contactPage": {
+    "logoAlt": "Atlantis 12 — Guesthouse & House of Art, Essaouira, Morocco",
+    "eyebrow": "Contact",
+    "title": "Write to us",
+    "form": {
+      "name": "Full name",
+      "namePh": "Your name",
+      "email": "Email address",
+      "emailPh": "your@email.com",
+      "subject": "Subject",
+      "subjectPh": "Select a subject",
+      "message": "Message",
+      "messagePh": "Your message…",
+      "send": "Send",
+      "mailSubject": "Contact — Atlantis 12"
+    },
+    "subjects": [
+      "Booking / Availability",
+      "Practical information",
+      "Guest table",
+      "Information about an artwork",
+      "Artist residency",
+      "Other"
+    ],
+    "info": {
+      "email": "Email",
+      "whatsapp": "WhatsApp",
+      "address": "Address",
+      "addressLine": "Douar Laraich, Route de Safi, 44000, Essaouira — Morocco",
+      "reception": "Reception",
+      "hours": "Open from 8 a.m. to 9 p.m. — 7 days a week",
+      "mapPlaceholder": "Essaouira — 44000 Morocco",
+      "openMap": "Open in Google Maps"
+    }
+  },
+  "aboutHero": {
+    "eyebrow": "The House",
+    "title1": "Revealed",
+    "title2": "stone by stone",
+    "heroAlt": "The Atlantis 12 house"
+  },
+  "aboutPg": {
+    "geneseEyebrow": "The Genesis",
+    "geneseTitle": "Born of a shared dream",
+    "geneseParas": [
+      "The dream of Asmae and Lahcen, for whom art, gastronomy and Moroccan hospitality are ways of being in the world and offering its very best.",
+      "Atlantis 12 was not built. It was dreamt, then slowly revealed, stone by stone, painting by painting, silence by silence.",
+      "It all began with a love at first sight for a place lost between sky and scrubland, a few kilometres from Essaouira. A wild, forgotten place, swept by the Atlantic wind and the golden Souss light. A place that was waiting.",
+      "For years, we tamed this place, awakened its stones, mastered its volumes, deepened its silence. Until it became what it is today: a guesthouse and house of art where each room bears the name of a plant, like so many secret gardens, each with its own soul.",
+      "Meals are taken at the heart of art or beneath the thuyas. Mornings smell of argan, msemmen and warm bread. Nights are silent, starlit, absolute.",
+      "We welcome only adults, by choice, to preserve the quality of silence and connection that makes the soul of Atlantis 12."
+    ],
+    "foundersAlt": "Asmae and Lahcen",
+    "photoCredit": "© Jean Madesky",
+    "welcome": "Welcome home.",
+    "essenceEyebrow": "Our essence",
+    "essenceTitle": "What drives us",
+    "essenceParas": [
+      "There is another way of travelling. Not the one of interchangeable hotels, of folkloric scenery calibrated to please everyone and that ends up touching no one. A slower, truer way, where you arrive somewhere and feel, without needing to be told, that you are expected.",
+      "It is this conviction that founded Atlantis 12.",
+      "An old sheepfold lovingly transformed. Its walls carry a story, its rooms hold a memory, its plants have a name. Nothing has been placed for effect. Everything is here because we love it.",
+      "Essaouira is not our backdrop. It is our material. The particular light of this city — white in the morning, golden in the evening, never quite the same — enters through our windows and tints each hour differently. The trade winds carry the scent of the Atlantic into the rooms. The medina pulses gently a few minutes' drive away, close enough to dive into, far enough to return from soothed. The cuisine we prepare comes from this land, this sea, these three cultures intertwined for centuries: Amazigh, Andalusian, Sephardic.",
+      "Art runs through the house like a continuous thread. The works we exhibit, the artists we welcome, from here and elsewhere, from Morocco and the world, make Atlantis 12 a living place, in motion, where creation is never an ornament but always a presence.",
+      "Nature, for its part, needs no announcement. It enters through scents, through light, through the breath of the wind, through birdsong. It reminds us that time here moves to a different cadence and that it is allowed to slow down.",
+      "We believe beauty is not a luxury. That attention paid to things and to beings is the highest form of hospitality. That the guesthouse and the house of art are one and the same gesture: to truly welcome."
+    ],
+    "galleryEyebrow": "The house in pictures",
+    "galleryTitle": "See, feel",
+    "gallery": [
+      "The entrance",
+      "The patio",
+      "The patio at night",
+      "The pool",
+      "The rooftop at dusk",
+      "The lounge",
+      "The lounge & the artworks",
+      "Easel & details",
+      "A sound detail",
+      "Breakfast",
+      "Coffee in the garden",
+      "Mint tea"
+    ],
+    "ctaTitle": "Where time slows down",
+    "ctaRooms": "See the rooms",
+    "ctaContact": "Contact us"
+  },
+  "tablePg": {
+    "heroAlt": "Atlantis 12 guest table",
+    "heroEyebrow": "Guest table in Essaouira",
+    "heroTitle1": "The meal",
+    "heroTitle2": "as a ritual",
+    "s1Title": "One single, shared table",
+    "s1p1": "Each evening, the guests of Atlantis 12 gather around a common table. A unique meal, drawn from Essaouira's threefold culinary heritage — Andalusian, Amazigh and Ashkenazi — prepared with vegetables from the garden and fresh produce from the market.",
+    "s1p2": "Served in the patio in summer, by the fire in winter.",
+    "s1p3": "It is often here that the best conversations are born.",
+    "s1ImgAlt": "The set table — Atlantis 12",
+    "s2Title": "The evening dinner",
+    "s2Courses": "Starter · Main course · Dessert",
+    "s2Lead": "A single menu, composed each evening according to the season and the inspiration of the moment.",
+    "s2Price": "€40 / person · drinks not included · by reservation · served at 8 p.m.",
+    "s2ImgAlt": "Couscous with prawns",
+    "s2Caption": "Couscous with Atlantic prawns",
+    "s3Title": "A dish, a story",
+    "s3p1": "Jaouhara — crisp leaves, cream, almonds, cinnamon, orange blossom.",
+    "s3p2": "Before reigning over Moroccan tables, this dessert had its roots in the art of living of Al-Andalus. Crossing the Mediterranean with the Jewish and Muslim exiles of the 15th century, it reinvented itself in an Amazigh Morocco as a layered poem.",
+    "s3p3": "At Atlantis 12, we love telling the story on the plate.",
+    "s3ImgAlt": "Jaouhara, crisp-leaf and cream dessert",
+    "s4Eyebrow": "Every morning",
+    "s4Title": "The Moroccan breakfast",
+    "s4ImgAlt": "The Moroccan breakfast",
+    "s4p1": "In the morning, the table is set anew — msemen, baghrir, harcha, fresh bread, honey, jams, eggs from our hens, mint tea...",
+    "s4p2": "Included in the room rate · served from 9 a.m. to 11 a.m."
+  },
+  "activitesPg": {
+    "heroAlt": "Sunset horseback ride on Essaouira beach — Atlantis 12",
+    "heroEyebrow": "Unique moments",
+    "heroTitle": "Experiences",
+    "intro": "Because a stay at Atlantis 12 doesn't end at the room, we have crafted each experience to extend the spirit of the house — between the thuya forest, the Atlantic and the Moroccan art of living. Some are lived right here, others take us further afield. All are by reservation.",
+    "houseEyebrow": "at Atlantis 12",
+    "houseTitle": "With us",
+    "house": [
+      {
+        "eyebrow": "wellness",
+        "title": "Wellness massage",
+        "todo": "Beneath the argan trees or on the terrace depending on the weather, our team offers a complete moment of relaxation. A treatment to enjoy from arrival — the rest of your stay will only be sweeter.",
+        "cta": "By reservation"
+      },
+      {
+        "eyebrow": "art & creation",
+        "title": "Intuitive painting workshop",
+        "todo": "Lahcen Fikri opens his studio and his way of entering painting — through gesture, instinct, colour. No experience is required. None is even useful. You leave with a work you didn't expect — and that is entirely your own.",
+        "cta": "By reservation"
+      },
+      {
+        "eyebrow": "nature & escape",
+        "title": "Camel ride",
+        "todo": "From the Atlantis 12 patio, at the pace of the camel, the thuya forest opens onto a wild beach, far from everything. A picnic may punctuate the ride — a moment suspended between sky and ocean.",
+        "cta": ""
+      },
+      {
+        "eyebrow": "body & spirit",
+        "title": "Yoga session",
+        "todo": "On the terrace, with the thuya forest stretching into the distance. Indoors when the wind decides otherwise. Either way, time truly stops.",
+        "cta": ""
+      }
+    ],
+    "partnersEyebrow": "with our partners",
+    "partnersTitle": "Around us",
+    "partnersCta": "On request",
+    "partners": [
+      {
+        "eyebrow": "Rides",
+        "title": "Horseback rides",
+        "todo": "Argan forests, golden dunes, beach at sunset. A rare and gentle way to discover the surroundings."
+      },
+      {
+        "eyebrow": "Surf",
+        "title": "Surf, kitesurf, kitefoil, windsurf",
+        "todo": "The Atlantic is just steps away and Essaouira's wind is legendary. Beginners and advanced welcome — our partners adapt to your level."
+      },
+      {
+        "eyebrow": "Excursions",
+        "title": "Quad or buggy excursions",
+        "todo": "Wild beaches and dunes as far as the eye can see. For those who love the feel of wind and space."
+      },
+      {
+        "eyebrow": "Hammam",
+        "title": "Traditional hammam & treatments",
+        "todo": "A wellness interlude in an authentic hammam with scrubbing, beldi soap, clay mask. The Moroccan ritual in all its generosity."
+      },
+      {
+        "eyebrow": "Tours",
+        "title": "Electric motorbike tours",
+        "todo": "Quiet guided tours, at the pace of nature. An ecological and original way to discover the region."
+      }
+    ],
+    "customEyebrow": "tailor-made",
+    "customTitle": "A particular wish?",
+    "customText": "Every stay is different. If you have an activity in mind, an outing at sea, a meeting with an artisan or musician, a dinner under the stars... we will do everything to make it happen. Tell us what would truly delight you.",
+    "customCta": "contact us"
+  },
+  "essaouiraPg": {
+    "heroAlt": "Essaouira",
+    "heroEyebrow": "Mogador",
+    "heroTitle1": "What we (truly!) love",
+    "heroTitle2": "in Essaouira",
+    "chosenTitle": "Essaouira, chosen",
+    "chosenP1": "One does not settle in Essaouira by chance. You arrive one day, carried by the wind, and something happens: a light, a scent of thuyas and iodine, the sound of waves against the ramparts. And you never quite leave.",
+    "chosenP2": "That is what happened to us. We chose it for what it conceals: a rare gentleness of life, a creativity bubbling up everywhere, a humanity in the alleyways unlike any other city in Morocco.",
+    "chosenP3": "What you'll find on this page are the addresses we share with our friends.",
+    "seeTitle": "To see and to live",
+    "seeP1a": "We always start with ",
+    "seeP1b": " — it's the gate that sets the tone. A few steps to the right, ",
+    "seeP1c": " is worth a stop, for an exhibition or a musical improvisation.",
+    "seeP2a": "Drift to the place de l'Horloge, cross the small adjoining square that resembles Sardinia as much as a Buenos Aires alley, then ask your way to ",
+    "seeP2b": " which tells the story of living together in the most beautiful way, and a little further on, the ",
+    "seeP2c": " — two places that change the way you see the city.",
+    "seeP3a": "From there, climb up to ",
+    "seeP3b": ". The cannons, the seagulls, the Atlantic facing you — we never get over it. Walking along the ramparts, you'll reach ",
+    "seeP3c": ", perfect at the end of the afternoon. Then wander as you wish — Place au Grain, the fish market, ",
+    "seeP3d": " patron saint of the Gnaouas…",
+    "seeP4": "Push open the doors. Lose yourself in the alleys. That is where Essaouira truly reveals itself.",
+    "linkBabSbaa": "Bab Sbaa",
+    "linkDarSouiri": "Dar Souiri",
+    "linkBaytDakira": "Bayt Dakira",
+    "linkMusee": "Essaouira History Museum",
+    "linkSkala": "the Skala",
+    "linkPlaceMoulay": "Place Moulay El Hassan",
+    "linkZaouia": "the Zaouia Sidna Blal",
+    "bookLunch": "Lunch",
+    "bookDinner": "Dinner — our favourites",
+    "bookNights": "Nightlife",
+    "bookNightsSub": "Programme to be checked — usually from Wednesday or Thursday onwards",
+    "bookArgan": "Argan oil",
+    "bookCoops": "Authentic cooperatives",
+    "bookCoopsSub": "By appointment — cooking workshop and argan-making",
+    "notes": {
+      "darLawama": "The most breathtaking Atlantic viewpoint in the region. We come as much for the eyes as for the plate. But for us, it is far more than that: for over twenty years we've had our table here, and long had our refuge here too. It is here, facing this ocean, that the idea of Essaouira took root, and with it, Atlantis 12.",
+      "oceanVagabond": "Feet in the sand, facing the Atlantic.",
+      "chaletPlage": "An institution. The sea on the plate, always.",
+      "chebZak": "A discreet address in the Medina, unassuming on the outside but where you'll savour lobster on a lovely rooftop.",
+      "tableMaDada": "Refined Moroccan cuisine, in a superb setting.",
+      "loveCaravane": "Unique atmosphere, careful cuisine.",
+      "darBaba": "Intimate and flavourful.",
+      "lallaIzza": "Our trusted address for authentic argan oil."
+    },
+    "ctaText": "Don't hesitate to write to us if you'd like more details about any of these addresses — we'll happily guide you."
+  },
+  "galleryPg": {
+    "heroAlt": "Atlantis 12 House of Art",
+    "heroEyebrow": "House of Art",
+    "heroTitle1": "Art lives here,",
+    "heroTitle2": "permanently",
+    "s1Title": "A gallery you live in",
+    "s1p1": "Atlantis 12 is not only a guesthouse — it is a house of art. Since opening, the house has welcomed Moroccan and international artists in residence, displays their works in the living spaces, and allows collectors to discover and acquire original pieces in situ.",
+    "s1p2": "The selection is permanent and ever-evolving. Every stay is therefore unique — works change, artists pass through, but the dialogue between space and creation remains constant.",
+    "s1ImgAlt": "Painting studio",
+    "collectionEyebrow": "The collection",
+    "collectionTitle": "Works in residence",
+    "badgeAvailable": "Available for purchase",
+    "badgePermanent": "Permanent collection",
+    "metaCanvas": "Mixed media on canvas — 2023 — 180 x 120 cm",
+    "metaPermanent": "Permanent collection",
+    "metaMetal": "Forged metal",
+    "works": [
+      {
+        "artist": "Lahcen Fikri",
+        "where": "In: La Pluméria"
+      },
+      {
+        "artist": "Natalia Voronova",
+        "where": "In: L'Ipomèa"
+      },
+      {
+        "artist": "Marta Blahová",
+        "where": "In: L'Agave"
+      },
+      {
+        "artist": "Lahcen Fikri",
+        "where": "In: La Coquelicot"
+      },
+      {
+        "artist": "Lahcen Fikri",
+        "where": "In: L'Orchis"
+      },
+      {
+        "artist": "Karim Alaoui",
+        "sub": "Les Gnaouas",
+        "where": "In: The patio"
+      }
+    ],
+    "residencyTitle": "Artist residencies",
+    "residencyText": "In late 2026, Atlantis 12 will open its doors to artists and thinkers in residence — visual artists, photographers, sculptors, writers, historians, philosophers. Two to four weeks of complete immersion, with on-site lodging, studio space and workspaces, in the heart of the forest.",
+    "residencyCta": "Express your interest"
+  }
 }

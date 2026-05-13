@@ -1,66 +1,69 @@
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
-// import { HelmetProvider } from "react-helmet-async"; // uncomment if you keep SEO library
+
+import Navbar from "./components/Layout/Navbar";
+import Footer from "./components/Layout/Footer";
+import BottomReservationBar from "./components/Layout/BottomReservationBar";
+import ScrollToHash from "./components/Common/ScrollToHash";
+import ScrollToTop from "./components/UI/ScrollToTop";
+
 import Home from "./pages/Home";
 import Rooms from "./pages/Rooms";
 import Gallery from "./pages/Gallery";
 import Contact from "./pages/Contact";
-import Navbar from "./components/Layout/Navbar";
-import Footer from "./components/Layout/Footer";
-import ScrollToHash from "./components/Common/ScrollToHash";
-import WhyBookBox from "./components/Common/WhyBookBox";
 import About from "./pages/About";
-import ScrollToTop from "./components/UI/ScrollToTop";
 import Activites from "./pages/Activites";
-
-
-// import Retreat from "./pages/Retreat";
 import TermsConditions from "./pages/TermsConditions";
 import CancellationPolicy from "./pages/CancellationPolicy";
 import TableDHotes from "./pages/TableDHotes";
-// import { useEffect } from "react";
+import Essaouira from "./pages/Essaouira";
 
 export default function App() {
-  // useEffect(() => {
-  //   window.dispatchEvent(new CustomEvent("retreat:open"));
-  // }, [])
   return (
-    // <HelmetProvider>  {/* remove if not using react-helmet-async */}
-      <BrowserRouter>
-        <div className="min-h-full flex flex-col">
-          <Navbar />
-          <ScrollToTop />
-          <ScrollToHash />
-          <WhyBookBox />
-          <main className="flex-1">
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/about" element={<About />} /> 
-              <Route path="/rooms" element={<Rooms />} />
-              <Route path="/activites" element={<Activites />} />
+    <BrowserRouter>
+      <div className="min-h-full flex flex-col">
+        <Navbar />
+        <ScrollToTop />
+        <ScrollToHash />
 
-              <Route path="/gallery" element={<Gallery />} />
-              <Route path="/contact" element={<Contact />} />
-              <Route path="/table" element={<TableDHotes />} />
-              <Route path="/terms" element={<TermsConditions />} />
-              <Route path="/cancellation" element={<CancellationPolicy />} />
-              {/* <Route path="/retreat" element={<Retreat />} /> */}
-              {/* 404 fallback */}
-              <Route
-                path="*"
-                element={
-                  <div className="container-std py-20">
-                    <h1 className="text-3xl mb-4">404</h1>
-                    <Link className="btn btn-primary" to="/">
-                      Go Home
-                    </Link>
-                  </div>
-                }
-              />
-            </Routes>
-          </main>
-          <Footer />
-        </div>
-      </BrowserRouter>
-    // </HelmetProvider>
+        {/* Live site lets the fixed header OVERLAP page content (Hero handles its own
+            full-viewport height). Inner pages add their own top padding if needed. */}
+        <main className="flex-1">
+          <Routes>
+            <Route path="/" element={<Home />} />
+
+            {/* Live-site canonical URLs */}
+            <Route path="/la-maison"    element={<About />} />
+            <Route path="/chambres"     element={<Rooms />} />
+            <Route path="/table-dhotes" element={<TableDHotes />} />
+            <Route path="/maison-dart"  element={<Gallery />} />
+            <Route path="/experiences"  element={<Activites />} />
+            <Route path="/essaouira"    element={<Essaouira />} />
+            <Route path="/contact"      element={<Contact />} />
+
+            {/* Legacy aliases (kept so old links still resolve) */}
+            <Route path="/about"        element={<About />} />
+            <Route path="/rooms"        element={<Rooms />} />
+            <Route path="/table"        element={<TableDHotes />} />
+            <Route path="/activites"    element={<Activites />} />
+            <Route path="/gallery"      element={<Gallery />} />
+
+            <Route path="/terms"        element={<TermsConditions />} />
+            <Route path="/cancellation" element={<CancellationPolicy />} />
+
+            <Route
+              path="*"
+              element={
+                <div className="container-std py-20 text-center">
+                  <h1 className="text-3xl mb-4">404</h1>
+                  <Link className="btn-outline-primary" to="/">Go Home</Link>
+                </div>
+              }
+            />
+          </Routes>
+        </main>
+        <Footer />
+        <BottomReservationBar />
+      </div>
+    </BrowserRouter>
   );
 }

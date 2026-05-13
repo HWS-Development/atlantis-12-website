@@ -2,179 +2,161 @@
 @tailwind components;
 @tailwind utilities;
 
-/* -------------------------- */
-/* Base layer (global styles) */
-/* -------------------------- */
+/* ============================================================
+   Atlantis 12 — global styles
+   Matches live site: Raleway body, Dancing Script display,
+   white background, dark-olive (rgb 47 63 44) text.
+   ============================================================ */
+
 @layer base {
   html, body, #root { height: 100%; }
 
-  /* Old-site look = white page background */
   body {
-    @apply font-sans antialiased;
-    @apply text-black;          /* use your Tailwind color if you prefer */
-    background-color: #ffffff;
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Raleway', system-ui, -apple-system, 'Segoe UI', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    font-weight: 400;
   }
 
-  h1, h2, h3, h4 { @apply font-serif; }
+  /* Display headings = Dancing Script, normal weight (live site spec) */
+  h1, h2 {
+    font-family: 'Dancing Script', cursive;
+    font-weight: 400;
+    line-height: 1;
+    color: rgb(47, 63, 44);
+  }
+
+  /* Default <p> on the live site is 12px, 0.4em tracking, uppercase semantics
+     when used as a label. We keep <p> default as Raleway 16/24 here and
+     opt into the eyebrow look via .eyebrow utility. */
+  p { font-family: 'Raleway', sans-serif; }
+
+  /* Smooth scroll for the hero scroll-down arrow */
+  html { scroll-behavior: smooth; }
 }
 
-:root{
-  --fnt: normal normal 700 14px / 1.4em avenir-lt-w01_35-light1475496, sans-serif;
-  --font_1: normal normal normal 16px / 1.4em din-next-w01-light, sans-serif;
-}
-* {
-  font-family: "Avenir LT W01 85 Heavy", "Avenir Next", "Avenir", sans-serif !important;
-  /* font-weight: 700; */
-}
-.hero-form-bg {
-    background: rgba(255, 255, 255, .75);
-    background-color: rgba(255, 255, 255, 0.5928571428571427) !important;
-    overflow: hidden;
-  /* background-color: hsla(100, 100%, 100%, 0.25); */
-}
-/* -------------------------------------- */
-/* Components & design utilities (custom) */
-/* -------------------------------------- */
+/* ============================================================
+   Components / utilities
+   ============================================================ */
 @layer components {
-  .container-std { @apply mx-auto w-full max-w-[1140px] px-4; }
-  .section       { @apply py-8 md:py-10; }
+  /* "Eyebrow" tiny uppercase label — used everywhere on live site
+     (e.g. PROCHE D'ESSAOUIRA, MAROC / LES 5 CHAMBRES / CONTACT) */
+  .eyebrow {
+    @apply font-body uppercase;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0.4em;
+    color: rgb(47 63 44 / 0.6);
+  }
+  .eyebrow-primary {
+    @apply eyebrow;
+    color: rgb(47 63 44 / 1);
+  }
+  .eyebrow-accent {
+    @apply font-body uppercase;
+    font-size: 12px;
+    letter-spacing: 0.4em;
+    color: rgb(143, 175, 126);
+  }
+
+  /* Outline pill button (live site primary CTA) */
+  .btn-outline-primary {
+    @apply font-body uppercase inline-flex items-center justify-center
+           border border-primary/40 text-primary
+           transition-colors duration-300
+           hover:bg-primary/10;
+    font-size: 12px;
+    letter-spacing: 0.3em;
+    padding: 12px 32px;
+  }
+  .btn-outline-sage {
+    @apply font-body uppercase inline-flex items-center justify-center
+           border transition-colors duration-300;
+    font-size: 12px;
+    letter-spacing: 0.3em;
+    padding: 12px 32px;
+    color: #6B8F5E;
+    border-color: rgba(107, 143, 94, .4);
+  }
+  .btn-outline-sage:hover { background-color: rgba(107, 143, 94, .1); }
+
+  /* Container helper kept for compatibility with non-home pages */
+  .container-std { @apply mx-auto w-full max-w-[1200px] px-4; }
+  .section { @apply py-8 md:py-10; }
   .section-tight { @apply py-6 md:py-8; }
-  .title-smallcaps { @apply uppercase tracking-[.12em] text-xs text-black/60; }
-  .field-sm { @apply h-12 px-6 py-2 text-[20px]; }
 
-  /* Lighter section labels like old site */
-  .section-narrow { @apply py-6  md:py-8; }
+  /* Live-site horizontal page padding (used by every section) */
+  .page-x { @apply px-[8vw] md:px-[10vw]; }
 
-  /* Plain card (very light border like old site) */
+  /* ---- Compatibility shims so existing non-home pages keep building ---- */
+  /* (The brown "legacy" classes referenced by old pages map to no-op /
+     near-equivalent so we don't break the build while migrating.) */
+  .legacy-green { background-color: rgb(44 62 37); }
+  .legacy-orange { background-color: #C77A3F; }
+  .btn-legacy { @apply inline-flex items-center justify-center rounded-full px-4 py-2 text-sm font-medium transition; }
+  .btn-legacy-primary { @apply text-white; background-color: rgb(47 63 44); }
+  .btn-legacy-primary:hover { background-color: rgb(47 63 44 / .9); }
+  .btn { @apply inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-full font-medium transition; }
+  .btn-primary { @apply text-white bg-primary; }
+  .btn-secondary { @apply text-primary bg-white border border-primary/40; }
+  .btn-ghost { @apply text-primary bg-white/90 border border-primary/25; }
+  .btn-outline { @apply text-primary border border-primary/60; }
+  .field {
+    @apply w-full rounded-md border border-primary/20 bg-white px-3 py-2 text-sm
+           focus:outline-none focus:border-primary/60;
+  }
+  .field-sm { @apply h-10 px-3 py-2 text-sm; }
   .card { @apply bg-white rounded-xl2 shadow-soft; }
   .card-plain { @apply bg-white rounded-xl2 border border-black/10; }
-
-  /* Optional subtle paper texture (keep available) */
-  .texture {
-    background-image: url("https://www.transparenttextures.com/patterns/paper-1.png");
-    background-size: 300px 300px;
-  }
-
-  /* ------------------------- */
-  /* Legacy palette + helpers  */
-  /* ------------------------- */
-  .legacy-green        { background-color:#2F5F2E; }  /* header band */
-  .legacy-green-700    { background-color:#244A23; }
-  .legacy-orange       { background-color:#E68007; }  /* CTA button */
-  .legacy-border       { border-color:rgba(0,0,0,.12); }
-
-  /* Uppercase nav look from old site */
-  .nav-link-legacy {
-    @apply uppercase tracking-[.08em] text-[12px] text-white px-2 py-2 hover:text-white/90;
-  }
+  .title-smallcaps { @apply uppercase tracking-[.12em] text-xs text-foreground/60; }
+  .nav-link-legacy { @apply uppercase tracking-[.08em] text-[12px] text-primary px-2 py-2 hover:text-primary/80; }
   .nav-link-legacy-active { @apply font-semibold underline underline-offset-4; }
+  .badge-mono { @apply rounded-xl2 px-5 py-4 text-center bg-card text-foreground/70; }
+  .legacy-hero-banner { @apply text-center text-white rounded-xl px-6 md:px-10 py-4 shadow-md; background-color: rgb(47 63 44 / .85); }
+  .hero-form-bg { background: rgba(255, 255, 255, .75); }
 
-  /* Compact inputs (old booking bar style) */
-  .field {
-    @apply w-full rounded-full border legacy-border bg-white px-4 py-2 text-[14px];
-  }
-
-  /* Legacy buttons */
-  .btn-legacy {
-    @apply inline-flex items-center justify-center rounded-full px-4 py-2 text-[15px] font-semibold transition;
-  }
-  .btn-legacy-primary { @apply text-white; background-color:#E68007; }
-  .btn-legacy-primary:hover { background-color:#d78627; }
-  .btn-legacy-ghost  { @apply bg-white/15 text-white; }
-  .btn-legacy-ghost:hover { @apply bg-white/25; }
-
-  /* Monochrome service badges (old site vibe) */
-  .badge-mono {
-    @apply rounded-xl2 px-5 py-4 text-center bg-[#eae5db] text-black/70;
-  }
-
-  /* Hero welcome banner helper */
-  .legacy-hero-banner {
-    @apply text-center text-white rounded-xl px-6 md:px-10 py-4 shadow-md;
-    background-color: rgb(46 125 31 / 72%); /* legacy-green/95 */
-  }
+  /* simple line clamp helpers */
+  .line-clamp-4 { display:-webkit-box; -webkit-line-clamp:4; -webkit-box-orient:vertical; overflow:hidden; }
+  .line-clamp-5 { display:-webkit-box; -webkit-line-clamp:5; -webkit-box-orient:vertical; overflow:hidden; }
+  .scrollbar-hide::-webkit-scrollbar { display: none; }
+  .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+  .hide-scrollbar::-webkit-scrollbar { display: none; }
+  .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
 }
 
-/* ----------------------- */
-/* Buttons (your existing) */
-/* ----------------------- */
-/* Keep your modern button set so nothing breaks.
-   You can use either .btn-* or .btn-legacy-* as needed. */
-@layer components {
-  .btn {
-    @apply inline-flex items-center justify-center gap-2;
-    @apply px-5 py-2.5 rounded-full font-medium tracking-wide;
-    @apply transition-all duration-300 shadow-sm;
-  }
-  .btn:focus-visible {
-    outline: 2px solid rgba(94,107,78,.40);
-    outline-offset: 2px;
-  }
-  .btn:active { transform: scale(.98); }
-
-  .btn-primary {
-    color: #fff;
-    background-color: rgb(94 107 78 / 1); /* #5E6B4E */
-  }
-  .btn-primary:hover {
-    background-color: rgb(94 107 78 / .92);
-    box-shadow: 0 8px 20px rgba(0,0,0,.10);
-    transform: translateY(-1px);
-  }
-
-  .btn-secondary {
-    color: rgb(94 107 78 / 1);
-    background-color: #ffffff;
-    border: 1px solid rgba(94,107,78,.35);
-  }
-  .btn-secondary:hover {
-    background-color: #DDE8D1;
-    border-color: rgba(94,107,78,.50);
-    box-shadow: 0 8px 20px rgba(0,0,0,.08);
-  }
-
-  .btn-ghost {
-    color: rgb(94 107 78 / 1);
-    background-color: rgba(255,255,255,.9);
-    border: 1px solid rgba(94,107,78,.25);
-  }
-  .btn-ghost:hover {
-    background-color: #ffffff;
-    box-shadow: 0 6px 14px rgba(0,0,0,.08);
-  }
-
-  .btn-outline {
-    color: rgb(94 107 78 / 1);
-    background-color: transparent;
-    border: 1px solid rgba(94,107,78,.60);
-  }
-  .btn-outline:hover {
-    color: #fff;
-    background-color: rgb(94 107 78 / 1);
-    box-shadow: 0 8px 20px rgba(0,0,0,.10);
-  }
-
-  .btn-sm { @apply px-4 py-2 text-sm; }
-  .btn-lg { @apply px-6 py-3 text-base; }
-  .btn:disabled { @apply opacity-60 pointer-events-none; }
+/* ============================================================
+   Section reveal animation (live site uses Framer Motion fade-in-up
+   on every section title/text. We replicate it with IntersectionObserver
+   in src/components/Common/Reveal.jsx and CSS classes below.)
+   ============================================================ */
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 800ms cubic-bezier(.22,.61,.36,1),
+              transform 800ms cubic-bezier(.22,.61,.36,1);
+  will-change: opacity, transform;
 }
-
-/* ----------------------- */
-/* Little utility helpers  */
-/* ----------------------- */
-.scrollbar-hide::-webkit-scrollbar { display: none; }
-.scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
-
-/* simple line clamp helpers without the Tailwind plugin */
-.line-clamp-4{
-  display:-webkit-box;
-  -webkit-line-clamp:4;
-  -webkit-box-orient:vertical;
-  overflow:hidden;
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
 }
-.line-clamp-5{
-  display:-webkit-box;
-  -webkit-line-clamp:5;
-  -webkit-box-orient:vertical;
-  overflow:hidden;
+.reveal.delay-1 { transition-delay: 120ms; }
+.reveal.delay-2 { transition-delay: 240ms; }
+.reveal.delay-3 { transition-delay: 360ms; }
+.reveal.delay-4 { transition-delay: 480ms; }
+
+/* Hero scroll-down line subtle bob (live site does a tiny y-translate loop) */
+@keyframes scroll-bob {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(7px); }
 }
+.scroll-bob { animation: scroll-bob 2s ease-in-out infinite; }
+
+/* Home hero watercolor logo — fade + rise on load (matches live framer-motion) */
+@keyframes hero-logo-in {
+  0%   { opacity: 0; transform: translateY(20px) scale(0.98); }
+  100% { opacity: 1; transform: translateY(0)    scale(1); }
+}
+.hero-logo-in { animation: hero-logo-in 1400ms cubic-bezier(.22,.61,.36,1) both; }
+.hero-logo-img { animation: hero-logo-in 1800ms cubic-bezier(.22,.61,.36,1) both; }

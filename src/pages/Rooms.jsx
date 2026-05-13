@@ -1,234 +1,217 @@
-import React, { useState } from "react";
+// /chambres — rebuilt 1:1 from reference/chambres/body.pretty.html
+import { useEffect, useState } from "react";
+import { useSearchParams } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import Reveal from "../components/Common/Reveal";
+import RoomDetailModal from "../components/Rooms/RoomDetailModal";
+import ROOMS from "../data/rooms";
 
-// 3 photos par chambre. Remplacez par vos chemins réels (ex: ipomea-2.jpg, ipomea-3.jpg).
-const rooms = [
-  {
-    key: "ipomea",
-    images: [
-      "/images/LIpoméa/L’Ipoméa/_DSC8325-HDR.jpg",
-      "/images/LIpoméa/L’Ipoméa/_DSC8328-HDR-Panorama-Modifier.jpg",
-      "/images/LIpoméa/L’Ipoméa/_DSC8352-HDR-Panorama.jpg",
-      "/images/LIpoméa/L’Ipoméa/_DSC8340-HDR-Panorama-Modifier.jpg",
-      "/images/LIpoméa/L’Ipoméa/_DSC8364-HDR.jpg",
-      "/images/LIpoméa/L’Ipoméa/_DSC8367-HDR-Panorama-Modifier.jpg",
-      "/images/LIpoméa/L’Ipoméa/_DSC8379-HDR-Modifier.jpg",
-      "/images/LIpoméa/L’Ipoméa/_DSC8388-HDR.jpg",
-    ],
+const CDN = "/images/cdn";
+const HERO = `${CDN}/05cdde6fb_plumeria-suite-superieure-atlantis12-essaouira.jpg`;
+
+const CARD_IMG = {
+  "la-plumeria": {
+    img: `${CDN}/5c1920fae_plumeria-lit-baldaquin-suite-atlantis12-essaouira.jpg`,
+    altKey: "rooms.altPlumeria",
+    altDefault: "Plumeria, le lit — Atlantis 12, Essaouira",
+    label: "labelSuperior",
   },
-  {
-    key: "coquelicot",
-    images: [
-      "/images/LaCoquelicot/La Coquelicot/_DSC8458-HDR.jpg",
-      "/images/LaCoquelicot/La Coquelicot/_DSC8470-HDR-Panorama-Modifier.jpg",
-      "/images/LaCoquelicot/La Coquelicot/_DSC8473-HDR-Panorama-Modifier.jpg",
-      "/images/LaCoquelicot/La Coquelicot/_DSC8479-HDR.jpg",
-      "/images/LaCoquelicot/La Coquelicot/_DSC8482-HDR.jpg",
-      "/images/LaCoquelicot/La Coquelicot/_DSC8494-HDR.jpg",
-      "/images/LaCoquelicot/La Coquelicot/_DSC8497-HDR-Modifier.jpg",
-      "/images/LaCoquelicot/La Coquelicot/_DSC8503.jpg",
-      
-    ],
+  lipomea: {
+    img: `${CDN}/9a96715ab_ipomea-chambre-vue-principale-atlantis12-essaouira.jpg`,
+    altKey: "rooms.altIpomea",
+    altDefault: "Ipomea, chambre avec lit bleu indigo — Atlantis 12, Essaouira",
+    label: "labelJunior",
   },
-  {
-    key: "orchis",
-    images: [
-      "/images/LOrchis/L’Orchis/_DSC8536-HDR.jpg",
-      "/images/LOrchis/L’Orchis/_DSC8539-HDR.jpg",
-      "/images/LOrchis/L’Orchis/_DSC8542-HDR.jpg",
-      "/images/LOrchis/L’Orchis/_DSC8545-HDR.jpg",
-      "/images/LOrchis/L’Orchis/_DSC8548-HDR.jpg",
-      "/images/LOrchis/L’Orchis/_DSC8560-HDR.jpg",
-      "/images/LOrchis/L’Orchis/_DSC8563-HDR-Modifier.jpg",
-      "/images/LOrchis/L’Orchis/_DSC8566.jpg",
-    ],
+  lagave: {
+    img: `${CDN}/2a7e148c8_agave-chambre-vue-panoramique-atlantis12-essaouira.jpg`,
+    altKey: "rooms.altAgave",
+    altDefault: "Agave, chambre avec lit vert — Atlantis 12, Essaouira",
+    label: "labelJunior",
   },
-  {
-    key: "agave",
-    images: [
-      "/images/LAgave/L’Agave/_DSC8397-HDR-Panorama.jpg",
-      "/images/LAgave/L’Agave/_DSC8406-HDR-Panorama.jpg",
-      "/images/LAgave/L’Agave/_DSC8409-HDR.jpg",
-      "/images/LAgave/L’Agave/_DSC8412-HDR.jpg",
-      "/images/LAgave/L’Agave/_DSC8421-HDR-Panorama-Modifier.jpg",
-      "/images/LAgave/L’Agave/_DSC8439-HDR.jpg",
-      "/images/LAgave/L’Agave/_DSC8450.jpg",
-      "/images/LAgave/L’Agave/_DSC8451.jpg",
-    ],
+  "la-coquelicot": {
+    img: `${CDN}/7574d0f0e_coquelicot-chambre-principale-atlantis12-essaouira.jpg`,
+    altKey: "rooms.altCoquelicot",
+    altDefault: "Coquelicot, chambre principale — Atlantis 12, Essaouira",
+    label: "labelJunior",
   },
-];
+  lorchis: {
+    img: `${CDN}/777d35891_orchis-chambre-lit-mauve-murs-pierre-arche-atlantis12-essaouira.jpg`,
+    altKey: "rooms.altOrchis",
+    altDefault: "Orchis, chambre avec lit mauve — Atlantis 12, Essaouira",
+    label: "labelJunior",
+  },
+};
 
-//const plumeriaImg = "/images/LaPluméria/La Pluméria/_DSC8300-HDR.jpg";
-const plumeriaImages = ["/images/LaPluméria/La Pluméria/_DSC8231-HDR.jpg",
-      "/images/LaPluméria/La Pluméria/_DSC8234-HDR.jpg",
-      "/images/LaPluméria/La Pluméria/_DSC8243-HDR-Panorama-Modifier.jpg",
-      "/images/LaPluméria/La Pluméria/_DSC8249-HDR-Panorama-Modifier.jpg",
-      "/images/LaPluméria/La Pluméria/_DSC8273-HDR.jpg",
-      "/images/LaPluméria/La Pluméria/_DSC8276-HDR.jpg",
-      "/images/LaPluméria/La Pluméria/_DSC8279-HDR.jpg",
-      "/images/LaPluméria/La Pluméria/_DSC8282-HDR-Panorama-Modifier.jpg",];
+const Chevron = () => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    className="lucide lucide-chevron-right w-4 h-4"
+    style={{ color: "rgb(245, 240, 232)" }}
+  >
+    <path d="m9 18 6-6-6-6" />
+  </svg>
+);
 
-function RoomSlider({ images, alt, className = "", cta, ctaLabel }) {
-  const [idx, setIdx] = useState(0);
-  const safeImages = images?.filter(Boolean).length ? images : [images?.[0] || "/images/placeholder.jpg"];
-
-  const goPrev = (e) => {
-    e.stopPropagation();
-    setIdx((p) => (p - 1 + safeImages.length) % safeImages.length);
-  };
-  const goNext = (e) => {
-    e.stopPropagation();
-    setIdx((p) => (p + 1) % safeImages.length);
-  };
-
+function RoomCard({
+  name,
+  label,
+  img,
+  alt,
+  onClick,
+  aspect = "aspect-[4/3]",
+  titleSize = "text-2xl md:text-3xl",
+}) {
   return (
-    <div className={`relative group overflow-hidden ${className}`}>
-      {safeImages.map((src, i) => (
-        <img
-          key={i}
-          src={src}
-          alt={`${alt} ${i + 1}`}
-          className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ${
-            i === idx ? "opacity-100 z-0" : "opacity-0 z-0 pointer-events-none"
-          }`}
-        />
-      ))}
-
-      {/* Arrows */}
-      <button
-        type="button"
-        onClick={goPrev}
-        aria-label="Photo précédente"
-        className="absolute left-2 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full bg-white/90 hover:bg-white
-                   flex items-center justify-center shadow-md transition"
-      >
-        <svg className="w-6 h-6 text-[#8b5e34]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 19l-7-7 7-7" />
-        </svg>
-      </button>
-      <button
-        type="button"
-        onClick={goNext}
-        aria-label="Photo suivante"
-        className="absolute right-2 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full bg-white/90 hover:bg-white
-                   flex items-center justify-center shadow-md transition"
-      >
-        <svg className="w-6 h-6 text-[#8b5e34]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
-        </svg>
-      </button>
-
-      {/* CTA overlay */}
-      {cta && (
-        <a
-          href="https://atlantis-12-maison-d-hotes-et-d-art.hotelrunner.com/bv3/search"
-          target="_blank"
-          rel="noreferrer"
-          className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition bg-black/10 z-[1]"
+    <div
+      role="button"
+      tabIndex={0}
+      onClick={onClick}
+      onKeyDown={(e) => (e.key === "Enter" || e.key === " ") && onClick?.()}
+      className={`group relative overflow-hidden cursor-pointer ${aspect}`}
+    >
+      <img
+        src={img}
+        alt={alt}
+        loading="lazy"
+        decoding="async"
+        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+      />
+      <div className="absolute inset-0 bg-gradient-to-t from-secondary/80 via-transparent to-transparent" />
+      <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/10 transition-colors duration-500" />
+      <div className="absolute bottom-5 left-5 right-5">
+        <p className={`font-display ${titleSize}`} style={{ color: "rgb(245, 240, 232)" }}>
+          {name}
+        </p>
+        <p
+          className="font-body text-xs tracking-wider mt-1"
+          style={{ color: "rgba(245, 240, 232, 0.7)" }}
         >
-          <span className="bg-white px-6 py-2 rounded-full shadow hover:bg-[#DDC5AD] text-sm font-medium text-[#5a3e28] transition">
-            {ctaLabel}
-          </span>
-        </a>
-      )}
+          {label}
+        </p>
+      </div>
+      <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+        <div className="w-8 h-8 flex items-center justify-center border border-foreground/30 bg-background/20 backdrop-blur-sm">
+          <Chevron />
+        </div>
+      </div>
     </div>
   );
 }
 
 export default function Rooms() {
   const { t } = useTranslation();
+  const [searchParams, setSearchParams] = useSearchParams();
+  const [activeSlug, setActiveSlug] = useState(null);
+
+  useEffect(() => {
+    const slug = searchParams.get("room");
+    if (slug && ROOMS.some((r) => r.slug === slug)) {
+      setActiveSlug(slug);
+    }
+  }, [searchParams]);
+
+  const closeModal = () => {
+    setActiveSlug(null);
+    if (searchParams.get("room")) {
+      const next = new URLSearchParams(searchParams);
+      next.delete("room");
+      setSearchParams(next, { replace: true });
+    }
+  };
+
+  const openModal = (slug) => {
+    setActiveSlug(slug);
+    const next = new URLSearchParams(searchParams);
+    next.set("room", slug);
+    setSearchParams(next, { replace: true });
+  };
+
+  const activeRoom = ROOMS.find((r) => r.slug === activeSlug) || null;
+  const hero = ROOMS.find((r) => r.slug === "la-plumeria");
+  const juniors = ROOMS.filter((r) => r.slug !== "la-plumeria");
 
   return (
-    <main className="bg-white">
-
-      {/* ===== HERO IMAGE ===== */}
-      <div className="w-full h-[340px] md:h-[500px] overflow-hidden">
+    <div className="bg-background min-h-screen text-foreground pb-14">
+      <div className="relative h-[70vh] overflow-hidden">
         <img
-          src="/images/LaPluméria/La Pluméria/_DSC8243-HDR-Panorama-Modifier.jpg"
-          alt={t("rooms.title")}
+          src={HERO}
+          alt={t("roomsPage.heroAlt")}
+          width="1600"
+          height="900"
           className="w-full h-full object-cover"
+          style={{ objectPosition: "center 60%" }}
         />
+        <div className="absolute bottom-12 left-[8vw] md:left-[10vw]">
+          <Reveal as="p" className="font-body text-xs tracking-[0.4em] uppercase text-white/70 mb-3">
+            {t("roomsPage.heroEyebrow")}
+          </Reveal>
+          <Reveal as="h1" className="font-display text-5xl md:text-7xl text-white" delay={1}>
+            {t("roomsPage.heroTitle1")}
+            <br />
+            <span className="text-white">{t("roomsPage.heroTitle2")}</span>
+          </Reveal>
+        </div>
       </div>
 
-      {/* ===== INTRO ===== */}
-      <section className="max-w-4xl mx-auto px-4 py-14 text-center">
-        <h2
-          className="font-[DancingScript] text-4xl md:text-5xl text-[#7a5a39] font-normal mb-2"
-          style={{ fontFamily: "'Dancing Script', cursive" }}
+      <div className="px-[60px] pt-[60px] pb-[40px] max-w-[720px] mx-auto text-center">
+        <Reveal
+          as="p"
+          className="font-body text-[15px] leading-[1.8]"
+          style={{ color: "rgb(74, 74, 74)" }}
         >
-       
-        <span className="tracking-wide !font-dancing ">{t("rooms.title")}</span>
+          {t("roomsPage.intro1")}
+          <br />
+          {t("roomsPage.intro2")}
+          <br />
+          <br />
+          {t("roomsPage.intro3")}
+          <br />
+          {t("roomsPage.intro4")}
+          <br />
+          <br />
+          {t("roomsPage.intro5")}
+        </Reveal>
+      </div>
 
-        </h2>
+      <section className="px-[8vw] md:px-[10vw] pb-16">
+        <div className="mb-6">
+          <Reveal>
+            <RoomCard
+              name={hero.name}
+              label={t(`roomsPage.${CARD_IMG[hero.slug].label}`)}
+              img={CARD_IMG[hero.slug].img}
+              alt={CARD_IMG[hero.slug].altDefault}
+              onClick={() => openModal(hero.slug)}
+              aspect="aspect-[16/9]"
+              titleSize="text-2xl md:text-3xl"
+            />
+          </Reveal>
+        </div>
 
-        <p className="text-black font-semibold tracking-wide mb-10">
-          {t("rooms.subtitle")}
-        </p>
-
-
-        <div className="text-black/80 leading-relaxed space-y-6 text-[10px] md:text-base mb-16 whitespace-pre-line">
-          <p>{t("rooms.p1")}</p>
-          <p>{t("rooms.p2")}</p>
-          <p>{t("rooms.p3")}</p>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
+          {juniors.map((r, i) => (
+            <Reveal key={r.slug} delay={(i % 4) + 1}>
+              <RoomCard
+                name={r.name}
+                label={t(`roomsPage.${CARD_IMG[r.slug].label}`)}
+                img={CARD_IMG[r.slug].img}
+                alt={CARD_IMG[r.slug].altDefault}
+                onClick={() => openModal(r.slug)}
+              />
+            </Reveal>
+          ))}
         </div>
       </section>
 
-      {/* ===== ROOMS GRID ===== */}
-      <section className="max-w-5xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-10">
-        {rooms.map((room) => (
-          <div key={room.key} className="text-center">
-            <RoomSlider
-              images={room.images}
-              alt={t(`rooms.items.${room.key}.title`)}
-              className="w-full h-[400px]"
-              cta
-              ctaLabel={t("rooms.cta")}
-            />
-
-
-            <h3 className="font-script text-xl text-[#8b5e34] mt-6">
-            
-                     <span className="tracking-wide !font-dancing text-3xl md:text-4xl font-semibold">  {t(`rooms.items.${room.key}.title`)}</span>
-
-            </h3>
-
-            <p className="text-sm text-black/70 mt-2 line-clamp-3">
-              {t(`rooms.items.${room.key}.desc`)}
-            </p>
-          </div>
-        ))}
-      </section>
-
-      {/* ===== FEATURED ROOM ===== */}
-      <section className="max-w-5xl mx-auto px-2 py-16 text-center">
-        <RoomSlider
-          images={plumeriaImages}
-          alt={t("rooms.items.plumeria.title")}
-          className="w-full h-[360px] mb-6"
-          cta
-          ctaLabel={t("rooms.cta")}
-        />
-
-        <h3 className="font-script text-3xl text-[#8b5e34]">
-       
-<span className="tracking-wide !font-dancing text-3xl md:text-4xl font-semibold">
-  {t("rooms.items.plumeria.title")}
-</span>
-
-        </h3>
-
-        <p className="text-sm text-black/70 mt-2 text-center max-w-xl mx-auto overflow-hidden"
-   style={{ display: '-webkit-box', WebkitLineClamp: 3, WebkitBoxOrient: 'vertical', overflow: 'hidden' }}>
-  {t("rooms.items.plumeria.desc")}
-</p>
-
-
-
-
-        <p className="mt-10 font-semibold">
-          {t("rooms.footer")}
-        </p>
-      </section>
-    </main>
+      {activeRoom && <RoomDetailModal room={activeRoom} onClose={closeModal} />}
+    </div>
   );
 }

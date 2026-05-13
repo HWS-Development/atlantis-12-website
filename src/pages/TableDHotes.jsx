@@ -1,140 +1,95 @@
-// src/pages/TableDHotes.jsx
+// /table-dhotes — rebuilt 1:1 from reference/table-dhotes/body.pretty.html
 import { useTranslation } from "react-i18next";
+import Reveal from "../components/Common/Reveal";
+
+const CDN = "/images/cdn";
+const HERO_IMG = `${CDN}/c246f3e05_table-dhotes-salle-commune-plafond-peint-sculptures-oeuvres-atlantis12-essaouira.jpg`;
+const TABLE_IMG = `${CDN}/47d4a6bd5_table-dhotes-diner-table-dressee-bougies-oeuvre-salle-atlantis12-essaouira.jpg`;
+const COUSCOUS_IMG = `${CDN}/d121c15f9_table-dhotes-couscous-crevettes-salle-oeuvre-atlantis12-essaouira.jpg`;
+const JAOUHARA_IMG = `${CDN}/b002ce2ac_table-dhotes-dessert-jaouhara-msemen-creme-fruits-secs-atlantis12-essaouira.jpg`;
+const BREAKFAST_IMG = `${CDN}/62d00bf62_table-dhotes-petit-dejeuner-marocain-patio-ete-atlantis12-essaouira.jpg`;
 
 export default function TableDHotes() {
   const { t } = useTranslation();
-
   return (
-    <div className="flex flex-col">
-
-      {/* HERO (full-bleed image) */}
-      <section className="relative h-[340px] md:h-[500px] overflow-hidden">
+    <div className="bg-background min-h-screen text-foreground pb-14">
+      <div className="relative h-[70vh] overflow-hidden">
         <img
-          src="/images/Screenshot 2026-02-19 155559.png"              // <-- replace with your hero image
-          alt={t("table.heroAlt")}
-          className="absolute inset-0 w-full h-full object-cover"
-          loading="eager"
+          src={HERO_IMG}
+          alt={t("tablePg.heroAlt")}
+          className="w-full h-full object-cover"
+          style={{ objectPosition: "center 60%" }}
         />
-        {/* optional very subtle darken so white text below pops against the transition */}
-        <div className="absolute inset-0 bg-black/10" />
-      </section>
-
-      {/* TITLE + COPY */}
-      <section className="bg-white">
-        <div className="container-std max-w-4xl mx-auto py-12 md:py-16 text-center">
-          {/* Handwritten-looking headline (uses your serif or script font if available) */}
-          <h2
-          className="font-[DancingScript] text-4xl md:text-5xl text-[#7a5a39] font-normal mb-2"
-          style={{ fontFamily: "'Dancing Script', cursive" }}
-          >
-            <span className="tracking-wide !font-dancing">{t("table.title")}</span>
-          </h2>
-         
-          <p className="text-black font-semibold tracking-wide mb-10">
-            {t("table.sub")}
-          </p>
-
-          {/* Paragraphs */}
-          <div className="text-black/80 leading-relaxed space-y-6 text-[10px] md:text-base mb-16 whitespace-pre-line">
-            <p>{t("table.p1")}</p>
-            <p>{t("table.p2")}</p>
-            <p>{t("table.p3")}</p>
-            <p>{t("table.p4")}</p>
-            <p>{t("table.p5")}</p>
-          </div>
+        <div className="absolute bottom-12 left-[8vw] md:left-[10vw]">
+          <Reveal as="p" className="font-body text-xs tracking-[0.4em] uppercase text-white/70 mb-3">
+            {t("tablePg.heroEyebrow")}
+          </Reveal>
+          <Reveal as="h1" className="font-display text-5xl md:text-7xl text-white" delay={1}>
+            {t("tablePg.heroTitle1")}
+            <br />
+            <span className="text-white">{t("tablePg.heroTitle2")}</span>
+          </Reveal>
         </div>
+      </div>
+
+      <section className="px-[8vw] md:px-[10vw] py-12 md:py-16 grid md:grid-cols-2 gap-12 md:gap-20">
+        <Reveal className="space-y-5">
+          <h2 className="font-display text-4xl md:text-5xl text-foreground">{t("tablePg.s1Title")}</h2>
+          <div className="w-10 h-px bg-primary/50" />
+          <p className="font-body text-sm leading-relaxed text-foreground/65">{t("tablePg.s1p1")}</p>
+          <p className="font-body text-sm leading-relaxed text-foreground/65">{t("tablePg.s1p2")}</p>
+          <p className="font-body text-sm leading-relaxed text-foreground/65">{t("tablePg.s1p3")}</p>
+        </Reveal>
+        <Reveal delay={1}>
+          <img src={TABLE_IMG} alt={t("tablePg.s1ImgAlt")} className="w-full h-auto object-cover" />
+        </Reveal>
       </section>
 
-      {/* 3-IMAGE STRIP */}
-      {/* STACKED GALLERY (1 / 2 / 2 layout like your screenshot) */}
-<section className="bg-[#F7F3EA] py-10">
-  <div className="container-std max-w-5xl mx-auto space-y-4">
+      <section className="px-[8vw] md:px-[10vw] py-12 md:py-16 bg-card/40 max-w-[720px] mx-auto text-center">
+        <Reveal as="h2" className="font-display text-4xl md:text-5xl text-foreground mb-8">
+          {t("tablePg.s2Title")}
+        </Reveal>
+        <Reveal as="p" className="font-body text-sm tracking-[0.3em] uppercase text-foreground/70 mb-8" delay={1}>
+          {t("tablePg.s2Courses")}
+        </Reveal>
+        <Reveal as="p" className="font-body text-sm leading-relaxed text-foreground/65 mb-8" delay={2}>
+          {t("tablePg.s2Lead")}
+        </Reveal>
+        <p className="font-body text-xs text-foreground/40 tracking-wide">{t("tablePg.s2Price")}</p>
+        <Reveal className="mt-12 flex flex-col items-center" delay={3}>
+          <img src={COUSCOUS_IMG} alt={t("tablePg.s2ImgAlt")} className="w-full max-w-[500px] h-auto object-cover" />
+          <p className="font-body text-sm italic text-foreground/60 mt-4">{t("tablePg.s2Caption")}</p>
+        </Reveal>
+      </section>
 
-    {/* TOP BIG IMAGE */}
-    <figure className="overflow-hidden shadow-soft">
-      <img
-        src="/images/11.jpg"  // replace with your top big image
-        alt={t('table.galleryAlt1')}
-        className="w-full h-[360px] md:h-[550px] object-cover"
-        loading="lazy"
-      />
-    </figure>
+      <section
+        className="px-[8vw] md:px-[10vw] py-12 md:py-16 grid md:grid-cols-2 gap-12 md:gap-20"
+        style={{ backgroundColor: "rgb(245, 237, 224)" }}
+      >
+        <Reveal className="flex items-center">
+          <img src={JAOUHARA_IMG} alt={t("tablePg.s3ImgAlt")} className="w-full h-full object-cover" />
+        </Reveal>
+        <Reveal className="space-y-5" delay={1}>
+          <h2 className="font-display text-4xl md:text-5xl text-foreground">{t("tablePg.s3Title")}</h2>
+          <div className="w-10 h-px bg-primary/50" />
+          <p className="font-body text-sm leading-relaxed text-foreground/65">{t("tablePg.s3p1")}</p>
+          <p className="font-body text-sm leading-relaxed text-foreground/65">{t("tablePg.s3p2")}</p>
+          <p className="font-body text-sm leading-relaxed text-foreground/65">{t("tablePg.s3p3")}</p>
+        </Reveal>
+      </section>
 
-    {/* MIDDLE ROW — 2 images */}
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
-      <figure className=" overflow-hidden shadow-soft">
-        <img
-          src="/images/restaurant/restaurant/_DSC8576-HDR.jpg"
-          alt={t('table.galleryAlt2')}
-          className="w-full h-[260px] md:h-[635px] object-cover"
-          loading="lazy"
-        />
-      </figure>
-      <figure className=" overflow-hidden shadow-soft">
-        <img
-          src="/images/restaurant/restaurant/_DSC8946-HDR-Avec accentuation-Bruit.jpg"
-          alt={t('table.galleryAlt3')}
-          className="w-full h-[260px] md:h-[635px] object-cover"
-          loading="lazy"
-        />
-      </figure>
-    </div>
-
-    {/* MIDDLE ROW — 2 images */}
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
-      <figure className=" overflow-hidden shadow-soft">
-        <img
-          src="/images/Dinner/Dinner/_DSC8963-HDR-Avec accentuation-Bruit.jpg"
-          alt={t('table.galleryAlt2')}
-          className="w-full h-[260px] md:h-[635px] object-cover"
-          loading="lazy"
-        />
-      </figure>
-      <figure className=" overflow-hidden shadow-soft">
-        <img
-          src="/images/breakfast/breakfast/_DSC9016.jpg"
-          alt={t('table.galleryAlt3')}
-          className="w-full h-[260px] md:h-[635px] object-cover"
-          loading="lazy"
-        />
-      </figure>
-    </div>
-
-     <figure className="overflow-hidden shadow-soft">
-      <img
-        src="/images/Dinner/Dinner/_DSC8957-Avec accentuation-Bruit.jpg"
-        alt={t('table.galleryAlt1')}
-        className="w-full h-[360px] md:h-[600px] object-cover"
-        loading="lazy"
-      />
-    </figure>
-
-
-      {/* MIDDLE ROW — 2 images */}
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
-      <figure className=" overflow-hidden shadow-soft">
-        <img
-          src="/images/Dinner/Dinner/_DSC8989-Avec accentuation-Bruit.jpg"
-          alt={t('table.galleryAlt2')}
-          className="w-full h-[260px] md:h-[600px] object-cover"
-          loading="lazy"
-        />
-      </figure>
-      <figure className=" overflow-hidden shadow-soft">
-        <img
-          src="/images/Dinner/Dinner/_DSC8991-Avec accentuation-Bruit.jpg"
-          alt={t('table.galleryAlt3')}
-          className="w-full h-[260px] md:h-[600px] object-cover"
-          loading="lazy"
-        />
-      </figure>
-    </div>
-
-  </div>
-</section>
-
-
-
+      <section className="px-[8vw] md:px-[10vw] py-12 md:py-16 grid md:grid-cols-2 gap-12 md:gap-20">
+        <Reveal className="flex items-center">
+          <img src={BREAKFAST_IMG} alt={t("tablePg.s4ImgAlt")} className="w-full h-full object-cover" />
+        </Reveal>
+        <Reveal className="space-y-5" delay={1}>
+          <p className="font-body text-xs tracking-[0.4em] uppercase text-primary">{t("tablePg.s4Eyebrow")}</p>
+          <h2 className="font-display text-4xl md:text-5xl text-foreground">{t("tablePg.s4Title")}</h2>
+          <div className="w-10 h-px bg-primary/40" />
+          <p className="font-body text-sm leading-relaxed text-foreground/65">{t("tablePg.s4p1")}</p>
+          <p className="font-body text-xs text-foreground/40 tracking-wide">{t("tablePg.s4p2")}</p>
+        </Reveal>
+      </section>
     </div>
   );
 }
