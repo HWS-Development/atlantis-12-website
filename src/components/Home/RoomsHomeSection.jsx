@@ -28,7 +28,7 @@ const JUNIORS = [
 function RoomCard({ to, name, type, img, alt, wide = false }) {
   return (
     <Reveal
-      as={Link}
+      as={LangLink}
       to={to}
       delay={1}
       className={`group relative overflow-hidden cursor-pointer block ${
