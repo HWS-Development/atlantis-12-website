@@ -286,6 +286,46 @@
         "title": "La Plumeria",
         "desc": "Superior suite with living room, fireplace, and private terrace.Spacious and elegant, it offers a haven of serenity and refinement just a stone's throw from Essaouira."
       }
+    },
+    "la-plumeria": {
+      "category": "Superior Suite",
+      "adults": "• 2 adults",
+      "intro": "The largest room in the house. A space made for those who seek the absolute."
+    },
+    "lipomea": {
+      "category": "Junior Suite",
+      "adults": "• 3 adults",
+      "intro": "Ipomea takes its name from the climbing flower that drapes the walls of Morocco. A luminous room, wrapped in indigo blue, where nature enters through every window."
+    },
+    "lagave": {
+      "category": "Junior Suite",
+      "adults": "• 3 adults",
+      "intro": "Named after the wild agave that punctuates the Atlantic landscape, this room blends mineral textures and softness. Its clean lines and natural palette invite silence."
+    },
+    "la-coquelicot": {
+      "category": "Junior Suite",
+      "adults": "• 3 adults",
+      "intro": "Coquelicot carries within it the red brilliance of a spring field. A vibrant and intimate room with refined details, where colour converses with the artworks on display."
+    },
+    "lorchis": {
+      "category": "Junior Suite",
+      "adults": "• 3 adults",
+      "intro": "Discreet and refined like the wild orchid of the thuya forest, its noble materials — wood, natural cotton, tadelakt — compose a space outside of time."
+    },
+    "equip": {
+      "litKing": "King-size bed",
+      "litQueen": "Queen-size bed",
+      "vasteSalon": "Spacious lounge",
+      "cheminee": "Fireplace",
+      "baiesVitrees": "Bay windows",
+      "terrassePrivee": "Private terrace",
+      "sdbPrivative": "Private bathroom",
+      "doucheItaliennePluie": "Walk-in rain shower",
+      "doucheItalienne": "Walk-in shower",
+      "serviettesArgan": "Towels & argan soap",
+      "salonPrivCheminee": "Private lounge with fireplace",
+      "vueParcPatio": "Park & patio view",
+      "ouvertureVitree": "Glass opening"
     }
   },
   "amenities": {
@@ -878,5 +918,17 @@
     "residencyTitle": "Artist residencies",
     "residencyText": "In late 2026, Atlantis 12 will open its doors to artists and thinkers in residence — visual artists, photographers, sculptors, writers, historians, philosophers. Two to four weeks of complete immersion, with on-site lodging, studio space and workspaces, in the heart of the forest.",
     "residencyCta": "Express your interest"
+  },
+  "modal": {
+    "backToRooms": "See the other rooms",
+    "prevImage": "Previous image",
+    "nextImage": "Next image",
+    "equipment": "Amenities",
+    "discoverArtwork": "Discover the artwork of the room",
+    "artworkLabel": "The artwork of the room",
+    "artworkDescription": "Each room at Atlantis 12 houses one or more original artworks selected in direct dialogue with the space. These pieces belong to the permanent collection and may be acquired on request from the team.",
+    "collection": "Atlantis 12 permanent collection",
+    "consultUs": "Contact us",
+    "bookRoom": "Book this room"
   }
 }

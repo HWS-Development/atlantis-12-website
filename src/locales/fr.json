@@ -286,6 +286,46 @@
         "title": "La Plumeria",
         "desc": "Suite supérieure avec salon, cheminée et terrasse privée.Spacieuse et élégante, elle offre une parenthèse de sérénité et de raffinement à deux pas d’Essaouira."
       }
+    },
+    "la-plumeria": {
+      "category": "Suite Supérieure",
+      "adults": "• 2 adultes",
+      "intro": "La plus grande chambre de la maison. Un espace fait pour ceux qui cherchent l'absolu."
+    },
+    "lipomea": {
+      "category": "Junior Suite",
+      "adults": "• 3 adultes",
+      "intro": "L'Ipoméa tire son nom de la fleur grimpante qui habille les murs du Maroc. Une chambre lumineuse, enveloppée de bleu indigo, où la nature entre par chaque fenêtre."
+    },
+    "lagave": {
+      "category": "Junior Suite",
+      "adults": "• 3 adultes",
+      "intro": "Nommée d'après l'agave sauvage qui ponctue le paysage atlantique, cette chambre conjugue minéralité et douceur. Ses lignes épurées et sa palette naturelle invitent au silence."
+    },
+    "la-coquelicot": {
+      "category": "Junior Suite",
+      "adults": "• 3 adultes",
+      "intro": "La Coquelicot porte en elle l'éclat rouge d'un champ au printemps. Une chambre vibrante et intime, aux détails soignés, où la couleur dialogue avec les œuvres exposées."
+    },
+    "lorchis": {
+      "category": "Junior Suite",
+      "adults": "• 3 adultes",
+      "intro": "Discrète et raffinée comme l'orchidée sauvage de la forêt de thuyas, ses matières nobles, bois, coton naturel, tadelakt, composent un espace hors du temps."
+    },
+    "equip": {
+      "litKing": "Lit King size",
+      "litQueen": "Lit Queen size",
+      "vasteSalon": "Vaste salon",
+      "cheminee": "Cheminée",
+      "baiesVitrees": "Baies vitrées",
+      "terrassePrivee": "Terrasse privée",
+      "sdbPrivative": "Salle de bain privative",
+      "doucheItaliennePluie": "Douche italienne pluie",
+      "doucheItalienne": "Douche italienne",
+      "serviettesArgan": "Serviettes & savon à l'argan",
+      "salonPrivCheminee": "Salon privatif avec cheminée",
+      "vueParcPatio": "Vue parc & patio",
+      "ouvertureVitree": "Ouverture vitrée"
     }
   },
   "gallery": {
@@ -878,5 +918,17 @@
     "residencyTitle": "Résidences d'artistes",
     "residencyText": "Fin 2026, Atlantis 12 ouvrira ses portes à des artistes et penseurs en résidence — plasticiens, photographes, sculpteurs, écrivains, historiens, philosophes. De 2 à 4 semaines d'immersion complète, avec hébergement sur place, espace studio et espaces de travail, au cœur de la forêt.",
     "residencyCta": "Manifester votre intérêt"
+  },
+  "modal": {
+    "backToRooms": "Voir les autres chambres",
+    "prevImage": "Image précédente",
+    "nextImage": "Image suivante",
+    "equipment": "Équipements",
+    "discoverArtwork": "Découvrir l'œuvre de la chambre",
+    "artworkLabel": "L'œuvre de la chambre",
+    "artworkDescription": "Chaque chambre d'Atlantis 12 abrite une ou plusieurs œuvres originales sélectionnées en dialogue direct avec l'espace. Ces pièces font partie de la collection permanente et peuvent être acquises sur demande auprès de l'équipe.",
+    "collection": "Collection permanente Atlantis 12",
+    "consultUs": "Nous consulter",
+    "bookRoom": "Réserver cette chambre"
   }
 }
