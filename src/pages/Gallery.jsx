@@ -1,6 +1,6 @@
-// /maison-dart — rebuilt 1:1 from reference/maison-dart/body.pretty.html
+﻿// /maison-dart — rebuilt 1:1 from reference/maison-dart/body.pretty.html
 import { useTranslation } from "react-i18next";
-import { Link } from "react-router-dom";
+import LangLink from "../components/Common/LangLink";
 import Reveal from "../components/Common/Reveal";
 
 const CDN = "/images/cdn";
@@ -104,12 +104,12 @@ export default function Gallery() {
         <Reveal as="p" className="font-body text-sm leading-relaxed max-w-xl mx-auto mb-10 text-foreground/70" delay={1}>
           {t("galleryPg.residencyText")}
         </Reveal>
-        <Link
+        <LangLink
           className="font-body text-xs tracking-[0.3em] uppercase px-8 py-3 inline-block bg-primary text-primary-foreground hover:bg-secondary transition-colors duration-300"
           to="/contact"
         >
           {t("galleryPg.residencyCta")}
-        </Link>
+        </LangLink>
       </section>
     </div>
   );

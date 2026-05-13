@@ -1,10 +1,12 @@
-import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import Navbar from "./components/Layout/Navbar";
 import Footer from "./components/Layout/Footer";
 import BottomReservationBar from "./components/Layout/BottomReservationBar";
 import ScrollToHash from "./components/Common/ScrollToHash";
 import ScrollToTop from "./components/UI/ScrollToTop";
+import I18nUrlSync from "./components/Common/I18nUrlSync";
+import LangLink from "./components/Common/LangLink";
 
 import Home from "./pages/Home";
 import Rooms from "./pages/Rooms";
@@ -24,6 +26,7 @@ export default function App() {
         <Navbar />
         <ScrollToTop />
         <ScrollToHash />
+        <I18nUrlSync />
 
         {/* Live site lets the fixed header OVERLAP page content (Hero handles its own
             full-viewport height). Inner pages add their own top padding if needed. */}
@@ -55,7 +58,7 @@ export default function App() {
               element={
                 <div className="container-std py-20 text-center">
                   <h1 className="text-3xl mb-4">404</h1>
-                  <Link className="btn-outline-primary" to="/">Go Home</Link>
+                  <LangLink className="btn-outline-primary" to="/">Go Home</LangLink>
                 </div>
               }
             />

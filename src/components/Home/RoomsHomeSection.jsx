@@ -1,10 +1,10 @@
-// RoomsHomeSection — "LES 5 CHAMBRES — Chaque chambre, une œuvre"
+﻿// RoomsHomeSection — "LES 5 CHAMBRES — Chaque chambre, une œuvre"
 //   - 4-col grid of junior suites (aspect-4/3)
 //   - 1 wide card (aspect-16/9) below for the superior suite (Pluméria)
 //   - Each card: image + dark gradient overlay + name (Dancing Script) + room type label
 //   - Hover: image scale-105
 //   - Bottom: centered "VOIR TOUTES LES CHAMBRES" outline pill
-import { Link } from "react-router-dom";
+import LangLink from "../Common/LangLink";
 import { useTranslation } from "react-i18next";
 import Reveal from "../Common/Reveal";
 
@@ -109,9 +109,9 @@ export default function RoomsHomeSection() {
       />
 
       <div className="mt-8 text-center">
-        <Link to="/chambres" className="btn-outline-primary inline-block">
+        <LangLink to="/chambres" className="btn-outline-primary inline-block">
           {t("home.rooms.cta", "Voir toutes les chambres")}
-        </Link>
+        </LangLink>
       </div>
     </section>
   );

@@ -1,9 +1,9 @@
-// IntroSection — first content section after hero on live site.
+﻿// IntroSection — first content section after hero on live site.
 //   Layout: section.px-[10vw].py-16, max-w-3xl
 //   H2 (Dancing Script) "Une maison entre l'océan / et les thuyas" (line 2 in primary color)
 //   <p> intro paragraph (max-w-xl, foreground/65)
 //   2 outline-pill CTAs: "Découvrir la maison" (primary) / "La galerie d'art" (sage)
-import { Link } from "react-router-dom";
+import LangLink from "../Common/LangLink";
 import { useTranslation } from "react-i18next";
 import Reveal from "../Common/Reveal";
 
@@ -30,12 +30,12 @@ export default function IntroSection() {
         </Reveal>
 
         <Reveal delay={2} className="mt-8 flex flex-wrap gap-4">
-          <Link to="/la-maison" className="btn-outline-primary">
+          <LangLink to="/la-maison" className="btn-outline-primary">
             {t("home.intro.ctaHouse", "Découvrir la maison")}
-          </Link>
-          <Link to="/maison-dart" className="btn-outline-sage">
+          </LangLink>
+          <LangLink to="/maison-dart" className="btn-outline-sage">
             {t("home.intro.ctaArt", "La galerie d'art")}
-          </Link>
+          </LangLink>
         </Reveal>
       </div>
     </section>

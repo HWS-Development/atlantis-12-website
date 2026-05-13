@@ -1,10 +1,10 @@
-// Footer — matches live site exactly:
+﻿// Footer — matches live site exactly:
 //   bg #2C3E25 (dark olive), top fade overlay,
 //   3-col grid: CONTACT | MÉTÉO (live weather) | EXPLORER
 //   bottom rule + © 2026 Atlantis 12
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
-import { Link } from "react-router-dom";
+import LangLink from "../Common/LangLink";
 import Reveal from "../Common/Reveal";
 
 const EMAIL = "contact@atlantis12essaouira.com";
@@ -138,16 +138,16 @@ export default function Footer() {
               </p>
               <div className="flex flex-col gap-2.5">
                 {explorer.map((l) => (
-                  <Link
+                  <LangLink
                     key={l.to}
                     to={l.to}
                     className="text-left transition-colors duration-300 font-body text-sm hover:text-white"
                     style={{ color: cream55 }}
                   >
                     {l.label}
-                  </Link>
+                  </LangLink>
                 ))}
-                <Link
+                <LangLink
                   to="/essaouira"
                   className="text-left transition-colors duration-300 font-display text-base md:text-lg hover:opacity-80"
                   style={{ color: cream }}
@@ -155,7 +155,7 @@ export default function Footer() {
                   {t("footer.essaouiraLine1", "Ce qu'on aime (vraiment !)")}
                   <br />
                   {t("footer.essaouiraLine2", "à Essaouira")}
-                </Link>
+                </LangLink>
               </div>
             </Reveal>
           </div>

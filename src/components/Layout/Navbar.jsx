@@ -1,8 +1,8 @@
-// Navbar — matches live atlantis12essaouira.com header exactly:
+﻿// Navbar — matches live atlantis12essaouira.com header exactly:
 //   fixed top, white bg, border-b, h≈81px, logo left, 3 controls right:
 //   [Maison d'hôtes ▾]  [Maison d'art]  [EN]
 import { useEffect, useRef, useState } from "react";
-import { Link } from "react-router-dom";
+import LangLink from "../Common/LangLink";
 import { useTranslation } from "react-i18next";
 
 // Watercolor brand mark used in live header (base44 CDN, mix-blend-multiply)
@@ -42,7 +42,7 @@ export default function Navbar() {
     <header className="fixed top-0 left-0 right-0 z-50 transition-all duration-500 bg-background border-b border-primary/10">
       <div className="flex items-center justify-between px-6 md:px-10 py-3 md:py-4">
         {/* Logo */}
-        <Link
+        <LangLink
           to="/"
           className="flex items-center flex-shrink-0 bg-background -ml-2 mr-3 md:mr-0"
           aria-label="Atlantis 12 — accueil"
@@ -53,7 +53,7 @@ export default function Navbar() {
             className="h-10 md:h-12 w-auto object-contain"
             style={{ mixBlendMode: "multiply" }}
           />
-        </Link>
+        </LangLink>
 
         {/* Right nav */}
         <nav className="flex items-center gap-2 md:gap-4" ref={wrapRef}>
@@ -90,7 +90,7 @@ export default function Navbar() {
                   ["/essaouira",   t("nav.essaouira",   "Essaouira")],
                   ["/contact",     t("nav.contact",     "Contact")],
                 ].map(([to, label]) => (
-                  <Link
+                  <LangLink
                     key={to}
                     to={to}
                     role="menuitem"
@@ -99,20 +99,20 @@ export default function Navbar() {
                     style={{ fontSize: "10px", letterSpacing: "0.15em" }}
                   >
                     {label}
-                  </Link>
+                  </LangLink>
                 ))}
               </div>
             )}
           </div>
 
           {/* Maison d'art */}
-          <Link
+          <LangLink
             to="/maison-dart"
             className={navBtnBase}
             style={{ fontSize: "10px", letterSpacing: "0.15em" }}
           >
             {t("nav.art", "Maison d'art")}
-          </Link>
+          </LangLink>
 
           {/* Lang switcher */}
           <button

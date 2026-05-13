@@ -1,6 +1,6 @@
-import { useEffect } from "react";
+﻿import { useEffect } from "react";
 import { useTranslation } from "react-i18next";
-import { Link } from "react-router-dom";
+import LangLink from "../components/Common/LangLink";
 import PageHero from "../components/Common/PageHero";
 
 function Section({ title, paragraphs = [], bullets = [] }) {
@@ -53,9 +53,9 @@ export default function TermsConditions() {
 
         <div className="mt-8 text-sm">
           <span className="text-black/70">{t("legal.terms.seeCancellation")} </span>
-          <Link to="/cancellation" className="text-[#2F5F2E] underline">
+          <LangLink to="/cancellation" className="text-[#2F5F2E] underline">
             {t("legal.cancellation.title")}
-          </Link>
+          </LangLink>
           .
         </div>
       </main>
