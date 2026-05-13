@@ -614,8 +614,7 @@
     "close": "Close",
     "bar": {
       "cta": "Book your stay",
-      "whyDesktop": "why book on our website?",
-      "whyMobile": "Why here?"
+      "why": "why book on our website?"
     },
     "why": {
       "title": "Why book with us?",

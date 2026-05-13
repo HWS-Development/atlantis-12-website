@@ -133,7 +133,7 @@ export default function BottomReservationBar() {
     <div className="fixed bottom-0 left-0 right-0 z-40 m-0 p-0">
       {/* "Pourquoi réserver" — floating white card, right-aligned above the bar */}
       {whyOpen && (
-        <div className="pointer-events-none absolute bottom-full right-0 left-0 flex justify-end px-4 md:px-10 pb-3">
+        <div className="pointer-events-none absolute bottom-full right-0 left-0 flex justify-end px-4 md:px-10 pb-4">
           <div className="pointer-events-auto bg-white shadow-xl border border-black/5 px-7 py-6 w-full max-w-md">
             <div className="flex items-start justify-between mb-4">
               <p className="font-display text-2xl text-foreground">
@@ -305,17 +305,17 @@ export default function BottomReservationBar() {
 
         <button
           type="button"
-          className="flex items-center justify-center gap-1 md:gap-2 px-2 md:px-4 py-2 hover:bg-primary-foreground/10 transition-colors ml-auto flex-shrink-0"
+          className="flex items-center justify-center gap-2 md:gap-3 px-2 md:px-4 py-2 hover:bg-primary-foreground/10 transition-colors ml-auto flex-shrink-0"
           onClick={() => {
             setWhyOpen((v) => !v);
             setReserveOpen(false);
           }}
         >
-          <span className="font-display italic hidden md:block" style={{ fontSize: "0.95rem" }}>
-            {t("bottomBar.bar.whyDesktop", "pourquoi réserver sur notre site ?")}
-          </span>
-          <span className="font-display italic block md:hidden" style={{ fontSize: "0.8rem" }}>
-            {t("bottomBar.bar.whyMobile", "Pourquoi ici ?")}
+          <span
+            className="font-display italic whitespace-nowrap"
+            style={{ fontSize: "clamp(11px, 2.4vw, 15px)", color: "rgb(255,255,255)" }}
+          >
+            {t("bottomBar.bar.why", "pourquoi réserver sur notre site ?")}
           </span>
           <PlusIcon open={whyOpen} />
         </button>

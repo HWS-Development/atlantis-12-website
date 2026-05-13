@@ -9,8 +9,7 @@ const fr = {
     close: "Fermer",
     bar: {
       cta: "Réserver votre séjour",
-      whyDesktop: "pourquoi réserver sur notre site ?",
-      whyMobile: "Pourquoi ici ?",
+      why: "pourquoi réserver sur notre site ?",
     },
     why: {
       title: "Pourquoi réserver avec nous ?",
@@ -38,8 +37,7 @@ const en = {
     close: "Close",
     bar: {
       cta: "Book your stay",
-      whyDesktop: "why book on our website?",
-      whyMobile: "Why here?",
+      why: "why book on our website?",
     },
     why: {
       title: "Why book with us?",
