@@ -284,8 +284,9 @@ export default function BottomReservationBar() {
 
       {/* Bar itself */}
       <div
-        className="flex items-center justify-between py-3.5 bg-primary text-primary-foreground gap-4 m-0"
+        className="flex items-center justify-between py-3.5 text-primary-foreground gap-4 m-0"
         style={{
+          backgroundColor: "#496246",
           width: "100vw",
           marginLeft: "calc(50% - 50vw)",
           paddingLeft: "1.5rem",
