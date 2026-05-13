@@ -14,11 +14,11 @@ const CalendarIcon = () => (
     height="24"
     viewBox="0 0 24 24"
     fill="none"
-    stroke="currentColor"
+    stroke="rgb(255,255,255)"
     strokeWidth="2"
     strokeLinecap="round"
     strokeLinejoin="round"
-    className="w-4 h-4 opacity-70 flex-shrink-0"
+    className="w-[15px] h-[15px] flex-shrink-0"
   >
     <path d="M8 2v4" />
     <path d="M16 2v4" />
@@ -34,11 +34,11 @@ const ChevronDown = ({ open }) => (
     height="24"
     viewBox="0 0 24 24"
     fill="none"
-    stroke="currentColor"
+    stroke="rgb(255,255,255)"
     strokeWidth="2"
     strokeLinecap="round"
     strokeLinejoin="round"
-    className={`w-5 h-5 flex-shrink-0 transition-transform duration-300 ${open ? "rotate-180" : ""}`}
+    className={`w-[15px] h-[15px] flex-shrink-0 transition-transform duration-300 ${open ? "rotate-180" : ""}`}
   >
     <path d="m6 9 6 6 6-6" />
   </svg>
@@ -294,7 +294,7 @@ export default function BottomReservationBar() {
       >
         <button
           type="button"
-          className="flex items-center gap-2 min-w-0"
+          className="flex items-center gap-[10px] min-w-0"
           onClick={() => {
             setReserveOpen((v) => !v);
             setWhyOpen(false);
@@ -304,9 +304,9 @@ export default function BottomReservationBar() {
           <span
             className="font-body uppercase whitespace-nowrap overflow-hidden text-ellipsis"
             style={{
-              fontSize: "clamp(8px, 3vw, 14px)",
+              fontSize: "clamp(10px, 2vw, 14px)",
               fontWeight: 800,
-              letterSpacing: "0.1em",
+              letterSpacing: "0.12em",
               color: "rgb(255, 255, 255)",
             }}
           >
