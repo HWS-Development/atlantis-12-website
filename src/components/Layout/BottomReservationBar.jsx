@@ -91,7 +91,7 @@ const CheckIcon = () => (
     strokeWidth="2"
     strokeLinecap="round"
     strokeLinejoin="round"
-    className="w-4 h-4 text-foreground/70 flex-shrink-0"
+    className="w-4 h-4 flex-shrink-0 text-primary"
   >
     <path d="M20 6 9 17l-5-5" />
   </svg>
@@ -133,36 +133,48 @@ export default function BottomReservationBar() {
     <div className="fixed bottom-0 left-0 right-0 z-40 m-0 p-0">
       {/* "Pourquoi réserver" — floating white card, right-aligned above the bar */}
       {whyOpen && (
-        <div className="pointer-events-none absolute bottom-full right-0 left-0 flex justify-end px-4 md:px-10 pb-4">
-          <div className="pointer-events-auto bg-white shadow-xl border border-black/5 px-7 py-6 w-full max-w-md">
-            <div className="flex items-start justify-between mb-4">
-              <p className="font-display text-2xl text-foreground">
-                {t("bottomBar.why.title", "Pourquoi réserver avec nous ?")}
-              </p>
-              <button
-                type="button"
-                aria-label={t("bottomBar.close", "Fermer")}
-                onClick={() => setWhyOpen(false)}
-                className="text-foreground/40 hover:text-foreground transition-colors -mt-1"
-              >
-                <CloseIcon />
-              </button>
+        <>
+          <button
+            type="button"
+            aria-label={t("bottomBar.close", "Fermer")}
+            onClick={() => setWhyOpen(false)}
+            className="fixed inset-x-0 top-[82px] bottom-[53px] bg-[#d0d0d0]/85"
+          />
+
+          <div className="pointer-events-none absolute bottom-full right-0 left-0 flex justify-end px-4 md:px-10 pb-[6px]">
+            <div className="pointer-events-auto w-full max-w-[448px] md:mr-[18vw] rounded-[3px] bg-white px-8 pt-8 pb-7 shadow-[0_18px_40px_rgba(0,0,0,0.12)]">
+              <div className="mb-6 flex items-start justify-between gap-4">
+                <p className="font-display text-[24px] leading-none text-primary">
+                  {t("bottomBar.why.title", "Pourquoi réserver avec nous ?")}
+                </p>
+                <button
+                  type="button"
+                  aria-label={t("bottomBar.close", "Fermer")}
+                  onClick={() => setWhyOpen(false)}
+                  className="-mt-1 text-[#c2c2b8] transition-colors hover:text-[#a7a79e]"
+                >
+                  <CloseIcon />
+                </button>
+              </div>
+
+              <ul className="space-y-6">
+                {[
+                  t("bottomBar.why.li1", "Meilleur tarif garanti"),
+                  t("bottomBar.why.li2", "Pension complète possible"),
+                  t("bottomBar.why.li3", "Réservation en ligne sécurisée"),
+                  t("bottomBar.why.li4", "Service personnalisé"),
+                ].map((label, i) => (
+                  <li key={i} className="flex items-center gap-4">
+                    <CheckIcon />
+                    <span className="font-body text-[15px] leading-[1.25] text-[#8f978d]">
+                      {label}
+                    </span>
+                  </li>
+                ))}
+              </ul>
             </div>
-            <ul className="space-y-3">
-              {[
-                t("bottomBar.why.li1", "Meilleur tarif garanti"),
-                t("bottomBar.why.li2", "Pension complète possible"),
-                t("bottomBar.why.li3", "Réservation en ligne sécurisée"),
-                t("bottomBar.why.li4", "Service personnalisé"),
-              ].map((label, i) => (
-                <li key={i} className="flex items-center gap-3">
-                  <CheckIcon />
-                  <span className="font-body text-[15px] text-primary">{label}</span>
-                </li>
-              ))}
-            </ul>
           </div>
-        </div>
+        </>
       )}
 
       {/* "Réserver un séjour" — full-width white panel above the bar */}
