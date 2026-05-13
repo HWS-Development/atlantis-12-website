@@ -1,5 +1,6 @@
 // /la-maison — rebuilt 1:1 from reference/la-maison/body.pretty.html
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
 import Reveal from "../components/Common/Reveal";
 
 const CDN = "/images/cdn";
@@ -124,18 +125,18 @@ export default function About() {
             {t("aboutPg.ctaTitle")}
           </Reveal>
           <div className="flex flex-wrap gap-4 shrink-0">
-            <a
+            <Link
               className="font-body text-xs tracking-[0.3em] uppercase text-primary border border-primary/40 px-6 py-3 hover:bg-primary/10 transition-colors duration-300"
-              href="/chambres"
+              to="/chambres"
             >
               {t("aboutPg.ctaRooms")}
-            </a>
-            <a
+            </Link>
+            <Link
               className="font-body text-xs tracking-[0.3em] uppercase text-background bg-primary px-6 py-3 hover:bg-secondary transition-colors duration-300"
-              href="/contact"
+              to="/contact"
             >
               {t("aboutPg.ctaContact")}
-            </a>
+            </Link>
           </div>
         </div>
       </section>

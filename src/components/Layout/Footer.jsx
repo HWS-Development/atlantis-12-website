@@ -4,6 +4,7 @@
 //   bottom rule + © 2026 Atlantis 12
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
 import Reveal from "../Common/Reveal";
 
 const EMAIL = "contact@atlantis12essaouira.com";
@@ -137,24 +138,24 @@ export default function Footer() {
               </p>
               <div className="flex flex-col gap-2.5">
                 {explorer.map((l) => (
-                  <a
+                  <Link
                     key={l.to}
-                    href={l.to}
+                    to={l.to}
                     className="text-left transition-colors duration-300 font-body text-sm hover:text-white"
                     style={{ color: cream55 }}
                   >
                     {l.label}
-                  </a>
+                  </Link>
                 ))}
-                <a
-                  href="/essaouira"
+                <Link
+                  to="/essaouira"
                   className="text-left transition-colors duration-300 font-display text-base md:text-lg hover:opacity-80"
                   style={{ color: cream }}
                 >
                   {t("footer.essaouiraLine1", "Ce qu'on aime (vraiment !)")}
                   <br />
                   {t("footer.essaouiraLine2", "à Essaouira")}
-                </a>
+                </Link>
               </div>
             </Reveal>
           </div>
