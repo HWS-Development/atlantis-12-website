@@ -8,7 +8,7 @@
 // NOTE on content: real review prose belongs to its authors. Place authentic
 // review text into your i18n locale (home.reviews.items[].quote) yourself.
 // I ship it with placeholder text + reviewer initials only.
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import Reveal from "../Common/Reveal";
 
@@ -81,7 +81,6 @@ export default function ReviewsSection() {
   const { t } = useTranslation();
 
   // Reviewer metadata (initials shown on live site).
-  // Quote text comes from i18n — see locales/fr.json -> home.reviews.items
   const reviewers = [
     { id: 0, initials: "JN", name: "Jin-Ah Noh" },
     { id: 1, initials: "AT", name: "Alphabet Tj" },
@@ -90,6 +89,27 @@ export default function ReviewsSection() {
 
   const reviewsRaw = t("home.reviews.items", { returnObjects: true });
   const reviews = Array.isArray(reviewsRaw) ? reviewsRaw : [];
+
+  // Google Places API - dynamic reviews sync (A3)
+  const [googleData, setGoogleData] = useState(null);
+  useEffect(() => {
+    const API_KEY = import.meta.env.VITE_GOOGLE_MAPS_API_KEY;
+    if (!API_KEY) return;
+    // Google Places API (New) - fetch place details with reviews
+    const PLACE_ID = "ChIJz4yJ76SaDBkRKk9cbaQh9Fc"; // Atlantis 12 Essaouira
+    fetch(
+      `https://places.googleapis.com/v1/places/${PLACE_ID}?fields=rating,userRatingCount,reviews&key=${API_KEY}`,
+      { headers: { "X-Goog-FieldMask": "rating,userRatingCount,reviews" } }
+    )
+      .then((r) => (r.ok ? r.json() : Promise.reject(r)))
+      .then((data) => {
+        if (data?.rating) setGoogleData(data);
+      })
+      .catch(() => {/* fallback to static reviews */});
+  }, []);
+
+  const rating = googleData?.rating || 5.0;
+  const reviewCount = googleData?.userRatingCount || 3;
 
   const [active, setActive] = useState(0);
   const total = reviewers.length;
@@ -120,7 +140,7 @@ export default function ReviewsSection() {
           className="flex items-center gap-5 bg-background border border-primary/15 px-6 py-4 self-start md:self-auto"
         >
           <div className="text-center">
-            <p className="font-display text-5xl text-foreground leading-none">5.0</p>
+            <p className="font-display text-5xl text-foreground leading-none">{rating.toFixed(1)}</p>
             <p className="font-body text-xs text-foreground/40 mt-1">/ 5</p>
           </div>
           <div className="space-y-1.5">
@@ -130,7 +150,7 @@ export default function ReviewsSection() {
               ))}
             </div>
             <p className="font-body text-xs text-foreground/50">
-              {t("home.reviews.verified", "3 avis vérifiés")}
+              {reviewCount} {t("home.reviews.verified", "avis vérifiés")}
             </p>
             <p className="font-body text-xs tracking-[0.15em] uppercase text-primary/70">
               {t("home.reviews.recommend", "100 % recommandent")}

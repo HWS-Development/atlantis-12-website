@@ -2,48 +2,48 @@
 import { useTranslation } from "react-i18next";
 import Reveal from "../components/Common/Reveal";
 
-const CDN = "/images/cdn";
-const HERO = `${CDN}/7d3ecd4c5_balade-cheval-coucher-soleil-plage-essaouira.jpg`;
+const EXP_PATH = "/images/experiences";
+const HERO = `${EXP_PATH}/balade-cheval-coucher-soleil-plage-essaouira.jpg`;
 
 const HOUSE_META = [
   {
-    img: `${CDN}/1710b9e6c_massage-bien-etre-arganiers-atlantis12-essaouira.jpg`,
+    img: `${EXP_PATH}/massage-bien-etre-arganiers-atlantis12-essaouira.jpg`,
     bg: "white",
     titleColor: "rgb(44, 62, 37)",
-    bodyColor: "rgb(74, 74, 74)",
+    bodyColor: "#333333",
     accent: "rgb(74, 103, 65)",
   },
   {
-    img: `${CDN}/fa543714a_atelier-peinture-intuitive-lahcen-fikri-atlantis12-essaouirajpg.jpg`,
+    img: `${EXP_PATH}/atelier-peinture-lahcen-fikri-atlantis12-essaouira.jpg`,
     bg: "white",
     titleColor: "rgb(44, 62, 37)",
-    bodyColor: "rgb(74, 74, 74)",
+    bodyColor: "#333333",
     accent: "rgb(74, 103, 65)",
     reverse: true,
   },
   {
-    img: `${CDN}/3070ceb17_balade-dromadaire-depart-atlantis12-essaouira.jpg`,
+    img: `${EXP_PATH}/balade-dromadaire-depart-atlantis12-essaouira.jpg`,
     bg: "rgb(44, 62, 37)",
     titleColor: "rgb(245, 240, 232)",
-    bodyColor: "rgb(176, 204, 160)",
+    bodyColor: "rgb(143, 175, 126)",
     accent: "rgb(143, 175, 126)",
   },
   {
-    img: `${CDN}/b95316e3e_yoga-terrasse-atlantis12-essaouira-foretjpg.jpg`,
+    img: `${EXP_PATH}/yoga-terrasse-atlantis12-essaouira-foretjpg.jpg`,
     bg: "white",
     titleColor: "rgb(44, 62, 37)",
-    bodyColor: "rgb(74, 74, 74)",
+    bodyColor: "#333333",
     accent: "rgb(74, 103, 65)",
     reverse: true,
   },
 ];
 
 const PARTNER_IMGS = [
-  `${CDN}/ea4939afd_balade-cheval-plage-coucher-soleil-essaouira.jpg`,
-  `${CDN}/a4bc0de3e_kitesurf-coucher-soleil-atlantique-essaouirajpg.jpg`,
-  `${CDN}/ef8b0b32f_quad-dunes-plage-sauvage-essaouira.jpg`,
-  `${CDN}/8d6a1fc06_hammam-traditionnel-soins-essaouira.jpg`,
-  `${CDN}/5a8f61c86_excursion-moto-electrique-arganiers-essaouirajpg.jpg`,
+  `${EXP_PATH}/balade-cheval-plage-coucher-soleil-essaouira.jpg`,
+  `${EXP_PATH}/kitesurf-coucher-soleil-atlantique-essaouirajpg.jpg`,
+  `${EXP_PATH}/quad-dunes-plage-sauvage-essaouira.jpg`,
+  `${EXP_PATH}/hammam-traditionnel-soins-essaouira.jpg`,
+  `${EXP_PATH}/excursions-moto-electrique-arganiers-essaouira-v1.jpg`,
 ];
 
 export default function Activites() {
@@ -65,7 +65,7 @@ export default function Activites() {
         <div className="absolute bottom-0 left-0 right-0 p-[60px]">
           <Reveal
             as="p"
-            className="font-body text-[10px] tracking-[0.4em] uppercase mb-3"
+            className="font-body text-[10px] tracking-[0.4em] uppercase mb-3 font-medium"
             style={{ color: "rgba(255, 255, 255, 0.75)" }}
           >
             {t("activitesPg.heroEyebrow")}
@@ -73,17 +73,20 @@ export default function Activites() {
           <Reveal as="h1" className="font-display text-[82px] font-bold text-white mt-2" delay={1}>
             {t("activitesPg.heroTitle")}
           </Reveal>
+          <Reveal as="p" className="font-body text-xs tracking-[0.3em] uppercase text-white/80 mt-3 font-medium" delay={2}>
+            À ATLANTIS 12 OU À ESSAOUIRA - MASSAGE, YOGA, ART & NATURE
+          </Reveal>
         </div>
       </div>
 
       <section className="bg-white">
-        <div className="px-[60px] pt-[60px] pb-[40px] max-w-[680px] mx-auto text-center">
-          <Reveal as="p" className="font-body text-[15px] leading-[1.8]" style={{ color: "rgb(74, 74, 74)" }}>
+        <div className="px-[60px] pt-[40px] pb-[20px] max-w-[680px] mx-auto text-center">
+          <Reveal as="p" className="font-body text-[15px] leading-[1.8]" style={{ color: "#333333" }}>
             {t("activitesPg.intro")}
           </Reveal>
         </div>
 
-        <div className="p-[60px]">
+        <div className="px-[60px] pt-[20px] pb-[30px]">
           <Reveal
             as="p"
             className="font-body text-[10px] tracking-[4px] uppercase"
@@ -158,7 +161,7 @@ export default function Activites() {
               </p>
               <div className="w-[30px] h-px my-3" style={{ backgroundColor: "rgb(74, 103, 65)" }} />
               <h3 className="font-display text-[30px] font-bold text-foreground mb-3">{p.title}</h3>
-              <p className="font-body text-[13px] leading-[1.8]" style={{ color: "rgb(74, 74, 74)" }}>
+              <p className="font-body text-[13px] leading-[1.8]" style={{ color: "#333333" }}>
                 {p.todo}
               </p>
               <p
@@ -182,7 +185,7 @@ export default function Activites() {
             <h3 className="font-display text-[34px] font-bold mb-4" style={{ color: "rgb(245, 240, 232)" }}>
               {t("activitesPg.customTitle")}
             </h3>
-            <p className="font-body text-[13px] leading-[1.8] mb-4" style={{ color: "rgb(176, 204, 160)" }}>
+            <p className="font-body text-[13px] leading-[1.8] mb-4" style={{ color: "rgb(143, 175, 126)" }}>
               {t("activitesPg.customText")}
             </p>
             <a

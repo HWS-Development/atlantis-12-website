@@ -303,11 +303,10 @@ export default function BottomReservationBar() {
         >
           <CalendarIcon />
           <span
-            className="font-body uppercase whitespace-nowrap overflow-hidden text-ellipsis"
+            className="font-display whitespace-nowrap overflow-hidden text-ellipsis"
             style={{
-              fontSize: "clamp(10px, 2vw, 14px)",
-              fontWeight: 800,
-              letterSpacing: "0.12em",
+              fontSize: "clamp(14px, 2.8vw, 19px)",
+              fontWeight: 400,
               color: "rgb(255, 255, 255)",
             }}
           >
@@ -325,7 +324,7 @@ export default function BottomReservationBar() {
           }}
         >
           <span
-            className="font-display italic whitespace-nowrap"
+            className="font-body italic whitespace-nowrap font-bold"
             style={{ fontSize: "clamp(11px, 2.4vw, 15px)", color: "rgb(255,255,255)" }}
           >
             {t("bottomBar.bar.why", "pourquoi réserver sur notre site ?")}

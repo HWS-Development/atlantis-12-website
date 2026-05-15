@@ -7,7 +7,7 @@ import Reveal from "../Common/Reveal";
 
 // Watercolor brand mark — same asset as live atlantis12essaouira.com (base44 CDN)
 const HERO_LOGO =
-  "/images/cdn/095e56924_logo-atlantis12-aquarelle-maison-hotes-art-essaouira.png";
+  "/images/logo/logo-atlantis12-aquarelle-maison-hotes-art-essaouira.png";
 
 export default function HomeHero() {
   const { t } = useTranslation();

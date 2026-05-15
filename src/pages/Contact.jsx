@@ -35,7 +35,7 @@ export default function Contact() {
   const onSubmit = (e) => {
     e.preventDefault();
     const body = encodeURIComponent(
-      `${form.message}\n\n— ${form.name} <${form.email}>\n${t("contactPage.form.subject")} : ${form.subject}`
+      `${form.message}\n\n- ${form.name} <${form.email}>\n${t("contactPage.form.subject")} : ${form.subject}`
     );
     window.location.href = `mailto:contact@atlantis12essaouira.com?subject=${encodeURIComponent(
       form.subject || t("contactPage.form.mailSubject")
@@ -44,20 +44,23 @@ export default function Contact() {
 
   return (
     <div className="bg-background min-h-screen text-foreground">
-      <div className="w-full flex items-center justify-center pt-12 pb-0 bg-white" style={{ lineHeight: 0 }}>
+      <div className="w-full flex items-center justify-center pt-16 pb-4 bg-white" style={{ lineHeight: 0 }}>
         <img
-          src="/images/logo atlantis final - blanc sans mot.png"
+          src="/images/logo/logo-atlantis12-blanc.png"
           alt={t("contactPage.logoAlt")}
           className="w-[240px] h-auto object-contain block"
         />
       </div>
 
-      <div className="px-[8vw] md:px-[10vw] pt-2 pb-12 mt-0">
+      <div className="px-[8vw] md:px-[10vw] pt-2 pb-4 mt-0">
         <Reveal as="p" className="font-body text-xs tracking-[0.4em] uppercase text-primary mb-3">
           {t("contactPage.eyebrow")}
         </Reveal>
         <Reveal as="h1" className="font-display text-5xl md:text-7xl text-foreground" delay={1}>
           {t("contactPage.title")}
+        </Reveal>
+        <Reveal as="p" className="font-body text-xs tracking-[0.3em] uppercase text-primary/70 mt-3 font-medium" delay={2}>
+          ATLANTIS 12, MAISON D'HÔTES ET D'ART À ESSAOUIRA
         </Reveal>
       </div>
 
@@ -72,7 +75,7 @@ export default function Contact() {
                 value={form.name}
                 onChange={onChange("name")}
                 placeholder={t("contactPage.form.namePh")}
-                className="w-full bg-card border border-border px-4 py-3 font-body text-sm text-foreground focus:outline-none focus:border-primary transition-colors"
+                className="w-full bg-white border border-border px-4 py-3 font-body text-sm text-foreground focus:outline-none focus:border-primary transition-colors"
               />
             </div>
             <div className="space-y-1">
@@ -83,7 +86,7 @@ export default function Contact() {
                 value={form.email}
                 onChange={onChange("email")}
                 placeholder={t("contactPage.form.emailPh")}
-                className="w-full bg-card border border-border px-4 py-3 font-body text-sm text-foreground focus:outline-none focus:border-primary transition-colors"
+                className="w-full bg-white border border-border px-4 py-3 font-body text-sm text-foreground focus:outline-none focus:border-primary transition-colors"
               />
             </div>
             <div className="space-y-1">
@@ -91,7 +94,7 @@ export default function Contact() {
               <select
                 value={form.subject}
                 onChange={onChange("subject")}
-                className="w-full bg-card border border-border px-4 py-3 font-body text-sm text-foreground focus:outline-none focus:border-primary transition-colors"
+                className="w-full bg-white border border-border px-4 py-3 font-body text-sm text-foreground focus:outline-none focus:border-primary transition-colors"
               >
                 <option value="">{t("contactPage.form.subjectPh")}</option>
                 {Array.isArray(subjects) && subjects.map((s) => (
@@ -107,12 +110,13 @@ export default function Contact() {
                 value={form.message}
                 onChange={onChange("message")}
                 placeholder={t("contactPage.form.messagePh")}
-                className="w-full bg-card border border-border px-4 py-3 font-body text-sm text-foreground focus:outline-none focus:border-primary transition-colors resize-none"
+                className="w-full bg-white border border-border px-4 py-3 font-body text-sm text-foreground focus:outline-none focus:border-primary transition-colors resize-none"
               />
             </div>
             <button
               type="submit"
-              className="w-full md:w-auto px-10 py-3 bg-primary text-primary-foreground font-body text-xs tracking-[0.3em] uppercase hover:bg-secondary transition-colors duration-300"
+              className="w-full md:w-auto px-10 py-3 font-body text-xs tracking-[0.3em] uppercase hover:opacity-90 transition-colors duration-300"
+              style={{ backgroundColor: "#4A6741", color: "#FFFFFF" }}
             >
               {t("contactPage.form.send")}
             </button>
@@ -147,19 +151,18 @@ export default function Contact() {
             </InfoRow>
           </div>
 
-          <div className="w-full aspect-[4/3] overflow-hidden relative border border-border flex items-center justify-center bg-card">
-            <div className="text-center space-y-2">
-              <Icon d={PIN_SVG} className="w-8 h-8 text-primary/40 mx-auto" />
-              <p className="font-body text-xs text-foreground/40">{t("contactPage.info.mapPlaceholder")}</p>
-              <a
-                href={MAPS_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="font-body text-xs tracking-[0.2em] uppercase text-primary border border-primary/30 px-4 py-2 inline-block hover:bg-primary/10 transition-colors"
-              >
-                {t("contactPage.info.openMap")}
-              </a>
-            </div>
+          <div className="w-full aspect-[4/3] overflow-hidden relative border border-border">
+            <iframe
+              title="Atlantis 12 - Google Maps"
+              src={`https://www.google.com/maps/embed/v1/place?key=${import.meta.env.VITE_GOOGLE_MAPS_API_KEY || 'AIzaSyDuDKKhgnHf7iCjAr4BdhrHtO8jTumEWDc'}&q=Atlantis+12+maison+d'hôtes+et+d'art,Essaouira,Morocco&zoom=15`}
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              allowFullScreen=""
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              className="absolute inset-0 w-full h-full"
+            />
           </div>
         </Reveal>
       </section>

@@ -107,7 +107,7 @@ export default function RoomDetailModal({ room, onClose }) {
               <img
                 key={current.src}
                 src={current.src}
-                alt={`${current.alt} — Atlantis 12, Essaouira`}
+                alt={`${current.alt} - Atlantis 12, Essaouira`}
                 className="w-full h-full object-cover absolute inset-0"
                 style={{ objectPosition: "center", opacity: 1 }}
               />

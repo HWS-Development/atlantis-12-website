@@ -2,12 +2,13 @@
 import { useTranslation } from "react-i18next";
 import Reveal from "../components/Common/Reveal";
 
-const CDN = "/images/cdn";
-const HERO_IMG = `${CDN}/c246f3e05_table-dhotes-salle-commune-plafond-peint-sculptures-oeuvres-atlantis12-essaouira.jpg`;
-const TABLE_IMG = `${CDN}/47d4a6bd5_table-dhotes-diner-table-dressee-bougies-oeuvre-salle-atlantis12-essaouira.jpg`;
-const COUSCOUS_IMG = `${CDN}/d121c15f9_table-dhotes-couscous-crevettes-salle-oeuvre-atlantis12-essaouira.jpg`;
-const JAOUHARA_IMG = `${CDN}/b002ce2ac_table-dhotes-dessert-jaouhara-msemen-creme-fruits-secs-atlantis12-essaouira.jpg`;
-const BREAKFAST_IMG = `${CDN}/62d00bf62_table-dhotes-petit-dejeuner-marocain-patio-ete-atlantis12-essaouira.jpg`;
+const TABLE_PATH = "/images/table-dhotes";
+const HERO_IMG = `${TABLE_PATH}/table-dhotes-salle-commune-plafond-peint-sculptures-oeuvres-atlantis12-essaouira.jpg`;
+const TABLE_IMG = `${TABLE_PATH}/table-dhotes-diner-table-dressee-bougies-oeuvre-salle-atlantis12-essaouira.jpg`;
+const ARTICHAUT_IMG = `${TABLE_PATH}/entree-artichaut-poulpe-crevette-table-dhotes-atlantis12-essaouira.jpg`;
+const COUSCOUS_IMG = `${TABLE_PATH}/table-dhotes-couscous-crevettes-salle-oeuvre-atlantis12-essaouira.jpg`;
+const JAOUHARA_IMG = `${TABLE_PATH}/table-dhotes-dessert-jaouhara-msemen-creme-fruits-secs-atlantis12-essaouira.jpg`;
+const BREAKFAST_IMG = `${TABLE_PATH}/table-dhotes-petit-dejeuner-marocain-patio-ete-atlantis12-essaouira.jpg`;
 
 export default function TableDHotes() {
   const { t } = useTranslation();
@@ -21,7 +22,7 @@ export default function TableDHotes() {
           style={{ objectPosition: "center 60%" }}
         />
         <div className="absolute bottom-12 left-[8vw] md:left-[10vw]">
-          <Reveal as="p" className="font-body text-xs tracking-[0.4em] uppercase text-white/70 mb-3">
+          <Reveal as="p" className="font-body text-xs tracking-[0.4em] uppercase text-white/70 mb-3 font-medium">
             {t("tablePg.heroEyebrow")}
           </Reveal>
           <Reveal as="h1" className="font-display text-5xl md:text-7xl text-white" delay={1}>
@@ -34,7 +35,7 @@ export default function TableDHotes() {
 
       <section className="px-[8vw] md:px-[10vw] py-12 md:py-16 grid md:grid-cols-2 gap-12 md:gap-20">
         <Reveal className="space-y-5">
-          <h2 className="font-display text-4xl md:text-5xl text-foreground">{t("tablePg.s1Title")}</h2>
+          <h2 className="font-display text-5xl md:text-6xl text-foreground">{t("tablePg.s1Title")}</h2>
           <div className="w-10 h-px bg-primary/50" />
           <p className="font-body text-sm leading-relaxed text-foreground/65">{t("tablePg.s1p1")}</p>
           <p className="font-body text-sm leading-relaxed text-foreground/65">{t("tablePg.s1p2")}</p>
@@ -57,8 +58,12 @@ export default function TableDHotes() {
         </Reveal>
         <p className="font-body text-xs text-foreground/40 tracking-wide">{t("tablePg.s2Price")}</p>
         <Reveal className="mt-12 flex flex-col items-center" delay={3}>
-          <img src={COUSCOUS_IMG} alt={t("tablePg.s2ImgAlt")} className="w-full max-w-[500px] h-auto object-cover" />
+          <img src={ARTICHAUT_IMG} alt={t("tablePg.s2ImgAlt")} className="w-full max-w-[500px] h-auto object-cover" />
           <p className="font-body text-sm italic text-foreground/60 mt-4">{t("tablePg.s2Caption")}</p>
+        </Reveal>
+        <Reveal className="mt-10 flex flex-col items-center" delay={4}>
+          <img src={COUSCOUS_IMG} alt={t("tablePg.s2Img2Alt")} className="w-full max-w-[500px] h-auto object-cover" />
+          <p className="font-body text-sm italic text-foreground/60 mt-4">{t("tablePg.s2Img2Caption")}</p>
         </Reveal>
       </section>
 

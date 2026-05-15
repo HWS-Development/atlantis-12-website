@@ -3,23 +3,23 @@ import { useTranslation } from "react-i18next";
 import LangLink from "../components/Common/LangLink";
 import Reveal from "../components/Common/Reveal";
 
-const CDN = "/images/cdn";
-const HERO_IMG = `${CDN}/2ab67b32c__DSC8898-HDR.jpg`;
-const FOUNDERS_IMG = `${CDN}/9e2f0300c_IMG_3456.jpg`;
+const ABOUT_PATH = "/images/about";
+const HERO_IMG = `${ABOUT_PATH}/maison-vue-jardin-atlantis12-essaouira.jpg`;
+const FOUNDERS_IMG = `${ABOUT_PATH}/IMG_3456.jpg`;
 
 const GALLERY_SRCS = [
-  `${CDN}/d45afe420_entree.jpg`,
-  `${CDN}/7c5eb424b_patio.jpg`,
-  `${CDN}/c27ed7543_patiodenuit.jpg`,
-  `${CDN}/b81ebba7b_piscine.jpg`,
-  `${CDN}/9af2237d8_rooftopdenuit.jpg`,
-  `${CDN}/60a660aad_salon1.jpg`,
-  `${CDN}/93019f216_salon2.jpg`,
-  `${CDN}/453908efe_chevaletsalon.jpg`,
-  `${CDN}/e1b413249_coquillage.jpg`,
-  `${CDN}/d4e339cb2_petit-dejeuner.jpg`,
-  `${CDN}/70cbe2cd8_cafe.jpg`,
-  `${CDN}/e3cc28894_thealamenthe.jpg`,
+  `${ABOUT_PATH}/entree.jpg`,
+  `${ABOUT_PATH}/patio.jpg`,
+  `${ABOUT_PATH}/patiodenuit.jpg`,
+  `${ABOUT_PATH}/piscine.jpg`,
+  `${ABOUT_PATH}/rooftopdenuit.jpg`,
+  `${ABOUT_PATH}/salon1.jpg`,
+  `${ABOUT_PATH}/salon2.jpg`,
+  `${ABOUT_PATH}/chevaletsalon.jpg`,
+  `${ABOUT_PATH}/coquillage.jpg`,
+  `${ABOUT_PATH}/petit-dejeuner.jpg`,
+  `${ABOUT_PATH}/cafe.jpg`,
+  `${ABOUT_PATH}/thealamenthe.jpg`,
 ];
 
 export default function About() {
@@ -33,7 +33,7 @@ export default function About() {
       <div className="relative h-[70vh] overflow-hidden">
         <img src={HERO_IMG} alt={t("aboutHero.heroAlt")} className="w-full h-full object-cover" />
         <div className="absolute bottom-12 left-[8vw] md:left-[10vw]">
-          <Reveal as="p" className="font-body text-xs tracking-[0.4em] uppercase text-white/70 mb-3">
+          <Reveal as="p" className="font-body text-xs tracking-[0.4em] uppercase text-white/70 mb-3 font-medium">
             {t("aboutHero.eyebrow")}
           </Reveal>
           <Reveal as="h1" className="font-display text-5xl md:text-7xl text-white" delay={1}>

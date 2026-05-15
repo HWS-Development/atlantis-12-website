@@ -6,38 +6,38 @@ import Reveal from "../components/Common/Reveal";
 import RoomDetailModal from "../components/Rooms/RoomDetailModal";
 import ROOMS from "../data/rooms";
 
-const CDN = "/images/cdn";
-const HERO = `${CDN}/05cdde6fb_plumeria-suite-superieure-atlantis12-essaouira.jpg`;
+const ROOMS_PATH = "/images/rooms";
+const HERO = `${ROOMS_PATH}/plumeria-suite-superieure-atlantis12-essaouira.jpg`;
 
 const CARD_IMG = {
   "la-plumeria": {
-    img: `${CDN}/5c1920fae_plumeria-lit-baldaquin-suite-atlantis12-essaouira.jpg`,
+    img: `${ROOMS_PATH}/plumeria-lit-baldaquin-suite-atlantis12-essaouira.jpg`,
     altKey: "rooms.altPlumeria",
-    altDefault: "Plumeria, le lit — Atlantis 12, Essaouira",
+    altDefault: "Plumeria, le lit - Atlantis 12, Essaouira",
     label: "labelSuperior",
   },
   lipomea: {
-    img: `${CDN}/9a96715ab_ipomea-chambre-vue-principale-atlantis12-essaouira.jpg`,
+    img: `${ROOMS_PATH}/ipomea-chambre-vue-principale-atlantis12-essaouira.jpg`,
     altKey: "rooms.altIpomea",
-    altDefault: "Ipomea, chambre avec lit bleu indigo — Atlantis 12, Essaouira",
+    altDefault: "Ipomea, chambre avec lit bleu indigo - Atlantis 12, Essaouira",
     label: "labelJunior",
   },
   lagave: {
-    img: `${CDN}/2a7e148c8_agave-chambre-vue-panoramique-atlantis12-essaouira.jpg`,
+    img: `${ROOMS_PATH}/agave-chambre-vue-panoramique-atlantis12-essaouira.jpg`,
     altKey: "rooms.altAgave",
-    altDefault: "Agave, chambre avec lit vert — Atlantis 12, Essaouira",
+    altDefault: "Agave, chambre avec lit vert - Atlantis 12, Essaouira",
     label: "labelJunior",
   },
   "la-coquelicot": {
-    img: `${CDN}/7574d0f0e_coquelicot-chambre-principale-atlantis12-essaouira.jpg`,
+    img: `${ROOMS_PATH}/coquelicot-chambre-principale-atlantis12-essaouira.jpg`,
     altKey: "rooms.altCoquelicot",
-    altDefault: "Coquelicot, chambre principale — Atlantis 12, Essaouira",
+    altDefault: "Coquelicot, chambre principale - Atlantis 12, Essaouira",
     label: "labelJunior",
   },
   lorchis: {
-    img: `${CDN}/777d35891_orchis-chambre-lit-mauve-murs-pierre-arche-atlantis12-essaouira.jpg`,
+    img: `${ROOMS_PATH}/orchis-chambre-lit-mauve-murs-pierre-arche-atlantis12-essaouira.jpg`,
     altKey: "rooms.altOrchis",
-    altDefault: "Orchis, chambre avec lit mauve — Atlantis 12, Essaouira",
+    altDefault: "Orchis, chambre avec lit mauve - Atlantis 12, Essaouira",
     label: "labelJunior",
   },
 };
@@ -150,7 +150,7 @@ export default function Rooms() {
           style={{ objectPosition: "center 60%" }}
         />
         <div className="absolute bottom-12 left-[8vw] md:left-[10vw]">
-          <Reveal as="p" className="font-body text-xs tracking-[0.4em] uppercase text-white/70 mb-3">
+          <Reveal as="p" className="font-body text-xs tracking-[0.4em] uppercase text-white/70 mb-3 font-medium">
             {t("roomsPage.heroEyebrow")}
           </Reveal>
           <Reveal as="h1" className="font-display text-5xl md:text-7xl text-white" delay={1}>
@@ -165,7 +165,7 @@ export default function Rooms() {
         <Reveal
           as="p"
           className="font-body text-[15px] leading-[1.8]"
-          style={{ color: "rgb(74, 74, 74)" }}
+          style={{ color: "#333333" }}
         >
           {t("roomsPage.intro1")}
           <br />

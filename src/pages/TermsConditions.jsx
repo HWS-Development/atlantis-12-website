@@ -32,7 +32,7 @@ export default function TermsConditions() {
   return (
     <>
       <PageHero
-        image="/images/view.jpg"
+        image="/images/misc/view.jpg"
         align="left"
         height="md"
         overlay="dark"

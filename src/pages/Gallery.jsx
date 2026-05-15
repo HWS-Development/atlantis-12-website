@@ -3,44 +3,48 @@ import { useTranslation } from "react-i18next";
 import LangLink from "../components/Common/LangLink";
 import Reveal from "../components/Common/Reveal";
 
-const CDN = "/images/cdn";
-const HERO_IMG = `${CDN}/6b60dadec__DSC8940-HDR-Panorama-Avecaccentuation-Bruit.jpg`;
-const ATELIER_IMG = `${CDN}/bc6d94155__DSC8624.jpg`;
+const GALLERY_PATH = "/images/gallery";
+const HERO_IMG = `${GALLERY_PATH}/galerie-salon-panorama-atlantis12-essaouira.jpg`;
+const ATELIER_IMG = `${GALLERY_PATH}/atelier-lahcen-fikri-atlantis12-essaouira.jpg`;
 
 const WORKS_META = [
-  { img: `${CDN}/459ce29b2_oeuvre-lahcen-fikri-1-peinture-atlantis12-essaouira.jpg`, badge: "available", meta: "canvas" },
-  { img: `${CDN}/3f5df31af_oeuvre-russe-peinture-atelier-atlantis12-essaouira.jpg`, badge: "permanent", meta: "permanent" },
-  { img: `${CDN}/128c70088_oeuvre-christina-peinture-atelier-atlantis12-essaouira.jpg`, badge: "permanent", meta: "permanent" },
-  { img: `${CDN}/fa660b154_oeuvre-lahcen-fikri-3-peinture-atlantis12-essaouira.jpeg`, badge: "available", meta: "canvas" },
-  { img: `${CDN}/bf151edb1_oeuvre-lahcen-fikri-4-peinture-atlantis12-essaouira.jpeg`, badge: "available", meta: "canvas" },
-  { img: `${CDN}/0351c82b2__DSC8640.jpg`, badge: "permanent", meta: "metal" },
+  { img: `${GALLERY_PATH}/oeuvre-lahcen-fikri-1-peinture-atlantis12-essaouira.jpg`, badge: "available", meta: "canvas", size: "70 x 120 cm" },
+  { img: `${GALLERY_PATH}/oeuvre-russe-peinture-atelier-atlantis12-essaouira.jpg`, badge: "permanent", meta: "permanent" },
+  { img: `${GALLERY_PATH}/oeuvre-christina-peinture-atelier-atlantis12-essaouira.jpg`, badge: "permanent", meta: "permanent" },
+  { img: `${GALLERY_PATH}/oeuvre-lahcen-fikri-3-peinture-atlantis12-essaouira.jpeg`, badge: "available", meta: "canvas", size: "100 x 70 cm" },
+  { img: `${GALLERY_PATH}/oeuvre-lahcen-fikri-4-peinture-atlantis12-essaouira.jpeg`, badge: "available", meta: "canvas", size: "70 x 120 cm" },
+  { img: `${GALLERY_PATH}/sculpture-sphere-metal-atlantis12-essaouira.jpg`, badge: "permanent", meta: "metal" },
 ];
 
 export default function Gallery() {
   const { t } = useTranslation();
   const works = t("galleryPg.works", { returnObjects: true }) || [];
   const badge = (k) => k === "available" ? t("galleryPg.badgeAvailable") : t("galleryPg.badgePermanent");
-  const meta = (k) => k === "canvas" ? t("galleryPg.metaCanvas") : k === "metal" ? t("galleryPg.metaMetal") : t("galleryPg.metaPermanent");
+  const meta = (k, size) => {
+    if (k === "canvas") {
+      const baseText = t("galleryPg.metaCanvas");
+      // Replace default size with per-work size if provided
+      if (size) return baseText.replace(/\d+ x \d+ cm/, size);
+      return baseText;
+    }
+    return k === "metal" ? t("galleryPg.metaMetal") : t("galleryPg.metaPermanent");
+  };
 
   return (
     <div className="min-h-screen pb-0 font-body bg-white" style={{ color: "rgb(61, 92, 48)" }}>
       <div className="relative h-[70vh] overflow-hidden">
-        <img src={HERO_IMG} alt={t("galleryPg.heroAlt")} className="w-full h-full object-cover" />
-        <div
-          className="absolute inset-0"
-          style={{
-            background:
-              "linear-gradient(rgba(255, 255, 255, 0.125), transparent 30%, rgba(255, 255, 255, 0.565))",
-          }}
-        />
+        <img src={HERO_IMG} alt={t("galleryPg.heroAlt")} className="w-full h-full object-cover" style={{ objectPosition: "left center" }} />
         <div className="absolute bottom-12 left-[8vw] md:left-[10vw]">
-          <Reveal as="p" className="font-body text-xs tracking-[0.4em] uppercase text-white/70 mb-3">
+          <Reveal as="p" className="font-body text-xs tracking-[0.4em] uppercase text-white/70 mb-3 font-medium">
             {t("galleryPg.heroEyebrow")}
           </Reveal>
           <Reveal as="h1" className="font-display text-5xl md:text-7xl leading-tight text-white" delay={1}>
             {t("galleryPg.heroTitle1")}
             <br />
             <span className="text-white">{t("galleryPg.heroTitle2")}</span>
+          </Reveal>
+          <Reveal as="p" className="font-body text-xs tracking-[0.3em] uppercase text-white/80 mt-3 font-medium" delay={2}>
+            GALERIE, RÉSIDENCE ARTISTIQUE & ŒUVRES | ATLANTIS 12 ESSAOUIRA
           </Reveal>
         </div>
       </div>
@@ -54,8 +58,8 @@ export default function Gallery() {
           <p className="font-body text-sm leading-relaxed text-foreground/65">{t("galleryPg.s1p1")}</p>
           <p className="font-body text-sm leading-relaxed text-foreground/65">{t("galleryPg.s1p2")}</p>
         </Reveal>
-        <Reveal delay={1}>
-          <img src={ATELIER_IMG} alt={t("galleryPg.s1ImgAlt")} className="w-full h-auto object-cover" />
+        <Reveal delay={1} className="overflow-hidden" style={{ maxHeight: "360px" }}>
+          <img src={ATELIER_IMG} alt={t("galleryPg.s1ImgAlt")} className="w-full h-full object-cover" style={{ objectPosition: "center top" }} />
         </Reveal>
       </section>
 
@@ -77,9 +81,9 @@ export default function Gallery() {
                   <img
                     src={m.img}
                     alt={w.artist}
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                    className="w-full h-full object-contain bg-white transition-transform duration-700 group-hover:scale-105"
                   />
-                  <div className="absolute top-3 right-3 px-2 py-1 font-body text-xs bg-primary text-primary-foreground">
+                  <div className="absolute top-3 right-3 px-3 py-1.5 font-body text-xs tracking-wide" style={{ backgroundColor: "#4A6741", color: "#FFFFFF" }}>
                     {badge(m.badge)}
                   </div>
                 </div>
@@ -88,7 +92,7 @@ export default function Gallery() {
                   {w.sub && (
                     <p className="font-body text-xs tracking-[0.2em] uppercase text-primary">{w.sub}</p>
                   )}
-                  <p className="font-body text-xs text-foreground/60">{meta(m.meta)}</p>
+                  <p className="font-body text-xs text-foreground/60">{meta(m.meta, m.size)}</p>
                   <p className="font-body text-xs tracking-wide text-foreground/50">{w.where}</p>
                 </div>
               </Reveal>
@@ -105,7 +109,8 @@ export default function Gallery() {
           {t("galleryPg.residencyText")}
         </Reveal>
         <LangLink
-          className="font-body text-xs tracking-[0.3em] uppercase px-8 py-3 inline-block bg-primary text-primary-foreground hover:bg-secondary transition-colors duration-300"
+          className="font-body text-xs tracking-[0.3em] uppercase px-8 py-3 inline-block hover:opacity-90 transition-colors duration-300"
+          style={{ backgroundColor: "#4A6741", color: "#FFFFFF" }}
           to="/contact"
         >
           {t("galleryPg.residencyCta")}

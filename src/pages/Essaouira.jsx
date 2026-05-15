@@ -2,22 +2,22 @@
 import { useTranslation } from "react-i18next";
 import Reveal from "../components/Common/Reveal";
 
-const CDN = "/images/cdn";
-const HERO = `${CDN}/01f30e936_asmae-lahcen-dar-lawama-coucher-soleil-essaouira.jpg`;
+const ESS_PATH = "/images/essaouira";
+const HERO = `${ESS_PATH}/asmae-lahcen-dar-lawama-coucher-soleil-essaouira.jpg`;
 
 const GRID_IMAGES = [
-  { src: `${CDN}/c56e1d217_1remparts-essaouira-skala-du-port.jpg`, alt: "Remparts d'Essaouira et Skala du Port" },
-  { src: `${CDN}/28dced548_2port-essaouira-barques-bleues-mouette.jpg`, alt: "Port d'Essaouira" },
-  { src: `${CDN}/a3b60a318_3port-essaouira-bateaux-bleus.jpg`, alt: "Bateaux bleus" },
-  { src: `${CDN}/ad630a75e_4coucher-soleil-plage-essaouira-atlantique.jpg`, alt: "Coucher de soleil" },
-  { src: `${CDN}/2987c0f2f_5coucher-soleil-essaouira-palmier.jpg`, alt: "Palmier" },
-  { src: `${CDN}/494b5be7d_6marche-medina-essaouira-homme-djellaba.jpg`, alt: "Marché Médina" },
-  { src: `${CDN}/be1f8df2d_7velo-chat-medina-essaouira-bleu.jpg`, alt: "Vélo bleu" },
-  { src: `${CDN}/3c43558a2_8porte-ancienne-medina-essaouira.jpg`, alt: "Porte ancienne" },
-  { src: `${CDN}/9c40a7758_9luminaires-cuir-artisanat-essaouira.jpg`, alt: "Luminaires en cuir" },
-  { src: `${CDN}/caccfd7fc_10musicienne-gnaoua-essaouirappg.jpg`, alt: "Musicienne Gnaoua" },
-  { src: `${CDN}/edb46f413_11epices-marche-essaouira.jpg`, alt: "Épices" },
-  { src: `${CDN}/90fd255bc_12bijoux-berberes-ambre-essaouira.jpg`, alt: "Bijoux berbères" },
+  { src: `${ESS_PATH}/1remparts-essaouira-skala-du-port.jpg`, alt: "Remparts d'Essaouira et Skala du Port" },
+  { src: `${ESS_PATH}/2port-essaouira-barques-bleues-mouette.jpg`, alt: "Port d'Essaouira" },
+  { src: `${ESS_PATH}/3port-essaouira-bateaux-bleus.jpg`, alt: "Bateaux bleus" },
+  { src: `${ESS_PATH}/4coucher-soleil-plage-essaouira-atlantique.jpg`, alt: "Coucher de soleil" },
+  { src: `${ESS_PATH}/5coucher-soleil-essaouira-palmier.jpg`, alt: "Palmier" },
+  { src: `${ESS_PATH}/6marche-medina-essaouira-homme-djellaba.jpg`, alt: "Marché Médina" },
+  { src: `${ESS_PATH}/7velo-chat-medina-essaouira-bleu.jpg`, alt: "Vélo bleu" },
+  { src: `${ESS_PATH}/8porte-ancienne-medina-essaouira.jpg`, alt: "Porte ancienne" },
+  { src: `${ESS_PATH}/9luminaires-cuir-artisanat-essaouira.jpg`, alt: "Luminaires en cuir" },
+  { src: `${ESS_PATH}/10musicienne-gnaoua-essaouirappg.jpg`, alt: "Musicienne Gnaoua" },
+  { src: `${ESS_PATH}/11epices-marche-essaouira.jpg`, alt: "Épices" },
+  { src: `${ESS_PATH}/12bijoux-berberes-ambre-essaouira.jpg`, alt: "Bijoux berbères" },
 ];
 
 const PIN = (
@@ -139,13 +139,16 @@ export default function Essaouira() {
           style={{ background: "linear-gradient(rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.5) 100%)" }}
         />
         <div className="absolute bottom-12 left-[8vw] md:left-[10vw]">
-          <Reveal as="p" className="font-body text-xs tracking-[0.4em] uppercase text-white/70 mb-3">
+          <Reveal as="p" className="font-body text-xs tracking-[0.4em] uppercase text-white/70 mb-3 font-medium">
             {t("essaouiraPg.heroEyebrow")}
           </Reveal>
           <Reveal as="h1" className="font-display text-5xl md:text-7xl text-white" delay={1}>
             {t("essaouiraPg.heroTitle1")}
             <br />
             {t("essaouiraPg.heroTitle2")}
+          </Reveal>
+          <Reveal as="p" className="font-body text-xs tracking-[0.3em] uppercase text-white/80 mt-3 font-medium" delay={2}>
+            ADRESSES, LIEUX & BONS PLANS | ATLANTIS 12
           </Reveal>
         </div>
       </div>
@@ -158,7 +161,7 @@ export default function Essaouira() {
           <p className="font-body text-sm leading-relaxed text-foreground/65">{t("essaouiraPg.chosenP1")}</p>
           <p className="font-body text-sm leading-relaxed text-foreground/65">{t("essaouiraPg.chosenP2")}</p>
           <p className="font-body text-sm leading-relaxed text-foreground/65">
-            <span className="font-bold italic">{t("essaouiraPg.chosenP3")}</span>
+            <span className="italic">{t("essaouiraPg.chosenP3")}</span>
           </p>
         </Reveal>
       </section>

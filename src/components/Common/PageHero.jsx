@@ -56,19 +56,15 @@ export default function PageHero({
                 </h1>
               )}
 
-              {/* Subtitle */}
+              {/* Subtitle (eyebrow) */}
               {subtitle && (
-                <p className="mt-2 md:mt-3 text-white/90 text-sm md:text-base">
+                <p className="mt-2 md:mt-3 text-white/90 text-sm md:text-base font-medium tracking-[0.2em] uppercase">
                   {subtitle}
                 </p>
               )}
 
               {/* Custom slot (buttons / forms / etc.) */}
               {children && <div className="mt-4 md:mt-6">{children}</div>}
-
-              <p className="mt-2 md:mt-3 text-white/90 text-sm md:text-base">
-                  {subtitle}
-                </p>
             </div>
           </div>
         </div>

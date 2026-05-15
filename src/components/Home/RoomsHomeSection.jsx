@@ -9,20 +9,20 @@ import { useTranslation } from "react-i18next";
 import Reveal from "../Common/Reveal";
 
 // Same base44 CDN assets as live atlantis12essaouira.com home
-const CDN = "/images/cdn";
+const ROOMS_PATH = "/images/rooms";
 const FAKE = {
-  ipomea:     `${CDN}/798e06b8a__DSC8352-HDR-Panorama.jpg`,
-  agave:      `${CDN}/2a7e148c8_agave-chambre-vue-panoramique-atlantis12-essaouira.jpg`,
-  coquelicot: `${CDN}/507a92f52__DSC8482-HDR.jpg`,
-  orchis:     `${CDN}/74b84d201__DSC8545-HDR.jpg`,
-  plumeria:   `${CDN}/854c1a8af__DSC8231-HDR.jpg`,
+  ipomea:     `${ROOMS_PATH}/ipomea-vue-panorama-atlantis12-essaouira.jpg`,
+  agave:      `${ROOMS_PATH}/agave-chambre-vue-panoramique-atlantis12-essaouira.jpg`,
+  coquelicot: `${ROOMS_PATH}/coquelicot-vue-patio-atlantis12-essaouira.jpg`,
+  orchis:     `${ROOMS_PATH}/orchis-chambre-lit-mauve-murs-pierre-arche-atlantis12-essaouira.jpg`,
+  plumeria:   `${ROOMS_PATH}/plumeria-vue-suite-atlantis12-essaouira.jpg`,
 };
 
 const JUNIORS = [
-  { key: "ipomea",     to: "/chambres?room=lipomea",      name: "L'Ipoméa",     type: "Junior Suite", img: FAKE.ipomea },
-  { key: "agave",      to: "/chambres?room=lagave",       name: "L'Agave",      type: "Junior Suite", img: FAKE.agave },
-  { key: "coquelicot", to: "/chambres?room=la-coquelicot",name: "La Coquelicot",type: "Junior Suite", img: FAKE.coquelicot },
-  { key: "orchis",     to: "/chambres?room=lorchis",      name: "L'Orchis",     type: "Junior Suite", img: FAKE.orchis },
+  { key: "ipomea",     to: "/chambres?room=lipomea",      name: "L'Ipoméa",     type: "Suite Junior", img: FAKE.ipomea },
+  { key: "agave",      to: "/chambres?room=lagave",       name: "L'Agave",      type: "Suite Junior", img: FAKE.agave },
+  { key: "coquelicot", to: "/chambres?room=la-coquelicot",name: "La Coquelicot",type: "Suite Junior", img: FAKE.coquelicot },
+  { key: "orchis",     to: "/chambres?room=lorchis",      name: "L'Orchis",     type: "Suite Junior", img: FAKE.orchis },
 ];
 
 function RoomCard({ to, name, type, img, alt, wide = false }) {
@@ -44,9 +44,9 @@ function RoomCard({ to, name, type, img, alt, wide = false }) {
         decoding="async"
         className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
       />
-      {/* Dark gradient overlay (from bottom) — uses secondary color rgba */}
+      {/* Dark gradient overlay (from bottom) - visible only on hover */}
       <div
-        className="absolute inset-0"
+        className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
         style={{
           background:
             "linear-gradient(to top, rgba(44, 62, 37, 0.7), transparent)",
@@ -94,7 +94,7 @@ export default function RoomsHomeSection() {
             name={r.name}
             type={r.type}
             img={r.img}
-            alt={`${r.name}, junior suite — Atlantis 12, Essaouira`}
+            alt={`${r.name}, junior suite - Atlantis 12, Essaouira`}
           />
         ))}
       </div>
@@ -105,7 +105,7 @@ export default function RoomsHomeSection() {
         name="La Pluméria"
         type="Chambre Supérieure"
         img={FAKE.plumeria}
-        alt="Plumeria, suite supérieure — Atlantis 12, Essaouira"
+        alt="Plumeria, suite supérieure - Atlantis 12, Essaouira"
       />
 
       <div className="mt-8 text-center">

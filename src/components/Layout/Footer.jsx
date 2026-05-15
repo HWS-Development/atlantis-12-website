@@ -21,7 +21,7 @@ const cream10 = "rgba(245, 240, 232, 0.1)";
 
 // Live weather (Open-Meteo, no API key) — Essaouira coords from schema.org JSON-LD
 const WX_URL =
-  "https://api.open-meteo.com/v1/forecast?latitude=31.5125&longitude=-9.7700&current=temperature_2m,wind_speed_10m,wind_direction_10m&timezone=Africa%2FCasablanca";
+  "https://api.open-meteo.com/v1/forecast?latitude=31.5085&longitude=-9.7595&current=temperature_2m,wind_speed_10m,wind_direction_10m&wind_speed_unit=kmh";
 
 function dirLabel(deg) {
   if (deg == null || Number.isNaN(deg)) return "";
@@ -102,7 +102,7 @@ export default function Footer() {
                 <p className="font-body text-sm" style={{ color: cream65 }}>
                   Douar Laraich, Route de Safi
                   <br />
-                  44000, Essaouira — Maroc
+                  44000, Essaouira - Maroc
                 </p>
               </div>
             </Reveal>
@@ -119,7 +119,7 @@ export default function Footer() {
                   </p>
                   <p className="font-body text-xs mt-2" style={{ color: cream40 }}>
                     {t("footer.wind", "Vent")} {dirLabel(wx.dir)}
-                    {wx.wind != null ? ` — ${wx.wind} km/h` : ""}
+                    {wx.wind != null ? ` - ${wx.wind} km/h` : ""}
                   </p>
                 </div>
                 <p className="font-body text-xs italic pt-3" style={{ color: cream45 }}>
@@ -134,7 +134,7 @@ export default function Footer() {
             {/* EXPLORER */}
             <Reveal delay={2} className="space-y-5">
               <p className="font-body text-xs tracking-[0.4em] uppercase" style={{ color: accent }}>
-                {t("footer.explore", "Explorer")}
+                {t("footer.explore", "EXPLORER")}
               </p>
               <div className="flex flex-col gap-2.5">
                 {explorer.map((l) => (
@@ -149,7 +149,7 @@ export default function Footer() {
                 ))}
                 <LangLink
                   to="/essaouira"
-                  className="text-left transition-colors duration-300 font-display text-base md:text-lg hover:opacity-80"
+                  className="text-left transition-colors duration-300 font-display text-lg md:text-xl hover:opacity-80"
                   style={{ color: cream }}
                 >
                   {t("footer.essaouiraLine1", "Ce qu'on aime (vraiment !)")}
@@ -166,7 +166,7 @@ export default function Footer() {
           style={{ borderTop: `1px solid ${cream10}` }}
         >
           <p className="font-body text-xs" style={{ color: cream25 }}>
-            © {new Date().getFullYear()} Atlantis 12 — {t("footer.tagline", "Maison d'hôtes & d'art — Essaouira, Maroc")}
+            © {new Date().getFullYear()} Atlantis 12 - {t("footer.tagline", "Maison d'hôtes & d'art - Essaouira, Maroc")}
           </p>
         </div>
       </div>

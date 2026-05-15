@@ -7,7 +7,7 @@ import { useTranslation } from "react-i18next";
 
 // Watercolor brand mark used in live header (base44 CDN, mix-blend-multiply)
 const LOGO =
-  "/images/cdn/2318e1e58_logo26-aquarelleok-simplifie.png";
+  "/images/logo/logo-atlantis12-simplifie.png";
 
 export default function Navbar() {
   const { t, i18n } = useTranslation();
@@ -45,7 +45,7 @@ export default function Navbar() {
         <LangLink
           to="/"
           className="flex items-center flex-shrink-0 bg-background -ml-2 mr-3 md:mr-0"
-          aria-label="Atlantis 12 — accueil"
+          aria-label="Atlantis 12 - accueil"
         >
           <img
             src={LOGO}
@@ -84,10 +84,9 @@ export default function Navbar() {
               >
                 {[
                   ["/la-maison",   t("nav.house",       "La Maison")],
-                  ["/chambres",    t("nav.rooms",       "Les Chambres")],
-                  ["/table-dhotes",t("nav.table",       "La Table")],
+                  ["/chambres",    t("nav.rooms",       "Hébergements")],
+                  ["/table-dhotes",t("nav.table",       "Table d'hôtes")],
                   ["/experiences", t("nav.experiences", "Expériences")],
-                  ["/essaouira",   t("nav.essaouira",   "Essaouira")],
                   ["/contact",     t("nav.contact",     "Contact")],
                 ].map(([to, label]) => (
                   <LangLink

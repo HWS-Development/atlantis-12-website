@@ -26,3 +26,11 @@ dist-ssr
 # Scraped reference HTML (dev-only, used for content verification)
 reference/
 
+# Corrections / working docs (not part of the codebase)
+*.docx
+~$*
+corrections_site_vercel.md
+
+# Sensitive screenshots
+Cle*API*Google*
+
