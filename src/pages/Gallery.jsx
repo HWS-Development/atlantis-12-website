@@ -83,7 +83,7 @@ export default function Gallery() {
                     alt={w.artist}
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                   />
-                  <div className="absolute top-3 right-3 px-2 py-1 font-body text-xs tracking-wide bg-primary text-primary-foreground">
+                  <div className="absolute top-3 right-3 px-2 py-1 font-body text-xs tracking-wide bg-primary text-white">
                     {badge(m.badge)}
                   </div>
                 </div>
