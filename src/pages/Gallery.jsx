@@ -58,8 +58,8 @@ export default function Gallery() {
           <p className="font-body text-sm leading-relaxed text-foreground/65">{t("galleryPg.s1p1")}</p>
           <p className="font-body text-sm leading-relaxed text-foreground/65">{t("galleryPg.s1p2")}</p>
         </Reveal>
-        <Reveal delay={1} className="overflow-hidden" style={{ maxHeight: "380px" }}>
-          <img src={ATELIER_IMG} alt={t("galleryPg.s1ImgAlt")} className="w-full object-cover object-center" />
+        <Reveal delay={1} className="overflow-hidden h-[380px]">
+          <img src={ATELIER_IMG} alt={t("galleryPg.s1ImgAlt")} className="w-full h-full object-cover object-[center_65%]" />
         </Reveal>
       </section>
 
