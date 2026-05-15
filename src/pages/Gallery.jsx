@@ -33,7 +33,7 @@ export default function Gallery() {
   return (
     <div className="min-h-screen pb-0 font-body bg-white" style={{ color: "rgb(61, 92, 48)" }}>
       <div className="relative h-[70vh] overflow-hidden">
-        <img src={HERO_IMG} alt={t("galleryPg.heroAlt")} className="w-full h-full object-cover" style={{ objectPosition: "left center" }} />
+        <img src={HERO_IMG} alt={t("galleryPg.heroAlt")} className="w-full h-full object-cover object-[center_15%]" />
         <div className="absolute bottom-12 left-[8vw] md:left-[10vw]">
           <Reveal as="p" className="font-body text-xs tracking-[0.4em] uppercase text-white/70 mb-3 font-medium">
             {t("galleryPg.heroEyebrow")}
@@ -58,8 +58,8 @@ export default function Gallery() {
           <p className="font-body text-sm leading-relaxed text-foreground/65">{t("galleryPg.s1p1")}</p>
           <p className="font-body text-sm leading-relaxed text-foreground/65">{t("galleryPg.s1p2")}</p>
         </Reveal>
-        <Reveal delay={1} className="overflow-hidden" style={{ maxHeight: "360px" }}>
-          <img src={ATELIER_IMG} alt={t("galleryPg.s1ImgAlt")} className="w-full h-full object-cover" style={{ objectPosition: "center top" }} />
+        <Reveal delay={1} className="overflow-hidden" style={{ maxHeight: "380px" }}>
+          <img src={ATELIER_IMG} alt={t("galleryPg.s1ImgAlt")} className="w-full object-cover object-center" />
         </Reveal>
       </section>
 
@@ -81,9 +81,9 @@ export default function Gallery() {
                   <img
                     src={m.img}
                     alt={w.artist}
-                    className="w-full h-full object-contain bg-white transition-transform duration-700 group-hover:scale-105"
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                   />
-                  <div className="absolute top-3 right-3 px-3 py-1.5 font-body text-xs tracking-wide" style={{ backgroundColor: "#4A6741", color: "#FFFFFF" }}>
+                  <div className="absolute top-3 right-3 px-2 py-1 font-body text-xs tracking-wide bg-primary text-primary-foreground">
                     {badge(m.badge)}
                   </div>
                 </div>
