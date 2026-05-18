@@ -290,7 +290,7 @@ export default function BottomReservationBar() {
 
       {/* Bar itself */}
       <div
-        className="flex items-center justify-between py-3.5 text-primary-foreground gap-4 m-0"
+        className="flex items-center justify-between py-3.5 text-white gap-4 m-0"
         style={{
           backgroundColor: "#496246",
           width: "100vw",
@@ -311,9 +311,9 @@ export default function BottomReservationBar() {
           <span
             className="font-display whitespace-nowrap overflow-hidden text-ellipsis"
             style={{
-              fontSize: "clamp(14px, 2.8vw, 19px)",
+              fontSize: "clamp(15px, 2.8vw, 19px)",
               fontWeight: 400,
-              color: "rgb(255, 255, 255)",
+              color: "#ffffff",
             }}
           >
             {t("bottomBar.bar.cta", "Réserver votre séjour")}
@@ -323,7 +323,7 @@ export default function BottomReservationBar() {
 
         <button
           type="button"
-          className="flex items-center justify-center gap-2 md:gap-3 px-2 md:px-4 py-2 hover:bg-primary-foreground/10 transition-colors ml-auto flex-shrink-0"
+          className="flex items-center justify-center gap-2 md:gap-3 px-2 md:px-4 py-2 hover:bg-white/10 transition-colors ml-auto flex-shrink-0"
           onClick={() => {
             setWhyOpen((v) => !v);
             setReserveOpen(false);
@@ -331,7 +331,7 @@ export default function BottomReservationBar() {
         >
           <span
             className="font-display whitespace-nowrap font-bold"
-            style={{ fontSize: "clamp(11px, 2.4vw, 15px)", color: "rgb(255,255,255)" }}
+            style={{ fontSize: "clamp(12px, 2.4vw, 15px)", color: "#ffffff" }}
           >
             {t("bottomBar.bar.why", "pourquoi réserver sur notre site ?")}
           </span>

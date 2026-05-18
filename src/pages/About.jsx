@@ -38,7 +38,7 @@ export default function About() {
       <div className="relative h-[70vh] overflow-hidden">
         <img src={HERO_IMG} alt={t("aboutHero.heroAlt")} className="w-full h-full object-cover" />
         <div className="absolute bottom-12 left-[8vw] md:left-[10vw]">
-          <Reveal as="p" className="font-body text-xs tracking-[0.4em] uppercase text-white/70 mb-3 font-medium">
+          <Reveal as="p" className="font-body text-xs tracking-[0.4em] uppercase text-white/70 mb-3 font-semibold">
             {t("aboutHero.eyebrow")}
           </Reveal>
           <Reveal as="h1" className="font-display text-5xl md:text-7xl text-white" delay={1}>

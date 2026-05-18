@@ -1,4 +1,5 @@
 ﻿// /maison-dart — rebuilt 1:1 from reference/maison-dart/body.pretty.html
+import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import LangLink from "../components/Common/LangLink";
 import Reveal from "../components/Common/Reveal";
@@ -20,11 +21,11 @@ const WORKS_META = [
 export default function Gallery() {
   const { t } = useTranslation();
   const works = t("galleryPg.works", { returnObjects: true }) || [];
+  const [selected, setSelected] = useState(null); // index of opened artwork
   const badge = (k) => k === "available" ? t("galleryPg.badgeAvailable") : t("galleryPg.badgePermanent");
   const meta = (k, size) => {
     if (k === "canvas") {
       const baseText = t("galleryPg.metaCanvas");
-      // Replace default size with per-work size if provided
       if (size) return baseText.replace(/\d+ x \d+ cm/, size);
       return baseText;
     }
@@ -40,7 +41,7 @@ export default function Gallery() {
       <div className="relative h-[70vh] overflow-hidden">
         <img src={HERO_IMG} alt={t("galleryPg.heroAlt")} className="w-full h-full object-cover object-[center_15%]" />
         <div className="absolute bottom-12 left-[8vw] md:left-[10vw]">
-          <Reveal as="p" className="font-body text-xs tracking-[0.4em] uppercase text-white/70 mb-3 font-medium">
+          <Reveal as="p" className="font-body text-xs tracking-[0.4em] uppercase text-white/70 mb-3 font-semibold">
             {t("galleryPg.heroEyebrow")}
           </Reveal>
           <Reveal as="h1" className="font-display text-5xl md:text-7xl leading-tight text-white" delay={1}>
@@ -48,7 +49,7 @@ export default function Gallery() {
             <br />
             <span className="text-white">{t("galleryPg.heroTitle2")}</span>
           </Reveal>
-          <Reveal as="p" className="font-body text-xs tracking-[0.3em] uppercase text-white/80 mt-3 font-medium" delay={2}>
+          <Reveal as="p" className="font-body text-xs tracking-[0.3em] uppercase text-white/80 mt-3 font-semibold" delay={2}>
             GALERIE, RÉSIDENCE ARTISTIQUE & ŒUVRES | ATLANTIS 12 ESSAOUIRA
           </Reveal>
         </div>
@@ -81,7 +82,12 @@ export default function Gallery() {
           {works.map((w, i) => {
             const m = WORKS_META[i] || {};
             return (
-              <Reveal key={i} className="group cursor-pointer border border-border" delay={(i % 3) + 1}>
+              <Reveal
+                key={i}
+                className="group cursor-pointer border border-border"
+                delay={(i % 3) + 1}
+                onClick={() => setSelected(i)}
+              >
                 <div className="relative overflow-hidden aspect-[4/3]">
                   <img
                     src={m.img}
@@ -121,6 +127,67 @@ export default function Gallery() {
           {t("galleryPg.residencyCta")}
         </LangLink>
       </section>
+
+      {/* Artwork Lightbox Modal */}
+      {selected !== null && (() => {
+        const w = works[selected] || {};
+        const m = WORKS_META[selected] || {};
+        return (
+          <div
+            className="fixed inset-0 z-50 flex items-center justify-center p-4"
+            onClick={() => setSelected(null)}
+          >
+            {/* Backdrop */}
+            <div className="absolute inset-0 bg-black/60" />
+            {/* Modal */}
+            <div
+              className="relative bg-white max-w-5xl w-full max-h-[90vh] overflow-y-auto flex flex-col md:flex-row shadow-2xl"
+              onClick={(e) => e.stopPropagation()}
+            >
+              {/* Close button */}
+              <button
+                type="button"
+                onClick={() => setSelected(null)}
+                className="absolute top-4 right-4 z-10 text-foreground/50 hover:text-foreground transition-colors"
+                aria-label={t("galleryPg.closeModal", "Fermer")}
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+              </button>
+              {/* Image */}
+              <div className="md:w-1/2 bg-white flex items-center justify-center p-6 md:p-10">
+                <img
+                  src={m.img}
+                  alt={w.artist}
+                  className="w-full h-auto max-h-[70vh] object-contain"
+                />
+              </div>
+              {/* Info */}
+              <div className="md:w-1/2 p-8 md:p-10 flex flex-col justify-center space-y-5">
+                <div className="inline-block px-3 py-1 font-body text-xs tracking-wide bg-primary text-white w-fit">
+                  {badge(m.badge)}
+                </div>
+                <h3 className="font-display text-3xl md:text-4xl text-foreground">{w.artist}</h3>
+                {w.sub && (
+                  <p className="font-body text-sm tracking-[0.2em] uppercase text-primary">{w.sub}</p>
+                )}
+                <p className="font-body text-sm text-foreground/60">{meta(m.meta, m.size)}</p>
+                {w.where && (
+                  <p className="font-body text-sm text-foreground/50">{w.where}</p>
+                )}
+                {m.badge === "available" && (
+                  <LangLink
+                    to="/contact"
+                    className="mt-4 inline-block font-body text-xs tracking-[0.25em] uppercase px-6 py-3 text-white hover:opacity-90 transition-colors w-fit"
+                    style={{ backgroundColor: "#4A6741" }}
+                  >
+                    {t("galleryPg.inquiryCta", "Renseignement & Acquisition")}
+                  </LangLink>
+                )}
+              </div>
+            </div>
+          </div>
+        );
+      })()}
     </div>
   );
 }

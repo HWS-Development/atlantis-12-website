@@ -149,7 +149,7 @@ export default function Footer() {
                 ))}
                 <LangLink
                   to="/essaouira"
-                  className="text-left transition-colors duration-300 font-display text-lg md:text-xl hover:opacity-80"
+                  className="text-left transition-colors duration-300 font-display text-xl md:text-2xl hover:opacity-80"
                   style={{ color: cream }}
                 >
                   {t("footer.essaouiraLine1", "Ce qu'on aime (vraiment !)")}

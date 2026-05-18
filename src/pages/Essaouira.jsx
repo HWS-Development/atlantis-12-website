@@ -144,7 +144,7 @@ export default function Essaouira() {
           style={{ background: "linear-gradient(rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.5) 100%)" }}
         />
         <div className="absolute bottom-12 left-[8vw] md:left-[10vw]">
-          <Reveal as="p" className="font-body text-xs tracking-[0.4em] uppercase text-white/70 mb-3 font-medium">
+          <Reveal as="p" className="font-body text-xs tracking-[0.4em] uppercase text-white/70 mb-3 font-semibold">
             {t("essaouiraPg.heroEyebrow")}
           </Reveal>
           <Reveal as="h1" className="font-display text-5xl md:text-7xl text-white" delay={1}>
@@ -152,7 +152,7 @@ export default function Essaouira() {
             <br />
             {t("essaouiraPg.heroTitle2")}
           </Reveal>
-          <Reveal as="p" className="font-body text-xs tracking-[0.3em] uppercase text-white/80 mt-3 font-medium" delay={2}>
+          <Reveal as="p" className="font-body text-xs tracking-[0.3em] uppercase text-white/80 mt-3 font-semibold" delay={2}>
             ADRESSES, LIEUX & BONS PLANS | ATLANTIS 12
           </Reveal>
         </div>

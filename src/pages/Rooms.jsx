@@ -156,7 +156,7 @@ export default function Rooms() {
           style={{ objectPosition: "center 60%" }}
         />
         <div className="absolute bottom-12 left-[8vw] md:left-[10vw]">
-          <Reveal as="p" className="font-body text-xs tracking-[0.4em] uppercase text-white/70 mb-3 font-medium">
+          <Reveal as="p" className="font-body text-xs tracking-[0.4em] uppercase text-white/70 mb-3 font-semibold">
             {t("roomsPage.heroEyebrow")}
           </Reveal>
           <Reveal as="h1" className="font-display text-5xl md:text-7xl text-white" delay={1}>

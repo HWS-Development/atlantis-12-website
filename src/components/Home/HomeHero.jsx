@@ -39,6 +39,7 @@ export default function HomeHero() {
               fontSize: "12px",
               letterSpacing: "0.4em",
               textTransform: "uppercase",
+              fontWeight: 600,
             }}
           >
             {t("home.hero.eyebrow", "Proche d'Essaouira, Maroc")}

@@ -27,7 +27,7 @@ export default function TableDHotes() {
           style={{ objectPosition: "center 60%" }}
         />
         <div className="absolute bottom-12 left-[8vw] md:left-[10vw]">
-          <Reveal as="p" className="font-body text-xs tracking-[0.4em] uppercase text-white/70 mb-3 font-medium">
+          <Reveal as="p" className="font-body text-xs tracking-[0.4em] uppercase text-white/70 mb-3 font-semibold">
             {t("tablePg.heroEyebrow")}
           </Reveal>
           <Reveal as="h1" className="font-display text-5xl md:text-7xl text-white" delay={1}>
@@ -40,7 +40,7 @@ export default function TableDHotes() {
 
       <section className="px-[8vw] md:px-[10vw] py-12 md:py-16 grid md:grid-cols-2 gap-12 md:gap-20">
         <Reveal className="space-y-5">
-          <h2 className="font-display text-5xl md:text-6xl text-foreground">{t("tablePg.s1Title")}</h2>
+          <h2 className="font-display text-5xl md:text-6xl text-foreground font-bold">{t("tablePg.s1Title")}</h2>
           <div className="w-10 h-px bg-primary/50" />
           <p className="font-body text-sm leading-relaxed text-foreground/65">{t("tablePg.s1p1")}</p>
           <p className="font-body text-sm leading-relaxed text-foreground/65">{t("tablePg.s1p2")}</p>
@@ -52,7 +52,7 @@ export default function TableDHotes() {
       </section>
 
       <section className="px-[8vw] md:px-[10vw] py-12 md:py-16 bg-card/40 max-w-[720px] mx-auto text-center">
-        <Reveal as="h2" className="font-display text-4xl md:text-5xl text-foreground mb-8">
+        <Reveal as="h2" className="font-display text-4xl md:text-5xl text-foreground mb-8 font-bold">
           {t("tablePg.s2Title")}
         </Reveal>
         <Reveal as="p" className="font-body text-sm tracking-[0.3em] uppercase text-foreground/70 mb-8" delay={1}>

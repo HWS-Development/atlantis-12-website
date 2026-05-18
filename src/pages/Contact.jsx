@@ -64,7 +64,7 @@ export default function Contact() {
         <Reveal as="h1" className="font-display text-5xl md:text-7xl text-foreground" delay={1}>
           {t("contactPage.title")}
         </Reveal>
-        <Reveal as="p" className="font-body text-xs tracking-[0.3em] uppercase text-primary/70 mt-3 font-medium" delay={2}>
+        <Reveal as="p" className="font-body text-xs tracking-[0.3em] uppercase text-primary/70 mt-3 font-semibold" delay={2}>
           ATLANTIS 12, MAISON D'HÔTES ET D'ART À ESSAOUIRA
         </Reveal>
       </div>

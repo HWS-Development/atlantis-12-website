@@ -78,7 +78,7 @@ export default function Activites() {
           <Reveal as="h1" className="font-display text-[82px] font-bold text-white mt-2" delay={1}>
             {t("activitesPg.heroTitle")}
           </Reveal>
-          <Reveal as="p" className="font-body text-xs tracking-[0.3em] uppercase text-white/80 mt-3 font-medium" delay={2}>
+          <Reveal as="p" className="font-body text-xs tracking-[0.3em] uppercase text-white/80 mt-3 font-semibold" delay={2}>
             À ATLANTIS 12 OU À ESSAOUIRA - MASSAGE, YOGA, ART & NATURE
           </Reveal>
         </div>
