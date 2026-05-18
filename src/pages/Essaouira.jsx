@@ -1,6 +1,7 @@
 // /essaouira — rebuilt 1:1 from reference/essaouira/body.pretty.html
 import { useTranslation } from "react-i18next";
 import Reveal from "../components/Common/Reveal";
+import Seo from "../components/Common/Seo";
 
 const ESS_PATH = "/images/essaouira";
 const HERO = `${ESS_PATH}/asmae-lahcen-dar-lawama-coucher-soleil-essaouira.jpg`;
@@ -127,6 +128,10 @@ export default function Essaouira() {
 
   return (
     <div className="bg-background min-h-screen text-foreground">
+      <Seo
+        title="Ce qu'on aime (vraiment !) à Essaouira - Adresses & bons plans | Atlantis 12"
+        description="Restaurants, soirées, huile d'argan, coopératives, lieux à ne pas manquer : les adresses qu'on donne à nos amis à Essaouira. Les coups de coeur vrais d'Atlantis 12."
+      />
       <div className="relative h-[70vh] overflow-hidden">
         <img
           src={HERO}

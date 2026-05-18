@@ -353,9 +353,10 @@
     "open": "Ouvrir : Pourquoi réserver sur notre site web ?",
     "items": {
       "bestPrice": "Meilleur tarif garanti",
-      "fullBoard": "Pension complète possible",
+      "fullBoard": "Demi-pension, exclusivement sur notre site",
       "secure": "Réservation en ligne sécurisée",
-      "service": "Service personnalisé"
+      "service": "Service personnalisé",
+      "atelier": "Visite de l'atelier de l'artiste"
     }
   },
   "aboutPage": {
@@ -619,9 +620,10 @@
     "why": {
       "title": "Pourquoi réserver avec nous ?",
       "li1": "Meilleur tarif garanti",
-      "li2": "Pension complète possible",
+      "li2": "Demi-pension, exclusivement sur notre site",
       "li3": "Réservation en ligne sécurisée",
-      "li4": "Service personnalisé"
+      "li4": "Service personnalisé",
+      "li5": "Visite de l'atelier de l'artiste"
     },
     "reserve": {
       "title": "Réserver un séjour"
@@ -751,7 +753,7 @@
     "s2ImgAlt": "Artichaut farci, poulpe et crevette",
     "s2Caption": "Artichaut farci, poulpe et crevette de l'Atlantique",
     "s2Img2Alt": "Couscous aux crevettes de l'Atlantique",
-    "s2Img2Caption": "Couscous aux crevettes de l'Atlantique",
+    "s2Img2Caption": "Crevettes de l'Atlantique",
     "s3Title": "Un plat, une histoire",
     "s3p1": "Jaouhara, feuilles croustillantes, crème, amandes, cannelle, fleur d'oranger.",
     "s3p2": "Avant de trôner sur les tables marocaines, ce dessert a trouvé ses racines dans l'art de vivre d'Al-Andalus. Traversant la Méditerranée avec les exilés juifs et musulmans du XVe siècle, il s'est réinventé dans un Maroc Amazigh en poème feuilleté.",

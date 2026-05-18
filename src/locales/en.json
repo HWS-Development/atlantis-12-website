@@ -360,9 +360,10 @@
     "open": "Open: Why book on our website?",
     "items": {
       "bestPrice": "Best price guaranteed",
-      "fullBoard": "Full board available",
+      "fullBoard": "Half-board, exclusively on our site",
       "secure": "Secure online booking",
-      "service": "Personalized service"
+      "service": "Personalized service",
+      "atelier": "Visit the artist's studio"
     }
   },
   "aboutPage": {
@@ -619,9 +620,10 @@
     "why": {
       "title": "Why book with us?",
       "li1": "Best rate guaranteed",
-      "li2": "Full board available",
+      "li2": "Half-board, exclusively on our site",
       "li3": "Secure online booking",
-      "li4": "Personalised service"
+      "li4": "Personalised service",
+      "li5": "Visit the artist's studio"
     },
     "reserve": {
       "title": "Book a stay"

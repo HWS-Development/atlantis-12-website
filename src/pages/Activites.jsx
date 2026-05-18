@@ -1,6 +1,7 @@
 // /experiences — rebuilt 1:1 from reference/experiences/body.pretty.html
 import { useTranslation } from "react-i18next";
 import Reveal from "../components/Common/Reveal";
+import Seo from "../components/Common/Seo";
 
 const EXP_PATH = "/images/experiences";
 const HERO = `${EXP_PATH}/balade-cheval-coucher-soleil-plage-essaouira.jpg`;
@@ -54,6 +55,10 @@ export default function Activites() {
 
   return (
     <div className="bg-white min-h-screen text-foreground">
+      <Seo
+        title="Expériences - Atelier, dromadaire, yoga, surf | Atlantis 12 Essaouira"
+        description="Atelier de peinture avec Lahcen Fikri, balade en dromadaire dans la forêt de thuyas, yoga en rooftop, massage, surf, hammam, cheval au coucher du soleil. Des expériences pensées pour les adultes."
+      />
       <div className="relative h-[70vh] overflow-hidden">
         <img
           src={HERO}
@@ -80,13 +85,13 @@ export default function Activites() {
       </div>
 
       <section className="bg-white">
-        <div className="px-[60px] pt-[40px] pb-[20px] max-w-[680px] mx-auto text-center">
+        <div className="px-[60px] pt-[40px] pb-[10px] max-w-[680px] mx-auto text-center">
           <Reveal as="p" className="font-body text-[15px] leading-[1.8]" style={{ color: "#333333" }}>
             {t("activitesPg.intro")}
           </Reveal>
         </div>
 
-        <div className="px-[60px] pt-[20px] pb-[30px]">
+        <div className="px-[60px] pt-[10px] pb-[20px]">
           <Reveal
             as="p"
             className="font-body text-[10px] tracking-[4px] uppercase"

@@ -2,6 +2,7 @@
 import { useTranslation } from "react-i18next";
 import LangLink from "../components/Common/LangLink";
 import Reveal from "../components/Common/Reveal";
+import Seo from "../components/Common/Seo";
 
 const ABOUT_PATH = "/images/about";
 const HERO_IMG = `${ABOUT_PATH}/maison-vue-jardin-atlantis12-essaouira.jpg`;
@@ -30,6 +31,10 @@ export default function About() {
 
   return (
     <div className="bg-background min-h-screen text-foreground pb-14 overflow-x-hidden">
+      <Seo
+        title="La Maison - Bergerie berbère & résidence d'art | Atlantis 12 Essaouira"
+        description="Une bergerie berbère restaurée, pierre par pierre, entre forêt protégée de thuyas et horizon atlantique. L'atelier de Lahcen Fikri, la lumière du sud, le silence. Cinq chambres, adults only."
+      />
       <div className="relative h-[70vh] overflow-hidden">
         <img src={HERO_IMG} alt={t("aboutHero.heroAlt")} className="w-full h-full object-cover" />
         <div className="absolute bottom-12 left-[8vw] md:left-[10vw]">

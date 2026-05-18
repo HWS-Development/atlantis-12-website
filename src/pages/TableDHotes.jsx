@@ -1,6 +1,7 @@
 // /table-dhotes — rebuilt 1:1 from reference/table-dhotes/body.pretty.html
 import { useTranslation } from "react-i18next";
 import Reveal from "../components/Common/Reveal";
+import Seo from "../components/Common/Seo";
 
 const TABLE_PATH = "/images/table-dhotes";
 const HERO_IMG = `${TABLE_PATH}/table-dhotes-salle-commune-plafond-peint-sculptures-oeuvres-atlantis12-essaouira.jpg`;
@@ -14,6 +15,10 @@ export default function TableDHotes() {
   const { t } = useTranslation();
   return (
     <div className="bg-background min-h-screen text-foreground pb-14">
+      <Seo
+        title="La Table d'hôtes - Cuisine marocaine du marché | Atlantis 12 Essaouira"
+        description="Une seule table, une cuisine du marché, des saveurs marocaines au gré des saisons. La table d'hôtes d'Atlantis 12 : un moment de partage autant qu'un repas. Réservée aux résidents."
+      />
       <div className="relative h-[70vh] overflow-hidden">
         <img
           src={HERO_IMG}
@@ -57,13 +62,15 @@ export default function TableDHotes() {
           {t("tablePg.s2Lead")}
         </Reveal>
         <p className="font-body text-xs text-foreground/40 tracking-wide">{t("tablePg.s2Price")}</p>
-        <Reveal className="mt-12 flex flex-col items-center" delay={3}>
-          <img src={ARTICHAUT_IMG} alt={t("tablePg.s2ImgAlt")} className="w-full max-w-[500px] h-auto object-cover" />
-          <p className="font-body text-sm italic text-foreground/60 mt-4">{t("tablePg.s2Caption")}</p>
-        </Reveal>
-        <Reveal className="mt-10 flex flex-col items-center" delay={4}>
-          <img src={COUSCOUS_IMG} alt={t("tablePg.s2Img2Alt")} className="w-full max-w-[500px] h-auto object-cover" />
-          <p className="font-body text-sm italic text-foreground/60 mt-4">{t("tablePg.s2Img2Caption")}</p>
+        <Reveal className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-6" delay={3}>
+          <div className="flex flex-col items-center">
+            <img src={ARTICHAUT_IMG} alt={t("tablePg.s2ImgAlt")} className="w-full h-auto object-cover" />
+            <p className="font-body text-sm italic text-foreground/60 mt-4">{t("tablePg.s2Caption")}</p>
+          </div>
+          <div className="flex flex-col items-center">
+            <img src={COUSCOUS_IMG} alt={t("tablePg.s2Img2Alt")} className="w-full h-auto object-cover" />
+            <p className="font-body text-sm italic text-foreground/60 mt-4">{t("tablePg.s2Img2Caption")}</p>
+          </div>
         </Reveal>
       </section>
 

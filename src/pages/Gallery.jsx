@@ -2,6 +2,7 @@
 import { useTranslation } from "react-i18next";
 import LangLink from "../components/Common/LangLink";
 import Reveal from "../components/Common/Reveal";
+import Seo from "../components/Common/Seo";
 
 const GALLERY_PATH = "/images/gallery";
 const HERO_IMG = `${GALLERY_PATH}/galerie-salon-panorama-atlantis12-essaouira.jpg`;
@@ -32,6 +33,10 @@ export default function Gallery() {
 
   return (
     <div className="min-h-screen pb-0 font-body bg-white" style={{ color: "rgb(61, 92, 48)" }}>
+      <Seo
+        title="Maison d'Art - Lahcen Fikri & résidence artistique | Atlantis 12 Essaouira"
+        description="L'atelier de Lahcen Fikri est au coeur d'Atlantis 12. Oeuvres exposées dans chaque espace, résidence d'artistes, ateliers de peinture intuitive. L'art n'est pas un décor, c'est une raison d'être."
+      />
       <div className="relative h-[70vh] overflow-hidden">
         <img src={HERO_IMG} alt={t("galleryPg.heroAlt")} className="w-full h-full object-cover object-[center_15%]" />
         <div className="absolute bottom-12 left-[8vw] md:left-[10vw]">
@@ -58,8 +63,8 @@ export default function Gallery() {
           <p className="font-body text-sm leading-relaxed text-foreground/65">{t("galleryPg.s1p1")}</p>
           <p className="font-body text-sm leading-relaxed text-foreground/65">{t("galleryPg.s1p2")}</p>
         </Reveal>
-        <Reveal delay={1} className="overflow-hidden h-[380px]">
-          <img src={ATELIER_IMG} alt={t("galleryPg.s1ImgAlt")} className="w-full h-full object-cover object-[center_65%]" />
+        <Reveal delay={1} className="overflow-hidden flex items-end">
+          <img src={ATELIER_IMG} alt={t("galleryPg.s1ImgAlt")} className="w-full h-auto object-contain" />
         </Reveal>
       </section>
 
@@ -81,7 +86,7 @@ export default function Gallery() {
                   <img
                     src={m.img}
                     alt={w.artist}
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                    className="w-full h-full object-contain bg-white transition-transform duration-700 group-hover:scale-105"
                   />
                   <div className="absolute top-3 right-3 px-2 py-1 font-body text-xs tracking-wide bg-primary text-white">
                     {badge(m.badge)}

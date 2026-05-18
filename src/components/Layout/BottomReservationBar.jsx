@@ -160,7 +160,7 @@ export default function BottomReservationBar() {
               <ul className="space-y-6">
                 {[
                   t("bottomBar.why.li1", "Meilleur tarif garanti"),
-                  t("bottomBar.why.li2", "Pension complète possible"),
+                  t("bottomBar.why.li2", "Demi-pension, exclusivement sur notre site"),
                   t("bottomBar.why.li3", "Réservation en ligne sécurisée"),
                   t("bottomBar.why.li4", "Service personnalisé"),
                 ].map((label, i) => (
@@ -171,6 +171,12 @@ export default function BottomReservationBar() {
                     </span>
                   </li>
                 ))}
+                <li className="flex items-center gap-4">
+                  <CheckIcon />
+                  <span className="font-body text-[15px] leading-[1.25] font-bold" style={{ color: "#4A6741" }}>
+                    {t("bottomBar.why.li5", "Visite de l'atelier de l'artiste")}
+                  </span>
+                </li>
               </ul>
             </div>
           </div>
@@ -324,7 +330,7 @@ export default function BottomReservationBar() {
           }}
         >
           <span
-            className="font-body italic whitespace-nowrap font-bold"
+            className="font-display whitespace-nowrap font-bold"
             style={{ fontSize: "clamp(11px, 2.4vw, 15px)", color: "rgb(255,255,255)" }}
           >
             {t("bottomBar.bar.why", "pourquoi réserver sur notre site ?")}

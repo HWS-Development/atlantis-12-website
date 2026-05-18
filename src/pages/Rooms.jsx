@@ -3,6 +3,8 @@ import { useEffect, useState } from "react";
 import { useSearchParams } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import Reveal from "../components/Common/Reveal";
+import LangLink from "../components/Common/LangLink";
+import Seo from "../components/Common/Seo";
 import RoomDetailModal from "../components/Rooms/RoomDetailModal";
 import ROOMS from "../data/rooms";
 
@@ -140,6 +142,10 @@ export default function Rooms() {
 
   return (
     <div className="bg-background min-h-screen text-foreground pb-14">
+      <Seo
+        title="Chambres & Suites - Adults only | Atlantis 12 Essaouira"
+        description="5 chambres adults only : La Pluméria (suite 50m² avec terrasse privée), L'Ipoméa, L'Agave, L'Orchis, La Coquelicot. Pierre, tadelakt, lumière douce. À partir de 1 200 MAD/nuit."
+      />
       <div className="relative h-[70vh] overflow-hidden">
         <img
           src={HERO}
@@ -209,6 +215,17 @@ export default function Rooms() {
             </Reveal>
           ))}
         </div>
+      </section>
+
+      <section className="px-[8vw] md:px-[10vw] pb-16 text-center max-w-[720px] mx-auto">
+        <Reveal>
+          <p className="font-body text-sm leading-relaxed" style={{ color: "#333333" }}>
+            {t("roomsPage.privatisation", "Vous souhaitez privatiser toute la maison ? Pour les familles et les groupes, nous proposons une formule de privatisation complète.")}{" "}
+            <LangLink to="/contact" className="underline text-primary hover:text-secondary transition-colors">
+              {t("roomsPage.privatisationCta", "Contactez-nous pour recevoir un devis personnalisé.")}
+            </LangLink>
+          </p>
+        </Reveal>
       </section>
 
       {activeRoom && <RoomDetailModal room={activeRoom} onClose={closeModal} />}
