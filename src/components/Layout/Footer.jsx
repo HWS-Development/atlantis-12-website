@@ -10,13 +10,13 @@ import Reveal from "../Common/Reveal";
 const EMAIL = "contact@atlantis12essaouira.com";
 const WHATSAPP = "https://wa.me/212666292285";
 
-const accent = "rgb(143, 175, 126)";        // labels
+const accent = "rgb(143, 175, 126)";        // labels + body text on dark green (#8FAF7E)
 const cream  = "rgb(245, 240, 232)";        // headings
 const cream45 = "rgba(245, 240, 232, 0.45)";
-const cream55 = "rgba(245, 240, 232, 0.55)";
-const cream65 = "rgba(245, 240, 232, 0.65)";
+const cream55 = "rgba(143, 175, 126, 0.85)"; // nav links
+const cream65 = "rgb(143, 175, 126)";        // body text → sage green per G7
 const cream25 = "rgba(245, 240, 232, 0.25)";
-const cream40 = "rgba(245, 240, 232, 0.4)";
+const cream40 = "rgba(143, 175, 126, 0.7)";  // secondary text
 const cream10 = "rgba(245, 240, 232, 0.1)";
 
 // Live weather (Open-Meteo, no API key) — Essaouira coords from schema.org JSON-LD
@@ -115,7 +115,7 @@ export default function Footer() {
               <div className="space-y-3">
                 <div>
                   <p className="font-display text-4xl md:text-5xl" style={{ color: cream }}>
-                    {wx.temp != null ? `${wx.temp}°C` : "—"}
+                    {wx.temp != null ? `${wx.temp}°C` : "-"}
                   </p>
                   <p className="font-body text-xs mt-2" style={{ color: cream40 }}>
                     {t("footer.wind", "Vent")} {dirLabel(wx.dir)}

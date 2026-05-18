@@ -5,7 +5,7 @@ export default function MentionsLegales() {
     <div className="bg-white min-h-screen pt-28 pb-20 px-[8vw] md:px-[10vw]">
       <Seo
         title="Mentions Légales | Atlantis 12 Essaouira"
-        description="Mentions légales du site atlantis12essaouira.com — éditeur, directrice de publication, registre de commerce."
+        description="Mentions légales du site atlantis12essaouira.com - éditeur, directrice de publication, registre de commerce."
       />
       <div className="max-w-3xl mx-auto">
         <h1 className="font-display text-4xl md:text-5xl text-foreground mb-10">Mentions Légales</h1>

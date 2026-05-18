@@ -82,7 +82,7 @@ export default function TableDHotes() {
           <img src={JAOUHARA_IMG} alt={t("tablePg.s3ImgAlt")} className="w-full h-full object-cover" />
         </Reveal>
         <Reveal className="space-y-5" delay={1}>
-          <h2 className="font-display text-4xl md:text-5xl text-foreground">{t("tablePg.s3Title")}</h2>
+          <h2 className="font-display text-4xl md:text-5xl text-foreground font-bold">{t("tablePg.s3Title")}</h2>
           <div className="w-10 h-px bg-primary/50" />
           <p className="font-body text-sm leading-relaxed text-foreground/65">{t("tablePg.s3p1")}</p>
           <p className="font-body text-sm leading-relaxed text-foreground/65">{t("tablePg.s3p2")}</p>
@@ -96,7 +96,7 @@ export default function TableDHotes() {
         </Reveal>
         <Reveal className="space-y-5" delay={1}>
           <p className="font-body text-xs tracking-[0.4em] uppercase text-primary">{t("tablePg.s4Eyebrow")}</p>
-          <h2 className="font-display text-4xl md:text-5xl text-foreground">{t("tablePg.s4Title")}</h2>
+          <h2 className="font-display text-4xl md:text-5xl text-foreground font-bold">{t("tablePg.s4Title")}</h2>
           <div className="w-10 h-px bg-primary/40" />
           <p className="font-body text-sm leading-relaxed text-foreground/65">{t("tablePg.s4p1")}</p>
           <p className="font-body text-xs text-foreground/40 tracking-wide">{t("tablePg.s4p2")}</p>

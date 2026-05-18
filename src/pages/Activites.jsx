@@ -70,12 +70,12 @@ export default function Activites() {
         <div className="absolute bottom-0 left-0 right-0 p-[60px]">
           <Reveal
             as="p"
-            className="font-body text-[10px] tracking-[0.4em] uppercase mb-3 font-medium"
+            className="font-body text-[10px] tracking-[0.4em] uppercase mb-3 font-semibold"
             style={{ color: "rgba(255, 255, 255, 0.75)" }}
           >
             {t("activitesPg.heroEyebrow")}
           </Reveal>
-          <Reveal as="h1" className="font-display text-[82px] font-bold text-white mt-2" delay={1}>
+          <Reveal as="h1" className="font-display text-5xl md:text-7xl font-bold text-white mt-2" delay={1}>
             {t("activitesPg.heroTitle")}
           </Reveal>
           <Reveal as="p" className="font-body text-xs tracking-[0.3em] uppercase text-white/80 mt-3 font-semibold" delay={2}>
@@ -99,7 +99,7 @@ export default function Activites() {
           >
             {t("activitesPg.houseEyebrow")}
           </Reveal>
-          <Reveal as="h2" className="font-display text-[52px] font-bold text-foreground mt-2" delay={1}>
+          <Reveal as="h2" className="font-display text-4xl md:text-5xl font-bold text-foreground mt-2" delay={1}>
             {t("activitesPg.houseTitle")}
           </Reveal>
         </div>
@@ -120,7 +120,7 @@ export default function Activites() {
                   {row.eyebrow}
                 </p>
                 <div className="w-[40px] h-px my-3" style={{ backgroundColor: meta.accent, opacity: 0.45 }} />
-                <h3 className="font-display text-[50px] font-bold mb-4" style={{ color: meta.titleColor }}>
+                <h3 className="font-display text-4xl md:text-5xl font-bold mb-4" style={{ color: meta.titleColor }}>
                   {row.title}
                 </h3>
                 <p className="font-body text-[15px] leading-[1.8]" style={{ color: meta.bodyColor }}>
@@ -149,7 +149,7 @@ export default function Activites() {
           >
             {t("activitesPg.partnersEyebrow")}
           </Reveal>
-          <Reveal as="h2" className="font-display text-[52px] font-bold text-foreground mt-2" delay={1}>
+          <Reveal as="h2" className="font-display text-4xl md:text-5xl font-bold text-foreground mt-2" delay={1}>
             {t("activitesPg.partnersTitle")}
           </Reveal>
         </div>
@@ -165,7 +165,7 @@ export default function Activites() {
                 {p.eyebrow}
               </p>
               <div className="w-[30px] h-px my-3" style={{ backgroundColor: "rgb(74, 103, 65)" }} />
-              <h3 className="font-display text-[30px] font-bold text-foreground mb-3">{p.title}</h3>
+               <h3 className="font-display text-2xl md:text-3xl font-bold text-foreground mb-3">{p.title}</h3>
               <p className="font-body text-[13px] leading-[1.8]" style={{ color: "#333333" }}>
                 {p.todo}
               </p>
@@ -187,7 +187,7 @@ export default function Activites() {
               {t("activitesPg.customEyebrow")}
             </p>
             <div className="w-[30px] h-px my-3" style={{ backgroundColor: "rgb(143, 175, 126)" }} />
-            <h3 className="font-display text-[34px] font-bold mb-4" style={{ color: "rgb(245, 240, 232)" }}>
+            <h3 className="font-display text-3xl md:text-4xl font-bold mb-4" style={{ color: "rgb(245, 240, 232)" }}>
               {t("activitesPg.customTitle")}
             </h3>
             <p className="font-body text-[13px] leading-[1.8] mb-4" style={{ color: "rgb(143, 175, 126)" }}>
