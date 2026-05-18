@@ -18,6 +18,9 @@ import TermsConditions from "./pages/TermsConditions";
 import CancellationPolicy from "./pages/CancellationPolicy";
 import TableDHotes from "./pages/TableDHotes";
 import Essaouira from "./pages/Essaouira";
+import MentionsLegales from "./pages/MentionsLegales";
+import CGV from "./pages/CGV";
+import PolitiqueConfidentialite from "./pages/PolitiqueConfidentialite";
 
 export default function App() {
   return (
@@ -52,6 +55,9 @@ export default function App() {
 
             <Route path="/terms"        element={<TermsConditions />} />
             <Route path="/cancellation" element={<CancellationPolicy />} />
+            <Route path="/mentions-legales" element={<MentionsLegales />} />
+            <Route path="/cgv" element={<CGV />} />
+            <Route path="/politique-de-confidentialite" element={<PolitiqueConfidentialite />} />
 
             <Route
               path="*"

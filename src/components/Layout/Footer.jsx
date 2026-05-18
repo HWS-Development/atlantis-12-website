@@ -168,6 +168,19 @@ export default function Footer() {
           <p className="font-body text-xs" style={{ color: cream25 }}>
             © {new Date().getFullYear()} Atlantis 12 - {t("footer.tagline", "Maison d'hôtes & d'art - Essaouira, Maroc")}
           </p>
+          <div className="flex items-center gap-4 font-body text-xs" style={{ color: cream25 }}>
+            <LangLink to="/mentions-legales" className="hover:opacity-80 transition-opacity">
+              {t("footer.legalMentions", "Mentions légales")}
+            </LangLink>
+            <span>·</span>
+            <LangLink to="/cgv" className="hover:opacity-80 transition-opacity">
+              {t("footer.cgv", "CGV")}
+            </LangLink>
+            <span>·</span>
+            <LangLink to="/politique-de-confidentialite" className="hover:opacity-80 transition-opacity">
+              {t("footer.privacy", "Confidentialité")}
+            </LangLink>
+          </div>
         </div>
       </div>
     </footer>
