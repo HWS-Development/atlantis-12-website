@@ -4,136 +4,184 @@ export default function PolitiqueConfidentialite() {
   return (
     <div className="bg-white min-h-screen pt-28 pb-20 px-[8vw] md:px-[10vw]">
       <Seo
-        title="Politique de Confidentialité | Atlantis 12 Essaouira"
-        description="Politique de confidentialité et de protection des données personnelles d'Atlantis 12, maison d'hôtes & d'art à Essaouira, Maroc."
+        title="Politique de Confidentialité & Cookies | Atlantis 12 Essaouira"
+        description="Politique de confidentialité et de cookies d'Atlantis 12 SARL - protection des données personnelles conformément à la loi marocaine 09-08."
       />
       <div className="max-w-3xl mx-auto">
-        <h1 className="font-display text-4xl md:text-5xl text-foreground mb-4">
+        <h1 className="font-display text-4xl md:text-5xl text-foreground mb-10">
           Politique de Confidentialité
         </h1>
-        <p className="font-body text-xs text-foreground/50 mb-10">Dernière mise à jour : 17/05/2025</p>
 
-        <Section n="1" title="Responsable du traitement">
+        <P>
+          Atlantis 12 SARL s'engage à protéger la confidentialité et la sécurité des données
+          personnelles de ses clients, conformément à la loi marocaine 09-08 relative à la protection
+          des données personnelles.
+        </P>
+
+        {/* 1. Données collectées */}
+        <Section n="1" title="Données collectées">
+          <P>Nous pouvons collecter les informations suivantes :</P>
+          <Ul>
+            <li>nom et prénom,</li>
+            <li>numéro de la pièce d'identité,</li>
+            <li>adresse e-mail,</li>
+            <li>numéro de téléphone,</li>
+            <li>adresse postale,</li>
+            <li>informations de réservation,</li>
+            <li>préférences de séjour,</li>
+            <li>informations de paiement,</li>
+            <li>données de navigation,</li>
+            <li>adresse IP.</li>
+          </Ul>
+          <P>Certaines données peuvent être collectées automatiquement via des cookies.</P>
+        </Section>
+
+        {/* 2. Finalités du traitement */}
+        <Section n="2" title="Finalités du traitement">
+          <P>Les données collectées sont utilisées afin de :</P>
+          <Ul>
+            <li>gérer les réservations,</li>
+            <li>assurer le suivi client,</li>
+            <li>personnaliser l'expérience utilisateur,</li>
+            <li>répondre aux demandes des clients,</li>
+            <li>envoyer des informations liées au séjour,</li>
+            <li>améliorer nos services,</li>
+            <li>respecter nos obligations légales.</li>
+          </Ul>
+        </Section>
+
+        {/* 3. Base légale du traitement */}
+        <Section n="3" title="Base légale du traitement">
+          <P>Les traitements de données reposent sur :</P>
+          <Ul>
+            <li>l'exécution du contrat de réservation,</li>
+            <li>le consentement du client,</li>
+            <li>les obligations légales applicables,</li>
+            <li>l'intérêt légitime de l'établissement.</li>
+          </Ul>
+        </Section>
+
+        {/* 4. Partage des données */}
+        <Section n="4" title="Partage des données">
+          <P>Les données peuvent être transmises uniquement à :</P>
+          <Ul>
+            <li>nos prestataires techniques,</li>
+            <li>nos prestataires de paiement,</li>
+            <li>les autorités compétentes lorsque la loi l'exige.</li>
+          </Ul>
+          <P>Aucune donnée personnelle n'est vendue à des tiers.</P>
+        </Section>
+
+        {/* 5. Conservation des données */}
+        <Section n="5" title="Conservation des données">
           <P>
-            Le responsable du traitement des données personnelles collectées sur ce site est :
-          </P>
-          <div className="font-body text-sm leading-relaxed text-foreground/75 space-y-1 pl-4 border-l-2 border-primary/20 my-3">
-            <p className="font-semibold">Atlantis 12 SARL</p>
-            <p>Douar Laraich, Ounagha, Essaouira, Maroc</p>
-            <p>ICE : 003046032000041</p>
-            <p>E-mail : a.benabdeljalil@atlantis12essaouira.com</p>
-            <p>Téléphone : +212 666 29 22 85</p>
-          </div>
-        </Section>
-
-        <Section n="2" title="Données collectées">
-          <P>Dans le cadre de votre navigation ou de votre réservation, nous pouvons collecter :</P>
-          <Ul>
-            <li>Nom et prénom</li>
-            <li>Adresse e-mail</li>
-            <li>Numéro de téléphone</li>
-            <li>Dates de séjour souhaitées</li>
-            <li>Préférences liées au séjour (chambre, activités)</li>
-            <li>Données de paiement (traitées par notre prestataire de paiement sécurisé)</li>
-          </Ul>
-        </Section>
-
-        <Section n="3" title="Finalités du traitement">
-          <P>Vos données personnelles sont utilisées pour :</P>
-          <Ul>
-            <li>Traiter et confirmer votre réservation</li>
-            <li>Vous contacter concernant votre séjour</li>
-            <li>Répondre à vos demandes via le formulaire de contact</li>
-            <li>Respecter nos obligations légales (fiche de police, facturation)</li>
-            <li>Améliorer nos services et votre expérience utilisateur</li>
-          </Ul>
-        </Section>
-
-        <Section n="4" title="Base légale du traitement">
-          <P>Le traitement de vos données repose sur :</P>
-          <Ul>
-            <li>L'exécution d'un contrat (réservation de séjour)</li>
-            <li>Le respect d'obligations légales (réglementation hôtelière marocaine)</li>
-            <li>Votre consentement (formulaire de contact, newsletter le cas échéant)</li>
-            <li>L'intérêt légitime d'Atlantis 12 (amélioration des services)</li>
-          </Ul>
-        </Section>
-
-        <Section n="5" title="Durée de conservation">
-          <P>
-            Vos données personnelles sont conservées pendant la durée nécessaire aux finalités
-            pour lesquelles elles ont été collectées :
-          </P>
-          <Ul>
-            <li>Données de réservation : 5 ans à compter de la fin du séjour</li>
-            <li>Données de facturation : 10 ans (obligation comptable)</li>
-            <li>Formulaire de contact : 1 an après la dernière communication</li>
-          </Ul>
-        </Section>
-
-        <Section n="6" title="Partage des données">
-          <P>
-            Vos données ne sont jamais vendues à des tiers. Elles peuvent être partagées
-            uniquement avec :
-          </P>
-          <Ul>
-            <li>Notre prestataire de paiement en ligne (pour le traitement sécurisé des transactions)</li>
-            <li>Les autorités marocaines compétentes (obligation légale : fiche de police)</li>
-            <li>Notre hébergeur web (pour le fonctionnement technique du site)</li>
-          </Ul>
-        </Section>
-
-        <Section n="7" title="Cookies">
-          <P>
-            Ce site utilise uniquement des cookies strictement nécessaires au bon fonctionnement
-            du site (préférences de langue, session de navigation). Aucun cookie publicitaire ou
-            de tracking tiers n'est utilisé.
+            Les données sont conservées uniquement pendant la durée nécessaire aux finalités pour
+            lesquelles elles ont été collectées, sauf obligation légale contraire.
           </P>
         </Section>
 
-        <Section n="8" title="Vos droits">
-          <P>Conformément à la loi marocaine n° 09-08, vous disposez des droits suivants :</P>
+        {/* 6. Sécurité des données */}
+        <Section n="6" title="Sécurité des données">
+          <P>
+            Atlantis 12 met en oeuvre des mesures techniques et organisationnelles appropriées afin
+            d'assurer la confidentialité et la sécurité des données personnelles.
+          </P>
+        </Section>
+
+        {/* 7. Vos droits */}
+        <Section n="7" title="Vos droits">
+          <P>Conformément à la loi 09-08, vous disposez notamment :</P>
           <Ul>
-            <li>Droit d'accès à vos données personnelles</li>
-            <li>Droit de rectification des données inexactes</li>
-            <li>Droit d'opposition au traitement de vos données</li>
-            <li>Droit à la suppression de vos données</li>
+            <li>d'un droit d'accès,</li>
+            <li>d'un droit de rectification,</li>
+            <li>d'un droit de suppression,</li>
+            <li>d'un droit d'opposition,</li>
+            <li>d'un droit de limitation du traitement.</li>
           </Ul>
           <P>
-            Pour exercer ces droits, vous pouvez nous contacter par e-mail à :{" "}
-            <a href="mailto:a.benabdeljalil@atlantis12essaouira.com" className="underline hover:text-primary transition-colors">
-              a.benabdeljalil@atlantis12essaouira.com
+            Pour exercer vos droits :{" "}
+            <a href="mailto:contact@atlantis12essaouira.com" className="underline hover:text-primary transition-colors">
+              contact@atlantis12essaouira.com
             </a>
           </P>
         </Section>
 
-        <Section n="9" title="Sécurité des données">
+        {/* 8. Modifications */}
+        <Section n="8" title="Modifications">
           <P>
-            Atlantis 12 met en œuvre les mesures techniques et organisationnelles appropriées
-            pour protéger vos données personnelles contre tout accès non autorisé, modification,
-            divulgation ou destruction.
-          </P>
-          <P>
-            Les transactions de paiement sont sécurisées par notre prestataire via un protocole
-            de chiffrement SSL.
+            Cette politique peut être modifiée à tout moment afin de respecter les évolutions légales
+            ou techniques.
           </P>
         </Section>
 
-        <Section n="10" title="Modification de la politique">
+        {/* 9. Contact */}
+        <Section n="9" title="Contact">
           <P>
-            Atlantis 12 se réserve le droit de modifier la présente politique de confidentialité à
-            tout moment. Toute modification sera publiée sur cette page avec une date de mise à
-            jour actualisée.
+            Pour toute question relative à la protection des données personnelles :{" "}
+            <a href="mailto:contact@atlantis12essaouira.com" className="underline hover:text-primary transition-colors">
+              contact@atlantis12essaouira.com
+            </a>
           </P>
         </Section>
 
-        <Section n="11" title="Droit applicable">
-          <P>
-            La présente politique est régie par le droit marocain, et notamment la loi n° 09-08
-            relative à la protection des personnes physiques à l'égard du traitement des données
-            à caractère personnel.
-          </P>
-        </Section>
+        {/* ===== POLITIQUE DE COOKIES ===== */}
+        <div className="mt-16 pt-16 border-t border-foreground/10">
+          <h2 className="font-display text-3xl md:text-4xl text-foreground mb-8">
+            Politique de Cookies
+          </h2>
+
+          {/* 1. Qu'est-ce qu'un cookie ? */}
+          <Section n="1" title="Qu'est-ce qu'un cookie ?">
+            <P>
+              Un cookie est un petit fichier texte enregistré sur votre appareil lors de votre navigation sur
+              un site internet.
+            </P>
+          </Section>
+
+          {/* 2. Utilisation des cookies */}
+          <Section n="2" title="Utilisation des cookies">
+            <P>Nous utilisons des cookies afin de :</P>
+            <Ul>
+              <li>assurer le bon fonctionnement du site,</li>
+              <li>mémoriser vos préférences,</li>
+              <li>analyser la fréquentation du site,</li>
+              <li>améliorer l'expérience utilisateur,</li>
+              <li>proposer des contenus adaptés.</li>
+            </Ul>
+          </Section>
+
+          {/* 3. Cookies tiers */}
+          <Section n="3" title="Cookies tiers">
+            <P>Le site peut utiliser des services tiers tels que :</P>
+            <Ul>
+              <li>Google Analytics,</li>
+              <li>outils publicitaires,</li>
+              <li>services intégrés de réservation.</li>
+            </Ul>
+            <P>Ces services peuvent déposer leurs propres cookies.</P>
+          </Section>
+
+          {/* 4. Gestion des cookies */}
+          <Section n="4" title="Gestion des cookies">
+            <P>Vous pouvez configurer votre navigateur pour :</P>
+            <Ul>
+              <li>accepter les cookies,</li>
+              <li>refuser les cookies,</li>
+              <li>supprimer les cookies existants.</li>
+            </Ul>
+            <P>Le refus de certains cookies peut affecter le fonctionnement du site.</P>
+          </Section>
+
+          {/* 5. Contact */}
+          <Section n="5" title="Contact">
+            <P>
+              Pour toute question relative aux cookies :{" "}
+              <a href="mailto:contact@atlantis12essaouira.com" className="underline hover:text-primary transition-colors">
+                contact@atlantis12essaouira.com
+              </a>
+            </P>
+          </Section>
+        </div>
       </div>
     </div>
   );
