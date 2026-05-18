@@ -1,26 +1,22 @@
 // ReviewsSection — "CE QU'ILS EN DISENT — Paroles de voyageurs"
-//   Layout (live site):
-//   - Header row: left = eyebrow + h2, right = rating box (5.0 / 5 + 5 stars + "3 avis vérifiés" + "100% recommandent")
-//   - Quote area: large quote icon + italic display quote + reviewer chip
-//   - Below: prev/next arrows + dot indicators + (md+) initials avatars
-//   - "Voir tous nos avis Google" outline pill with Google G icon
-//
-// NOTE on content: real review prose belongs to its authors. Place authentic
-// review text into your i18n locale (home.reviews.items[].quote) yourself.
-// I ship it with placeholder text + reviewer initials only.
-import { useState, useEffect } from "react";
+//   Fetches live Google reviews via Maps JavaScript API (Places library).
+//   Falls back to static i18n reviews if API unavailable or key restricted.
+import { useState, useEffect, useRef } from "react";
 import { useTranslation } from "react-i18next";
 import Reveal from "../Common/Reveal";
 
-const GOOGLE_REVIEWS_URL =
-  "https://www.google.com/maps/search/Atlantis+12+Maison+d%27h%C3%B4tes+%26+d%27art+Essaouira";
+const PLACE_ID = "ChIJz4yJ76SaDBkRKk9cbaQh9Fc"; // Atlantis 12 Essaouira
+const API_KEY = import.meta.env.VITE_GOOGLE_MAPS_API_KEY || "";
 
-function StarIcon({ size = "w-5 h-5" }) {
+const GOOGLE_REVIEWS_URL =
+  "https://www.google.com/maps/place/?q=place_id:" + PLACE_ID;
+
+function StarIcon({ size = "w-5 h-5", filled = true }) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 24 24"
-      fill="currentColor"
+      fill={filled ? "currentColor" : "none"}
       stroke="currentColor"
       strokeWidth="2"
       strokeLinecap="round"
@@ -77,53 +73,116 @@ function GoogleG() {
   );
 }
 
+// Helper: get initials from author_name
+function getInitials(name) {
+  if (!name) return "?";
+  const parts = name.trim().split(/\s+/);
+  if (parts.length === 1) return parts[0][0].toUpperCase();
+  return (parts[0][0] + parts[parts.length - 1][0]).toUpperCase();
+}
+
+// Load Google Maps JS API script (once)
+let mapsPromise = null;
+function loadGoogleMapsAPI() {
+  if (mapsPromise) return mapsPromise;
+  if (!API_KEY) return Promise.reject(new Error("No API key"));
+  // Check if already loaded
+  if (window.google?.maps?.places) return Promise.resolve(window.google.maps.places);
+
+  mapsPromise = new Promise((resolve, reject) => {
+    const script = document.createElement("script");
+    script.src = `https://maps.googleapis.com/maps/api/js?key=${API_KEY}&libraries=places`;
+    script.async = true;
+    script.defer = true;
+    script.onload = () => {
+      if (window.google?.maps?.places) resolve(window.google.maps.places);
+      else reject(new Error("Places library not available"));
+    };
+    script.onerror = () => reject(new Error("Failed to load Google Maps API"));
+    document.head.appendChild(script);
+  });
+  return mapsPromise;
+}
+
 export default function ReviewsSection() {
   const { t } = useTranslation();
+  const mapRef = useRef(null); // hidden div for PlacesService
 
-  // Reviewer metadata (initials shown on live site).
-  const reviewers = [
-    { id: 0, initials: "JN", name: "Jin-Ah Noh" },
-    { id: 1, initials: "AT", name: "Alphabet Tj" },
-    { id: 2, initials: "DY", name: "Dawn Yager" },
-  ];
-
+  // Static fallback reviews from i18n
   const reviewsRaw = t("home.reviews.items", { returnObjects: true });
-  const reviews = Array.isArray(reviewsRaw) ? reviewsRaw : [];
+  const staticReviews = Array.isArray(reviewsRaw) ? reviewsRaw : [];
 
-  // Google Places API - dynamic reviews sync (A3)
-  const [googleData, setGoogleData] = useState(null);
+  // Live Google data
+  const [liveReviews, setLiveReviews] = useState(null); // null = not loaded yet
+  const [rating, setRating] = useState(5.0);
+  const [reviewCount, setReviewCount] = useState(staticReviews.length || 3);
+
   useEffect(() => {
-    const API_KEY = import.meta.env.VITE_GOOGLE_MAPS_API_KEY;
     if (!API_KEY) return;
-    // Google Places API (New) - fetch place details with reviews
-    const PLACE_ID = "ChIJz4yJ76SaDBkRKk9cbaQh9Fc"; // Atlantis 12 Essaouira
-    fetch(
-      `https://places.googleapis.com/v1/places/${PLACE_ID}?fields=rating,userRatingCount,reviews&key=${API_KEY}`,
-      { headers: { "X-Goog-FieldMask": "rating,userRatingCount,reviews" } }
-    )
-      .then((r) => (r.ok ? r.json() : Promise.reject(r)))
-      .then((data) => {
-        if (data?.rating) setGoogleData(data);
+
+    loadGoogleMapsAPI()
+      .then((placesLib) => {
+        // PlacesService needs a DOM element (can be hidden)
+        const service = new placesLib.PlacesService(mapRef.current);
+        service.getDetails(
+          {
+            placeId: PLACE_ID,
+            fields: ["rating", "user_ratings_total", "reviews"],
+            language: "fr",
+          },
+          (place, status) => {
+            if (status === window.google.maps.places.PlacesServiceStatus.OK && place) {
+              if (place.rating) setRating(place.rating);
+              if (place.user_ratings_total) setReviewCount(place.user_ratings_total);
+              if (place.reviews && place.reviews.length > 0) {
+                // Map Google reviews to our format
+                const mapped = place.reviews
+                  .filter((r) => r.rating >= 4) // Only show 4+ star reviews
+                  .slice(0, 5) // Max 5 reviews
+                  .map((r) => ({
+                    name: r.author_name,
+                    initials: getInitials(r.author_name),
+                    quote: r.text,
+                    rating: r.rating,
+                    photo: r.profile_photo_url,
+                    relativeTime: r.relative_time_description,
+                  }));
+                if (mapped.length > 0) setLiveReviews(mapped);
+              }
+            }
+          }
+        );
       })
-      .catch(() => {/* fallback to static reviews */});
+      .catch(() => {
+        // Silently fallback to static reviews
+      });
   }, []);
 
-  const rating = googleData?.rating || 5.0;
-  const reviewCount = googleData?.userRatingCount || 3;
+  // Determine which reviews to show
+  const isLive = liveReviews && liveReviews.length > 0;
+  const reviewItems = isLive
+    ? liveReviews
+    : staticReviews.map((r, i) => ({
+        name: ["Jin-Ah Noh", "Alphabet Tj", "Dawn Yager"][i] || `Voyageur ${i + 1}`,
+        initials: ["JN", "AT", "DY"][i] || "?",
+        quote: r.quote || "",
+        rating: 5,
+        photo: null,
+        relativeTime: r.breakdown || "",
+      }));
 
+  const total = reviewItems.length || 1;
   const [active, setActive] = useState(0);
-  const total = reviewers.length;
   const prev = () => setActive((i) => (i - 1 + total) % total);
   const next = () => setActive((i) => (i + 1) % total);
 
-  const current = {
-    ...reviewers[active],
-    quote: reviews[active]?.quote || "",
-    breakdown: reviews[active]?.breakdown || "",
-  };
+  const current = reviewItems[active] || {};
 
   return (
     <section className="pt-20 md:pt-32 pb-10 md:pb-14 page-x bg-card/40 overflow-hidden">
+      {/* Hidden div for PlacesService */}
+      <div ref={mapRef} style={{ display: "none" }} />
+
       {/* Header row */}
       <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-14 md:mb-20">
         <div>
@@ -146,7 +205,7 @@ export default function ReviewsSection() {
           <div className="space-y-1.5">
             <div className="flex gap-0.5">
               {[0, 1, 2, 3, 4].map((i) => (
-                <StarIcon key={i} />
+                <StarIcon key={i} filled={i < Math.round(rating)} />
               ))}
             </div>
             <p className="font-body text-xs text-foreground/50">
@@ -165,31 +224,35 @@ export default function ReviewsSection() {
           <div className="space-y-6">
             <QuoteIcon />
             <p className="font-display text-2xl md:text-3xl text-foreground/80 leading-relaxed italic">
-              « {current.quote || t("home.reviews.placeholder", "Ajoutez vos avis dans locales/fr.json → home.reviews.items[].quote")} »
+              « {current.quote || t("home.reviews.placeholder", "Chargement des avis...")} »
             </p>
             <div className="flex items-center gap-4 pt-2">
               <div
-                className="w-12 h-12 rounded-full flex items-center justify-center bg-primary/10 border border-primary/20 flex-shrink-0"
-                title={`Photo de ${current.name}, client Atlantis 12`}
+                className="w-12 h-12 rounded-full flex items-center justify-center bg-primary/10 border border-primary/20 flex-shrink-0 overflow-hidden"
+                title={current.name}
               >
-                <span className="font-body text-sm font-medium text-primary">
-                  {current.initials}
-                </span>
+                {current.photo ? (
+                  <img src={current.photo} alt={current.name} className="w-full h-full object-cover rounded-full" />
+                ) : (
+                  <span className="font-body text-sm font-medium text-primary">
+                    {current.initials}
+                  </span>
+                )}
               </div>
               <div>
                 <p className="font-body text-sm font-medium text-foreground">
                   {current.name}
                 </p>
-                {current.breakdown && (
+                {current.relativeTime && (
                   <p className="font-body text-xs text-foreground/50">
-                    {current.breakdown}
+                    {current.relativeTime}
                   </p>
                 )}
               </div>
               <div className="ml-4 pl-4 border-l border-primary/15 space-y-1">
                 <div className="flex gap-0.5">
                   {[0, 1, 2, 3, 4].map((i) => (
-                    <StarIcon key={i} size="w-3.5 h-3.5" />
+                    <StarIcon key={i} size="w-3.5 h-3.5" filled={i < (current.rating || 5)} />
                   ))}
                 </div>
               </div>
@@ -198,59 +261,65 @@ export default function ReviewsSection() {
         </Reveal>
 
         {/* Controls */}
-        <div className="flex items-center gap-4 mt-10">
-          <button
-            type="button"
-            onClick={prev}
-            aria-label={t("home.reviews.prev", "Avis précédent")}
-            className="w-9 h-9 flex items-center justify-center border border-primary/15 text-foreground/40 hover:border-primary hover:text-primary transition-colors duration-300"
-          >
-            <ChevronLeft />
-          </button>
-          <button
-            type="button"
-            onClick={next}
-            aria-label={t("home.reviews.next", "Avis suivant")}
-            className="w-9 h-9 flex items-center justify-center border border-primary/15 text-foreground/40 hover:border-primary hover:text-primary transition-colors duration-300"
-          >
-            <ChevronRight />
-          </button>
+        {total > 1 && (
+          <div className="flex items-center gap-4 mt-10">
+            <button
+              type="button"
+              onClick={prev}
+              aria-label={t("home.reviews.prev", "Avis précédent")}
+              className="w-9 h-9 flex items-center justify-center border border-primary/15 text-foreground/40 hover:border-primary hover:text-primary transition-colors duration-300"
+            >
+              <ChevronLeft />
+            </button>
+            <button
+              type="button"
+              onClick={next}
+              aria-label={t("home.reviews.next", "Avis suivant")}
+              className="w-9 h-9 flex items-center justify-center border border-primary/15 text-foreground/40 hover:border-primary hover:text-primary transition-colors duration-300"
+            >
+              <ChevronRight />
+            </button>
 
-          {/* Dots */}
-          <div className="flex gap-2 ml-2">
-            {reviewers.map((r, i) => (
-              <button
-                key={r.id}
-                type="button"
-                onClick={() => setActive(i)}
-                aria-label={`Avis ${i + 1}`}
-                className={`h-1 rounded-full transition-all duration-300 ${
-                  i === active ? "w-8 bg-primary" : "w-2 bg-primary/15 hover:bg-primary/40"
-                }`}
-              />
-            ))}
-          </div>
+            {/* Dots */}
+            <div className="flex gap-2 ml-2">
+              {reviewItems.map((_, i) => (
+                <button
+                  key={i}
+                  type="button"
+                  onClick={() => setActive(i)}
+                  aria-label={`Avis ${i + 1}`}
+                  className={`h-1 rounded-full transition-all duration-300 ${
+                    i === active ? "w-8 bg-primary" : "w-2 bg-primary/15 hover:bg-primary/40"
+                  }`}
+                />
+              ))}
+            </div>
 
-          {/* Initials avatars (md+) */}
-          <div className="ml-auto hidden md:flex gap-2">
-            {reviewers.map((r, i) => (
-              <button
-                key={r.id}
-                type="button"
-                onClick={() => setActive(i)}
-                title={`Photo de ${r.name}, client Atlantis 12`}
-                aria-label={`Photo de ${r.name}`}
-                className={`w-8 h-8 rounded-full flex items-center justify-center bg-primary/10 border transition-all duration-300 ${
-                  i === active
-                    ? "border-primary ring-2 ring-primary ring-offset-1"
-                    : "border-primary/20 opacity-50 hover:opacity-80"
-                }`}
-              >
-                <span className="font-body text-xs text-primary">{r.initials}</span>
-              </button>
-            ))}
+            {/* Initials avatars (md+) */}
+            <div className="ml-auto hidden md:flex gap-2">
+              {reviewItems.map((r, i) => (
+                <button
+                  key={i}
+                  type="button"
+                  onClick={() => setActive(i)}
+                  title={r.name}
+                  aria-label={r.name}
+                  className={`w-8 h-8 rounded-full flex items-center justify-center bg-primary/10 border overflow-hidden transition-all duration-300 ${
+                    i === active
+                      ? "border-primary ring-2 ring-primary ring-offset-1"
+                      : "border-primary/20 opacity-50 hover:opacity-80"
+                  }`}
+                >
+                  {r.photo ? (
+                    <img src={r.photo} alt={r.name} className="w-full h-full object-cover rounded-full" />
+                  ) : (
+                    <span className="font-body text-xs text-primary">{r.initials}</span>
+                  )}
+                </button>
+              ))}
+            </div>
           </div>
-        </div>
+        )}
 
         {/* Google reviews CTA */}
         <div className="mt-10 text-center">
