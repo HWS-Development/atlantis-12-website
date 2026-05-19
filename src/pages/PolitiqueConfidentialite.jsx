@@ -1,181 +1,168 @@
+import { useTranslation } from "react-i18next";
 import Seo from "../components/Common/Seo";
 
 export default function PolitiqueConfidentialite() {
+  const { t } = useTranslation();
+
   return (
     <div className="bg-white min-h-screen pt-28 pb-20 px-[8vw] md:px-[10vw]">
       <Seo
-        title="Politique de Confidentialité & Cookies | Atlantis 12 Essaouira"
-        description="Politique de confidentialité et de cookies d'Atlantis 12 SARL - protection des données personnelles conformément à la loi marocaine 09-08."
+        title={t("privacy.seoTitle")}
+        description={t("privacy.seoDesc")}
       />
       <div className="max-w-3xl mx-auto">
         <h1 className="font-display text-4xl md:text-5xl text-foreground mb-10">
-          Politique de Confidentialité
+          {t("privacy.title")}
         </h1>
 
-        <P>
-          Atlantis 12 SARL s'engage à protéger la confidentialité et la sécurité des données
-          personnelles de ses clients, conformément à la loi marocaine 09-08 relative à la protection
-          des données personnelles.
-        </P>
+        <P>{t("privacy.intro")}</P>
 
-        {/* 1. Données collectées */}
-        <Section n="1" title="Données collectées">
-          <P>Nous pouvons collecter les informations suivantes :</P>
+        {/* 1. Data Collected */}
+        <Section n="1" title={t("privacy.s1Title")}>
+          <P>{t("privacy.s1p1")}</P>
           <Ul>
-            <li>nom et prénom,</li>
-            <li>numéro de la pièce d'identité,</li>
-            <li>adresse e-mail,</li>
-            <li>numéro de téléphone,</li>
-            <li>adresse postale,</li>
-            <li>informations de réservation,</li>
-            <li>préférences de séjour,</li>
-            <li>informations de paiement,</li>
-            <li>données de navigation,</li>
-            <li>adresse IP.</li>
+            <li>{t("privacy.s1li1")}</li>
+            <li>{t("privacy.s1li2")}</li>
+            <li>{t("privacy.s1li3")}</li>
+            <li>{t("privacy.s1li4")}</li>
+            <li>{t("privacy.s1li5")}</li>
+            <li>{t("privacy.s1li6")}</li>
+            <li>{t("privacy.s1li7")}</li>
+            <li>{t("privacy.s1li8")}</li>
+            <li>{t("privacy.s1li9")}</li>
+            <li>{t("privacy.s1li10")}</li>
           </Ul>
-          <P>Certaines données peuvent être collectées automatiquement via des cookies.</P>
+          <P>{t("privacy.s1p2")}</P>
         </Section>
 
-        {/* 2. Finalités du traitement */}
-        <Section n="2" title="Finalités du traitement">
-          <P>Les données collectées sont utilisées afin de :</P>
+        {/* 2. Purposes */}
+        <Section n="2" title={t("privacy.s2Title")}>
+          <P>{t("privacy.s2p1")}</P>
           <Ul>
-            <li>gérer les réservations,</li>
-            <li>assurer le suivi client,</li>
-            <li>personnaliser l'expérience utilisateur,</li>
-            <li>répondre aux demandes des clients,</li>
-            <li>envoyer des informations liées au séjour,</li>
-            <li>améliorer nos services,</li>
-            <li>respecter nos obligations légales.</li>
+            <li>{t("privacy.s2li1")}</li>
+            <li>{t("privacy.s2li2")}</li>
+            <li>{t("privacy.s2li3")}</li>
+            <li>{t("privacy.s2li4")}</li>
+            <li>{t("privacy.s2li5")}</li>
+            <li>{t("privacy.s2li6")}</li>
+            <li>{t("privacy.s2li7")}</li>
           </Ul>
         </Section>
 
-        {/* 3. Base légale du traitement */}
-        <Section n="3" title="Base légale du traitement">
-          <P>Les traitements de données reposent sur :</P>
+        {/* 3. Legal Basis */}
+        <Section n="3" title={t("privacy.s3Title")}>
+          <P>{t("privacy.s3p1")}</P>
           <Ul>
-            <li>l'exécution du contrat de réservation,</li>
-            <li>le consentement du client,</li>
-            <li>les obligations légales applicables,</li>
-            <li>l'intérêt légitime de l'établissement.</li>
+            <li>{t("privacy.s3li1")}</li>
+            <li>{t("privacy.s3li2")}</li>
+            <li>{t("privacy.s3li3")}</li>
+            <li>{t("privacy.s3li4")}</li>
           </Ul>
         </Section>
 
-        {/* 4. Partage des données */}
-        <Section n="4" title="Partage des données">
-          <P>Les données peuvent être transmises uniquement à :</P>
+        {/* 4. Data Sharing */}
+        <Section n="4" title={t("privacy.s4Title")}>
+          <P>{t("privacy.s4p1")}</P>
           <Ul>
-            <li>nos prestataires techniques,</li>
-            <li>nos prestataires de paiement,</li>
-            <li>les autorités compétentes lorsque la loi l'exige.</li>
+            <li>{t("privacy.s4li1")}</li>
+            <li>{t("privacy.s4li2")}</li>
+            <li>{t("privacy.s4li3")}</li>
           </Ul>
-          <P>Aucune donnée personnelle n'est vendue à des tiers.</P>
+          <P>{t("privacy.s4p2")}</P>
         </Section>
 
-        {/* 5. Conservation des données */}
-        <Section n="5" title="Conservation des données">
-          <P>
-            Les données sont conservées uniquement pendant la durée nécessaire aux finalités pour
-            lesquelles elles ont été collectées, sauf obligation légale contraire.
-          </P>
+        {/* 5. Data Retention */}
+        <Section n="5" title={t("privacy.s5Title")}>
+          <P>{t("privacy.s5p1")}</P>
         </Section>
 
-        {/* 6. Sécurité des données */}
-        <Section n="6" title="Sécurité des données">
-          <P>
-            Atlantis 12 met en oeuvre des mesures techniques et organisationnelles appropriées afin
-            d'assurer la confidentialité et la sécurité des données personnelles.
-          </P>
+        {/* 6. Data Security */}
+        <Section n="6" title={t("privacy.s6Title")}>
+          <P>{t("privacy.s6p1")}</P>
         </Section>
 
-        {/* 7. Vos droits */}
-        <Section n="7" title="Vos droits">
-          <P>Conformément à la loi 09-08, vous disposez notamment :</P>
+        {/* 7. Your Rights */}
+        <Section n="7" title={t("privacy.s7Title")}>
+          <P>{t("privacy.s7p1")}</P>
           <Ul>
-            <li>d'un droit d'accès,</li>
-            <li>d'un droit de rectification,</li>
-            <li>d'un droit de suppression,</li>
-            <li>d'un droit d'opposition,</li>
-            <li>d'un droit de limitation du traitement.</li>
+            <li>{t("privacy.s7li1")}</li>
+            <li>{t("privacy.s7li2")}</li>
+            <li>{t("privacy.s7li3")}</li>
+            <li>{t("privacy.s7li4")}</li>
+            <li>{t("privacy.s7li5")}</li>
           </Ul>
           <P>
-            Pour exercer vos droits :{" "}
+            {t("privacy.s7p2")}{" "}
             <a href="mailto:contact@atlantis12essaouira.com" className="underline hover:text-primary transition-colors">
               contact@atlantis12essaouira.com
             </a>
           </P>
         </Section>
 
-        {/* 8. Modifications */}
-        <Section n="8" title="Modifications">
-          <P>
-            Cette politique peut être modifiée à tout moment afin de respecter les évolutions légales
-            ou techniques.
-          </P>
+        {/* 8. Amendments */}
+        <Section n="8" title={t("privacy.s8Title")}>
+          <P>{t("privacy.s8p1")}</P>
         </Section>
 
         {/* 9. Contact */}
-        <Section n="9" title="Contact">
+        <Section n="9" title={t("privacy.s9Title")}>
           <P>
-            Pour toute question relative à la protection des données personnelles :{" "}
+            {t("privacy.s9p1")}{" "}
             <a href="mailto:contact@atlantis12essaouira.com" className="underline hover:text-primary transition-colors">
               contact@atlantis12essaouira.com
             </a>
           </P>
         </Section>
 
-        {/* ===== POLITIQUE DE COOKIES ===== */}
+        {/* ===== COOKIE POLICY ===== */}
         <div className="mt-16 pt-16 border-t border-foreground/10">
           <h2 className="font-display text-3xl md:text-4xl text-foreground mb-8">
-            Politique de Cookies
+            {t("privacy.cookiesTitle")}
           </h2>
 
-          {/* 1. Qu'est-ce qu'un cookie ? */}
-          <Section n="1" title="Qu'est-ce qu'un cookie ?">
-            <P>
-              Un cookie est un petit fichier texte enregistré sur votre appareil lors de votre navigation sur
-              un site internet.
-            </P>
+          {/* 1. What is a cookie? */}
+          <Section n="1" title={t("privacy.c1Title")}>
+            <P>{t("privacy.c1p1")}</P>
           </Section>
 
-          {/* 2. Utilisation des cookies */}
-          <Section n="2" title="Utilisation des cookies">
-            <P>Nous utilisons des cookies afin de :</P>
+          {/* 2. Use of Cookies */}
+          <Section n="2" title={t("privacy.c2Title")}>
+            <P>{t("privacy.c2p1")}</P>
             <Ul>
-              <li>assurer le bon fonctionnement du site,</li>
-              <li>mémoriser vos préférences,</li>
-              <li>analyser la fréquentation du site,</li>
-              <li>améliorer l'expérience utilisateur,</li>
-              <li>proposer des contenus adaptés.</li>
+              <li>{t("privacy.c2li1")}</li>
+              <li>{t("privacy.c2li2")}</li>
+              <li>{t("privacy.c2li3")}</li>
+              <li>{t("privacy.c2li4")}</li>
+              <li>{t("privacy.c2li5")}</li>
             </Ul>
           </Section>
 
-          {/* 3. Cookies tiers */}
-          <Section n="3" title="Cookies tiers">
-            <P>Le site peut utiliser des services tiers tels que :</P>
+          {/* 3. Third-Party Cookies */}
+          <Section n="3" title={t("privacy.c3Title")}>
+            <P>{t("privacy.c3p1")}</P>
             <Ul>
-              <li>Google Analytics,</li>
-              <li>outils publicitaires,</li>
-              <li>services intégrés de réservation.</li>
+              <li>{t("privacy.c3li1")}</li>
+              <li>{t("privacy.c3li2")}</li>
+              <li>{t("privacy.c3li3")}</li>
             </Ul>
-            <P>Ces services peuvent déposer leurs propres cookies.</P>
+            <P>{t("privacy.c3p2")}</P>
           </Section>
 
-          {/* 4. Gestion des cookies */}
-          <Section n="4" title="Gestion des cookies">
-            <P>Vous pouvez configurer votre navigateur pour :</P>
+          {/* 4. Managing Cookies */}
+          <Section n="4" title={t("privacy.c4Title")}>
+            <P>{t("privacy.c4p1")}</P>
             <Ul>
-              <li>accepter les cookies,</li>
-              <li>refuser les cookies,</li>
-              <li>supprimer les cookies existants.</li>
+              <li>{t("privacy.c4li1")}</li>
+              <li>{t("privacy.c4li2")}</li>
+              <li>{t("privacy.c4li3")}</li>
             </Ul>
-            <P>Le refus de certains cookies peut affecter le fonctionnement du site.</P>
+            <P>{t("privacy.c4p2")}</P>
           </Section>
 
           {/* 5. Contact */}
-          <Section n="5" title="Contact">
+          <Section n="5" title={t("privacy.c5Title")}>
             <P>
-              Pour toute question relative aux cookies :{" "}
+              {t("privacy.c5p1")}{" "}
               <a href="mailto:contact@atlantis12essaouira.com" className="underline hover:text-primary transition-colors">
                 contact@atlantis12essaouira.com
               </a>
