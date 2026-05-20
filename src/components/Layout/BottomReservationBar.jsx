@@ -120,12 +120,14 @@ export default function BottomReservationBar() {
 
   const submitBooking = (e) => {
     e?.preventDefault?.();
-    // HotelRunner BV3 search; pass dates and adults (best-effort param names).
+    // HotelRunner BV3 expects: checkin_date, checkout_date, and guest_rooms structure.
     const url = new URL(BOOK_URL);
-    url.searchParams.set("check_in", arrival);
-    url.searchParams.set("check_out", departure);
-    url.searchParams.set("adults", String(guests));
-    if (roomSlug) url.searchParams.set("room", roomSlug);
+    const searchPayload = {
+      checkin_date: arrival,
+      checkout_date: departure,
+      rooms: [{ adult_count: guests, child_count: 0, child_ages: [] }],
+    };
+    url.searchParams.set("search", JSON.stringify(searchPayload));
     window.open(url.toString(), "_blank", "noopener,noreferrer");
   };
 
