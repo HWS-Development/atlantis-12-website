@@ -1,7 +1,6 @@
 // /essaouira — rebuilt 1:1 from reference/essaouira/body.pretty.html
 import { useTranslation } from "react-i18next";
 import Reveal from "../components/Common/Reveal";
-import Seo from "../components/Common/Seo";
 
 const ESS_PATH = "/images/essaouira";
 const HERO = `${ESS_PATH}/asmae-lahcen-dar-lawama-coucher-soleil-essaouira.jpg`;
@@ -103,7 +102,7 @@ export default function Essaouira() {
 
   const LUNCH = [
     { name: "Dar Lawama", url: "https://maps.app.goo.gl/xdEAKgpNRcKEXvuz6", note: notes.darLawama },
-    { name: "Océan Vagabond", url: "https://maps.app.goo.gl/4EAyuJXrAdYjVdem9", note: notes.oceanVagabond },
+    { name: "Océan Vagabond", url: "https://maps.app.goo.gl/7P4JQ1bHnGg53m4D7", note: notes.oceanVagabond },
     { name: "Le Chalet de la Plage", url: "https://maps.app.goo.gl/1nQNDFFagnUj74An9", note: notes.chaletPlage },
     { name: "Cheb Zak", url: "https://maps.app.goo.gl/Y1bBm2ZbmuhDE7LFA", note: notes.chebZak },
   ];
@@ -128,10 +127,6 @@ export default function Essaouira() {
 
   return (
     <div className="bg-background min-h-screen text-foreground">
-      <Seo
-        title="Ce qu'on aime (vraiment !) à Essaouira - Adresses & bons plans | Atlantis 12"
-        description="Restaurants, soirées, huile d'argan, coopératives, lieux à ne pas manquer : les adresses qu'on donne à nos amis à Essaouira. Les coups de coeur vrais d'Atlantis 12."
-      />
       <div className="relative h-[70vh] overflow-hidden">
         <img
           src={HERO}
@@ -144,16 +139,16 @@ export default function Essaouira() {
           style={{ background: "linear-gradient(rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.5) 100%)" }}
         />
         <div className="absolute bottom-12 left-[8vw] md:left-[10vw]">
-          <Reveal as="p" className="font-body text-xs tracking-[0.4em] uppercase text-white/70 mb-3 font-semibold">
+          <Reveal as="p" className="font-body text-xs tracking-[0.4em] uppercase text-white/70 mb-3 font-semibold hero-text-shadow">
             {t("essaouiraPg.heroEyebrow")}
           </Reveal>
-          <Reveal as="h1" className="font-display text-5xl md:text-7xl text-white" delay={1}>
+          <Reveal as="h1" className="font-display text-5xl md:text-7xl text-white hero-text-shadow" delay={1}>
             {t("essaouiraPg.heroTitle1")}
             <br />
             {t("essaouiraPg.heroTitle2")}
           </Reveal>
-          <Reveal as="p" className="font-body text-xs tracking-[0.3em] uppercase text-white/80 mt-3 font-semibold" delay={2}>
-            ADRESSES, LIEUX & BONS PLANS | ATLANTIS 12
+          <Reveal as="p" className="font-body text-xs tracking-[0.3em] uppercase text-white/80 mt-3 font-semibold hero-text-shadow" delay={2}>
+            {t("essaouiraPg.heroSubline", "ADRESSES, LIEUX & BONS PLANS | ATLANTIS 12")}
           </Reveal>
         </div>
       </div>
@@ -182,9 +177,9 @@ export default function Essaouira() {
               {t("essaouiraPg.linkBabSbaa")}
             </a>
             {t("essaouiraPg.seeP1b")}
-            <a href="https://www.google.com/maps/place/Association+Essaouira+Mogador+-+Centre+Socioculturel+-+Dar+Souiri/@31.5128,-9.7718,17z" target="_blank" rel="noopener noreferrer" className={linkClass} style={linkStyle}>
-              {t("essaouiraPg.linkDarSouiri")}
-            </a>
+              <a href="https://www.google.com/maps/place/Dar+Souiri/@31.513008,-9.771489,17z" target="_blank" rel="noopener noreferrer" className={linkClass} style={linkStyle}>
+                {t("essaouiraPg.linkDarSouiri")}
+              </a>
             {t("essaouiraPg.seeP1c")}
           </p>
           <p className="font-body text-sm leading-relaxed text-foreground/65">
@@ -193,24 +188,24 @@ export default function Essaouira() {
               {t("essaouiraPg.linkBaytDakira")}
             </a>
             {t("essaouiraPg.seeP2b")}
-            <a href="https://www.google.com/maps/place/Mus%C3%A9e+Sidi+Mohammed+Ben+Abdellah/@31.5138683,-9.7714524,17z" target="_blank" rel="noopener noreferrer" className={linkClass} style={linkStyle}>
-              {t("essaouiraPg.linkMusee")}
-            </a>
+              <a href="https://www.google.com/maps/place/Mus%C3%A9e+d'Histoire+d'Essaouira/@31.514112,-9.771163,17z" target="_blank" rel="noopener noreferrer" className={linkClass} style={linkStyle}>
+                {t("essaouiraPg.linkMusee")}
+              </a>
             {t("essaouiraPg.seeP2c")}
           </p>
           <p className="font-body text-sm leading-relaxed text-foreground/65">
             {t("essaouiraPg.seeP3a")}
-            <a href="https://www.google.com/maps/place/Skala+de+la+Ville/@31.5145,-9.7723,17z" target="_blank" rel="noopener noreferrer" className={linkClass} style={linkStyle}>
-              {t("essaouiraPg.linkSkala")}
-            </a>
+              <a href="https://www.google.com/maps/place/Skala+de+la+Ville/@31.513877,-9.773176,17z" target="_blank" rel="noopener noreferrer" className={linkClass} style={linkStyle}>
+                {t("essaouiraPg.linkSkala")}
+              </a>
             {t("essaouiraPg.seeP3b")}
-            <a href="https://www.google.com/maps/place/Place+Moulay+Hassan/@31.5116422,-9.7718239,17z" target="_blank" rel="noopener noreferrer" className={linkClass} style={linkStyle}>
-              {t("essaouiraPg.linkPlaceMoulay")}
-            </a>
+              <a href="https://www.google.com/maps/place/Place+Moulay+El+Hassan/@31.511653,-9.771648,17z" target="_blank" rel="noopener noreferrer" className={linkClass} style={linkStyle}>
+                {t("essaouiraPg.linkPlaceMoulay")}
+              </a>
             {t("essaouiraPg.seeP3c")}
-            <a href="https://www.google.com/maps/search/Zaouia+Sidna+Bilal+Essaouira" target="_blank" rel="noopener noreferrer" className={linkClass} style={linkStyle}>
-              {t("essaouiraPg.linkZaouia")}
-            </a>
+              <a href="https://www.google.com/maps/search/Zaouia+Sidna+Blal+Essaouira" target="_blank" rel="noopener noreferrer" className={linkClass} style={linkStyle}>
+                {t("essaouiraPg.linkZaouia")}
+              </a>
             {t("essaouiraPg.seeP3d")}
           </p>
           <p className="font-body text-sm leading-relaxed text-foreground/65">{t("essaouiraPg.seeP4")}</p>

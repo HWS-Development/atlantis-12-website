@@ -1,6 +1,3 @@
-// ReviewsSection — "CE QU'ILS EN DISENT — Paroles de voyageurs"
-//   Fetches live Google reviews via Maps JavaScript API (Places library).
-//   Falls back to static i18n reviews if API unavailable or key restricted.
 import { useState, useEffect, useRef } from "react";
 import { useTranslation } from "react-i18next";
 import Reveal from "../Common/Reveal";
@@ -73,7 +70,6 @@ function GoogleG() {
   );
 }
 
-// Helper: get initials from author_name
 function getInitials(name) {
   if (!name) return "?";
   const parts = name.trim().split(/\s+/);
@@ -81,7 +77,6 @@ function getInitials(name) {
   return (parts[0][0] + parts[parts.length - 1][0]).toUpperCase();
 }
 
-// Load Google Maps JS API script (once)
 let mapsPromise = null;
 function loadGoogleMapsAPI() {
   if (mapsPromise) return mapsPromise;
@@ -108,21 +103,18 @@ export default function ReviewsSection() {
   const { t } = useTranslation();
   const mapRef = useRef(null); // hidden div for PlacesService
 
-  // Static fallback reviews from i18n
   const reviewsRaw = t("home.reviews.items", { returnObjects: true });
   const staticReviews = Array.isArray(reviewsRaw) ? reviewsRaw : [];
 
-  // Live Google data
   const [liveReviews, setLiveReviews] = useState(null); // null = not loaded yet
-  const [rating, setRating] = useState(5.0);
-  const [reviewCount, setReviewCount] = useState(staticReviews.length || 3);
+  const [rating, setRating] = useState(4.8);
+  const [reviewCount, setReviewCount] = useState(48);
 
   useEffect(() => {
     if (!API_KEY) return;
 
     loadGoogleMapsAPI()
       .then((placesLib) => {
-        // PlacesService needs a DOM element (can be hidden)
         const service = new placesLib.PlacesService(mapRef.current);
         service.getDetails(
           {
@@ -135,10 +127,9 @@ export default function ReviewsSection() {
               if (place.rating) setRating(place.rating);
               if (place.user_ratings_total) setReviewCount(place.user_ratings_total);
               if (place.reviews && place.reviews.length > 0) {
-                // Map Google reviews to our format
                 const mapped = place.reviews
-                  .filter((r) => r.rating >= 4) // Only show 4+ star reviews
-                  .slice(0, 5) // Max 5 reviews
+                  .filter((r) => r.rating >= 4)
+                  .slice(0, 5)
                   .map((r) => ({
                     name: r.author_name,
                     initials: getInitials(r.author_name),
@@ -154,11 +145,9 @@ export default function ReviewsSection() {
         );
       })
       .catch(() => {
-        // Silently fallback to static reviews
       });
   }, []);
 
-  // Determine which reviews to show
   const isLive = liveReviews && liveReviews.length > 0;
   const reviewItems = isLive
     ? liveReviews
@@ -179,11 +168,9 @@ export default function ReviewsSection() {
   const current = reviewItems[active] || {};
 
   return (
-    <section className="pt-20 md:pt-32 pb-10 md:pb-14 page-x bg-card/40 overflow-hidden">
-      {/* Hidden div for PlacesService */}
+      <section className="pt-20 md:pt-32 pb-10 md:pb-14 page-x bg-card/40 overflow-hidden">
       <div ref={mapRef} style={{ display: "none" }} />
 
-      {/* Header row */}
       <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-14 md:mb-20">
         <div>
           <Reveal as="p" className="eyebrow-primary mb-3">
@@ -218,13 +205,12 @@ export default function ReviewsSection() {
         </Reveal>
       </div>
 
-      {/* Quote area */}
       <div className="relative">
         <Reveal className="grid md:grid-cols-[1fr_auto] gap-10 md:gap-16 items-start" key={active}>
           <div className="space-y-6">
             <QuoteIcon />
-            <p className="font-display text-2xl md:text-3xl text-foreground/80 leading-relaxed italic">
-              « {current.quote || t("home.reviews.placeholder", "Chargement des avis...")} »
+            <p className="font-body text-lg md:text-2xl text-foreground/80 leading-relaxed italic">
+              {current.quote || t("home.reviews.placeholder", "Chargement des avis...")}
             </p>
             <div className="flex items-center gap-4 pt-2">
               <div
@@ -260,7 +246,6 @@ export default function ReviewsSection() {
           </div>
         </Reveal>
 
-        {/* Controls */}
         {total > 1 && (
           <div className="flex items-center gap-4 mt-10">
             <button
@@ -280,7 +265,6 @@ export default function ReviewsSection() {
               <ChevronRight />
             </button>
 
-            {/* Dots */}
             <div className="flex gap-2 ml-2">
               {reviewItems.map((_, i) => (
                 <button
@@ -295,7 +279,6 @@ export default function ReviewsSection() {
               ))}
             </div>
 
-            {/* Initials avatars (md+) */}
             <div className="ml-auto hidden md:flex gap-2">
               {reviewItems.map((r, i) => (
                 <button
@@ -321,7 +304,6 @@ export default function ReviewsSection() {
           </div>
         )}
 
-        {/* Google reviews CTA */}
         <div className="mt-10 text-center">
           <a
             href={GOOGLE_REVIEWS_URL}

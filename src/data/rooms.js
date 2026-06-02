@@ -1,12 +1,6 @@
-// Five rooms — structural data only. All visible text (intros, equipment
-// labels, category, adults) is resolved at render time via i18n keys:
-//   rooms.<slug>.intro   rooms.<slug>.category   rooms.<slug>.adults
-//   rooms.equip.<id>
-// Inline FR strings below remain as i18next fallbacks (used when key missing).
 const ROOMS_PATH = "/images/rooms";
 const GALLERY_PATH = "/images/gallery";
 
-// Stable equipment IDs (locale keys: rooms.equip.<id>)
 const EQ = {
   litKing:        "litKing",
   litQueen:       "litQueen",
@@ -61,13 +55,13 @@ const ROOMS = [
       { src: `${ROOMS_PATH}/plumeria-coussins-artisanat-marocain-detail-lit-atlantis12-essaouira.jpg`, alt: "La Pluméria, Coussins artisanaux" },
     ],
     artwork: { src: `${GALLERY_PATH}/oeuvre-lahcen-fikri-1-peinture-atlantis12-essaouira.jpg`, alt: "Œuvre dans la chambre" },
-    showConsulter: false,
+    artworkStatus: "available",
   },
   {
     slug: "lipomea",
     name: "L'Ipoméa",
     category: "Suite Junior",
-    adults: "• 3 adultes",
+    adults: "• 2 adultes",
     area: "• 25 m²",
     intro:
       "L'Ipoméa tire son nom de la fleur grimpante qui habille les murs du Maroc. Une chambre lumineuse, enveloppée de bleu indigo, où la nature entre par chaque fenêtre.",
@@ -81,13 +75,13 @@ const ROOMS = [
       { src: `${ROOMS_PATH}/ipomea-patio-hamac-pergola-pierre-atlantis12-essaouirajpg.jpg`, alt: "L'Ipoméa, Le patio" },
     ],
     artwork: { src: `${GALLERY_PATH}/oeuvre-russe-peinture-atelier-atlantis12-essaouira.jpg`, alt: "Œuvre dans la chambre" },
-    showConsulter: true,
+    artworkStatus: "permanent",
   },
   {
     slug: "lagave",
     name: "L'Agave",
     category: "Suite Junior",
-    adults: "• 3 adultes",
+    adults: "• 2 adultes",
     area: "• 25 m²",
     intro:
       "Nommée d'après l'agave sauvage qui ponctue le paysage atlantique, cette chambre conjugue minéralité et douceur. Ses lignes épurées et sa palette naturelle invitent au silence.",
@@ -101,13 +95,13 @@ const ROOMS = [
       { src: `${ROOMS_PATH}/agave-exterieur-facade-pierre-porte-noire-patio-atlantis12-essaouira.jpg`, alt: "L'Agave, L'entrée" },
     ],
     artwork: { src: `${GALLERY_PATH}/oeuvre-christina-peinture-atelier-atlantis12-essaouira.jpg`, alt: "Œuvre dans la chambre" },
-    showConsulter: true,
+    artworkStatus: "permanent",
   },
   {
     slug: "la-coquelicot",
     name: "La Coquelicot",
     category: "Suite Junior",
-    adults: "• 3 adultes",
+    adults: "• 2 adultes",
     area: "• 25 m²",
     intro:
       "La Coquelicot porte en elle l'éclat rouge d'un champ au printemps. Une chambre vibrante et intime, aux détails soignés, où la couleur dialogue avec les œuvres exposées.",
@@ -118,16 +112,16 @@ const ROOMS = [
       { src: `${ROOMS_PATH}/coquelicot-salon-porte-patio-fauteuil-baroque-poutres-pierre-atlantis12-essaouira.jpg`, alt: "La Coquelicot, Accès au patio" },
       { src: `${ROOMS_PATH}/coquelicot-salle-de-bain-double-vasque-miroirs-ronds-tadelakt-lanternes-atlantis12-essaouira.jpg`, alt: "La Coquelicot, La salle de bain" },
       { src: `${ROOMS_PATH}/coquelicot-detail-niche-etageres-roses-multicolores-bougeoir-atlantis12-essaouira.jpg`, alt: "La Coquelicot, Détail déco" },
-      { src: `${ROOMS_PATH}/coquelicot-exterieur-plaque-rouge-mur-pierre-atlantis12-essaouira.jpg`, alt: "La Coquelicot, L'extérieur" },
+      { src: `${GALLERY_PATH}/oeuvre-lahcen-fikri-3-peinture-atlantis12-essaouira.jpeg`, alt: "La Coquelicot, L'œuvre de Lahcen Fikri" },
     ],
-    artwork: { src: `${ROOMS_PATH}/coquelicot-exterieur-plaque-rouge-mur-pierre-atlantis12-essaouira.jpg`, alt: "Œuvre dans la chambre" },
-    showConsulter: true,
+    artwork: { src: `${GALLERY_PATH}/oeuvre-lahcen-fikri-3-peinture-atlantis12-essaouira.jpeg`, alt: "Œuvre de Lahcen Fikri dans La Coquelicot" },
+    artworkStatus: "available",
   },
   {
     slug: "lorchis",
     name: "L'Orchis",
     category: "Suite Junior",
-    adults: "• 3 adultes",
+    adults: "• 2 adultes",
     area: "• 25 m²",
     intro:
       "Discrète et raffinée comme l'orchidée sauvage de la forêt de thuyas, ses matières nobles, bois, coton naturel, tadelakt, composent un espace hors du temps.",
@@ -138,10 +132,10 @@ const ROOMS = [
       { src: `${ROOMS_PATH}/orchis-salon-cheminee-pierre-oeuvre-peinte-arche-fenetre-atlantis12-essaouira.jpg`, alt: "L'Orchis, Le salon" },
       { src: `${ROOMS_PATH}/orchis-salle-de-bain-double-vasque-tadelakt-rose-miroirs-voute-atlantis12-essaouira.jpg`, alt: "L'Orchis, La salle de bain" },
       { src: `${ROOMS_PATH}/orchis-salon-banquette-coussins-mauve-baie-vitree-rideau-atlantis12-essaouira.jpg`, alt: "L'Orchis, La banquette" },
-      { src: `${ROOMS_PATH}/orchis-exterieur-plaque-rouge-mur-pierre-porte-atlantis12-essaouira.jpg`, alt: "L'Orchis, L'entrée" },
+      { src: `${GALLERY_PATH}/oeuvre-lahcen-fikri-4-peinture-atlantis12-essaouira.jpeg`, alt: "L'Orchis, L'œuvre de Lahcen Fikri" },
     ],
-    artwork: { src: `${ROOMS_PATH}/orchis-exterieur-plaque-rouge-mur-pierre-porte-atlantis12-essaouira.jpg`, alt: "Œuvre dans la chambre" },
-    showConsulter: true,
+    artwork: { src: `${GALLERY_PATH}/oeuvre-lahcen-fikri-4-peinture-atlantis12-essaouira.jpeg`, alt: "Œuvre de Lahcen Fikri dans L'Orchis" },
+    artworkStatus: "available",
   },
 ];
 

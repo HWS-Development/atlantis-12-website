@@ -1,57 +1,72 @@
 import { useEffect } from "react";
+import { DEFAULT_OG_IMAGE } from "../../seo/metadata";
 
-const OG_IMAGE = "/images/about/patio.jpg"; // default og:image (hero-like property shot)
+function ensureTag(selector, create) {
+  let el = document.querySelector(selector);
+  if (!el) {
+    el = create();
+    document.head.appendChild(el);
+  }
+  return el;
+}
 
-/**
- * Lightweight SEO head manager (no dependency needed).
- * Sets document.title, meta description, and og:image.
- */
 export default function Seo({ title, description, ogImage }) {
   useEffect(() => {
     if (title) document.title = title;
 
-    // Meta description
     if (description) {
-      let el = document.querySelector('meta[name="description"]');
-      if (!el) {
-        el = document.createElement("meta");
-        el.setAttribute("name", "description");
-        document.head.appendChild(el);
-      }
+      const el = ensureTag('meta[name="description"]', () => {
+        const meta = document.createElement("meta");
+        meta.setAttribute("name", "description");
+        return meta;
+      });
       el.setAttribute("content", description);
     }
 
-    // og:title
     if (title) {
-      let el = document.querySelector('meta[property="og:title"]');
-      if (!el) {
-        el = document.createElement("meta");
-        el.setAttribute("property", "og:title");
-        document.head.appendChild(el);
-      }
+      const el = ensureTag('meta[property="og:title"]', () => {
+        const meta = document.createElement("meta");
+        meta.setAttribute("property", "og:title");
+        return meta;
+      });
       el.setAttribute("content", title);
     }
 
-    // og:description
     if (description) {
-      let el = document.querySelector('meta[property="og:description"]');
-      if (!el) {
-        el = document.createElement("meta");
-        el.setAttribute("property", "og:description");
-        document.head.appendChild(el);
-      }
+      const el = ensureTag('meta[property="og:description"]', () => {
+        const meta = document.createElement("meta");
+        meta.setAttribute("property", "og:description");
+        return meta;
+      });
       el.setAttribute("content", description);
     }
 
-    // og:image
-    const img = ogImage || OG_IMAGE;
-    let el = document.querySelector('meta[property="og:image"]');
-    if (!el) {
-      el = document.createElement("meta");
-      el.setAttribute("property", "og:image");
-      document.head.appendChild(el);
+    const img = ogImage || DEFAULT_OG_IMAGE;
+    ensureTag('meta[property="og:image"]', () => {
+      const meta = document.createElement("meta");
+      meta.setAttribute("property", "og:image");
+      return meta;
+    }).setAttribute("content", img);
+
+    ensureTag('meta[name="twitter:title"]', () => {
+      const meta = document.createElement("meta");
+      meta.setAttribute("name", "twitter:title");
+      return meta;
+    }).setAttribute("content", title || document.title);
+
+    if (description) {
+      ensureTag('meta[name="twitter:description"]', () => {
+        const meta = document.createElement("meta");
+        meta.setAttribute("name", "twitter:description");
+        return meta;
+      }).setAttribute("content", description);
     }
-    el.setAttribute("content", img);
+
+    ensureTag('meta[name="twitter:image"]', () => {
+      const meta = document.createElement("meta");
+      meta.setAttribute("name", "twitter:image");
+      return meta;
+    }).setAttribute("content", img);
   }, [title, description, ogImage]);
 
   return null;

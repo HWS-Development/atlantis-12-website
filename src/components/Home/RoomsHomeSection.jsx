@@ -1,14 +1,7 @@
-﻿// RoomsHomeSection — "LES 5 CHAMBRES — Chaque chambre, une œuvre"
-//   - 4-col grid of junior suites (aspect-4/3)
-//   - 1 wide card (aspect-16/9) below for the superior suite (Pluméria)
-//   - Each card: image + dark gradient overlay + name (Dancing Script) + room type label
-//   - Hover: image scale-105
-//   - Bottom: centered "VOIR TOUTES LES CHAMBRES" outline pill
-import LangLink from "../Common/LangLink";
+﻿import LangLink from "../Common/LangLink";
 import { useTranslation } from "react-i18next";
 import Reveal from "../Common/Reveal";
 
-// Same base44 CDN assets as live atlantis12essaouira.com home
 const ROOMS_PATH = "/images/rooms";
 const FAKE = {
   ipomea:     `${ROOMS_PATH}/ipomea-vue-panorama-atlantis12-essaouira.jpg`,
@@ -44,7 +37,6 @@ function RoomCard({ to, name, type, img, alt, wide = false }) {
         decoding="async"
         className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
       />
-      {/* Dark gradient overlay (from bottom) - visible only on hover */}
       <div
         className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
         style={{
@@ -55,13 +47,13 @@ function RoomCard({ to, name, type, img, alt, wide = false }) {
       <div className={`absolute ${wide ? "bottom-6 left-6" : "bottom-4 left-4"}`}>
         <p
           className={`font-display ${wide ? "text-2xl" : "text-xl"}`}
-          style={{ color: "rgb(245, 240, 232)" }}
+          style={{ color: "rgb(245, 240, 232)", textShadow: "0 1px 4px rgba(0,0,0,0.6)" }}
         >
           {name}
         </p>
         <p
           className={`font-body text-xs tracking-wider ${wide ? "mt-2" : "mt-1"}`}
-          style={{ color: "rgba(245, 240, 232, 0.6)" }}
+          style={{ color: "rgba(245, 240, 232, 0.8)", textShadow: "0 1px 4px rgba(0,0,0,0.6)" }}
         >
           {type}
         </p>
@@ -103,7 +95,7 @@ export default function RoomsHomeSection() {
         wide
         to="/chambres?room=la-plumeria"
         name="La Pluméria"
-        type="Chambre Supérieure"
+        type="Suite Supérieure"
         img={FAKE.plumeria}
         alt="Plumeria, suite supérieure - Atlantis 12, Essaouira"
       />

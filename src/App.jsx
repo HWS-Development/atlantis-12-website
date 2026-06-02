@@ -33,7 +33,7 @@ export default function App() {
 
         {/* Live site lets the fixed header OVERLAP page content (Hero handles its own
             full-viewport height). Inner pages add their own top padding if needed. */}
-        <main className="flex-1">
+        <main className="flex-1 page-content-safe-bottom">
           <Routes>
             <Route path="/" element={<Home />} />
 

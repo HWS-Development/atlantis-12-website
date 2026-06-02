@@ -1,13 +1,7 @@
-// HomeHero — matches live site exactly:
-//   <section id="hero" h-screen> with centered watercolor logo (mix-blend-multiply)
-//   + "PROCHE D'ESSAOUIRA, MAROC" eyebrow positioned at bottom 18%
-//   + scroll-down button (1px vertical line, gentle bob animation) at bottom 8.
 import { useTranslation } from "react-i18next";
 import Reveal from "../Common/Reveal";
 
-// Watercolor brand mark — same asset as live atlantis12essaouira.com (base44 CDN)
-const HERO_LOGO =
-  "/images/logo/logo-atlantis12-aquarelle-maison-hotes-art-essaouira.png";
+const HERO_LOGO = "/images/logo/logo-atlantis12-aquarelle-maison-hotes-art-essaouira.png";
 
 export default function HomeHero() {
   const { t } = useTranslation();
@@ -21,19 +15,18 @@ export default function HomeHero() {
 
   return (
     <section id="hero" className="relative w-full h-screen overflow-hidden">
-      {/* Centered logo + eyebrow */}
-      <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-        <Reveal className="relative flex flex-col items-center hero-logo-in">
+      <div className="absolute inset-0 flex items-center justify-center pointer-events-none px-6">
+        <Reveal className="relative flex flex-col items-center hero-logo-in w-full max-w-[440px]">
           <img
             src={HERO_LOGO}
             alt="Atlantis 12"
             width={440}
             height={440}
-            className="w-[280px] md:w-[380px] lg:w-[440px] object-contain hero-logo-img"
+            className="w-[260px] sm:w-[300px] md:w-[380px] lg:w-[440px] object-contain hero-logo-img mx-auto"
             style={{ mixBlendMode: "multiply" }}
           />
           <p
-            className="font-body absolute bottom-[18%] left-1/2 -translate-x-1/2 whitespace-nowrap text-center"
+            className="font-body absolute bottom-[18%] left-1/2 -translate-x-1/2 whitespace-nowrap text-center hero-text-shadow"
             style={{
               color: "rgba(60, 75, 50, 0.6)",
               fontSize: "12px",
@@ -47,7 +40,6 @@ export default function HomeHero() {
         </Reveal>
       </div>
 
-      {/* Scroll-down indicator (thin vertical line, gentle bob) */}
       <button
         type="button"
         onClick={scrollDown}

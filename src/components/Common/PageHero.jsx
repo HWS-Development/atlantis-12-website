@@ -1,6 +1,3 @@
-// src/components/common/PageHero.jsx
-import { useTranslation } from "react-i18next";
-
 export default function PageHero({
   image,                 // string: background image URL
   title,                 // string or node
@@ -30,7 +27,6 @@ export default function PageHero({
 
   return (
     <section className={`relative w-full ${hMap[height]} overflow-hidden`}>
-      {/* Background */}
       <img
         src={image}
         alt=""
@@ -38,39 +34,33 @@ export default function PageHero({
         loading="eager"
         fetchpriority="high"
       />
-      {/* Overlay */}
       {overlay !== "none" && (
         <div className="absolute inset-0" style={overlayStyle} />
       )}
 
-      {/* Content */}
       <div className={`relative z-10 h-full`}>
         <div className="container-std h-full">
           <div className={`h-full flex ${textAlign} justify-center md:justify-center items-center pt-10`}>
             <div className={`max-w-3xl ${align === "left" ? "" : "mx-auto"}`}>
 
-              {/* Title */}
               {title && (
-                <h1 className="font-serif text-white text-3xl md:text-5xl leading-tight drop-shadow-sm">
+                <h1 className="font-serif text-white text-3xl md:text-5xl leading-tight hero-text-shadow">
                   {title}
                 </h1>
               )}
 
-              {/* Subtitle (eyebrow) */}
               {subtitle && (
-                <p className="mt-2 md:mt-3 text-white/90 text-sm md:text-base font-medium tracking-[0.2em] uppercase">
+                <p className="mt-2 md:mt-3 text-white/90 text-sm md:text-base font-medium tracking-[0.2em] uppercase hero-text-shadow">
                   {subtitle}
                 </p>
               )}
 
-              {/* Custom slot (buttons / forms / etc.) */}
               {children && <div className="mt-4 md:mt-6">{children}</div>}
             </div>
           </div>
         </div>
       </div>
 
-      {/* Subtle bottom vignette for legibility */}
       <div className="pointer-events-none absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-black/15 to-transparent" />
     </section>
   );

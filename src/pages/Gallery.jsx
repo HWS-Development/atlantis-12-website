@@ -1,9 +1,7 @@
-﻿// /maison-dart — rebuilt 1:1 from reference/maison-dart/body.pretty.html
-import { useState } from "react";
+﻿import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import LangLink from "../components/Common/LangLink";
 import Reveal from "../components/Common/Reveal";
-import Seo from "../components/Common/Seo";
 
 const GALLERY_PATH = "/images/gallery";
 const HERO_IMG = `${GALLERY_PATH}/galerie-salon-panorama-atlantis12-essaouira.jpg`;
@@ -34,23 +32,19 @@ export default function Gallery() {
 
   return (
     <div className="min-h-screen pb-0 font-body bg-white" style={{ color: "rgb(61, 92, 48)" }}>
-      <Seo
-        title="Maison d'Art - Lahcen Fikri & résidence artistique | Atlantis 12 Essaouira"
-        description="L'atelier de Lahcen Fikri est au coeur d'Atlantis 12. Oeuvres exposées dans chaque espace, résidence d'artistes, ateliers de peinture intuitive. L'art n'est pas un décor, c'est une raison d'être."
-      />
       <div className="relative h-[70vh] overflow-hidden">
         <img src={HERO_IMG} alt={t("galleryPg.heroAlt")} className="w-full h-full object-cover object-[center_15%]" />
         <div className="absolute bottom-12 left-[8vw] md:left-[10vw]">
-          <Reveal as="p" className="font-body text-xs tracking-[0.4em] uppercase text-white/70 mb-3 font-semibold">
+          <Reveal as="p" className="font-body text-xs tracking-[0.4em] uppercase text-white/70 mb-3 font-semibold hero-text-shadow">
             {t("galleryPg.heroEyebrow")}
           </Reveal>
-          <Reveal as="h1" className="font-display text-5xl md:text-7xl leading-tight text-white" delay={1}>
+          <Reveal as="h1" className="font-display text-5xl md:text-7xl leading-tight text-white hero-text-shadow" delay={1}>
             {t("galleryPg.heroTitle1")}
             <br />
             <span className="text-white">{t("galleryPg.heroTitle2")}</span>
           </Reveal>
-          <Reveal as="p" className="font-body text-xs tracking-[0.3em] uppercase text-white/80 mt-3 font-semibold" delay={2}>
-            GALERIE, RÉSIDENCE ARTISTIQUE & ŒUVRES | ATLANTIS 12 ESSAOUIRA
+          <Reveal as="p" className="font-body text-xs tracking-[0.3em] uppercase text-white/80 mt-3 font-semibold hero-text-shadow" delay={2}>
+            {t("galleryPg.heroSubline", "GALERIE, RÉSIDENCE ARTISTIQUE & ŒUVRES | ATLANTIS 12 ESSAOUIRA")}
           </Reveal>
         </div>
       </div>
@@ -92,7 +86,7 @@ export default function Gallery() {
                   <img
                     src={m.img}
                     alt={w.artist}
-                    className="w-full h-full object-contain bg-white transition-transform duration-700 group-hover:scale-105"
+                    className={`w-full h-full bg-white transition-transform duration-700 group-hover:scale-105 ${i === 3 ? "object-cover object-top" : "object-contain"}`}
                   />
                   <div className="absolute top-3 right-3 px-2 py-1 font-body text-xs tracking-wide bg-primary text-white">
                     {badge(m.badge)}
@@ -180,7 +174,7 @@ export default function Gallery() {
                     className="mt-4 inline-block font-body text-xs tracking-[0.25em] uppercase px-6 py-3 text-white hover:opacity-90 transition-colors w-fit"
                     style={{ backgroundColor: "#4A6741" }}
                   >
-                    {t("galleryPg.inquiryCta", "Renseignement & Acquisition")}
+                    {t("galleryPg.inquiryCta", "ENQUIRE & ACQUIRE")}
                   </LangLink>
                 )}
               </div>

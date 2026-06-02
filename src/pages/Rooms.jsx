@@ -4,7 +4,6 @@ import { useSearchParams } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import Reveal from "../components/Common/Reveal";
 import LangLink from "../components/Common/LangLink";
-import Seo from "../components/Common/Seo";
 import RoomDetailModal from "../components/Rooms/RoomDetailModal";
 import ROOMS from "../data/rooms";
 
@@ -141,11 +140,7 @@ export default function Rooms() {
   const juniors = ROOMS.filter((r) => r.slug !== "la-plumeria");
 
   return (
-    <div className="bg-background min-h-screen text-foreground pb-14">
-      <Seo
-        title="Chambres & Suites - Adults only | Atlantis 12 Essaouira"
-        description="5 chambres adults only : La Pluméria (suite 50m² avec terrasse privée), L'Ipoméa, L'Agave, L'Orchis, La Coquelicot. Pierre, tadelakt, lumière douce. À partir de 1 200 MAD/nuit."
-      />
+    <div className="bg-background min-h-screen text-foreground overflow-x-hidden">
       <div className="relative h-[70vh] overflow-hidden">
         <img
           src={HERO}
@@ -156,10 +151,10 @@ export default function Rooms() {
           style={{ objectPosition: "center 60%" }}
         />
         <div className="absolute bottom-12 left-[8vw] md:left-[10vw]">
-          <Reveal as="p" className="font-body text-xs tracking-[0.4em] uppercase text-white/70 mb-3 font-semibold">
+          <Reveal as="p" className="font-body text-xs tracking-[0.4em] uppercase text-white/70 mb-3 font-semibold hero-text-shadow" style={{ fontWeight: 600 }}>
             {t("roomsPage.heroEyebrow")}
           </Reveal>
-          <Reveal as="h1" className="font-display text-5xl md:text-7xl text-white" delay={1}>
+          <Reveal as="h1" className="font-display text-4xl md:text-7xl text-white hero-text-shadow" delay={1}>
             {t("roomsPage.heroTitle1")}
             <br />
             <span className="text-white">{t("roomsPage.heroTitle2")}</span>
@@ -167,7 +162,7 @@ export default function Rooms() {
         </div>
       </div>
 
-      <div className="px-[60px] pt-[60px] pb-[40px] max-w-[720px] mx-auto text-center">
+      <div className="px-6 md:px-[60px] pt-10 md:pt-[60px] pb-10 max-w-[720px] mx-auto text-center">
         <Reveal
           as="p"
           className="font-body text-[15px] leading-[1.8]"
@@ -187,7 +182,7 @@ export default function Rooms() {
         </Reveal>
       </div>
 
-      <section className="px-[8vw] md:px-[10vw] pb-16">
+      <section className="px-[8vw] md:px-[10vw] pb-16 overflow-x-hidden">
         <div className="mb-6">
           <Reveal>
             <RoomCard
@@ -217,14 +212,28 @@ export default function Rooms() {
         </div>
       </section>
 
-      <section className="px-[8vw] md:px-[10vw] pb-16 text-center max-w-[720px] mx-auto">
+      <section className="px-[8vw] md:px-[10vw] pb-16">
         <Reveal>
-          <p className="font-body text-sm leading-relaxed" style={{ color: "#333333" }}>
-            {t("roomsPage.privatisation", "Vous souhaitez privatiser toute la maison ? Pour les familles et les groupes, nous proposons une formule de privatisation complète.")}{" "}
-            <LangLink to="/contact" className="underline text-primary hover:text-secondary transition-colors">
-              {t("roomsPage.privatisationCta", "Contactez-nous pour recevoir un devis personnalisé.")}
+          <div className="mx-auto max-w-[720px] text-center px-6 py-10 md:py-12" style={{ backgroundColor: "#4A6741" }}>
+            <p className="font-body text-xs tracking-[0.4em] uppercase mb-3" style={{ color: "#8FAF7E" }}>
+              {t("roomsPage.privatisationEyebrow", "Privatisation")}
+            </p>
+            <h2 className="font-display text-4xl md:text-5xl mb-4" style={{ color: "#F5F0E8" }}>
+              {t("roomsPage.privatisationTitle", "Toute la maison, rien que pour vous !")}
+            </h2>
+            <p className="font-body text-sm leading-relaxed mb-6" style={{ color: "#8FAF7E" }}>
+              {t("roomsPage.privatisation", "Pour les familles et les groupes, nous proposons une formule de privatisation complète.")}
+            </p>
+            <LangLink
+              to="/contact"
+              className="inline-block font-body text-xs tracking-[0.3em] uppercase px-6 py-3 text-white border border-[#C8B99A] hover:bg-white/10 transition-colors"
+            >
+              {t("roomsPage.privatisationButton", "Contactez-nous")}
             </LangLink>
-          </p>
+            <p className="font-body text-xs mt-4" style={{ color: "#8FAF7E" }}>
+              {t("roomsPage.privatisationCta", "pour recevoir un devis personnalisé.")}
+            </p>
+          </div>
         </Reveal>
       </section>
 

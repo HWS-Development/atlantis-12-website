@@ -1,7 +1,6 @@
-// /experiences — rebuilt 1:1 from reference/experiences/body.pretty.html
 import { useTranslation } from "react-i18next";
 import Reveal from "../components/Common/Reveal";
-import Seo from "../components/Common/Seo";
+import LangLink from "../components/Common/LangLink";
 
 const EXP_PATH = "/images/experiences";
 const HERO = `${EXP_PATH}/balade-cheval-coucher-soleil-plage-essaouira.jpg`;
@@ -55,10 +54,6 @@ export default function Activites() {
 
   return (
     <div className="bg-white min-h-screen text-foreground">
-      <Seo
-        title="Expériences - Atelier, dromadaire, yoga, surf | Atlantis 12 Essaouira"
-        description="Atelier de peinture avec Lahcen Fikri, balade en dromadaire dans la forêt de thuyas, yoga en rooftop, massage, surf, hammam, cheval au coucher du soleil. Des expériences pensées pour les adultes."
-      />
       <div className="relative h-[70vh] overflow-hidden">
         <img
           src={HERO}
@@ -70,28 +65,28 @@ export default function Activites() {
         <div className="absolute bottom-0 left-0 right-0 p-[60px]">
           <Reveal
             as="p"
-            className="font-body text-[10px] tracking-[0.4em] uppercase mb-3 font-semibold"
+            className="font-body text-[10px] tracking-[0.4em] uppercase mb-3 font-semibold hero-text-shadow"
             style={{ color: "rgba(255, 255, 255, 0.75)" }}
           >
             {t("activitesPg.heroEyebrow")}
           </Reveal>
-          <Reveal as="h1" className="font-display text-5xl md:text-7xl font-bold text-white mt-2" delay={1}>
+          <Reveal as="h1" className="font-display text-5xl md:text-7xl text-white mt-2 hero-text-shadow" delay={1}>
             {t("activitesPg.heroTitle")}
           </Reveal>
-          <Reveal as="p" className="font-body text-xs tracking-[0.3em] uppercase text-white/80 mt-3 font-semibold" delay={2}>
-            À ATLANTIS 12 OU À ESSAOUIRA - MASSAGE, YOGA, ART & NATURE
+          <Reveal as="p" className="font-body text-xs tracking-[0.3em] uppercase text-white/80 mt-3 font-semibold hero-text-shadow" delay={2}>
+            {t("activitesPg.heroSubline", "À ATLANTIS 12 OU À ESSAOUIRA - MASSAGE, YOGA, ART & NATURE")}
           </Reveal>
         </div>
       </div>
 
       <section className="bg-white">
-        <div className="px-[60px] pt-[40px] pb-[10px] max-w-[680px] mx-auto text-center">
+        <div className="px-[60px] pt-[32px] pb-[4px] max-w-[680px] mx-auto text-center">
           <Reveal as="p" className="font-body text-[15px] leading-[1.8]" style={{ color: "#333333" }}>
             {t("activitesPg.intro")}
           </Reveal>
         </div>
 
-        <div className="px-[60px] pt-[10px] pb-[20px]">
+        <div className="px-[60px] pt-[4px] pb-[16px]">
           <Reveal
             as="p"
             className="font-body text-[10px] tracking-[4px] uppercase"
@@ -99,7 +94,7 @@ export default function Activites() {
           >
             {t("activitesPg.houseEyebrow")}
           </Reveal>
-          <Reveal as="h2" className="font-display text-4xl md:text-5xl font-bold text-foreground mt-2" delay={1}>
+          <Reveal as="h2" className="font-display text-4xl md:text-5xl text-foreground mt-2" delay={1}>
             {t("activitesPg.houseTitle")}
           </Reveal>
         </div>
@@ -120,7 +115,7 @@ export default function Activites() {
                   {row.eyebrow}
                 </p>
                 <div className="w-[40px] h-px my-3" style={{ backgroundColor: meta.accent, opacity: 0.45 }} />
-                <h3 className="font-display text-4xl md:text-5xl font-bold mb-4" style={{ color: meta.titleColor }}>
+                <h3 className="font-display text-4xl md:text-5xl mb-4" style={{ color: meta.titleColor }}>
                   {row.title}
                 </h3>
                 <p className="font-body text-[15px] leading-[1.8]" style={{ color: meta.bodyColor }}>
@@ -140,7 +135,7 @@ export default function Activites() {
         })}
       </section>
 
-      <section className="bg-white py-20">
+      <section className="bg-white py-20 pb-8 md:pb-20">
         <div className="px-[60px] mb-12 text-center">
           <Reveal
             as="p"
@@ -149,7 +144,7 @@ export default function Activites() {
           >
             {t("activitesPg.partnersEyebrow")}
           </Reveal>
-          <Reveal as="h2" className="font-display text-4xl md:text-5xl font-bold text-foreground mt-2" delay={1}>
+          <Reveal as="h2" className="font-display text-4xl md:text-5xl text-foreground mt-2" delay={1}>
             {t("activitesPg.partnersTitle")}
           </Reveal>
         </div>
@@ -165,7 +160,7 @@ export default function Activites() {
                 {p.eyebrow}
               </p>
               <div className="w-[30px] h-px my-3" style={{ backgroundColor: "rgb(74, 103, 65)" }} />
-               <h3 className="font-display text-2xl md:text-3xl font-bold text-foreground mb-3">{p.title}</h3>
+                <h3 className="font-display text-2xl md:text-3xl text-foreground mb-3">{p.title}</h3>
               <p className="font-body text-[13px] leading-[1.8]" style={{ color: "#333333" }}>
                 {p.todo}
               </p>
@@ -187,22 +182,24 @@ export default function Activites() {
               {t("activitesPg.customEyebrow")}
             </p>
             <div className="w-[30px] h-px my-3" style={{ backgroundColor: "rgb(143, 175, 126)" }} />
-            <h3 className="font-display text-3xl md:text-4xl font-bold mb-4" style={{ color: "rgb(245, 240, 232)" }}>
+            <h3 className="font-display text-3xl md:text-4xl mb-4" style={{ color: "rgb(245, 240, 232)" }}>
               {t("activitesPg.customTitle")}
             </h3>
-            <p className="font-body text-[13px] leading-[1.8] mb-4" style={{ color: "rgb(143, 175, 126)" }}>
-              {t("activitesPg.customText")}
-            </p>
-            <a
-              href="mailto:contact@atlantis12essaouira.com"
-              className="font-body text-[9px] tracking-[4px] uppercase border-b pb-1"
-              style={{ color: "rgb(143, 175, 126)", display: "inline-block", borderColor: "rgb(143, 175, 126)" }}
-            >
-              {t("activitesPg.customCta")}
-            </a>
+          <p className="font-body text-[13px] leading-[1.8] mb-4" style={{ color: "rgb(143, 175, 126)" }}>
+            {t("activitesPg.customText")}
+          </p>
+          <LangLink
+            to="/contact"
+            className="font-body text-[9px] tracking-[4px] uppercase border-b pb-1"
+            style={{ color: "rgb(143, 175, 126)", display: "inline-block", borderColor: "rgb(143, 175, 126)" }}
+          >
+            {t("activitesPg.customCta")}
+          </LangLink>
           </Reveal>
         </div>
       </section>
+
+      <div className="h-[36px] md:hidden" style={{ backgroundColor: "#F5F0E8" }} />
     </div>
   );
 }

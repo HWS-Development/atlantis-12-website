@@ -1,8 +1,3 @@
-// Global fixed bottom bar — matches live atlantis12essaouira.com:
-//   - Default: green bar with "RÉSERVER VOTRE SÉJOUR" (left) and "pourquoi réserver sur notre site ?" (right)
-//   - Click left button: full-width white panel slides up with date pickers + room select + guests + CTA
-//   - Click right button: floating white card above the bar with checkmark bullets ("Pourquoi réserver avec nous ?")
-//   - CTA "VÉRIFIER LES DISPONIBILITÉS" redirects to HotelRunner search.
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import ROOMS, { BOOK_URL } from "../../data/rooms";
@@ -97,7 +92,6 @@ const CheckIcon = () => (
   </svg>
 );
 
-// Default check-in = today + 7d, check-out = today + 14d (matches screenshot example).
 function defaultDates() {
   const fmt = (d) => d.toISOString().slice(0, 10);
   const a = new Date();
@@ -115,12 +109,11 @@ export default function BottomReservationBar() {
   const init = defaultDates();
   const [arrival, setArrival] = useState(init.arrival);
   const [departure, setDeparture] = useState(init.departure);
-  const [roomSlug, setRoomSlug] = useState(""); // "" = any
+  const [roomSlug, setRoomSlug] = useState("");
   const [guests, setGuests] = useState(2);
 
   const submitBooking = (e) => {
     e?.preventDefault?.();
-    // HotelRunner BV3 expects: checkin_date, checkout_date, and guest_rooms structure.
     const url = new URL(BOOK_URL);
     const searchPayload = {
       checkin_date: arrival,
@@ -133,7 +126,6 @@ export default function BottomReservationBar() {
 
   return (
     <div className="fixed bottom-0 left-0 right-0 z-40 m-0 p-0">
-      {/* "Pourquoi réserver" — floating white card, right-aligned above the bar */}
       {whyOpen && (
         <>
           <button
@@ -185,7 +177,6 @@ export default function BottomReservationBar() {
         </>
       )}
 
-      {/* "Réserver un séjour" — full-width white panel above the bar */}
       {reserveOpen && (
         <div className="bg-white border-t border-black/5 shadow-[0_-4px_20px_rgba(0,0,0,0.04)]">
           <div className="max-w-5xl mx-auto px-6 md:px-10 py-7 md:py-9">
@@ -290,15 +281,17 @@ export default function BottomReservationBar() {
         </div>
       )}
 
-      {/* Bar itself */}
       <div
-        className="flex items-center justify-between py-3.5 text-white gap-4 m-0"
+        className="flex items-center justify-between py-3.5 text-white gap-4 m-0 border-t"
         style={{
           backgroundColor: "#496246",
+          borderTopColor: "#C8B99A",
+          boxShadow: "0 -2px 6px rgba(0,0,0,0.15)",
           width: "100vw",
           marginLeft: "calc(50% - 50vw)",
           paddingLeft: "1.5rem",
           paddingRight: "1.5rem",
+          paddingBottom: "calc(0.875rem + env(safe-area-inset-bottom, 0px))",
         }}
       >
         <button
@@ -313,7 +306,7 @@ export default function BottomReservationBar() {
           <span
             className="font-display whitespace-nowrap overflow-hidden text-ellipsis"
             style={{
-              fontSize: "clamp(15px, 2.8vw, 19px)",
+              fontSize: "clamp(17px, 3vw, 19px)",
               fontWeight: 400,
               color: "#ffffff",
             }}
@@ -332,8 +325,8 @@ export default function BottomReservationBar() {
           }}
         >
           <span
-            className="font-display whitespace-nowrap font-bold"
-            style={{ fontSize: "clamp(12px, 2.4vw, 15px)", color: "#ffffff" }}
+            className="font-display whitespace-nowrap"
+            style={{ fontSize: "clamp(17px, 3vw, 19px)", color: "#ffffff", fontWeight: 400 }}
           >
             {t("bottomBar.bar.why", "pourquoi réserver sur notre site ?")}
           </span>

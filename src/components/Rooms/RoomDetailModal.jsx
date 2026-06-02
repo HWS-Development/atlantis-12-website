@@ -1,4 +1,3 @@
-// Room detail overlay — 1:1 with reference/rooms/<slug>.pretty.html
 import { useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { BOOK_URL } from "../../data/rooms";
@@ -42,7 +41,6 @@ export default function RoomDetailModal({ room, onClose }) {
   const [idx, setIdx] = useState(0);
   const artworkRef = useRef(null);
 
-  // Body scroll lock + ESC close
   useEffect(() => {
     const prev = document.body.style.overflow;
     document.body.style.overflow = "hidden";
@@ -60,10 +58,12 @@ export default function RoomDetailModal({ room, onClose }) {
 
   if (!room) return null;
   const current = room.images[idx];
-  // Per-room copy from locales (rooms.<slug>.intro). Equipment items resolved
-  // via their key ids: rooms.equip.<id> in locales.
   const intro = t(`rooms.${room.slug}.intro`, room.intro);
   const equipLabels = (room.equip || []).map((id) => t(`rooms.equip.${id}`, id));
+  const artworkStatusLabel =
+    room.artworkStatus === "available"
+      ? t("galleryPg.badgeAvailable", "Disponible à l'acquisition")
+      : t("galleryPg.badgePermanent", "Collection permanente");
 
   const prev = () => setIdx((i) => (i - 1 + room.images.length) % room.images.length);
   const next = () => setIdx((i) => (i + 1) % room.images.length);
@@ -72,17 +72,17 @@ export default function RoomDetailModal({ room, onClose }) {
 
   return (
     <div className="fixed inset-0 z-50 bg-background overflow-y-auto" style={{ opacity: 1 }}>
-      <button
-        onClick={onClose}
-        className="fixed top-6 left-6 z-10 flex items-center gap-2 border border-border hover:border-primary/50 bg-background px-4 py-2.5 font-body text-xs tracking-[0.2em] uppercase text-foreground/60 hover:text-primary transition-colors"
-      >
-        <ChevronLeft className="w-3.5 h-3.5" />
-        {t("modal.backToRooms", "Voir les autres chambres")}
-      </button>
 
       <div className="max-w-6xl mx-auto px-6 md:px-12 py-20 md:py-24">
-        {/* Eyebrow */}
-        <div className="flex items-center gap-3 mb-4 flex-wrap">
+        <button
+          onClick={onClose}
+          className="mb-8 flex items-center gap-2 border border-border hover:border-primary/50 bg-background px-4 py-2.5 font-body text-xs tracking-[0.2em] uppercase text-foreground/60 hover:text-primary transition-colors max-w-full"
+        >
+          <ChevronLeft className="w-3.5 h-3.5" />
+          <span className="break-words">{t("modal.backToRooms", "Voir les autres chambres")}</span>
+        </button>
+
+        <div className="flex items-center gap-3 mb-4 flex-wrap pr-8">
           <p className="font-body text-xs tracking-[0.4em] uppercase text-primary">
             {t(`rooms.${room.slug}.category`, room.category)}
           </p>
@@ -94,15 +94,12 @@ export default function RoomDetailModal({ room, onClose }) {
           </p>
         </div>
 
-        {/* Title */}
-        <h2 className="font-display text-5xl md:text-7xl text-foreground mb-8">
+        <h2 className="font-display text-4xl md:text-7xl text-foreground mb-8 break-words">
           {room.name}
         </h2>
 
-        {/* Two-column: carousel + info */}
         <div className="grid md:grid-cols-2 gap-8 md:gap-16 mb-12">
-          {/* Carousel */}
-          <div className="space-y-3">
+          <div className="space-y-3 min-w-0">
             <div className="relative overflow-hidden aspect-[4/3]">
               <img
                 key={current.src}
@@ -126,8 +123,7 @@ export default function RoomDetailModal({ room, onClose }) {
                 <ChevronRight className="w-4 h-4 text-foreground/70" />
               </button>
             </div>
-            {/* Thumbs */}
-            <div className="flex gap-2 overflow-x-auto hide-scrollbar">
+            <div className="flex gap-2 overflow-x-auto hide-scrollbar pr-2 pb-1">
               {room.images.map((img, i) => (
                 <button
                   key={img.src}
@@ -143,10 +139,9 @@ export default function RoomDetailModal({ room, onClose }) {
             </div>
           </div>
 
-          {/* Info column */}
-          <div className="flex flex-col justify-between gap-8">
+          <div className="flex flex-col justify-between gap-8 min-w-0">
             <div className="space-y-4">
-              <p className="font-body text-sm leading-relaxed text-foreground/65">
+              <p className="font-body text-sm leading-relaxed text-[#333333] break-words">
                 {intro}
               </p>
             </div>
@@ -156,12 +151,9 @@ export default function RoomDetailModal({ room, onClose }) {
               </p>
               <div className="flex flex-wrap gap-2">
                 {equipLabels.map((label, i) => (
-                  <span
-                    key={i}
-                    className="font-body text-xs px-3 py-1 border border-border text-foreground/60"
-                  >
-                    {label}
-                  </span>
+                    <span key={i} className="font-body text-xs px-3 py-1 border border-border text-foreground/60 break-words max-w-full">
+                      {label}
+                    </span>
                 ))}
               </div>
             </div>
@@ -177,7 +169,6 @@ export default function RoomDetailModal({ room, onClose }) {
           </div>
         </div>
 
-        {/* Artwork */}
         <div
           ref={artworkRef}
           id="room-artwork"
@@ -196,26 +187,23 @@ export default function RoomDetailModal({ room, onClose }) {
             <p className="font-body text-xs tracking-[0.3em] uppercase text-primary">
               {t("modal.artworkLabel", "L'œuvre de la chambre")}
             </p>
+            <p className="font-body text-xs tracking-[0.25em] uppercase text-primary/70">
+              {artworkStatusLabel}
+            </p>
             <p className="font-body text-sm leading-relaxed text-foreground/60">
               {t(
                 "modal.artworkDescription",
-                "Chaque chambre d'Atlantis 12 abrite une ou plusieurs œuvres originales sélectionnées en dialogue direct avec l'espace. Ces pièces font partie de la collection permanente et peuvent être acquises sur demande auprès de l'équipe."
+                "Chaque chambre d'Atlantis 12 abrite une ou plusieurs œuvres originales sélectionnées en dialogue direct avec l'espace."
               )}
             </p>
             <div className="w-10 h-px bg-border mt-4 mb-3" />
             <p className="font-body text-sm italic text-foreground/50">
-              {t("modal.collection", "Collection permanente Atlantis 12")}
+              {artworkStatusLabel}
             </p>
           </div>
         </div>
 
-        {/* CTA row */}
-        <div className="mt-10 flex gap-4 items-center">
-          {room.showConsulter && (
-            <div className="font-body text-sm text-primary font-medium">
-              {t("modal.consultUs", "Nous consulter")}
-            </div>
-          )}
+        <div className="mt-10 flex gap-4 items-center flex-wrap">
           <a
             href={BOOK_URL}
             target="_blank"

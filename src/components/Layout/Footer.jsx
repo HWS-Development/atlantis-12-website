@@ -1,8 +1,4 @@
-﻿// Footer — matches live site exactly:
-//   bg #2C3E25 (dark olive), top fade overlay,
-//   3-col grid: CONTACT | MÉTÉO (live weather) | EXPLORER
-//   bottom rule + © 2026 Atlantis 12
-import { useEffect, useState } from "react";
+﻿import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import LangLink from "../Common/LangLink";
 import Reveal from "../Common/Reveal";
@@ -19,7 +15,6 @@ const cream25 = "rgba(245, 240, 232, 0.25)";
 const cream40 = "rgba(143, 175, 126, 0.7)";  // secondary text
 const cream10 = "rgba(245, 240, 232, 0.1)";
 
-// Live weather (Open-Meteo, no API key) — Essaouira coords from schema.org JSON-LD
 const WX_URL =
   "https://api.open-meteo.com/v1/forecast?latitude=31.5085&longitude=-9.7595&current=temperature_2m,wind_speed_10m,wind_direction_10m&wind_speed_unit=kmh";
 
@@ -65,7 +60,6 @@ export default function Footer() {
       className="relative overflow-hidden"
       style={{ backgroundColor: "rgb(44, 62, 37)" }}
     >
-      {/* Soft top→bottom darkening overlay */}
       <div
         className="absolute inset-0 pointer-events-none"
         style={{
@@ -77,7 +71,6 @@ export default function Footer() {
       <div className="relative z-10 page-x py-10 md:py-14">
         <div className="space-y-16 md:space-y-20">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-16 md:gap-24">
-            {/* CONTACT */}
             <Reveal className="space-y-5">
               <p className="font-body text-xs tracking-[0.4em] uppercase" style={{ color: accent }}>
                 {t("footer.contact", "Contact")}
@@ -102,12 +95,11 @@ export default function Footer() {
                 <p className="font-body text-sm" style={{ color: cream65 }}>
                   Douar Laraich, Route de Safi
                   <br />
-                  44000, Essaouira - Maroc
+                  44000, Essaouira - {t("footer.country", "Maroc")}
                 </p>
               </div>
             </Reveal>
 
-            {/* MÉTÉO (live) */}
             <Reveal delay={1} className="space-y-5">
               <p className="font-body text-xs tracking-[0.4em] uppercase" style={{ color: accent }}>
                 {t("footer.weather", "Météo")}
@@ -131,7 +123,6 @@ export default function Footer() {
               </div>
             </Reveal>
 
-            {/* EXPLORER */}
             <Reveal delay={2} className="space-y-5">
               <p className="font-body text-xs tracking-[0.4em] uppercase" style={{ color: accent }}>
                 {t("footer.explore", "EXPLORER")}
@@ -165,8 +156,8 @@ export default function Footer() {
           className="mt-8 md:mt-10 pt-6 flex flex-col md:flex-row justify-between items-center gap-4"
           style={{ borderTop: `1px solid ${cream10}` }}
         >
-          <p className="font-body text-xs" style={{ color: cream25 }}>
-            © {new Date().getFullYear()} Atlantis 12 - {t("footer.tagline", "Maison d'hôtes & d'art - Essaouira, Maroc")}
+          <p className="font-body text-xs text-center md:text-left" style={{ color: cream25 }}>
+            © 2026 Atlantis 12 - {t("footer.tagline", "Maison d'hôtes & d'art")}
           </p>
           <div className="flex items-center gap-4 font-body text-xs" style={{ color: cream25 }}>
             <LangLink to="/mentions-legales" className="hover:opacity-80 transition-opacity">

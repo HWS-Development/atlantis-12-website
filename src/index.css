@@ -90,6 +90,14 @@
   /* Live-site horizontal page padding (used by every section) */
   .page-x { @apply px-[8vw] md:px-[10vw]; }
 
+  .page-content-safe-bottom {
+    padding-bottom: calc(6rem + env(safe-area-inset-bottom, 0px));
+  }
+
+  .hero-text-shadow {
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
+  }
+
   /* ---- Compatibility shims so existing non-home pages keep building ---- */
   /* (The brown "legacy" classes referenced by old pages map to no-op /
      near-equivalent so we don't break the build while migrating.) */
@@ -161,3 +169,9 @@
 }
 .hero-logo-in { animation: hero-logo-in 1400ms cubic-bezier(.22,.61,.36,1) both; }
 .hero-logo-img { animation: hero-logo-in 1800ms cubic-bezier(.22,.61,.36,1) both; }
+
+@media (max-width: 767px) {
+  .page-content-safe-bottom {
+    padding-bottom: calc(7.75rem + env(safe-area-inset-bottom, 0px));
+  }
+}

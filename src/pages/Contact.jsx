@@ -1,8 +1,6 @@
-// /contact — rebuilt 1:1 from reference/contact/section-00-section-0.pretty.html
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import Reveal from "../components/Common/Reveal";
-import Seo from "../components/Common/Seo";
 
 const Icon = ({ d, className = "w-4 h-4 mt-1 text-primary flex-shrink-0" }) => (
   <svg
@@ -45,15 +43,11 @@ export default function Contact() {
 
   return (
     <div className="bg-background min-h-screen text-foreground">
-      <Seo
-        title="Contact & Réservation | Atlantis 12 Essaouira"
-        description="Réservez votre séjour à Atlantis 12 directement sur notre site - meilleur tarif garanti. WhatsApp : +212 666 29 22 85 · contact@atlantis12essaouira.com · Douar Laraich, Route de Safi, Essaouira."
-      />
-      <div className="w-full flex items-center justify-center pt-24 pb-4 bg-white" style={{ lineHeight: 0 }}>
+      <div className="w-full flex items-center justify-center pt-28 pb-4 bg-white" style={{ lineHeight: 0 }}>
         <img
           src="/images/logo/logo-atlantis12-blanc.png"
           alt={t("contactPage.logoAlt")}
-          className="w-[240px] h-auto object-contain block"
+          className="w-[220px] md:w-[240px] h-auto object-contain block"
         />
       </div>
 
@@ -65,7 +59,7 @@ export default function Contact() {
           {t("contactPage.title")}
         </Reveal>
         <Reveal as="p" className="font-body text-xs tracking-[0.3em] uppercase text-primary/70 mt-3 font-semibold" delay={2}>
-          ATLANTIS 12, MAISON D'HÔTES ET D'ART À ESSAOUIRA
+          {t("contactPage.heroSubline", "ATLANTIS 12, MAISON D'HÔTES ET D'ART À ESSAOUIRA")}
         </Reveal>
       </div>
 
