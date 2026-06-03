@@ -14,7 +14,11 @@ export default function HomeHero() {
   };
 
   return (
-    <section id="hero" className="relative w-full h-screen overflow-hidden">
+    <section
+      id="hero"
+      className="relative w-full h-screen overflow-hidden"
+      style={{ height: "100svh", minHeight: "100svh" }}
+    >
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none px-6">
         <Reveal className="relative flex flex-col items-center hero-logo-in w-full max-w-[440px]">
           <img

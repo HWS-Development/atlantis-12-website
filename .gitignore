@@ -31,6 +31,11 @@ reference/
 ~$*
 corrections_site_vercel.md
 
+# Local env files (Vite)
+.env
+.env.*
+!.env.example
+
 # Sensitive screenshots
 Cle*API*Google*
 

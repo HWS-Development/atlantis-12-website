@@ -47,8 +47,9 @@ const ROOMS = [
       EQ.serviettesArgan,
     ],
     images: [
-      { src: `${ROOMS_PATH}/plumeria-vaste-espace-chambre-colonnes-atlantis12-essaouira.jpg`, alt: "La Pluméria, Détail du lit" },
-      { src: `${ROOMS_PATH}/plumeria-terrasse-privee-baldaquin-foret-thuyas-atlantis12-essaouira.jpg`, alt: "La Pluméria, Terrasse privée" },
+      // C10 Pluméria recadrage : pull the focal point slightly down so the bed / colonnes composition is centered instead of being cropped at the top.
+      { src: `${ROOMS_PATH}/plumeria-vaste-espace-chambre-colonnes-atlantis12-essaouira.jpg`, alt: "La Pluméria, Détail du lit", position: "center 40%" },
+      { src: `${ROOMS_PATH}/plumeria-terrasse-privee-baldaquin-foret-thuyas-atlantis12-essaouira.jpg`, alt: "La Pluméria, Terrasse privée", position: "center 45%" },
       { src: `${ROOMS_PATH}/plumeria-salon-prive-oeuvre-lahcen-fikri-lumiere-atlantis12-essaouira.jpg`, alt: "La Pluméria, Salon privé" },
       { src: `${ROOMS_PATH}/plumeria-cheminee-pierre-suite-superieure-atlantis12-essaouira.jpg`, alt: "La Pluméria, La cheminée" },
       { src: `${ROOMS_PATH}/plumeria-salle-de-bain-zellige-turquoise-atlantis12-essaouira.jpg`, alt: "La Pluméria, La salle de bain" },

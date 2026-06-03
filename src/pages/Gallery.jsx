@@ -86,7 +86,13 @@ export default function Gallery() {
                   <img
                     src={m.img}
                     alt={w.artist}
-                    className={`w-full h-full bg-white transition-transform duration-700 group-hover:scale-105 ${i === 3 ? "object-cover object-top" : "object-contain"}`}
+                    className={`w-full h-full bg-white transition-transform duration-700 group-hover:scale-105 ${
+                      i === 3
+                        ? "object-cover object-top"
+                        : i === 5
+                        ? "object-cover object-center"
+                        : "object-contain"
+                    }`}
                   />
                   <div className="absolute top-3 right-3 px-2 py-1 font-body text-xs tracking-wide bg-primary text-white">
                     {badge(m.badge)}

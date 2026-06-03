@@ -1,6 +1,8 @@
-import { mkdir, writeFile } from "node:fs/promises";
+import { mkdir, readFile, writeFile } from "node:fs/promises";
 import { dirname, resolve } from "node:path";
 import { HTML_ENTRY_PATHS, SEO_PAGES, getSeoMetadata } from "../src/seo/metadata.js";
+
+const DIST_DIR = resolve(process.cwd(), "dist");
 
 const FONT_LINKS = `    <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -9,7 +11,32 @@ const FONT_LINKS = `    <link rel="preconnect" href="https://fonts.googleapis.co
       rel="stylesheet"
     />`;
 
-function buildHtml({ lang, title, description, canonical, hreflang, ogImage }) {
+/**
+ * Extract Vite-emitted asset tags from the built dist/index.html so every
+ * prerendered route HTML loads the same hashed JS/CSS bundles.
+ */
+function extractAssetTags(distIndexHtml) {
+  const tags = [];
+  const patterns = [
+    /<script\b[^>]*\bsrc="\/assets\/[^"]+"[^>]*><\/script>/g,
+    /<link\b[^>]*\bhref="\/assets\/[^"]+"[^>]*\/?>(?:<\/link>)?/g,
+  ];
+  for (const re of patterns) {
+    const matches = distIndexHtml.match(re);
+    if (matches) tags.push(...matches);
+  }
+  if (tags.length === 0) {
+    throw new Error(
+      "No /assets/* tags found in dist/index.html; did `vite build` run first?"
+    );
+  }
+  // Deduplicate while preserving order
+  return Array.from(new Set(tags));
+}
+
+function buildHtml({ lang, title, description, canonical, hreflang, ogImage }, assetTags) {
+  const indent = "    ";
+  const assetBlock = assetTags.map((t) => indent + t).join("\n");
   return `<!doctype html>
 <html lang="${lang}">
   <head>
@@ -31,7 +58,7 @@ function buildHtml({ lang, title, description, canonical, hreflang, ogImage }) {
     <link rel="alternate" hreflang="fr" href="${hreflang.fr}" />
     <link rel="alternate" hreflang="en" href="${hreflang.en}" />
 ${FONT_LINKS}
-    <script type="module" src="/src/main.jsx"></script>
+${assetBlock}
   </head>
   <body>
     <div id="root"></div>
@@ -61,11 +88,17 @@ function getEntryConfig(filePath) {
   return { routeKey, lang };
 }
 
+const distIndex = await readFile(resolve(DIST_DIR, "index.html"), "utf8");
+const assetTags = extractAssetTags(distIndex);
+
 for (const filePath of HTML_ENTRY_PATHS) {
   const { routeKey, lang } = getEntryConfig(filePath);
   const metadata = getSeoMetadata(routeKey, lang);
-  const targetPath = resolve(process.cwd(), filePath);
+  const targetPath = resolve(DIST_DIR, filePath);
 
   await mkdir(dirname(targetPath), { recursive: true });
-  await writeFile(targetPath, buildHtml({ lang, ...metadata }), "utf8");
+  await writeFile(targetPath, buildHtml({ lang, ...metadata }, assetTags), "utf8");
+  console.log(`  wrote dist/${filePath}`);
 }
+
+console.log(`\nGenerated ${HTML_ENTRY_PATHS.length} prerendered route files in dist/.`);

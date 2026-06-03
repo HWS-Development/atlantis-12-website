@@ -106,7 +106,7 @@ export default function RoomDetailModal({ room, onClose }) {
                 src={current.src}
                 alt={`${current.alt} - Atlantis 12, Essaouira`}
                 className="w-full h-full object-cover absolute inset-0"
-                style={{ objectPosition: "center", opacity: 1 }}
+                style={{ objectPosition: current.position || "center", opacity: 1 }}
               />
               <button
                 onClick={prev}
@@ -133,7 +133,7 @@ export default function RoomDetailModal({ room, onClose }) {
                     i === idx ? "border-primary" : "border-transparent"
                   }`}
                 >
-                  <img src={img.src} alt={img.alt} className="w-full h-full object-cover" />
+                  <img src={img.src} alt={img.alt} className="w-full h-full object-cover" style={{ objectPosition: img.position || "center" }} />
                 </button>
               ))}
             </div>
