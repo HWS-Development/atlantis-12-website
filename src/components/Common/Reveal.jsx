@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 
 export default function Reveal({
-  as: Tag = "div",
+  as = "div",
   delay = 0,         // 0 | 1 | 2 | 3 | 4   (maps to .delay-N classes)
   className = "",
   children,
@@ -11,6 +11,7 @@ export default function Reveal({
   once = true,
   ...rest
 }) {
+  const Tag = as;
   const ref = useRef(null);
   const [visible, setVisible] = useState(false);
 

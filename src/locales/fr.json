@@ -616,6 +616,7 @@
     "close": "Fermer",
     "bar": {
       "cta": "Réserver votre séjour",
+      "ctaMobile": "Réserver",
       "why": "pourquoi réserver sur notre site ?"
     },
     "why": {

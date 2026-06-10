@@ -2,11 +2,11 @@ import { useState, useEffect, useRef } from "react";
 import { useTranslation } from "react-i18next";
 import Reveal from "../Common/Reveal";
 
-const PLACE_ID = "ChIJz4yJ76SaDBkRKk9cbaQh9Fc"; // Atlantis 12 Essaouira
+const PLACE_ID = "ChIJH19_ZnqbrQ0RnQFpcNhP6cs"; // Atlantis 12 Essaouira
 const API_KEY = import.meta.env.VITE_GOOGLE_MAPS_API_KEY || "";
 
 const GOOGLE_REVIEWS_URL =
-  "https://www.google.com/maps/place/?q=place_id:" + PLACE_ID;
+  `https://www.google.com/maps/search/?api=1&query=Atlantis+12+Essaouira&query_place_id=${PLACE_ID}`;
 
 function StarIcon({ size = "w-5 h-5", filled = true }) {
   return (

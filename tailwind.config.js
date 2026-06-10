@@ -7,7 +7,7 @@ export default {
       colors: {
         // Live-site palette (atlantis12essaouira.com)
         background: "#FFFFFF",
-        foreground: "rgb(47 63 44 / <alpha-value>)",       // body text + headings
+        foreground: "rgb(51 51 51 / <alpha-value>)",       // body text + headings
         primary: "rgb(47 63 44 / <alpha-value>)",          // dark olive
         "primary-soft": "rgb(73 98 70 / <alpha-value>)",   // softer olive (button color)
         secondary: "rgb(44 62 37 / <alpha-value>)",        // footer / image gradient

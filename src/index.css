@@ -5,7 +5,7 @@
 /* ============================================================
    Atlantis 12 — global styles
    Matches live site: Raleway body, Dancing Script display,
-   white background, dark-olive (rgb 47 63 44) text.
+   white background, #333333 body text.
    ============================================================ */
 
 @layer base {
@@ -25,7 +25,7 @@
     font-family: 'Dancing Script', cursive;
     font-weight: 400;
     line-height: 1;
-    color: rgb(47, 63, 44);
+    color: #333333;
   }
 
   /* Default <p> on the live site is 12px, 0.4em tracking, uppercase semantics
@@ -91,7 +91,11 @@
   .page-x { @apply px-[8vw] md:px-[10vw]; }
 
   .page-content-safe-bottom {
-    padding-bottom: calc(6rem + env(safe-area-inset-bottom, 0px));
+    padding-bottom: 0;
+  }
+
+  footer {
+    padding-bottom: calc(70px + env(safe-area-inset-bottom, 0px));
   }
 
   .hero-text-shadow {
@@ -172,6 +176,6 @@
 
 @media (max-width: 767px) {
   .page-content-safe-bottom {
-    padding-bottom: calc(7.75rem + env(safe-area-inset-bottom, 0px));
+    padding-bottom: 0;
   }
 }

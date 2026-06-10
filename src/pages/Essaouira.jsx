@@ -96,13 +96,22 @@ function PlaceList({ heading, sub, items }) {
 const linkClass = "underline underline-offset-2 hover:text-foreground transition-colors";
 const linkStyle = { color: "rgb(74, 103, 65)" };
 
+const MAP_LINKS = {
+  darSouiri: "https://www.google.com/maps/search/?api=1&query=Dar+Souiri+Essaouira&query_place_id=ChIJl1zwjcybrQ0RAejZuONdJVs",
+  baytDakira: "https://www.google.com/maps/search/?api=1&query=Bayt+Dakira+Essaouira&query_place_id=ChIJHYQK2iabrQ0RP08ndoU_ENM",
+  musee: "https://www.google.com/maps/search/?api=1&query=Musée+Sidi+Mohammed+Ben+Abdellah+Essaouira&query_place_id=ChIJfW_MXPubrQ0Rqr294Iy0ob0",
+  skala: "https://www.google.com/maps/search/?api=1&query=Skala+de+la+Kasbah+Essaouira&query_place_id=ChIJu1Lmks2brQ0RC_puWXYJkzw",
+  placeMoulay: "https://www.google.com/maps/search/?api=1&query=Place+Moulay+El+Hassan+Essaouira&query_place_id=ChIJy_gna8ybrQ0RqGNV8RKJSIs",
+  oceanVagabond: "https://maps.app.goo.gl/cjLXeUfFPAweVzS59",
+};
+
 export default function Essaouira() {
   const { t } = useTranslation();
   const notes = t("essaouiraPg.notes", { returnObjects: true }) || {};
 
   const LUNCH = [
     { name: "Dar Lawama", url: "https://maps.app.goo.gl/xdEAKgpNRcKEXvuz6", note: notes.darLawama },
-    { name: "Océan Vagabond", url: "https://maps.app.goo.gl/7P4JQ1bHnGg53m4D7", note: notes.oceanVagabond },
+    { name: "Océan Vagabond", url: MAP_LINKS.oceanVagabond, note: notes.oceanVagabond },
     { name: "Le Chalet de la Plage", url: "https://maps.app.goo.gl/1nQNDFFagnUj74An9", note: notes.chaletPlage },
     { name: "Cheb Zak", url: "https://maps.app.goo.gl/Y1bBm2ZbmuhDE7LFA", note: notes.chebZak },
   ];
@@ -177,29 +186,29 @@ export default function Essaouira() {
               {t("essaouiraPg.linkBabSbaa")}
             </a>
             {t("essaouiraPg.seeP1b")}
-              <a href="https://www.google.com/maps/place/Dar+Souiri/@31.513008,-9.771489,17z" target="_blank" rel="noopener noreferrer" className={linkClass} style={linkStyle}>
+              <a href={MAP_LINKS.darSouiri} target="_blank" rel="noopener noreferrer" className={linkClass} style={linkStyle}>
                 {t("essaouiraPg.linkDarSouiri")}
               </a>
             {t("essaouiraPg.seeP1c")}
           </p>
           <p className="font-body text-sm leading-relaxed text-foreground/65">
             {t("essaouiraPg.seeP2a")}
-            <a href="https://www.google.com/maps/place/Bayt+Dakira/@31.5134084,-9.7710272,17z" target="_blank" rel="noopener noreferrer" className={linkClass} style={linkStyle}>
+            <a href={MAP_LINKS.baytDakira} target="_blank" rel="noopener noreferrer" className={linkClass} style={linkStyle}>
               {t("essaouiraPg.linkBaytDakira")}
             </a>
             {t("essaouiraPg.seeP2b")}
-              <a href="https://www.google.com/maps/place/Mus%C3%A9e+d'Histoire+d'Essaouira/@31.514112,-9.771163,17z" target="_blank" rel="noopener noreferrer" className={linkClass} style={linkStyle}>
+              <a href={MAP_LINKS.musee} target="_blank" rel="noopener noreferrer" className={linkClass} style={linkStyle}>
                 {t("essaouiraPg.linkMusee")}
               </a>
             {t("essaouiraPg.seeP2c")}
           </p>
           <p className="font-body text-sm leading-relaxed text-foreground/65">
             {t("essaouiraPg.seeP3a")}
-              <a href="https://www.google.com/maps/place/Skala+de+la+Ville/@31.513877,-9.773176,17z" target="_blank" rel="noopener noreferrer" className={linkClass} style={linkStyle}>
+              <a href={MAP_LINKS.skala} target="_blank" rel="noopener noreferrer" className={linkClass} style={linkStyle}>
                 {t("essaouiraPg.linkSkala")}
               </a>
             {t("essaouiraPg.seeP3b")}
-              <a href="https://www.google.com/maps/place/Place+Moulay+El+Hassan/@31.511653,-9.771648,17z" target="_blank" rel="noopener noreferrer" className={linkClass} style={linkStyle}>
+              <a href={MAP_LINKS.placeMoulay} target="_blank" rel="noopener noreferrer" className={linkClass} style={linkStyle}>
                 {t("essaouiraPg.linkPlaceMoulay")}
               </a>
             {t("essaouiraPg.seeP3c")}

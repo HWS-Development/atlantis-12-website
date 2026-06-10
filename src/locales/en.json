@@ -44,7 +44,7 @@
       "table": "The Table",
       "art": "The Art"
     },
-    "essaouiraLine1": "What we (truly) love",
+    "essaouiraLine1": "What we (truly!) love",
     "essaouiraLine2": "in Essaouira",
     "tagline": "maison d'hôtes & d'art"
   },
@@ -616,6 +616,7 @@
     "close": "Close",
     "bar": {
       "cta": "Book your stay",
+      "ctaMobile": "Book",
       "why": "why book on our website?"
     },
     "why": {

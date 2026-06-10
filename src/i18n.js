@@ -11,7 +11,8 @@ i18n.on('languageChanged', (lng) => { document.documentElement.lang = lng; })
     resources: { fr: { translation: fr }, en: { translation: en } },
     fallbackLng: "fr",
     detection: {
-      order: ["localStorage", "navigator", "htmlTag", "cookie"],
+      order: ["querystring", "localStorage", "navigator", "htmlTag", "cookie"],
+      lookupQuerystring: "lng",
       caches: ["localStorage", "cookie"],
       lookupLocalStorage: "i18nextLng"
     },

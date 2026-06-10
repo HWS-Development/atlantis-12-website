@@ -22,9 +22,6 @@ const PHONE_SVG = '<path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-
 const PIN_SVG = '<path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/>';
 const CLOCK_SVG = '<circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>';
 
-const MAPS_URL =
-  "https://www.google.com/maps/search/Atlantis+12+maison+d%27h%C3%B4tes+et+d%27art+Essaouira/@31.541854,-9.690154,17z";
-
 export default function Contact() {
   const { t } = useTranslation();
   const [form, setForm] = useState({ name: "", email: "", subject: "", message: "" });
@@ -45,9 +42,9 @@ export default function Contact() {
     <div className="bg-background min-h-screen text-foreground">
       <div className="w-full flex items-center justify-center pt-28 pb-4 bg-white" style={{ lineHeight: 0 }}>
         <img
-          src="/images/logo/logo-atlantis12-blanc.png"
+          src="/images/logo/logo-atlantis12-aquarelle-maison-hotes-art-essaouira.png"
           alt={t("contactPage.logoAlt")}
-          className="w-[220px] md:w-[240px] h-auto object-contain block"
+          className="w-[220px] md:w-[260px] h-auto object-contain block"
         />
       </div>
 

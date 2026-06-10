@@ -9,14 +9,14 @@ const HOUSE_META = [
   {
     img: `${EXP_PATH}/massage-bien-etre-arganiers-atlantis12-essaouira.jpg`,
     bg: "white",
-    titleColor: "rgb(44, 62, 37)",
+    titleColor: "#333333",
     bodyColor: "#333333",
     accent: "rgb(74, 103, 65)",
   },
   {
     img: `${EXP_PATH}/atelier-peinture-lahcen-fikri-atlantis12-essaouira.jpg`,
     bg: "white",
-    titleColor: "rgb(44, 62, 37)",
+    titleColor: "#333333",
     bodyColor: "#333333",
     accent: "rgb(74, 103, 65)",
     reverse: true,
@@ -31,7 +31,7 @@ const HOUSE_META = [
   {
     img: `${EXP_PATH}/yoga-terrasse-atlantis12-essaouira-foretjpg.jpg`,
     bg: "white",
-    titleColor: "rgb(44, 62, 37)",
+    titleColor: "#333333",
     bodyColor: "#333333",
     accent: "rgb(74, 103, 65)",
     reverse: true,
@@ -80,13 +80,13 @@ export default function Activites() {
       </div>
 
       <section className="bg-white">
-        <div className="px-[60px] pt-[32px] pb-[4px] max-w-[680px] mx-auto text-center">
+        <div className="px-[60px] pt-[32px] pb-[60px] max-w-[680px] mx-auto text-center">
           <Reveal as="p" className="font-body text-[15px] leading-[1.8]" style={{ color: "#333333" }}>
             {t("activitesPg.intro")}
           </Reveal>
         </div>
 
-        <div className="px-[60px] pt-[4px] pb-[16px]">
+        <div className="px-[60px] pt-0 pb-0">
           <Reveal
             as="p"
             className="font-body text-[10px] tracking-[4px] uppercase"
@@ -104,7 +104,7 @@ export default function Activites() {
           return (
             <Reveal
               key={i}
-              className={`flex flex-col md:flex-row gap-[60px] px-[60px] py-[80px] ${meta.reverse ? "md:flex-row-reverse" : ""}`}
+              className={`flex flex-col md:flex-row gap-[60px] px-[60px] ${i === 0 ? "pt-[20px] pb-[80px]" : "py-[80px]"} ${meta.reverse ? "md:flex-row-reverse" : ""}`}
               style={{ backgroundColor: meta.bg }}
             >
               <div className="w-full md:w-[46%] flex-shrink-0">
@@ -135,7 +135,7 @@ export default function Activites() {
         })}
       </section>
 
-      <section className="bg-white py-20 pb-8 md:pb-20">
+      <section className="py-16 pb-10" style={{ backgroundColor: "#F5F0E8" }}>
         <div className="px-[60px] mb-12 text-center">
           <Reveal
             as="p"
@@ -198,8 +198,6 @@ export default function Activites() {
           </Reveal>
         </div>
       </section>
-
-      <div className="h-[36px] md:hidden" style={{ backgroundColor: "#F5F0E8" }} />
     </div>
   );
 }

@@ -7,6 +7,7 @@ import ScrollToHash from "./components/Common/ScrollToHash";
 import ScrollToTop from "./components/UI/ScrollToTop";
 import I18nUrlSync from "./components/Common/I18nUrlSync";
 import LangLink from "./components/Common/LangLink";
+import RouteSeo from "./components/Common/RouteSeo";
 
 import Home from "./pages/Home";
 import Rooms from "./pages/Rooms";
@@ -30,6 +31,7 @@ export default function App() {
         <ScrollToTop />
         <ScrollToHash />
         <I18nUrlSync />
+        <RouteSeo />
 
         {/* Live site lets the fixed header OVERLAP page content (Hero handles its own
             full-viewport height). Inner pages add their own top padding if needed. */}

@@ -58,12 +58,12 @@ export default function TableDHotes() {
         <p className="font-body text-xs text-foreground/40 tracking-wide">{t("tablePg.s2Price")}</p>
         <Reveal className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-6" delay={3}>
           <div className="flex flex-col items-center">
-            <img src={ARTICHAUT_IMG} alt={t("tablePg.s2ImgAlt")} className="w-full aspect-[4/3] object-cover" />
-            <p className="font-body text-sm italic text-foreground/60 mt-4">{t("tablePg.s2Caption")}</p>
+            <img src={ARTICHAUT_IMG} alt={t("tablePg.s2ImgAlt")} className="w-full aspect-[4/3] object-contain bg-white" />
+            <p className="font-body text-xs italic text-foreground/60 mt-3">{t("tablePg.s2Caption")}</p>
           </div>
           <div className="flex flex-col items-center">
             <img src={COUSCOUS_IMG} alt={t("tablePg.s2Img2Alt")} className="w-full aspect-[4/3] object-cover" />
-            <p className="font-body text-sm italic text-foreground/60 mt-4">{t("tablePg.s2Img2Caption")}</p>
+            <p className="font-body text-xs italic text-foreground/60 mt-3">{t("tablePg.s2Img2Caption")}</p>
           </div>
         </Reveal>
       </section>

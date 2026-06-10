@@ -197,9 +197,6 @@ export default function RoomDetailModal({ room, onClose }) {
               )}
             </p>
             <div className="w-10 h-px bg-border mt-4 mb-3" />
-            <p className="font-body text-sm italic text-foreground/50">
-              {artworkStatusLabel}
-            </p>
           </div>
         </div>
 
