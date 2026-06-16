@@ -162,7 +162,7 @@ export default function Rooms() {
         </div>
       </div>
 
-      <div className="px-6 md:px-[60px] pt-10 md:pt-[60px] pb-10 max-w-[720px] mx-auto text-center">
+      <div className="px-6 md:px-[60px] pt-6 md:pt-[60px] pb-6 md:pb-10 max-w-[720px] mx-auto text-center">
         <Reveal
           as="p"
           className="font-body text-[15px] leading-[1.8]"
@@ -182,7 +182,7 @@ export default function Rooms() {
         </Reveal>
       </div>
 
-      <section className="px-[8vw] md:px-[10vw] pb-16 overflow-x-hidden">
+      <section className="px-[8vw] md:px-[10vw] pb-6 md:pb-16 overflow-x-hidden">
         <div className="mb-6">
           <Reveal>
             <RoomCard
@@ -212,13 +212,13 @@ export default function Rooms() {
         </div>
       </section>
 
-      <section className="px-[8vw] md:px-[10vw] pb-16">
+      <section className="px-[8vw] md:px-[10vw] pb-6 md:pb-16">
         <Reveal>
-          <div className="mx-auto max-w-[720px] text-center px-6 py-10 md:py-12" style={{ backgroundColor: "#4A6741" }}>
+          <div className="mx-auto max-w-[720px] text-center px-6 py-8 md:py-12" style={{ backgroundColor: "#4A6741" }}>
             <p className="font-body text-xs tracking-[0.4em] uppercase mb-3" style={{ color: "#8FAF7E" }}>
               {t("roomsPage.privatisationEyebrow", "Privatisation")}
             </p>
-            <h2 className="font-display text-4xl md:text-5xl mb-4" style={{ color: "#F5F0E8" }}>
+            <h2 className="font-display text-4xl md:text-5xl mb-4" style={{ color: "#8FAF7E" }}>
               {t("roomsPage.privatisationTitle", "Toute la maison, rien que pour vous !")}
             </h2>
             <p className="font-body text-sm leading-relaxed mb-6" style={{ color: "#8FAF7E" }}>
@@ -226,7 +226,8 @@ export default function Rooms() {
             </p>
             <LangLink
               to="/contact"
-              className="inline-block font-body text-xs tracking-[0.3em] uppercase px-6 py-3 text-white border border-[#C8B99A] hover:bg-white/10 transition-colors"
+              className="inline-block font-body text-xs tracking-[0.3em] uppercase px-6 py-3 border hover:bg-white/10 transition-colors"
+              style={{ color: "#8FAF7E", borderColor: "#8FAF7E" }}
             >
               {t("roomsPage.privatisationButton", "Contactez-nous")}
             </LangLink>

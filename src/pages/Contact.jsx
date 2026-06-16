@@ -71,7 +71,7 @@ export default function Contact() {
                 value={form.name}
                 onChange={onChange("name")}
                 placeholder={t("contactPage.form.namePh")}
-                className="w-full bg-white border border-border px-4 py-3 font-body text-sm text-foreground focus:outline-none focus:border-primary transition-colors"
+                className="w-full bg-white border border-border px-4 py-3 font-body text-sm text-foreground placeholder:text-[#4D4D4D] focus:outline-none focus:border-primary transition-colors"
               />
             </div>
             <div className="space-y-1">
@@ -82,7 +82,7 @@ export default function Contact() {
                 value={form.email}
                 onChange={onChange("email")}
                 placeholder={t("contactPage.form.emailPh")}
-                className="w-full bg-white border border-border px-4 py-3 font-body text-sm text-foreground focus:outline-none focus:border-primary transition-colors"
+                className="w-full bg-white border border-border px-4 py-3 font-body text-sm text-foreground placeholder:text-[#4D4D4D] focus:outline-none focus:border-primary transition-colors"
               />
             </div>
             <div className="space-y-1">
@@ -106,7 +106,7 @@ export default function Contact() {
                 value={form.message}
                 onChange={onChange("message")}
                 placeholder={t("contactPage.form.messagePh")}
-                className="w-full bg-white border border-border px-4 py-3 font-body text-sm text-foreground focus:outline-none focus:border-primary transition-colors resize-none"
+                className="w-full bg-white border border-border px-4 py-3 font-body text-sm text-foreground placeholder:text-[#4D4D4D] focus:outline-none focus:border-primary transition-colors resize-none"
               />
             </div>
             <button

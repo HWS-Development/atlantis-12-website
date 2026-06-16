@@ -26,6 +26,8 @@
     { "source": "/table", "destination": "/index.html" },
     { "source": "/activites", "destination": "/index.html" },
     { "source": "/gallery", "destination": "/index.html" },
+    { "source": "/robots.txt", "destination": "/robots.txt" },
+    { "source": "/sitemap.xml",  "destination": "/sitemap.xml" },
     { "source": "/(.*)", "destination": "/index.html" }
   ]
 }

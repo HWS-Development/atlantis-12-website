@@ -80,13 +80,13 @@ export default function Activites() {
       </div>
 
       <section className="bg-white">
-        <div className="px-[60px] pt-[32px] pb-[60px] max-w-[680px] mx-auto text-center">
+        <div className="px-6 md:px-[60px] pt-8 pb-8 md:pb-[60px] max-w-[680px] mx-auto text-center">
           <Reveal as="p" className="font-body text-[15px] leading-[1.8]" style={{ color: "#333333" }}>
             {t("activitesPg.intro")}
           </Reveal>
         </div>
 
-        <div className="px-[60px] pt-0 pb-0">
+        <div className="px-6 md:px-[60px] pt-0 pb-0 mt-2">
           <Reveal
             as="p"
             className="font-body text-[10px] tracking-[4px] uppercase"
@@ -104,11 +104,11 @@ export default function Activites() {
           return (
             <Reveal
               key={i}
-              className={`flex flex-col md:flex-row gap-[60px] px-[60px] ${i === 0 ? "pt-[20px] pb-[80px]" : "py-[80px]"} ${meta.reverse ? "md:flex-row-reverse" : ""}`}
+              className={`flex flex-col md:flex-row gap-8 md:gap-[60px] px-6 md:px-[60px] ${i === 0 ? "pt-4 pb-6 md:pt-[20px] md:pb-[80px]" : "py-6 md:py-[80px]"} ${meta.reverse ? "md:flex-row-reverse" : ""}`}
               style={{ backgroundColor: meta.bg }}
             >
               <div className="w-full md:w-[46%] flex-shrink-0">
-                <img src={meta.img} alt={row.title} className="w-full h-[360px] object-cover" />
+                <img src={meta.img} alt={row.title} className="w-full h-[280px] md:h-[360px] object-cover" />
               </div>
               <div className="flex-1 flex flex-col justify-center">
                 <p className="font-body text-[10px] tracking-[4px] uppercase" style={{ color: meta.accent }}>
@@ -135,8 +135,8 @@ export default function Activites() {
         })}
       </section>
 
-      <section className="py-16 pb-10" style={{ backgroundColor: "#F5F0E8" }}>
-        <div className="px-[60px] mb-12 text-center">
+      <section className="py-6 md:py-16 pb-6 md:pb-10" style={{ backgroundColor: "#F5F0E8" }}>
+        <div className="px-6 md:px-[60px] mb-8 md:mb-12 text-center">
           <Reveal
             as="p"
             className="font-body text-[10px] tracking-[4px] uppercase"
@@ -150,11 +150,11 @@ export default function Activites() {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-px" style={{ backgroundColor: "rgba(74, 103, 65, 0.12)" }}>
           {partners.map((p, i) => (
-            <Reveal key={i} className="bg-white p-[36px]" delay={(i % 3) + 1}>
+            <Reveal key={i} className="bg-white p-6 md:p-[36px]" delay={(i % 3) + 1}>
               <img
                 src={PARTNER_IMGS[i]}
                 alt={p.title}
-                className="w-full h-[280px] object-cover rounded-sm mb-[24px]"
+                className="w-full h-[220px] md:h-[280px] object-cover rounded-sm mb-4 md:mb-[24px]"
               />
               <p className="font-body text-[10px] tracking-[3px] uppercase" style={{ color: "rgb(74, 103, 65)" }}>
                 {p.eyebrow}
@@ -174,7 +174,7 @@ export default function Activites() {
           ))}
 
           <Reveal
-            className="p-[36px] flex flex-col justify-center"
+            className="p-6 md:p-[36px] flex flex-col justify-center"
             style={{ backgroundColor: "rgb(44, 62, 37)" }}
             delay={1}
           >
