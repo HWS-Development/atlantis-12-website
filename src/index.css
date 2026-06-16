@@ -178,4 +178,13 @@
   .page-content-safe-bottom {
     padding-bottom: 0;
   }
+  /* Essaouira email CTA — reduce letter-spacing & allow word-break
+     so the long contact@atlantis12essaouira.com fits within the viewport. */
+  .essaouira-email-btn {
+    letter-spacing: 0.1em;
+    word-break: break-word;
+    overflow-wrap: anywhere;
+    max-width: 100%;
+    font-size: 11px;
+  }
 }

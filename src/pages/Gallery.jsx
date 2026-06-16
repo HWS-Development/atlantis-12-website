@@ -49,7 +49,7 @@ export default function Gallery() {
         </div>
       </div>
 
-      <section className="px-[8vw] md:px-[10vw] py-8 md:py-28 grid md:grid-cols-2 gap-8 md:gap-20 items-start">
+      <section className="px-[8vw] md:px-[10vw] py-4 md:py-28 grid md:grid-cols-2 gap-6 md:gap-20 items-start">
         <Reveal className="space-y-5">
           <h2 className="font-display text-4xl md:text-5xl leading-tight text-foreground">
             {t("galleryPg.s1Title")}
@@ -63,8 +63,8 @@ export default function Gallery() {
         </Reveal>
       </section>
 
-      <section className="px-[8vw] md:px-[10vw] pb-8 md:pb-24" style={{ backgroundColor: "rgb(249, 249, 249)" }}>
-        <div className="pt-12 md:pt-20 mb-8 md:mb-16">
+      <section className="px-[8vw] md:px-[10vw] pb-4 md:pb-24" style={{ backgroundColor: "rgb(249, 249, 249)" }}>
+        <div className="pt-6 md:pt-20 mb-4 md:mb-16">
           <Reveal as="p" className="font-body text-xs tracking-[0.4em] uppercase mb-3 text-primary">
             {t("galleryPg.collectionEyebrow")}
           </Reveal>
@@ -72,7 +72,7 @@ export default function Gallery() {
             {t("galleryPg.collectionTitle")}
           </Reveal>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8">
           {works.map((w, i) => {
             const m = WORKS_META[i] || {};
             return (
@@ -112,11 +112,11 @@ export default function Gallery() {
         </div>
       </section>
 
-      <section className="px-[8vw] md:px-[10vw] py-8 md:py-28 text-center bg-white">
-        <Reveal as="h2" className="font-display text-4xl md:text-6xl mb-6 text-foreground">
+      <section className="px-[8vw] md:px-[10vw] py-6 md:py-28 text-center bg-white">
+        <Reveal as="h2" className="font-display text-4xl md:text-6xl mb-4 text-foreground">
           {t("galleryPg.residencyTitle")}
         </Reveal>
-        <Reveal as="p" className="font-body text-sm leading-relaxed max-w-xl mx-auto mb-10 text-foreground/70" delay={1}>
+        <Reveal as="p" className="font-body text-sm leading-relaxed max-w-xl mx-auto mb-6 md:mb-10 text-foreground/70" delay={1}>
           {t("galleryPg.residencyText")}
         </Reveal>
         <LangLink

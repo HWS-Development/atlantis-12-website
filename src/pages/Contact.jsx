@@ -1,4 +1,4 @@
-import { useState } from "react";
+﻿import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import Reveal from "../components/Common/Reveal";
 
@@ -56,7 +56,7 @@ export default function Contact() {
           {t("contactPage.title")}
         </Reveal>
         <Reveal as="p" className="font-body text-xs tracking-[0.3em] uppercase text-primary/70 mt-3 font-semibold" delay={2}>
-          {t("contactPage.heroSubline", "ATLANTIS 12, MAISON D'HÔTES ET D'ART À ESSAOUIRA")}
+          {t("contactPage.heroSubline", "ATLANTIS 12, MAISON D'HÃ”TES ET D'ART Ã€ ESSAOUIRA")}
         </Reveal>
       </div>
 
@@ -71,7 +71,7 @@ export default function Contact() {
                 value={form.name}
                 onChange={onChange("name")}
                 placeholder={t("contactPage.form.namePh")}
-                className="w-full bg-white border border-border px-4 py-3 font-body text-sm text-foreground placeholder:text-[#4D4D4D] focus:outline-none focus:border-primary transition-colors"
+                className="w-full bg-white border border-border px-4 py-3 font-body text-sm text-foreground placeholder:text-[#1F1F1F] focus:outline-none focus:border-primary transition-colors"
               />
             </div>
             <div className="space-y-1">
@@ -82,7 +82,7 @@ export default function Contact() {
                 value={form.email}
                 onChange={onChange("email")}
                 placeholder={t("contactPage.form.emailPh")}
-                className="w-full bg-white border border-border px-4 py-3 font-body text-sm text-foreground placeholder:text-[#4D4D4D] focus:outline-none focus:border-primary transition-colors"
+                className="w-full bg-white border border-border px-4 py-3 font-body text-sm text-foreground placeholder:text-[#1F1F1F] focus:outline-none focus:border-primary transition-colors"
               />
             </div>
             <div className="space-y-1">
@@ -106,7 +106,7 @@ export default function Contact() {
                 value={form.message}
                 onChange={onChange("message")}
                 placeholder={t("contactPage.form.messagePh")}
-                className="w-full bg-white border border-border px-4 py-3 font-body text-sm text-foreground placeholder:text-[#4D4D4D] focus:outline-none focus:border-primary transition-colors resize-none"
+                className="w-full bg-white border border-border px-4 py-3 font-body text-sm text-foreground placeholder:text-[#1F1F1F] focus:outline-none focus:border-primary transition-colors resize-none"
               />
             </div>
             <button
@@ -150,7 +150,7 @@ export default function Contact() {
           <div className="w-full aspect-[4/3] overflow-hidden relative border border-border">
             <iframe
               title="Atlantis 12 - Google Maps"
-              src={`https://www.google.com/maps/embed/v1/place?key=${import.meta.env.VITE_GOOGLE_MAPS_API_KEY || 'AIzaSyDuDKKhgnHf7iCjAr4BdhrHtO8jTumEWDc'}&q=Atlantis+12+maison+d'hôtes+et+d'art,Essaouira,Morocco&zoom=15`}
+              src={`https://www.google.com/maps/embed/v1/place?key=${import.meta.env.VITE_GOOGLE_MAPS_API_KEY || 'AIzaSyDuDKKhgnHf7iCjAr4BdhrHtO8jTumEWDc'}&q=Atlantis+12+maison+d'hÃ´tes+et+d'art,Essaouira,Morocco&zoom=15`}
               width="100%"
               height="100%"
               style={{ border: 0 }}

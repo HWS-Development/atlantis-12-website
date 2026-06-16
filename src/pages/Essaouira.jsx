@@ -263,7 +263,7 @@ export default function Essaouira() {
         <Reveal delay={1}>
           <a
             href="mailto:contact@atlantis12essaouira.com"
-            className="font-body text-xs tracking-[0.3em] uppercase text-primary border border-primary/40 px-6 py-2.5 inline-block max-w-full break-all text-center hover:bg-primary/10 transition-colors duration-300"
+            className="essaouira-email-btn font-body text-xs tracking-[0.3em] uppercase text-primary border border-primary/40 px-4 sm:px-6 py-2.5 inline-block max-w-full text-center hover:bg-primary/10 transition-colors duration-300"
           >
             contact@atlantis12essaouira.com
           </a>
