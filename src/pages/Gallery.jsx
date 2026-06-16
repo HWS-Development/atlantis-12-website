@@ -55,8 +55,8 @@ export default function Gallery() {
             {t("galleryPg.s1Title")}
           </h2>
           <div className="w-10 h-px bg-primary/50" />
-          <p className="font-body text-sm leading-relaxed text-foreground/65">{t("galleryPg.s1p1")}</p>
-          <p className="font-body text-sm leading-relaxed text-foreground/65">{t("galleryPg.s1p2")}</p>
+          <p className="font-body text-sm leading-relaxed text-foreground">{t("galleryPg.s1p1")}</p>
+          <p className="font-body text-sm leading-relaxed text-foreground">{t("galleryPg.s1p2")}</p>
         </Reveal>
         <Reveal delay={1} className="overflow-hidden flex items-end">
           <img src={ATELIER_IMG} alt={t("galleryPg.s1ImgAlt")} className="w-full h-auto object-contain" />
@@ -116,7 +116,7 @@ export default function Gallery() {
         <Reveal as="h2" className="font-display text-4xl md:text-6xl mb-4 text-foreground">
           {t("galleryPg.residencyTitle")}
         </Reveal>
-        <Reveal as="p" className="font-body text-sm leading-relaxed max-w-xl mx-auto mb-6 md:mb-10 text-foreground/70" delay={1}>
+        <Reveal as="p" className="font-body text-sm leading-relaxed max-w-xl mx-auto mb-6 md:mb-10 text-foreground" delay={1}>
           {t("galleryPg.residencyText")}
         </Reveal>
         <LangLink

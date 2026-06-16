@@ -52,7 +52,7 @@ export default function About() {
             </h2>
             <div className="w-10 h-px bg-primary/50" />
             {genese.slice(0, 5).map((p, i) => (
-              <p key={i} className="font-body text-sm leading-relaxed text-foreground/65">
+              <p key={i} className="font-body text-sm leading-relaxed text-foreground">
                 {p}
               </p>
             ))}
@@ -68,7 +68,7 @@ export default function About() {
               />
               <p className="font-body text-xs text-foreground/35 mt-2 text-right">{t("aboutPg.photoCredit")}</p>
             </div>
-            <p className="font-body text-sm leading-relaxed text-foreground/65">{genese[5]}</p>
+            <p className="font-body text-sm leading-relaxed text-foreground">{genese[5]}</p>
             <p className="font-display text-xl text-foreground/80">{t("aboutPg.welcome")}</p>
           </Reveal>
         </div>
@@ -83,7 +83,7 @@ export default function About() {
             {t("aboutPg.essenceTitle")}
           </Reveal>
           <div className="w-10 h-px bg-primary/50 mb-10" />
-          <Reveal className="space-y-6 font-body text-sm leading-relaxed text-foreground/70" delay={2}>
+          <Reveal className="space-y-6 font-body text-sm leading-relaxed text-foreground" delay={2}>
             {essence.map((p, i) => (
               <p key={i}>{p}</p>
             ))}

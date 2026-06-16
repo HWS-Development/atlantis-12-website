@@ -1,4 +1,4 @@
-import { useTranslation } from "react-i18next";
+﻿import { useTranslation } from "react-i18next";
 import Reveal from "../components/Common/Reveal";
 
 const TABLE_PATH = "/images/table-dhotes";
@@ -36,9 +36,9 @@ export default function TableDHotes() {
         <Reveal className="space-y-5">
           <h2 className="font-display text-4xl md:text-5xl text-foreground">{t("tablePg.s1Title")}</h2>
           <div className="w-10 h-px bg-primary/50" />
-          <p className="font-body text-sm leading-relaxed text-foreground/65">{t("tablePg.s1p1")}</p>
-          <p className="font-body text-sm leading-relaxed text-foreground/65">{t("tablePg.s1p2")}</p>
-          <p className="font-body text-sm leading-relaxed text-foreground/65">{t("tablePg.s1p3")}</p>
+          <p className="font-body text-sm leading-relaxed text-foreground">{t("tablePg.s1p1")}</p>
+          <p className="font-body text-sm leading-relaxed text-foreground">{t("tablePg.s1p2")}</p>
+          <p className="font-body text-sm leading-relaxed text-foreground">{t("tablePg.s1p3")}</p>
         </Reveal>
         <Reveal delay={1}>
           <img src={TABLE_IMG} alt={t("tablePg.s1ImgAlt")} className="w-full aspect-[4/3] object-cover" />
@@ -52,7 +52,7 @@ export default function TableDHotes() {
         <Reveal as="p" className="font-body text-sm tracking-[0.3em] uppercase text-foreground/70 mb-8" delay={1}>
           {t("tablePg.s2Courses")}
         </Reveal>
-        <Reveal as="p" className="font-body text-sm leading-relaxed text-foreground/65 mb-8" delay={2}>
+        <Reveal as="p" className="font-body text-sm leading-relaxed text-foreground mb-8" delay={2}>
           {t("tablePg.s2Lead")}
         </Reveal>
         <p className="font-body text-xs text-foreground/40 tracking-wide">{t("tablePg.s2Price")}</p>
@@ -78,9 +78,9 @@ export default function TableDHotes() {
         <Reveal className="space-y-5" delay={1}>
           <h2 className="font-display text-4xl md:text-5xl text-foreground">{t("tablePg.s3Title")}</h2>
           <div className="w-10 h-px bg-primary/50" />
-          <p className="font-body text-sm leading-relaxed text-foreground/65">{t("tablePg.s3p1")}</p>
-          <p className="font-body text-sm leading-relaxed text-foreground/65">{t("tablePg.s3p2")}</p>
-          <p className="font-body text-sm leading-relaxed text-foreground/65">{t("tablePg.s3p3")}</p>
+          <p className="font-body text-sm leading-relaxed text-foreground">{t("tablePg.s3p1")}</p>
+          <p className="font-body text-sm leading-relaxed text-foreground">{t("tablePg.s3p2")}</p>
+          <p className="font-body text-sm leading-relaxed text-foreground">{t("tablePg.s3p3")}</p>
         </Reveal>
       </section>
 
@@ -92,7 +92,7 @@ export default function TableDHotes() {
           <p className="font-body text-xs tracking-[0.4em] uppercase text-primary">{t("tablePg.s4Eyebrow")}</p>
           <h2 className="font-display text-4xl md:text-5xl text-foreground">{t("tablePg.s4Title")}</h2>
           <div className="w-10 h-px bg-primary/40" />
-          <p className="font-body text-sm leading-relaxed text-foreground/65">{t("tablePg.s4p1")}</p>
+          <p className="font-body text-sm leading-relaxed text-foreground">{t("tablePg.s4p1")}</p>
           <p className="font-body text-xs text-foreground/40 tracking-wide">{t("tablePg.s4p2")}</p>
         </Reveal>
       </section>

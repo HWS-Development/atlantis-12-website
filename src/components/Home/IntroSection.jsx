@@ -24,7 +24,7 @@ export default function IntroSection() {
         <Reveal
           as="p"
           delay={1}
-          className="font-body text-sm leading-relaxed text-foreground/65 max-w-xl"
+          className="font-body text-sm leading-relaxed text-foreground max-w-xl"
         >
           {t("home.intro.body")}
         </Reveal>

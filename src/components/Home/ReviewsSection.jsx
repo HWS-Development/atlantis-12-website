@@ -6,7 +6,7 @@ const PLACE_ID = "ChIJH19_ZnqbrQ0RnQFpcNhP6cs"; // Atlantis 12 Essaouira
 const API_KEY = import.meta.env.VITE_GOOGLE_MAPS_API_KEY || "";
 
 const GOOGLE_REVIEWS_URL =
-  `https://www.google.com/maps/search/?api=1&query=Atlantis+12+Essaouira&query_place_id=${PLACE_ID}`;
+  `https://search.google.com/local/reviews?placeid=${PLACE_ID}`;
 
 function StarIcon({ size = "w-5 h-5", filled = true }) {
   return (
@@ -108,7 +108,7 @@ export default function ReviewsSection() {
 
   const [liveReviews, setLiveReviews] = useState(null); // null = not loaded yet
   const [rating, setRating] = useState(4.8);
-  const [reviewCount, setReviewCount] = useState(48);
+  const [reviewCount, setReviewCount] = useState(73);
 
   useEffect(() => {
     if (!API_KEY) return;

@@ -1,4 +1,4 @@
-// /essaouira — rebuilt 1:1 from reference/essaouira/body.pretty.html
+﻿// /essaouira — rebuilt 1:1 from reference/essaouira/body.pretty.html
 import { useTranslation } from "react-i18next";
 import Reveal from "../components/Common/Reveal";
 
@@ -167,9 +167,9 @@ export default function Essaouira() {
           {t("essaouiraPg.chosenTitle")}
         </Reveal>
         <Reveal className="space-y-5 text-left md:text-center max-w-3xl mx-auto" delay={1}>
-          <p className="font-body text-sm leading-relaxed text-foreground/65">{t("essaouiraPg.chosenP1")}</p>
-          <p className="font-body text-sm leading-relaxed text-foreground/65">{t("essaouiraPg.chosenP2")}</p>
-          <p className="font-body text-sm leading-relaxed text-foreground/65">
+          <p className="font-body text-sm leading-relaxed text-foreground">{t("essaouiraPg.chosenP1")}</p>
+          <p className="font-body text-sm leading-relaxed text-foreground">{t("essaouiraPg.chosenP2")}</p>
+          <p className="font-body text-sm leading-relaxed text-foreground">
             <span className="italic">{t("essaouiraPg.chosenP3")}</span>
           </p>
         </Reveal>
@@ -180,7 +180,7 @@ export default function Essaouira() {
           {t("essaouiraPg.seeTitle")}
         </Reveal>
         <Reveal className="space-y-5 text-left md:text-center max-w-3xl mx-auto" delay={1}>
-          <p className="font-body text-sm leading-relaxed text-foreground/65">
+          <p className="font-body text-sm leading-relaxed text-foreground">
             {t("essaouiraPg.seeP1a")}
             <a href="https://www.google.com/maps/search/Bab+Sbaa+Essaouira" target="_blank" rel="noopener noreferrer" className={linkClass} style={linkStyle}>
               {t("essaouiraPg.linkBabSbaa")}
@@ -191,7 +191,7 @@ export default function Essaouira() {
               </a>
             {t("essaouiraPg.seeP1c")}
           </p>
-          <p className="font-body text-sm leading-relaxed text-foreground/65">
+          <p className="font-body text-sm leading-relaxed text-foreground">
             {t("essaouiraPg.seeP2a")}
             <a href={MAP_LINKS.baytDakira} target="_blank" rel="noopener noreferrer" className={linkClass} style={linkStyle}>
               {t("essaouiraPg.linkBaytDakira")}
@@ -202,7 +202,7 @@ export default function Essaouira() {
               </a>
             {t("essaouiraPg.seeP2c")}
           </p>
-          <p className="font-body text-sm leading-relaxed text-foreground/65">
+          <p className="font-body text-sm leading-relaxed text-foreground">
             {t("essaouiraPg.seeP3a")}
               <a href={MAP_LINKS.skala} target="_blank" rel="noopener noreferrer" className={linkClass} style={linkStyle}>
                 {t("essaouiraPg.linkSkala")}
@@ -217,7 +217,7 @@ export default function Essaouira() {
               </a>
             {t("essaouiraPg.seeP3d")}
           </p>
-          <p className="font-body text-sm leading-relaxed text-foreground/65">{t("essaouiraPg.seeP4")}</p>
+          <p className="font-body text-sm leading-relaxed text-foreground">{t("essaouiraPg.seeP4")}</p>
         </Reveal>
       </section>
 
@@ -257,7 +257,7 @@ export default function Essaouira() {
       </section>
 
       <section className="px-[8vw] md:px-[18vw] py-20 md:py-24 text-center bg-background">
-        <Reveal as="p" className="font-body text-sm leading-relaxed text-foreground/65 max-w-xl mx-auto mb-6">
+        <Reveal as="p" className="font-body text-sm leading-relaxed text-foreground max-w-xl mx-auto mb-6">
           {t("essaouiraPg.ctaText")}
         </Reveal>
         <Reveal delay={1}>
