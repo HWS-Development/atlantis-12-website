@@ -3,22 +3,22 @@ import LangLink from "../components/Common/LangLink";
 import Reveal from "../components/Common/Reveal";
 
 const ABOUT_PATH = "/images/about";
-const HERO_IMG = `${ABOUT_PATH}/maison-vue-jardin-atlantis12-essaouira.jpg`;
-const FOUNDERS_IMG = `${ABOUT_PATH}/IMG_3456.jpg`;
+const HERO_IMG = `${ABOUT_PATH}/maison-vue-jardin-atlantis12-essaouira.webp`;
+const FOUNDERS_IMG = `${ABOUT_PATH}/IMG_3456.webp`;
 
 const GALLERY_SRCS = [
-  `${ABOUT_PATH}/entree.jpg`,
-  `${ABOUT_PATH}/patio.jpg`,
-  `${ABOUT_PATH}/patiodenuit.jpg`,
-  `${ABOUT_PATH}/piscine.jpg`,
-  `${ABOUT_PATH}/rooftopdenuit.jpg`,
-  `${ABOUT_PATH}/salon1.jpg`,
-  `${ABOUT_PATH}/salon2.jpg`,
-  `${ABOUT_PATH}/chevaletsalon.jpg`,
-  `${ABOUT_PATH}/coquillage.jpg`,
-  `${ABOUT_PATH}/petit-dejeuner.jpg`,
-  `${ABOUT_PATH}/cafe.jpg`,
-  `${ABOUT_PATH}/thealamenthe.jpg`,
+  `${ABOUT_PATH}/entree.webp`,
+  `${ABOUT_PATH}/patio.webp`,
+  `${ABOUT_PATH}/patiodenuit.webp`,
+  `${ABOUT_PATH}/piscine.webp`,
+  `${ABOUT_PATH}/rooftopdenuit.webp`,
+  `${ABOUT_PATH}/salon1.webp`,
+  `${ABOUT_PATH}/salon2.webp`,
+  `${ABOUT_PATH}/chevaletsalon.webp`,
+  `${ABOUT_PATH}/coquillage.webp`,
+  `${ABOUT_PATH}/petit-dejeuner.webp`,
+  `${ABOUT_PATH}/cafe.webp`,
+  `${ABOUT_PATH}/thealamenthe.webp`,
 ];
 
 export default function About() {

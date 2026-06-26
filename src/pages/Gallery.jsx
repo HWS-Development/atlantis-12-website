@@ -4,16 +4,16 @@ import LangLink from "../components/Common/LangLink";
 import Reveal from "../components/Common/Reveal";
 
 const GALLERY_PATH = "/images/gallery";
-const HERO_IMG = `${GALLERY_PATH}/galerie-salon-panorama-atlantis12-essaouira.jpg`;
-const ATELIER_IMG = `${GALLERY_PATH}/atelier-lahcen-fikri-atlantis12-essaouira.jpg`;
+const HERO_IMG = `${GALLERY_PATH}/galerie-salon-panorama-atlantis12-essaouira.webp`;
+const ATELIER_IMG = `${GALLERY_PATH}/atelier-lahcen-fikri-atlantis12-essaouira.webp`;
 
 const WORKS_META = [
-  { img: `${GALLERY_PATH}/oeuvre-lahcen-fikri-1-peinture-atlantis12-essaouira.jpg`, badge: "available", meta: "canvas", size: "70 x 120 cm" },
-  { img: `${GALLERY_PATH}/oeuvre-russe-peinture-atelier-atlantis12-essaouira.jpg`, badge: "permanent", meta: "permanent" },
-  { img: `${GALLERY_PATH}/oeuvre-christina-peinture-atelier-atlantis12-essaouira.jpg`, badge: "permanent", meta: "permanent" },
-  { img: `${GALLERY_PATH}/oeuvre-lahcen-fikri-3-peinture-atlantis12-essaouira.jpeg`, badge: "available", meta: "canvas", size: "100 x 70 cm" },
-  { img: `${GALLERY_PATH}/oeuvre-lahcen-fikri-4-peinture-atlantis12-essaouira.jpeg`, badge: "available", meta: "canvas", size: "70 x 120 cm" },
-  { img: `${GALLERY_PATH}/sculpture-sphere-metal-atlantis12-essaouira.jpg`, badge: "permanent", meta: "metal" },
+  { img: `${GALLERY_PATH}/oeuvre-lahcen-fikri-1-peinture-atlantis12-essaouira.webp`, badge: "available", meta: "canvas", size: "70 x 120 cm" },
+  { img: `${GALLERY_PATH}/oeuvre-russe-peinture-atelier-atlantis12-essaouira.webp`, badge: "permanent", meta: "permanent" },
+  { img: `${GALLERY_PATH}/oeuvre-christina-peinture-atelier-atlantis12-essaouira.webp`, badge: "permanent", meta: "permanent" },
+  { img: `${GALLERY_PATH}/oeuvre-lahcen-fikri-3-peinture-atlantis12-essaouira.webp`, badge: "available", meta: "canvas", size: "100 x 70 cm" },
+  { img: `${GALLERY_PATH}/oeuvre-lahcen-fikri-4-peinture-atlantis12-essaouira.webp`, badge: "available", meta: "canvas", size: "70 x 120 cm" },
+  { img: `${GALLERY_PATH}/sculpture-sphere-metal-atlantis12-essaouira.webp`, badge: "permanent", meta: "metal" },
 ];
 
 export default function Gallery() {

@@ -220,7 +220,7 @@
       ],
       "eyebrow": "Ce qu'ils en disent",
       "title": "Paroles de voyageurs",
-      "verified": "3 avis vérifiés",
+      "verified": "avis vérifiés",
       "recommend": "100 % recommandent",
       "placeholder": "Ajoutez vos avis dans locales/fr.json → home.reviews.items[].quote",
       "prev": "Avis précédent",

@@ -4,6 +4,8 @@ import Reveal from "../Common/Reveal";
 
 const PLACE_ID = "ChIJH19_ZnqbrQ0RnQFpcNhP6cs"; // Atlantis 12 Essaouira
 const API_KEY = import.meta.env.VITE_GOOGLE_MAPS_API_KEY || "";
+const FALLBACK_RATING = 4.8;
+const FALLBACK_REVIEW_COUNT = 73;
 
 const GOOGLE_REVIEWS_URL =
   `https://search.google.com/local/reviews?placeid=${PLACE_ID}`;
@@ -100,15 +102,15 @@ function loadGoogleMapsAPI() {
 }
 
 export default function ReviewsSection() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const mapRef = useRef(null); // hidden div for PlacesService
 
   const reviewsRaw = t("home.reviews.items", { returnObjects: true });
   const staticReviews = Array.isArray(reviewsRaw) ? reviewsRaw : [];
 
   const [liveReviews, setLiveReviews] = useState(null); // null = not loaded yet
-  const [rating, setRating] = useState(4.8);
-  const [reviewCount, setReviewCount] = useState(73);
+  const [rating, setRating] = useState(FALLBACK_RATING);
+  const [reviewCount, setReviewCount] = useState(FALLBACK_REVIEW_COUNT);
 
   useEffect(() => {
     if (!API_KEY) return;
@@ -120,7 +122,7 @@ export default function ReviewsSection() {
           {
             placeId: PLACE_ID,
             fields: ["rating", "user_ratings_total", "reviews"],
-            language: "fr",
+            language: i18n.language?.startsWith("en") ? "en" : "fr",
           },
           (place, status) => {
             if (status === window.google.maps.places.PlacesServiceStatus.OK && place) {
@@ -146,7 +148,7 @@ export default function ReviewsSection() {
       })
       .catch(() => {
       });
-  }, []);
+  }, [i18n.language]);
 
   const isLive = liveReviews && liveReviews.length > 0;
   const reviewItems = isLive

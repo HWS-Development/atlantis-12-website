@@ -3,18 +3,18 @@ import Reveal from "../components/Common/Reveal";
 import LangLink from "../components/Common/LangLink";
 
 const EXP_PATH = "/images/experiences";
-const HERO = `${EXP_PATH}/balade-cheval-coucher-soleil-plage-essaouira.jpg`;
+const HERO = `${EXP_PATH}/balade-cheval-coucher-soleil-plage-essaouira.webp`;
 
 const HOUSE_META = [
   {
-    img: `${EXP_PATH}/massage-bien-etre-arganiers-atlantis12-essaouira.jpg`,
+    img: `${EXP_PATH}/massage-bien-etre-arganiers-atlantis12-essaouira.webp`,
     bg: "white",
     titleColor: "#333333",
     bodyColor: "#333333",
     accent: "rgb(74, 103, 65)",
   },
   {
-    img: `${EXP_PATH}/atelier-peinture-lahcen-fikri-atlantis12-essaouira.jpg`,
+    img: `${EXP_PATH}/atelier-peinture-lahcen-fikri-atlantis12-essaouira.webp`,
     bg: "white",
     titleColor: "#333333",
     bodyColor: "#333333",
@@ -22,14 +22,14 @@ const HOUSE_META = [
     reverse: true,
   },
   {
-    img: `${EXP_PATH}/balade-dromadaire-depart-atlantis12-essaouira.jpg`,
+    img: `${EXP_PATH}/balade-dromadaire-depart-atlantis12-essaouira.webp`,
     bg: "rgb(44, 62, 37)",
     titleColor: "rgb(245, 240, 232)",
     bodyColor: "rgb(143, 175, 126)",
     accent: "rgb(143, 175, 126)",
   },
   {
-    img: `${EXP_PATH}/yoga-terrasse-atlantis12-essaouira-foretjpg.jpg`,
+    img: `${EXP_PATH}/yoga-terrasse-atlantis12-essaouira-foretjpg.webp`,
     bg: "white",
     titleColor: "#333333",
     bodyColor: "#333333",
@@ -39,11 +39,11 @@ const HOUSE_META = [
 ];
 
 const PARTNER_IMGS = [
-  `${EXP_PATH}/balade-cheval-plage-coucher-soleil-essaouira.jpg`,
-  `${EXP_PATH}/kitesurf-coucher-soleil-atlantique-essaouirajpg.jpg`,
-  `${EXP_PATH}/quad-dunes-plage-sauvage-essaouira.jpg`,
-  `${EXP_PATH}/hammam-traditionnel-soins-essaouira.jpg`,
-  `${EXP_PATH}/excursions-moto-electrique-arganiers-essaouira-v1.jpg`,
+  `${EXP_PATH}/balade-cheval-plage-coucher-soleil-essaouira.webp`,
+  `${EXP_PATH}/kitesurf-coucher-soleil-atlantique-essaouirajpg.webp`,
+  `${EXP_PATH}/quad-dunes-plage-sauvage-essaouira.webp`,
+  `${EXP_PATH}/hammam-traditionnel-soins-essaouira.webp`,
+  `${EXP_PATH}/excursions-moto-electrique-arganiers-essaouira-v1.webp`,
 ];
 
 export default function Activites() {

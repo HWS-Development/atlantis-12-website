@@ -47,6 +47,7 @@ export default function Navbar() {
           to="/"
           className="flex items-center flex-shrink-0 bg-background -ml-2 mr-3 md:mr-0"
           aria-label="Atlantis 12 - accueil"
+          onClick={() => window.scrollTo({ top: 0, left: 0, behavior: "smooth" })}
         >
           <img
             src={LOGO}

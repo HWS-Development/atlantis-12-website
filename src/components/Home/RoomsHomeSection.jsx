@@ -4,11 +4,11 @@ import Reveal from "../Common/Reveal";
 
 const ROOMS_PATH = "/images/rooms";
 const FAKE = {
-  ipomea:     `${ROOMS_PATH}/ipomea-vue-panorama-atlantis12-essaouira.jpg`,
-  agave:      `${ROOMS_PATH}/agave-chambre-vue-panoramique-atlantis12-essaouira.jpg`,
-  coquelicot: `${ROOMS_PATH}/coquelicot-vue-patio-atlantis12-essaouira.jpg`,
-  orchis:     `${ROOMS_PATH}/orchis-chambre-lit-mauve-murs-pierre-arche-atlantis12-essaouira.jpg`,
-  plumeria:   `${ROOMS_PATH}/plumeria-vue-suite-atlantis12-essaouira.jpg`,
+  ipomea:     `${ROOMS_PATH}/ipomea-vue-panorama-atlantis12-essaouira.webp`,
+  agave:      `${ROOMS_PATH}/agave-chambre-vue-panoramique-atlantis12-essaouira.webp`,
+  coquelicot: `${ROOMS_PATH}/coquelicot-vue-patio-atlantis12-essaouira.webp`,
+  orchis:     `${ROOMS_PATH}/orchis-chambre-lit-mauve-murs-pierre-arche-atlantis12-essaouira.webp`,
+  plumeria:   `${ROOMS_PATH}/plumeria-vue-suite-atlantis12-essaouira.webp`,
 };
 
 const JUNIORS = [

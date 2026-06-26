@@ -220,7 +220,7 @@
       ],
       "eyebrow": "What they say",
       "title": "Travellers' words",
-      "verified": "3 verified reviews",
+      "verified": "verified reviews",
       "recommend": "100% recommend",
       "placeholder": "Add your reviews in locales/en.json → home.reviews.items[].quote",
       "prev": "Previous review",

@@ -1,11 +1,11 @@
 export const SITE_URL = "https://atlantis12essaouira.com";
 
-export const DEFAULT_OG_IMAGE = "/images/about/patio.jpg";
+export const DEFAULT_OG_IMAGE = "/images/about/patio.webp";
 
 export const SEO_PAGES = {
   home: {
     path: "/",
-    ogImage: "/images/about/patio.jpg",
+    ogImage: "/images/about/patio.webp",
     fr: {
       title: "Atlantis 12 · Maison d'hôtes & d'art · Essaouira, Maroc",
       description:
@@ -19,7 +19,7 @@ export const SEO_PAGES = {
   },
   about: {
     path: "/la-maison",
-    ogImage: "/images/about/salon1.jpg",
+    ogImage: "/images/about/salon1.webp",
     fr: {
       title: "La Maison · Atlantis 12, maison d'hôtes à Essaouira",
       description:
@@ -33,7 +33,7 @@ export const SEO_PAGES = {
   },
   rooms: {
     path: "/chambres",
-    ogImage: "/images/rooms/plumeria-suite-superieure-atlantis12-essaouira.jpg",
+    ogImage: "/images/rooms/plumeria-suite-superieure-atlantis12-essaouira.webp",
     fr: {
       title: "Chambres & Suites · Atlantis 12, Essaouira (adultes)",
       description:
@@ -47,7 +47,7 @@ export const SEO_PAGES = {
   },
   table: {
     path: "/table-dhotes",
-    ogImage: "/images/table-dhotes/entree-artichaut-poulpe-crevette-table-dhotes-atlantis12-essaouira.jpg",
+    ogImage: "/images/table-dhotes/entree-artichaut-poulpe-crevette-table-dhotes-atlantis12-essaouira.webp",
     fr: {
       title: "Table d'hôtes · cuisine maison · Atlantis 12 Essaouira",
       description:
@@ -61,7 +61,7 @@ export const SEO_PAGES = {
   },
   experiences: {
     path: "/experiences",
-    ogImage: "/images/essaouira/4coucher-soleil-plage-essaouira-atlantique.jpg",
+    ogImage: "/images/essaouira/4coucher-soleil-plage-essaouira-atlantique.webp",
     fr: {
       title: "Expériences · massage, yoga, art & nature · Atlantis 12",
       description:
@@ -75,7 +75,7 @@ export const SEO_PAGES = {
   },
   contact: {
     path: "/contact",
-    ogImage: "/images/about/patio.jpg",
+    ogImage: "/images/about/patio.webp",
     fr: {
       title: "Contact & réservation · Atlantis 12, Essaouira",
       description:
@@ -89,7 +89,7 @@ export const SEO_PAGES = {
   },
   gallery: {
     path: "/maison-dart",
-    ogImage: "/images/gallery/oeuvre-lahcen-fikri-1-peinture-atlantis12-essaouira.jpg",
+    ogImage: "/images/gallery/oeuvre-lahcen-fikri-1-peinture-atlantis12-essaouira.webp",
     fr: {
       title: "Maison d'art · galerie & résidence · Atlantis 12 Essaouira",
       description:
@@ -103,7 +103,7 @@ export const SEO_PAGES = {
   },
   essaouira: {
     path: "/essaouira",
-    ogImage: "/images/essaouira/1remparts-essaouira-skala-du-port.jpg",
+    ogImage: "/images/essaouira/1remparts-essaouira-skala-du-port.webp",
     fr: {
       title: "Ce qu'on aime à Essaouira · le guide d'Atlantis 12",
       description:

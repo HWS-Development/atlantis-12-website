@@ -2,12 +2,12 @@
 import Reveal from "../components/Common/Reveal";
 
 const TABLE_PATH = "/images/table-dhotes";
-const HERO_IMG = `${TABLE_PATH}/table-dhotes-salle-commune-plafond-peint-sculptures-oeuvres-atlantis12-essaouira.jpg`;
-const TABLE_IMG = `${TABLE_PATH}/table-dhotes-diner-table-dressee-bougies-oeuvre-salle-atlantis12-essaouira.jpg`;
-const ARTICHAUT_IMG = `${TABLE_PATH}/entree-artichaut-poulpe-crevette-table-dhotes-atlantis12-essaouira.jpg`;
-const COUSCOUS_IMG = `${TABLE_PATH}/table-dhotes-couscous-crevettes-salle-oeuvre-atlantis12-essaouira.jpg`;
-const JAOUHARA_IMG = `${TABLE_PATH}/table-dhotes-dessert-jaouhara-msemen-creme-fruits-secs-atlantis12-essaouira.jpg`;
-const BREAKFAST_IMG = `${TABLE_PATH}/table-dhotes-petit-dejeuner-marocain-patio-ete-atlantis12-essaouira.jpg`;
+const HERO_IMG = `${TABLE_PATH}/table-dhotes-salle-commune-plafond-peint-sculptures-oeuvres-atlantis12-essaouira.webp`;
+const TABLE_IMG = `${TABLE_PATH}/table-dhotes-diner-table-dressee-bougies-oeuvre-salle-atlantis12-essaouira.webp`;
+const ARTICHAUT_IMG = `${TABLE_PATH}/entree-artichaut-poulpe-crevette-table-dhotes-atlantis12-essaouira.webp`;
+const COUSCOUS_IMG = `${TABLE_PATH}/table-dhotes-couscous-crevettes-salle-oeuvre-atlantis12-essaouira.webp`;
+const JAOUHARA_IMG = `${TABLE_PATH}/table-dhotes-dessert-jaouhara-msemen-creme-fruits-secs-atlantis12-essaouira.webp`;
+const BREAKFAST_IMG = `${TABLE_PATH}/table-dhotes-petit-dejeuner-marocain-patio-ete-atlantis12-essaouira.webp`;
 
 export default function TableDHotes() {
   const { t } = useTranslation();
@@ -58,7 +58,7 @@ export default function TableDHotes() {
         <p className="font-body text-xs text-foreground/40 tracking-wide">{t("tablePg.s2Price")}</p>
         <Reveal className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-6" delay={3}>
           <div className="flex flex-col items-center">
-            <img src={ARTICHAUT_IMG} alt={t("tablePg.s2ImgAlt")} className="w-full aspect-[4/3] object-contain bg-white" />
+            <img src={ARTICHAUT_IMG} alt={t("tablePg.s2ImgAlt")} className="w-full aspect-[4/3] object-cover" />
             <p className="font-body text-xs italic text-foreground/60 mt-3">{t("tablePg.s2Caption")}</p>
           </div>
           <div className="flex flex-col items-center">

@@ -8,35 +8,35 @@ import RoomDetailModal from "../components/Rooms/RoomDetailModal";
 import ROOMS from "../data/rooms";
 
 const ROOMS_PATH = "/images/rooms";
-const HERO = `${ROOMS_PATH}/plumeria-suite-superieure-atlantis12-essaouira.jpg`;
+const HERO = `${ROOMS_PATH}/plumeria-suite-superieure-atlantis12-essaouira.webp`;
 
 const CARD_IMG = {
   "la-plumeria": {
-    img: `${ROOMS_PATH}/plumeria-lit-baldaquin-suite-atlantis12-essaouira.jpg`,
+    img: `${ROOMS_PATH}/plumeria-lit-baldaquin-suite-atlantis12-essaouira.webp`,
     altKey: "rooms.altPlumeria",
     altDefault: "Plumeria, le lit - Atlantis 12, Essaouira",
     label: "labelSuperior",
   },
   lipomea: {
-    img: `${ROOMS_PATH}/ipomea-chambre-vue-principale-atlantis12-essaouira.jpg`,
+    img: `${ROOMS_PATH}/ipomea-chambre-vue-principale-atlantis12-essaouira.webp`,
     altKey: "rooms.altIpomea",
     altDefault: "Ipomea, chambre avec lit bleu indigo - Atlantis 12, Essaouira",
     label: "labelJunior",
   },
   lagave: {
-    img: `${ROOMS_PATH}/agave-chambre-vue-panoramique-atlantis12-essaouira.jpg`,
+    img: `${ROOMS_PATH}/agave-chambre-vue-panoramique-atlantis12-essaouira.webp`,
     altKey: "rooms.altAgave",
     altDefault: "Agave, chambre avec lit vert - Atlantis 12, Essaouira",
     label: "labelJunior",
   },
   "la-coquelicot": {
-    img: `${ROOMS_PATH}/coquelicot-chambre-principale-atlantis12-essaouira.jpg`,
+    img: `${ROOMS_PATH}/coquelicot-chambre-principale-atlantis12-essaouira.webp`,
     altKey: "rooms.altCoquelicot",
     altDefault: "Coquelicot, chambre principale - Atlantis 12, Essaouira",
     label: "labelJunior",
   },
   lorchis: {
-    img: `${ROOMS_PATH}/orchis-chambre-lit-mauve-murs-pierre-arche-atlantis12-essaouira.jpg`,
+    img: `${ROOMS_PATH}/orchis-chambre-lit-mauve-murs-pierre-arche-atlantis12-essaouira.webp`,
     altKey: "rooms.altOrchis",
     altDefault: "Orchis, chambre avec lit mauve - Atlantis 12, Essaouira",
     label: "labelJunior",
@@ -218,10 +218,10 @@ export default function Rooms() {
             <p className="font-body text-xs tracking-[0.4em] uppercase mb-3" style={{ color: "#8FAF7E" }}>
               {t("roomsPage.privatisationEyebrow", "Privatisation")}
             </p>
-            <h2 className="font-display text-4xl md:text-5xl mb-4" style={{ color: "#8FAF7E" }}>
+            <h2 className="font-display text-4xl md:text-5xl mb-4" style={{ color: "#FFFFFF" }}>
               {t("roomsPage.privatisationTitle", "Toute la maison, rien que pour vous !")}
             </h2>
-            <p className="font-body text-sm leading-relaxed mb-6" style={{ color: "#8FAF7E" }}>
+            <p className="font-body text-sm leading-relaxed mb-6" style={{ color: "#FFFFFF" }}>
               {t("roomsPage.privatisation", "Pour les familles et les groupes, nous proposons une formule de privatisation complète.")}
             </p>
             <LangLink
@@ -231,7 +231,7 @@ export default function Rooms() {
             >
               {t("roomsPage.privatisationButton", "Contactez-nous")}
             </LangLink>
-            <p className="font-body text-xs mt-4" style={{ color: "#8FAF7E" }}>
+            <p className="font-body text-xs mt-4" style={{ color: "#FFFFFF" }}>
               {t("roomsPage.privatisationCta", "pour recevoir un devis personnalisé.")}
             </p>
           </div>
