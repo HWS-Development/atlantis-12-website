@@ -671,6 +671,9 @@
       "message": "Message",
       "messagePh": "Your message…",
       "send": "Send",
+      "sending": "Sending...",
+      "success": "Message sent. Thank you, we will reply shortly.",
+      "error": "The message could not be sent. Please try again.",
       "mailSubject": "Contact - Atlantis 12"
     },
     "subjects": [

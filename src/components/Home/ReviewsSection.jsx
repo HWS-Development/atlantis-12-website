@@ -5,7 +5,7 @@ import Reveal from "../Common/Reveal";
 const PLACE_ID = "ChIJH19_ZnqbrQ0RnQFpcNhP6cs"; // Atlantis 12 Essaouira
 const API_KEY = import.meta.env.VITE_GOOGLE_MAPS_API_KEY || "";
 const FALLBACK_RATING = 4.8;
-const FALLBACK_REVIEW_COUNT = 73;
+const FALLBACK_REVIEW_COUNT = 74;
 
 const GOOGLE_REVIEWS_URL =
   `https://search.google.com/local/reviews?placeid=${PLACE_ID}`;
@@ -82,8 +82,7 @@ function getInitials(name) {
 let mapsPromise = null;
 function loadGoogleMapsAPI() {
   if (mapsPromise) return mapsPromise;
-  if (!API_KEY) return Promise.reject(new Error("No API key"));
-  // Check if already loaded
+  if (!API_KEY) return Promise.reject(new Error("No Google Maps API key"));
   if (window.google?.maps?.places) return Promise.resolve(window.google.maps.places);
 
   mapsPromise = new Promise((resolve, reject) => {
@@ -98,12 +97,13 @@ function loadGoogleMapsAPI() {
     script.onerror = () => reject(new Error("Failed to load Google Maps API"));
     document.head.appendChild(script);
   });
+
   return mapsPromise;
 }
 
 export default function ReviewsSection() {
   const { t, i18n } = useTranslation();
-  const mapRef = useRef(null); // hidden div for PlacesService
+  const mapRef = useRef(null);
 
   const reviewsRaw = t("home.reviews.items", { returnObjects: true });
   const staticReviews = Array.isArray(reviewsRaw) ? reviewsRaw : [];
@@ -113,10 +113,12 @@ export default function ReviewsSection() {
   const [reviewCount, setReviewCount] = useState(FALLBACK_REVIEW_COUNT);
 
   useEffect(() => {
-    if (!API_KEY) return;
+    let ignore = false;
 
     loadGoogleMapsAPI()
       .then((placesLib) => {
+        if (!mapRef.current || ignore) return;
+
         const service = new placesLib.PlacesService(mapRef.current);
         service.getDetails(
           {
@@ -125,29 +127,32 @@ export default function ReviewsSection() {
             language: i18n.language?.startsWith("en") ? "en" : "fr",
           },
           (place, status) => {
-            if (status === window.google.maps.places.PlacesServiceStatus.OK && place) {
-              if (place.rating) setRating(place.rating);
-              if (place.user_ratings_total) setReviewCount(place.user_ratings_total);
-              if (place.reviews && place.reviews.length > 0) {
-                const mapped = place.reviews
-                  .filter((r) => r.rating >= 4)
-                  .slice(0, 5)
-                  .map((r) => ({
-                    name: r.author_name,
-                    initials: getInitials(r.author_name),
-                    quote: r.text,
-                    rating: r.rating,
-                    photo: r.profile_photo_url,
-                    relativeTime: r.relative_time_description,
-                  }));
-                if (mapped.length > 0) setLiveReviews(mapped);
-              }
+            if (ignore || status !== window.google.maps.places.PlacesServiceStatus.OK || !place) return;
+
+            if (typeof place.rating === "number") setRating(place.rating);
+            if (typeof place.user_ratings_total === "number") setReviewCount(place.user_ratings_total);
+            if (Array.isArray(place.reviews) && place.reviews.length > 0) {
+              const mapped = place.reviews
+                .filter((r) => r.rating >= 4)
+                .slice(0, 5)
+                .map((r) => ({
+                  name: r.author_name,
+                  initials: getInitials(r.author_name),
+                  quote: r.text,
+                  rating: r.rating,
+                  photo: r.profile_photo_url,
+                  relativeTime: r.relative_time_description,
+                }));
+              if (mapped.length > 0) setLiveReviews(mapped);
             }
           }
         );
       })
-      .catch(() => {
-      });
+      .catch(() => {});
+
+    return () => {
+      ignore = true;
+    };
   }, [i18n.language]);
 
   const isLive = liveReviews && liveReviews.length > 0;
@@ -171,7 +176,7 @@ export default function ReviewsSection() {
 
   return (
       <section className="pt-20 md:pt-32 pb-10 md:pb-14 page-x bg-card/40 overflow-hidden">
-      <div ref={mapRef} style={{ display: "none" }} />
+      <div ref={mapRef} className="hidden" />
 
       <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-14 md:mb-20">
         <div>

@@ -2,6 +2,9 @@
 import { useTranslation } from "react-i18next";
 import Reveal from "../components/Common/Reveal";
 
+const FORMSPREE_ENDPOINT = import.meta.env.VITE_FORMSPREE_ENDPOINT || "https://formspree.io/f/mvzjqwyo";
+const GOOGLE_MAPS_API_KEY = import.meta.env.VITE_GOOGLE_MAPS_API_KEY || "";
+
 const Icon = ({ d, className = "w-4 h-4 mt-1 text-primary flex-shrink-0" }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
@@ -23,19 +26,45 @@ const PIN_SVG = '<path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.2
 const CLOCK_SVG = '<circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>';
 
 export default function Contact() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const [form, setForm] = useState({ name: "", email: "", subject: "", message: "" });
+  const [submitStatus, setSubmitStatus] = useState("idle");
   const subjects = t("contactPage.subjects", { returnObjects: true });
+  const isSending = submitStatus === "sending";
 
   const onChange = (k) => (e) => setForm((f) => ({ ...f, [k]: e.target.value }));
-  const onSubmit = (e) => {
+  const onSubmit = async (e) => {
     e.preventDefault();
-    const body = encodeURIComponent(
-      `${form.message}\n\n- ${form.name} <${form.email}>\n${t("contactPage.form.subject")} : ${form.subject}`
-    );
-    window.location.href = `mailto:contact@atlantis12essaouira.com?subject=${encodeURIComponent(
-      form.subject || t("contactPage.form.mailSubject")
-    )}&body=${body}`;
+    setSubmitStatus("sending");
+
+    try {
+      if (!FORMSPREE_ENDPOINT) throw new Error("Missing Formspree endpoint");
+
+      const subject = form.subject || t("contactPage.form.mailSubject");
+      const response = await fetch(FORMSPREE_ENDPOINT, {
+        method: "POST",
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name: form.name,
+          email: form.email,
+          subject,
+          message: form.message,
+          language: i18n.language || "fr",
+          _replyto: form.email,
+          _subject: `Atlantis 12 - ${subject}`,
+        }),
+      });
+
+      if (!response.ok) throw new Error("Contact request failed");
+
+      setForm({ name: "", email: "", subject: "", message: "" });
+      setSubmitStatus("success");
+    } catch {
+      setSubmitStatus("error");
+    }
   };
 
   return (
@@ -111,11 +140,22 @@ export default function Contact() {
             </div>
             <button
               type="submit"
-              className="w-full md:w-auto px-10 py-3 font-body text-xs tracking-[0.3em] uppercase hover:opacity-90 transition-colors duration-300"
+              disabled={isSending}
+              className={`w-full md:w-auto px-10 py-3 font-body text-xs tracking-[0.3em] uppercase transition-colors duration-300 ${
+                isSending ? "cursor-wait opacity-70" : "hover:opacity-90"
+              }`}
               style={{ backgroundColor: "#4A6741", color: "#FFFFFF" }}
             >
-              {t("contactPage.form.send")}
+              {isSending ? t("contactPage.form.sending") : t("contactPage.form.send")}
             </button>
+            <div aria-live="polite" className="min-h-5">
+              {submitStatus === "success" && (
+                <p className="font-body text-sm text-primary">{t("contactPage.form.success")}</p>
+              )}
+              {submitStatus === "error" && (
+                <p className="font-body text-sm text-red-700">{t("contactPage.form.error")}</p>
+              )}
+            </div>
           </form>
         </Reveal>
 
@@ -150,7 +190,7 @@ export default function Contact() {
           <div className="w-full aspect-[4/3] overflow-hidden relative border border-border">
             <iframe
               title="Atlantis 12 - Google Maps"
-              src={`https://www.google.com/maps/embed/v1/place?key=${import.meta.env.VITE_GOOGLE_MAPS_API_KEY || 'AIzaSyDuDKKhgnHf7iCjAr4BdhrHtO8jTumEWDc'}&q=Atlantis+12+maison+d'hÃ´tes+et+d'art,Essaouira,Morocco&zoom=15`}
+              src={`https://www.google.com/maps/embed/v1/place?key=${GOOGLE_MAPS_API_KEY}&q=Atlantis+12+maison+d'hÃ´tes+et+d'art,Essaouira,Morocco&zoom=15`}
               width="100%"
               height="100%"
               style={{ border: 0 }}

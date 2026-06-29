@@ -671,6 +671,9 @@
       "message": "Message",
       "messagePh": "Votre message…",
       "send": "Envoyer",
+      "sending": "Envoi...",
+      "success": "Message envoyé. Merci, nous vous répondrons rapidement.",
+      "error": "Le message n'a pas pu être envoyé. Veuillez réessayer.",
       "mailSubject": "Contact - Atlantis 12"
     },
     "subjects": [
@@ -937,7 +940,7 @@
     "residencyText": "Fin 2026, Atlantis 12 ouvrira ses portes à des artistes et penseurs en résidence - plasticiens, photographes, sculpteurs, écrivains, historiens, philosophes. De 2 à 4 semaines d'immersion complète, avec hébergement sur place, espace studio et espaces de travail, au cœur de la forêt.",
     "residencyCta": "Manifester votre intérêt",
     "heroSubline": "GALERIE, RÉSIDENCE ARTISTIQUE & ŒUVRES | ATLANTIS 12 ESSAOUIRA",
-    "inquiryCta": "ENQUIRE & ACQUIRE"
+    "inquiryCta": "RENSEIGNEMENT & ACQUISITION"
   },
   "modal": {
     "backToRooms": "Voir les autres chambres",
