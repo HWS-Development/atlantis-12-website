@@ -630,13 +630,11 @@
     "reserve": {
       "title": "Réserver un séjour"
     },
-    "form": {
-      "arrival": "Arrivée",
-      "departure": "Départ",
-      "room": "Chambre",
-      "anyRoom": "Toutes les chambres",
-      "guests": "Voyageurs",
-      "cta": "Vérifier les disponibilités"
+    "widget": {
+      "title": "Moteur de réservation HotelRunner",
+      "loading": "Chargement du moteur de réservation…",
+      "error": "Le moteur de réservation ne peut pas être chargé pour le moment.",
+      "fallback": "Ouvrir HotelRunner"
     }
   },
   "roomsPage": {

@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
-import { BOOK_URL } from "../../data/rooms";
+import { OPEN_BOOKING_EVENT } from "../../data/rooms";
 
 const ChevronLeft = ({ className }) => (
   <svg
@@ -69,6 +69,10 @@ export default function RoomDetailModal({ room, onClose }) {
   const next = () => setIdx((i) => (i + 1) % room.images.length);
   const scrollToArtwork = () =>
     artworkRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
+  const openBooking = () => {
+    onClose?.();
+    window.dispatchEvent(new Event(OPEN_BOOKING_EVENT));
+  };
 
   return (
     <div className="fixed inset-0 z-50 bg-background overflow-y-auto" style={{ opacity: 1 }}>
@@ -201,14 +205,13 @@ export default function RoomDetailModal({ room, onClose }) {
         </div>
 
         <div className="mt-10 flex gap-4 items-center flex-wrap">
-          <a
-            href={BOOK_URL}
-            target="_blank"
-            rel="noopener noreferrer"
+          <button
+            type="button"
+            onClick={openBooking}
             className="font-body text-xs tracking-[0.3em] uppercase text-background bg-primary px-8 py-3 hover:bg-secondary transition-colors duration-300 ml-auto"
           >
             {t("modal.bookRoom", "Réserver cette chambre")}
-          </a>
+          </button>
         </div>
       </div>
     </div>

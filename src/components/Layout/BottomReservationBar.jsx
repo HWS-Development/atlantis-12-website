@@ -1,6 +1,7 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
-import ROOMS, { BOOK_URL } from "../../data/rooms";
+import HotelRunnerSearchWidget from "../Common/HotelRunnerSearchWidget";
+import { OPEN_BOOKING_EVENT } from "../../data/rooms";
 
 const CalendarIcon = () => (
   <svg
@@ -92,37 +93,20 @@ const CheckIcon = () => (
   </svg>
 );
 
-function defaultDates() {
-  const fmt = (d) => d.toISOString().slice(0, 10);
-  const a = new Date();
-  a.setDate(a.getDate() + 7);
-  const b = new Date();
-  b.setDate(b.getDate() + 14);
-  return { arrival: fmt(a), departure: fmt(b) };
-}
-
 export default function BottomReservationBar() {
   const { t } = useTranslation();
   const [reserveOpen, setReserveOpen] = useState(false);
   const [whyOpen, setWhyOpen] = useState(false);
 
-  const init = defaultDates();
-  const [arrival, setArrival] = useState(init.arrival);
-  const [departure, setDeparture] = useState(init.departure);
-  const [roomSlug, setRoomSlug] = useState("");
-  const [guests, setGuests] = useState(2);
-
-  const submitBooking = (e) => {
-    e?.preventDefault?.();
-    const url = new URL(BOOK_URL);
-    const searchPayload = {
-      checkin_date: arrival,
-      checkout_date: departure,
-      rooms: [{ adult_count: guests, child_count: 0, child_ages: [] }],
+  useEffect(() => {
+    const openBooking = () => {
+      setReserveOpen(true);
+      setWhyOpen(false);
     };
-    url.searchParams.set("search", JSON.stringify(searchPayload));
-    window.open(url.toString(), "_blank", "noopener,noreferrer");
-  };
+
+    window.addEventListener(OPEN_BOOKING_EVENT, openBooking);
+    return () => window.removeEventListener(OPEN_BOOKING_EVENT, openBooking);
+  }, []);
 
   return (
     <div className="fixed bottom-0 left-0 right-0 z-40 m-0 p-0">
@@ -178,7 +162,7 @@ export default function BottomReservationBar() {
       )}
 
       {reserveOpen && (
-        <div className="bg-white border-t border-black/5 shadow-[0_-4px_20px_rgba(0,0,0,0.04)]">
+        <div className="max-h-[calc(100dvh-64px)] overflow-y-auto overscroll-contain bg-white border-t border-black/5 shadow-[0_-4px_20px_rgba(0,0,0,0.04)]">
           <div className="max-w-5xl mx-auto px-6 md:px-10 py-7 md:py-9">
             <div className="flex items-start justify-between mb-5">
               <p className="font-display text-2xl md:text-3xl text-foreground">
@@ -193,90 +177,7 @@ export default function BottomReservationBar() {
                 <CloseIcon />
               </button>
             </div>
-
-            <form
-              onSubmit={submitBooking}
-              className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5"
-            >
-              <div>
-                <label className="block font-body text-[11px] tracking-[0.25em] uppercase text-foreground/60 mb-2">
-                  {t("bottomBar.form.arrival", "Arrivée")}
-                </label>
-                <input
-                  type="date"
-                  value={arrival}
-                  onChange={(e) => setArrival(e.target.value)}
-                  className="w-full border border-foreground/15 px-3 py-2.5 font-body text-sm text-foreground/80 focus:outline-none focus:border-primary"
-                />
-              </div>
-
-              <div>
-                <label className="block font-body text-[11px] tracking-[0.25em] uppercase text-foreground/60 mb-2">
-                  {t("bottomBar.form.departure", "Départ")}
-                </label>
-                <input
-                  type="date"
-                  value={departure}
-                  min={arrival}
-                  onChange={(e) => setDeparture(e.target.value)}
-                  className="w-full border border-foreground/15 px-3 py-2.5 font-body text-sm text-foreground/80 focus:outline-none focus:border-primary"
-                />
-              </div>
-
-              <div>
-                <label className="block font-body text-[11px] tracking-[0.25em] uppercase text-foreground/60 mb-2">
-                  {t("bottomBar.form.room", "Chambre")}
-                </label>
-                <select
-                  value={roomSlug}
-                  onChange={(e) => setRoomSlug(e.target.value)}
-                  className="w-full border border-foreground/15 px-3 py-2.5 font-body text-sm text-foreground/80 focus:outline-none focus:border-primary bg-white"
-                >
-                  <option value="">{t("bottomBar.form.anyRoom", "Toutes les chambres")}</option>
-                  {ROOMS.map((r) => (
-                    <option key={r.slug} value={r.slug}>
-                      {r.name}
-                    </option>
-                  ))}
-                </select>
-              </div>
-
-              <div>
-                <label className="block font-body text-[11px] tracking-[0.25em] uppercase text-foreground/60 mb-2">
-                  {t("bottomBar.form.guests", "Voyageurs")}
-                </label>
-                <div className="flex items-center border border-foreground/15">
-                  <button
-                    type="button"
-                    aria-label="-"
-                    onClick={() => setGuests((g) => Math.max(1, g - 1))}
-                    className="px-3 py-2.5 font-body text-base text-foreground/60 hover:text-primary transition-colors"
-                  >
-                    −
-                  </button>
-                  <span className="flex-1 text-center font-body text-sm text-foreground/80">
-                    {guests}
-                  </span>
-                  <button
-                    type="button"
-                    aria-label="+"
-                    onClick={() => setGuests((g) => Math.min(10, g + 1))}
-                    className="px-3 py-2.5 font-body text-base text-foreground/60 hover:text-primary transition-colors"
-                  >
-                    +
-                  </button>
-                </div>
-              </div>
-
-              <div className="sm:col-span-2 lg:col-span-4">
-                <button
-                  type="submit"
-                  className="font-body text-xs tracking-[0.3em] uppercase text-white bg-primary px-8 py-3.5 hover:bg-secondary transition-colors duration-300"
-                >
-                  {t("bottomBar.form.cta", "Vérifier les disponibilités")}
-                </button>
-              </div>
-            </form>
+            <HotelRunnerSearchWidget />
           </div>
         </div>
       )}

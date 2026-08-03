@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HotelRunner</title>
+    <style type="text/css">
+      @import url("https://d2uyahi4tkntqv.cloudfront.net/assets/shared.booknow.css?v=1.0.0");
+    </style>
+    <style type="text/css">
+      @import url("https://d2uyahi4tkntqv.cloudfront.net/assets/search_widget.css?v=1.0.0");
+    </style>
+    <style>
+      html,
+      body {
+        margin: 0;
+        min-height: 140px;
+        overflow: visible;
+        background: #fff;
+      }
+
+      #hr_search_widget {
+        width: 100%;
+        min-height: 140px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="hr_search_widget"></div>
+    <script>
+      (() => {
+        const source = "hotelrunner-search-widget";
+        const hotelRunnerHost =
+          "atlantis-12-maison-d-hotes-et-d-art.hotelrunner.com";
+        const widgetIds = {
+          fr: "64fa157ed4a62dfaad93",
+          en: "64db2aacdd95f5fe238e",
+        };
+        const params = new URLSearchParams(window.location.search);
+        const language = params.get("lng") === "en" ? "en" : "fr";
+        const widgetRoot = document.getElementById("hr_search_widget");
+        const nativeOpen = window.open.bind(window);
+        const allowedChildAges = new Set([15, 16, 17]);
+        let isReady = false;
+        let lastHeight = 0;
+        let pageLoaded = document.readyState === "complete";
+
+        document.documentElement.lang = language;
+
+        const post = (data) => {
+          window.parent.postMessage({ source, ...data }, "*");
+        };
+
+        // HotelRunner is configured with target="_self". From this isolated
+        // frame, send that navigation to the main page instead of the frame.
+        const normalizeChildAges = (href) => {
+          try {
+            const url = new URL(href);
+            const rawSearch = url.searchParams.get("search");
+            if (url.host !== hotelRunnerHost || !rawSearch) return href;
+
+            const search = JSON.parse(rawSearch);
+            if (!Array.isArray(search.rooms)) return href;
+
+            search.rooms = search.rooms.map((room) => ({
+              ...room,
+              child_ages: Array.isArray(room.child_ages)
+                ? room.child_ages
+                    .map(Number)
+                    .filter((age) => allowedChildAges.has(age))
+                : [],
+            }));
+            url.searchParams.set("search", JSON.stringify(search));
+            return url.toString();
+          } catch {
+            return href;
+          }
+        };
+
+        const navigateTop = (href) => {
+          const normalizedHref = normalizeChildAges(href);
+          if (
+            normalizedHref.startsWith(`https://${hotelRunnerHost}/`) &&
+            window.top !== window.self
+          ) {
+            window.top.location.assign(normalizedHref);
+            return true;
+          }
+
+          return false;
+        };
+
+        window.open = (url, target, features) => {
+          const href = String(url || "");
+          if (navigateTop(href)) return window.top;
+
+          return nativeOpen(url, target, features);
+        };
+
+        const overrideHotelRunnerShow = () => {
+          if (
+            !window.HotelRunnerWidget?.show ||
+            window.HotelRunnerWidget.show.opensInTop
+          ) {
+            return;
+          }
+
+          const nativeShow = window.HotelRunnerWidget.show.bind(
+            window.HotelRunnerWidget
+          );
+          const showInTop = (url) => {
+            if (!navigateTop(String(url || ""))) nativeShow(url);
+          };
+          showInTop.opensInTop = true;
+          window.HotelRunnerWidget.show = showInTop;
+        };
+
+        const restrictChildAgeOptions = () => {
+          widgetRoot
+            .querySelectorAll('select[class*="child_age"]')
+            .forEach((select) => {
+              if (select.dataset.ageRangeRestricted) return;
+
+              Array.from(select.options).forEach((option) => {
+                if (!allowedChildAges.has(Number(option.value))) option.remove();
+              });
+              select.dataset.ageRangeRestricted = "true";
+              select.value = select.options[0]?.value || "";
+              select.dispatchEvent(new Event("change", { bubbles: true }));
+            });
+        };
+
+        const visibleBottom = (selector) => {
+          let bottom = 0;
+          document.querySelectorAll(selector).forEach((element) => {
+            const style = window.getComputedStyle(element);
+            if (style.display === "none" || style.visibility === "hidden") return;
+            bottom = Math.max(bottom, element.getBoundingClientRect().bottom);
+          });
+          return bottom;
+        };
+
+        const reportHeight = () => {
+          const height = Math.max(
+            140,
+            widgetRoot.getBoundingClientRect().bottom,
+            visibleBottom(".datepicker"),
+            visibleBottom(".dropdown-menu")
+          );
+          const roundedHeight = Math.ceil(height + 2);
+
+          if (roundedHeight !== lastHeight) {
+            lastHeight = roundedHeight;
+            post({ height: roundedHeight });
+          }
+        };
+
+        const scheduleHeightReport = () => {
+          [0, 60, 250].forEach((delay) => window.setTimeout(reportHeight, delay));
+        };
+
+        const readyTimeout = window.setTimeout(() => {
+          if (!isReady) post({ status: "error" });
+        }, 15000);
+
+        const checkReady = () => {
+          overrideHotelRunnerShow();
+          restrictChildAgeOptions();
+          if (!isReady && widgetRoot.querySelector(".hr_container")) {
+            isReady = true;
+            window.clearTimeout(readyTimeout);
+            post({ status: "ready" });
+          }
+          scheduleHeightReport();
+        };
+
+        const mutationObserver = new MutationObserver(checkReady);
+        mutationObserver.observe(document.body, {
+          attributes: true,
+          childList: true,
+          subtree: true,
+          attributeFilter: ["class", "style", "aria-expanded"],
+        });
+
+        if ("ResizeObserver" in window) {
+          const resizeObserver = new ResizeObserver(scheduleHeightReport);
+          resizeObserver.observe(document.documentElement);
+          resizeObserver.observe(widgetRoot);
+        }
+
+        document.addEventListener("click", scheduleHeightReport);
+        window.addEventListener("resize", scheduleHeightReport);
+        window.addEventListener("load", () => {
+          pageLoaded = true;
+          scheduleHeightReport();
+        });
+
+        const script = document.createElement("script");
+        script.id = "hr_widget_script";
+        script.async = true;
+        script.src = `https://${hotelRunnerHost}/widgets/${widgetIds[language]}/search_widget.js?v=1.0.0`;
+        script.addEventListener("error", () => {
+          window.clearTimeout(readyTimeout);
+          post({ status: "error" });
+        });
+        script.addEventListener("load", () => {
+          overrideHotelRunnerShow();
+          if (pageLoaded && typeof window.onload === "function") {
+            window.onload();
+          }
+          checkReady();
+        });
+        document.body.appendChild(script);
+      })();
+    </script>
+  </body>
+</html>

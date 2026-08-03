@@ -630,13 +630,11 @@
     "reserve": {
       "title": "Book a stay"
     },
-    "form": {
-      "arrival": "Arrival",
-      "departure": "Departure",
-      "room": "Room",
-      "anyRoom": "All rooms",
-      "guests": "Guests",
-      "cta": "Check availability"
+    "widget": {
+      "title": "HotelRunner booking engine",
+      "loading": "Loading the booking engine…",
+      "error": "The booking engine cannot be loaded right now.",
+      "fallback": "Open HotelRunner"
     }
   },
   "roomsPage": {

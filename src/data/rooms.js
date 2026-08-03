@@ -139,5 +139,6 @@ const ROOMS = [
 
 export const BOOK_URL =
   "https://atlantis-12-maison-d-hotes-et-d-art.hotelrunner.com/bv3/search";
+export const OPEN_BOOKING_EVENT = "hotelrunner:open-search";
 
 export default ROOMS;
