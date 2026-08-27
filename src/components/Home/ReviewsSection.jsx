@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import Reveal from "../Common/Reveal";
 
@@ -83,17 +83,17 @@ let mapsPromise = null;
 function loadGoogleMapsAPI() {
   if (mapsPromise) return mapsPromise;
   if (!API_KEY) return Promise.reject(new Error("No Google Maps API key"));
-  if (window.google?.maps?.places) return Promise.resolve(window.google.maps.places);
+  if (window.google?.maps?.importLibrary) return Promise.resolve(window.google.maps);
 
   mapsPromise = new Promise((resolve, reject) => {
+    const callbackName = "__initAtlantisGoogleMaps";
     const script = document.createElement("script");
-    script.src = `https://maps.googleapis.com/maps/api/js?key=${API_KEY}&libraries=places`;
-    script.async = true;
-    script.defer = true;
-    script.onload = () => {
-      if (window.google?.maps?.places) resolve(window.google.maps.places);
-      else reject(new Error("Places library not available"));
+    window[callbackName] = () => {
+      delete window[callbackName];
+      resolve(window.google.maps);
     };
+    script.src = `https://maps.googleapis.com/maps/api/js?key=${API_KEY}&loading=async&v=weekly&callback=${callbackName}`;
+    script.async = true;
     script.onerror = () => reject(new Error("Failed to load Google Maps API"));
     document.head.appendChild(script);
   });
@@ -103,7 +103,6 @@ function loadGoogleMapsAPI() {
 
 export default function ReviewsSection() {
   const { t, i18n } = useTranslation();
-  const mapRef = useRef(null);
 
   const reviewsRaw = t("home.reviews.items", { returnObjects: true });
   const staticReviews = Array.isArray(reviewsRaw) ? reviewsRaw : [];
@@ -111,42 +110,40 @@ export default function ReviewsSection() {
   const [liveReviews, setLiveReviews] = useState(null); // null = not loaded yet
   const [rating, setRating] = useState(FALLBACK_RATING);
   const [reviewCount, setReviewCount] = useState(FALLBACK_REVIEW_COUNT);
+  const [hasLiveRating, setHasLiveRating] = useState(false);
 
   useEffect(() => {
     let ignore = false;
 
     loadGoogleMapsAPI()
-      .then((placesLib) => {
-        if (!mapRef.current || ignore) return;
+      .then(async (maps) => {
+        const { Place } = await maps.importLibrary("places");
+        const place = new Place({ id: PLACE_ID });
+        await place.fetchFields({ fields: ["rating", "userRatingCount", "reviews"] });
+        if (ignore) return;
 
-        const service = new placesLib.PlacesService(mapRef.current);
-        service.getDetails(
-          {
-            placeId: PLACE_ID,
-            fields: ["rating", "user_ratings_total", "reviews"],
-            language: i18n.language?.startsWith("en") ? "en" : "fr",
-          },
-          (place, status) => {
-            if (ignore || status !== window.google.maps.places.PlacesServiceStatus.OK || !place) return;
-
-            if (typeof place.rating === "number") setRating(place.rating);
-            if (typeof place.user_ratings_total === "number") setReviewCount(place.user_ratings_total);
-            if (Array.isArray(place.reviews) && place.reviews.length > 0) {
-              const mapped = place.reviews
-                .filter((r) => r.rating >= 4)
-                .slice(0, 5)
-                .map((r) => ({
-                  name: r.author_name,
-                  initials: getInitials(r.author_name),
-                  quote: r.text,
-                  rating: r.rating,
-                  photo: r.profile_photo_url,
-                  relativeTime: r.relative_time_description,
-                }));
-              if (mapped.length > 0) setLiveReviews(mapped);
-            }
-          }
-        );
+        if (typeof place.rating === "number") setRating(place.rating);
+        if (typeof place.userRatingCount === "number") setReviewCount(place.userRatingCount);
+        if (typeof place.rating === "number" && typeof place.userRatingCount === "number") {
+          setHasLiveRating(true);
+        }
+        if (Array.isArray(place.reviews) && place.reviews.length > 0) {
+          const mapped = place.reviews
+            .filter((review) => review.rating >= 4)
+            .slice(0, 5)
+            .map((review) => {
+              const name = review.authorAttribution?.displayName || "Google user";
+              return {
+                name,
+                initials: getInitials(name),
+                quote: review.text || "",
+                rating: review.rating,
+                photo: review.authorAttribution?.photoURI || null,
+                relativeTime: review.relativePublishTimeDescription || "",
+              };
+            });
+          if (mapped.length > 0) setLiveReviews(mapped);
+        }
       })
       .catch(() => {});
 
@@ -176,8 +173,6 @@ export default function ReviewsSection() {
 
   return (
       <section className="pt-20 md:pt-32 pb-10 md:pb-14 page-x bg-card/40 overflow-hidden">
-      <div ref={mapRef} className="hidden" />
-
       <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-14 md:mb-20">
         <div>
           <Reveal as="p" className="eyebrow-primary mb-3">
@@ -205,6 +200,11 @@ export default function ReviewsSection() {
             <p className="font-body text-xs text-foreground/50">
               {reviewCount} {t("home.reviews.verified", "avis vérifiés")}
             </p>
+            {!hasLiveRating && (
+              <p className="font-body text-[10px] text-foreground/40">
+                {t("home.reviews.lastKnown", "Dernière valeur connue")}
+              </p>
+            )}
             <p className="font-body text-xs tracking-[0.15em] uppercase text-primary/70">
               {t("home.reviews.recommend", "100 % recommandent")}
             </p>

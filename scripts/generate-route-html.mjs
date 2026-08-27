@@ -68,15 +68,15 @@ ${assetBlock}
 }
 
 function getEntryConfig(filePath) {
-  const isEnglish = filePath.startsWith("__seo/en/");
+  const isEnglish = filePath.startsWith("en/");
   const lang = isEnglish ? "en" : "fr";
 
-  if (filePath === "index.html" || filePath === "__seo/en/index.html") {
+  if (filePath === "index.html" || filePath === "en/index.html") {
     return { routeKey: "home", lang };
   }
 
   const routePath = `/${filePath
-    .replace(/^__seo\/en\//, "")
+    .replace(/^en\//, "")
     .replace(/\/index\.html$/, "")}`;
 
   const routeKey = Object.keys(SEO_PAGES).find((key) => SEO_PAGES[key].path === routePath);

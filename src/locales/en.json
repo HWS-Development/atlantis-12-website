@@ -225,7 +225,8 @@
       "placeholder": "Add your reviews in locales/en.json → home.reviews.items[].quote",
       "prev": "Previous review",
       "next": "Next review",
-      "googleCta": "See all our Google reviews"
+      "googleCta": "See all our Google reviews",
+      "lastKnown": "Last known value"
     },
     "rooms": {
       "eyebrow": "The 5 rooms",
@@ -758,7 +759,7 @@
     "s2Title": "The evening dinner",
     "s2Courses": "Starter · Main course · Dessert",
     "s2Lead": "A single menu, composed each evening according to the season and the inspiration of the moment.",
-    "s2Price": "€40 / person · drinks not included · by reservation · served at 8 p.m.",
+    "s2Price": "300 DH / person · drinks not included · by reservation · served at 8 p.m.",
     "s2ImgAlt": "Stuffed artichoke, octopus and prawns",
     "s2Caption": "Stuffed artichoke, octopus and Atlantic prawns",
     "s2Img2Alt": "Couscous with Atlantic prawns",

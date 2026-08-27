@@ -1,13 +1,9 @@
 {
+  "redirects": [
+    { "source": "/", "has": [{ "type": "query", "key": "lng", "value": "en" }], "destination": "/en", "permanent": true },
+    { "source": "/:path*", "has": [{ "type": "query", "key": "lng", "value": "en" }], "destination": "/en/:path*", "permanent": true }
+  ],
   "rewrites": [
-    { "source": "/", "has": [{ "type": "query", "key": "lng", "value": "en" }], "destination": "/__seo/en/index.html" },
-    { "source": "/la-maison", "has": [{ "type": "query", "key": "lng", "value": "en" }], "destination": "/__seo/en/la-maison/index.html" },
-    { "source": "/chambres", "has": [{ "type": "query", "key": "lng", "value": "en" }], "destination": "/__seo/en/chambres/index.html" },
-    { "source": "/table-dhotes", "has": [{ "type": "query", "key": "lng", "value": "en" }], "destination": "/__seo/en/table-dhotes/index.html" },
-    { "source": "/experiences", "has": [{ "type": "query", "key": "lng", "value": "en" }], "destination": "/__seo/en/experiences/index.html" },
-    { "source": "/contact", "has": [{ "type": "query", "key": "lng", "value": "en" }], "destination": "/__seo/en/contact/index.html" },
-    { "source": "/maison-dart", "has": [{ "type": "query", "key": "lng", "value": "en" }], "destination": "/__seo/en/maison-dart/index.html" },
-    { "source": "/essaouira", "has": [{ "type": "query", "key": "lng", "value": "en" }], "destination": "/__seo/en/essaouira/index.html" },
     { "source": "/", "destination": "/index.html" },
     { "source": "/la-maison", "destination": "/la-maison/index.html" },
     { "source": "/chambres", "destination": "/chambres/index.html" },
@@ -16,18 +12,17 @@
     { "source": "/contact", "destination": "/contact/index.html" },
     { "source": "/maison-dart", "destination": "/maison-dart/index.html" },
     { "source": "/essaouira", "destination": "/essaouira/index.html" },
-    { "source": "/terms", "destination": "/index.html" },
-    { "source": "/cancellation", "destination": "/index.html" },
-    { "source": "/mentions-legales", "destination": "/index.html" },
-    { "source": "/cgv", "destination": "/index.html" },
-    { "source": "/politique-de-confidentialite", "destination": "/index.html" },
-    { "source": "/about", "destination": "/index.html" },
-    { "source": "/rooms", "destination": "/index.html" },
-    { "source": "/table", "destination": "/index.html" },
-    { "source": "/activites", "destination": "/index.html" },
-    { "source": "/gallery", "destination": "/index.html" },
+    { "source": "/en", "destination": "/en/index.html" },
+    { "source": "/en/la-maison", "destination": "/en/la-maison/index.html" },
+    { "source": "/en/chambres", "destination": "/en/chambres/index.html" },
+    { "source": "/en/table-dhotes", "destination": "/en/table-dhotes/index.html" },
+    { "source": "/en/experiences", "destination": "/en/experiences/index.html" },
+    { "source": "/en/contact", "destination": "/en/contact/index.html" },
+    { "source": "/en/maison-dart", "destination": "/en/maison-dart/index.html" },
+    { "source": "/en/essaouira", "destination": "/en/essaouira/index.html" },
+    { "source": "/en/:path*", "destination": "/en/index.html" },
     { "source": "/robots.txt", "destination": "/robots.txt" },
-    { "source": "/sitemap.xml",  "destination": "/sitemap.xml" },
+    { "source": "/sitemap.xml", "destination": "/sitemap.xml" },
     { "source": "/(.*)", "destination": "/index.html" }
   ]
 }

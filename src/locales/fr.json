@@ -225,7 +225,8 @@
       "placeholder": "Ajoutez vos avis dans locales/fr.json → home.reviews.items[].quote",
       "prev": "Avis précédent",
       "next": "Avis suivant",
-      "googleCta": "Voir tous nos avis Google"
+      "googleCta": "Voir tous nos avis Google",
+      "lastKnown": "Dernière valeur connue"
     },
     "rooms": {
       "eyebrow": "Les 5 chambres",
@@ -758,7 +759,7 @@
     "s2Title": "Le dîner du soir",
     "s2Courses": "Entrée · Plat principal · Dessert",
     "s2Lead": "Un menu unique, composé chaque soir selon la saison et l'inspiration du moment.",
-    "s2Price": "40€ / personne · hors boissons · sur réservation · servi à 20h",
+    "s2Price": "300 DH / personne · hors boissons · sur réservation · servi à 20h",
     "s2ImgAlt": "Artichaut farci, poulpe et crevette",
     "s2Caption": "Artichaut farci, poulpe et crevette de l'Atlantique",
     "s2Img2Alt": "Couscous aux crevettes de l'Atlantique",

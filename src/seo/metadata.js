@@ -124,7 +124,7 @@ export function normalizeSeoLanguage(lng) {
 export function getAlternateUrl(path, lng) {
   const cleanPath = path === "/" ? "" : path;
   return lng === "en"
-    ? `${SITE_URL}${cleanPath || "/"}?lng=en`
+    ? `${SITE_URL}/en${cleanPath}`
     : `${SITE_URL}${cleanPath || "/"}`;
 }
 
@@ -157,12 +157,12 @@ export const HTML_ENTRY_PATHS = [
   "contact/index.html",
   "maison-dart/index.html",
   "essaouira/index.html",
-  "__seo/en/index.html",
-  "__seo/en/la-maison/index.html",
-  "__seo/en/chambres/index.html",
-  "__seo/en/table-dhotes/index.html",
-  "__seo/en/experiences/index.html",
-  "__seo/en/contact/index.html",
-  "__seo/en/maison-dart/index.html",
-  "__seo/en/essaouira/index.html",
+  "en/index.html",
+  "en/la-maison/index.html",
+  "en/chambres/index.html",
+  "en/table-dhotes/index.html",
+  "en/experiences/index.html",
+  "en/contact/index.html",
+  "en/maison-dart/index.html",
+  "en/essaouira/index.html",
 ];

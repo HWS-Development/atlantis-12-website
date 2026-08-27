@@ -10,6 +10,9 @@ i18n.on('languageChanged', (lng) => { document.documentElement.lang = lng; })
   .init({
     resources: { fr: { translation: fr }, en: { translation: en } },
     fallbackLng: "fr",
+    lng: window.location.pathname === "/en" || window.location.pathname.startsWith("/en/")
+      ? "en"
+      : undefined,
     detection: {
       order: ["querystring", "localStorage", "navigator", "htmlTag", "cookie"],
       lookupQuerystring: "lng",

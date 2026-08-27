@@ -24,8 +24,9 @@ export default function Navbar() {
 
   const switchLang = () => {
     const next = i18n.language?.startsWith("fr") ? "en" : "fr";
-    i18n.changeLanguage(next);
-    document.documentElement.lang = next;
+    const relativePath = window.location.pathname.replace(/^\/en(?=\/|$)/, "") || "/";
+    const nextPath = next === "en" ? `/en${relativePath === "/" ? "" : relativePath}` : relativePath;
+    window.location.assign(`${nextPath}${window.location.hash}`);
   };
 
   const navBtnBase =

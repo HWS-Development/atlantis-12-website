@@ -8,6 +8,7 @@ import ScrollToTop from "./components/UI/ScrollToTop";
 import I18nUrlSync from "./components/Common/I18nUrlSync";
 import LangLink from "./components/Common/LangLink";
 import RouteSeo from "./components/Common/RouteSeo";
+import GoogleAnalytics from "./components/Common/GoogleAnalytics";
 
 import Home from "./pages/Home";
 import Rooms from "./pages/Rooms";
@@ -24,14 +25,17 @@ import CGV from "./pages/CGV";
 import PolitiqueConfidentialite from "./pages/PolitiqueConfidentialite";
 
 export default function App() {
+  const englishPath = window.location.pathname === "/en" || window.location.pathname.startsWith("/en/");
+
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={englishPath ? "/en" : undefined}>
       <div className="min-h-full flex flex-col">
         <Navbar />
         <ScrollToTop />
         <ScrollToHash />
         <I18nUrlSync />
         <RouteSeo />
+        <GoogleAnalytics />
 
         {/* Live site lets the fixed header OVERLAP page content (Hero handles its own
             full-viewport height). Inner pages add their own top padding if needed. */}
