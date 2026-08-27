@@ -1,7 +1,13 @@
 {
   "redirects": [
     { "source": "/", "has": [{ "type": "query", "key": "lng", "value": "en" }], "destination": "/en", "permanent": true },
-    { "source": "/:path*", "has": [{ "type": "query", "key": "lng", "value": "en" }], "destination": "/en/:path*", "permanent": true }
+    { "source": "/la-maison", "has": [{ "type": "query", "key": "lng", "value": "en" }], "destination": "/en/la-maison", "permanent": true },
+    { "source": "/chambres", "has": [{ "type": "query", "key": "lng", "value": "en" }], "destination": "/en/chambres", "permanent": true },
+    { "source": "/table-dhotes", "has": [{ "type": "query", "key": "lng", "value": "en" }], "destination": "/en/table-dhotes", "permanent": true },
+    { "source": "/experiences", "has": [{ "type": "query", "key": "lng", "value": "en" }], "destination": "/en/experiences", "permanent": true },
+    { "source": "/contact", "has": [{ "type": "query", "key": "lng", "value": "en" }], "destination": "/en/contact", "permanent": true },
+    { "source": "/maison-dart", "has": [{ "type": "query", "key": "lng", "value": "en" }], "destination": "/en/maison-dart", "permanent": true },
+    { "source": "/essaouira", "has": [{ "type": "query", "key": "lng", "value": "en" }], "destination": "/en/essaouira", "permanent": true }
   ],
   "rewrites": [
     { "source": "/", "destination": "/index.html" },
