@@ -58,7 +58,7 @@ const ROOMS = [
     artworkStatus: "available",
   },
   {
-    slug: "lipomea",
+    slug: "l-ipomea",
     name: "L'Ipoméa",
     category: "Suite Junior",
     adults: "• 2 adultes",
@@ -78,7 +78,7 @@ const ROOMS = [
     artworkStatus: "permanent",
   },
   {
-    slug: "lagave",
+    slug: "l-agave",
     name: "L'Agave",
     category: "Suite Junior",
     adults: "• 2 adultes",
@@ -117,7 +117,7 @@ const ROOMS = [
     artworkStatus: "available",
   },
   {
-    slug: "lorchis",
+    slug: "l-orchis",
     name: "L'Orchis",
     category: "Suite Junior",
     adults: "• 2 adultes",
@@ -140,5 +140,20 @@ const ROOMS = [
 export const BOOK_URL =
   "https://atlantis-12-maison-d-hotes-et-d-art.hotelrunner.com/bv3/search";
 export const OPEN_BOOKING_EVENT = "hotelrunner:open-search";
+
+export const ROOM_SLUG_ALIASES = {
+  lipomea: "l-ipomea",
+  lagave: "l-agave",
+  lorchis: "l-orchis",
+};
+
+export function normalizeRoomSlug(slug) {
+  return ROOM_SLUG_ALIASES[slug] || slug;
+}
+
+export function getRoomBySlug(slug) {
+  const normalized = normalizeRoomSlug(slug);
+  return ROOMS.find((room) => room.slug === normalized) || null;
+}
 
 export default ROOMS;

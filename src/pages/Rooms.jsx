@@ -1,11 +1,11 @@
 // /chambres — rebuilt 1:1 from reference/chambres/body.pretty.html
-import { useEffect, useState } from "react";
-import { useSearchParams } from "react-router-dom";
+import { useEffect } from "react";
+import { useNavigate, useParams, useSearchParams } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import Reveal from "../components/Common/Reveal";
 import LangLink from "../components/Common/LangLink";
 import RoomDetailModal from "../components/Rooms/RoomDetailModal";
-import ROOMS from "../data/rooms";
+import ROOMS, { getRoomBySlug } from "../data/rooms";
 
 const ROOMS_PATH = "/images/rooms";
 const HERO = `${ROOMS_PATH}/plumeria-suite-superieure-atlantis12-essaouira.webp`;
@@ -17,13 +17,13 @@ const CARD_IMG = {
     altDefault: "Plumeria, le lit - Atlantis 12, Essaouira",
     label: "labelSuperior",
   },
-  lipomea: {
+  "l-ipomea": {
     img: `${ROOMS_PATH}/ipomea-chambre-vue-principale-atlantis12-essaouira.webp`,
     altKey: "rooms.altIpomea",
     altDefault: "Ipomea, chambre avec lit bleu indigo - Atlantis 12, Essaouira",
     label: "labelJunior",
   },
-  lagave: {
+  "l-agave": {
     img: `${ROOMS_PATH}/agave-chambre-vue-panoramique-atlantis12-essaouira.webp`,
     altKey: "rooms.altAgave",
     altDefault: "Agave, chambre avec lit vert - Atlantis 12, Essaouira",
@@ -35,7 +35,7 @@ const CARD_IMG = {
     altDefault: "Coquelicot, chambre principale - Atlantis 12, Essaouira",
     label: "labelJunior",
   },
-  lorchis: {
+  "l-orchis": {
     img: `${ROOMS_PATH}/orchis-chambre-lit-mauve-murs-pierre-arche-atlantis12-essaouira.webp`,
     altKey: "rooms.altOrchis",
     altDefault: "Orchis, chambre avec lit mauve - Atlantis 12, Essaouira",
@@ -66,17 +66,14 @@ function RoomCard({
   label,
   img,
   alt,
-  onClick,
+  to,
   aspect = "aspect-[4/3]",
   titleSize = "text-2xl md:text-3xl",
 }) {
   return (
-    <div
-      role="button"
-      tabIndex={0}
-      onClick={onClick}
-      onKeyDown={(e) => (e.key === "Enter" || e.key === " ") && onClick?.()}
-      className={`group relative overflow-hidden cursor-pointer ${aspect}`}
+    <LangLink
+      to={to}
+      className={`group relative overflow-hidden cursor-pointer block ${aspect}`}
     >
       <img
         src={img}
@@ -103,41 +100,34 @@ function RoomCard({
           <Chevron />
         </div>
       </div>
-    </div>
+    </LangLink>
   );
 }
 
 export default function Rooms() {
   const { t } = useTranslation();
-  const [searchParams, setSearchParams] = useSearchParams();
-  const [activeSlug, setActiveSlug] = useState(null);
+  const navigate = useNavigate();
+  const { roomSlug } = useParams();
+  const [searchParams] = useSearchParams();
+  const legacySlug = searchParams.get("room");
+  const activeRoom = getRoomBySlug(roomSlug || legacySlug);
 
   useEffect(() => {
-    const slug = searchParams.get("room");
-    if (slug && ROOMS.some((r) => r.slug === slug)) {
-      setActiveSlug(slug);
+    if (!roomSlug && legacySlug && activeRoom) {
+      navigate(`/chambres/${activeRoom.slug}`, { replace: true });
     }
-  }, [searchParams]);
+  }, [activeRoom, legacySlug, navigate, roomSlug]);
 
   const closeModal = () => {
-    setActiveSlug(null);
-    if (searchParams.get("room")) {
-      const next = new URLSearchParams(searchParams);
-      next.delete("room");
-      setSearchParams(next, { replace: true });
-    }
+    navigate("/chambres", { replace: true });
   };
 
-  const openModal = (slug) => {
-    setActiveSlug(slug);
-    const next = new URLSearchParams(searchParams);
-    next.set("room", slug);
-    setSearchParams(next, { replace: true });
-  };
-
-  const activeRoom = ROOMS.find((r) => r.slug === activeSlug) || null;
   const hero = ROOMS.find((r) => r.slug === "la-plumeria");
   const juniors = ROOMS.filter((r) => r.slug !== "la-plumeria");
+
+  if (roomSlug && activeRoom) {
+    return <RoomDetailModal room={activeRoom} onClose={closeModal} isPage />;
+  }
 
   return (
     <div className="bg-background min-h-screen text-foreground overflow-x-hidden">
@@ -190,7 +180,7 @@ export default function Rooms() {
               label={t(`roomsPage.${CARD_IMG[hero.slug].label}`)}
               img={CARD_IMG[hero.slug].img}
               alt={CARD_IMG[hero.slug].altDefault}
-              onClick={() => openModal(hero.slug)}
+              to={`/chambres/${hero.slug}`}
               aspect="aspect-[16/9]"
               titleSize="text-2xl md:text-3xl"
             />
@@ -205,7 +195,7 @@ export default function Rooms() {
                 label={t(`roomsPage.${CARD_IMG[r.slug].label}`)}
                 img={CARD_IMG[r.slug].img}
                 alt={CARD_IMG[r.slug].altDefault}
-                onClick={() => openModal(r.slug)}
+                to={`/chambres/${r.slug}`}
               />
             </Reveal>
           ))}

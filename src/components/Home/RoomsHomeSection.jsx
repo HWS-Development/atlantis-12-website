@@ -12,10 +12,10 @@ const FAKE = {
 };
 
 const JUNIORS = [
-  { key: "ipomea",     to: "/chambres?room=lipomea",      name: "L'Ipoméa",     type: "Suite Junior", img: FAKE.ipomea },
-  { key: "agave",      to: "/chambres?room=lagave",       name: "L'Agave",      type: "Suite Junior", img: FAKE.agave },
-  { key: "coquelicot", to: "/chambres?room=la-coquelicot",name: "La Coquelicot",type: "Suite Junior", img: FAKE.coquelicot },
-  { key: "orchis",     to: "/chambres?room=lorchis",      name: "L'Orchis",     type: "Suite Junior", img: FAKE.orchis },
+  { key: "ipomea",     to: "/chambres/l-ipomea",      name: "L'Ipoméa",     type: "Suite Junior", img: FAKE.ipomea },
+  { key: "agave",      to: "/chambres/l-agave",       name: "L'Agave",      type: "Suite Junior", img: FAKE.agave },
+  { key: "coquelicot", to: "/chambres/la-coquelicot", name: "La Coquelicot",type: "Suite Junior", img: FAKE.coquelicot },
+  { key: "orchis",     to: "/chambres/l-orchis",      name: "L'Orchis",     type: "Suite Junior", img: FAKE.orchis },
 ];
 
 function RoomCard({ to, name, type, img, alt, wide = false }) {
@@ -93,7 +93,7 @@ export default function RoomsHomeSection() {
 
       <RoomCard
         wide
-        to="/chambres?room=la-plumeria"
+        to="/chambres/la-plumeria"
         name="La Pluméria"
         type="Suite Supérieure"
         img={FAKE.plumeria}

@@ -13,7 +13,7 @@ export default function Reveal({
 }) {
   const Tag = as;
   const ref = useRef(null);
-  const [visible, setVisible] = useState(false);
+  const [visible, setVisible] = useState(typeof window === "undefined");
 
   useEffect(() => {
     const el = ref.current;

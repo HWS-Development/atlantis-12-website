@@ -32,7 +32,7 @@ export default function PageHero({
         alt=""
         className="absolute inset-0 w-full h-full object-cover"
         loading="eager"
-        fetchpriority="high"
+        fetchPriority="high"
       />
       {overlay !== "none" && (
         <div className="absolute inset-0" style={overlayStyle} />

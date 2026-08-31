@@ -2,112 +2,156 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://atlantis12essaouira.com/</loc>
-    <lastmod>2026-08-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://atlantis12essaouira.com/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://atlantis12essaouira.com/en" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://atlantis12essaouira.com/" />
+  </url>
+  <url>
+    <loc>https://atlantis12essaouira.com/en</loc>
     <xhtml:link rel="alternate" hreflang="fr" href="https://atlantis12essaouira.com/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://atlantis12essaouira.com/en" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://atlantis12essaouira.com/" />
   </url>
   <url>
     <loc>https://atlantis12essaouira.com/la-maison</loc>
-    <lastmod>2026-08-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://atlantis12essaouira.com/la-maison" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://atlantis12essaouira.com/en/la-maison" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://atlantis12essaouira.com/la-maison" />
+  </url>
+  <url>
+    <loc>https://atlantis12essaouira.com/en/la-maison</loc>
     <xhtml:link rel="alternate" hreflang="fr" href="https://atlantis12essaouira.com/la-maison" />
     <xhtml:link rel="alternate" hreflang="en" href="https://atlantis12essaouira.com/en/la-maison" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://atlantis12essaouira.com/la-maison" />
   </url>
   <url>
     <loc>https://atlantis12essaouira.com/chambres</loc>
-    <lastmod>2026-08-27</lastmod>
     <xhtml:link rel="alternate" hreflang="fr" href="https://atlantis12essaouira.com/chambres" />
     <xhtml:link rel="alternate" hreflang="en" href="https://atlantis12essaouira.com/en/chambres" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://atlantis12essaouira.com/chambres" />
   </url>
   <url>
+    <loc>https://atlantis12essaouira.com/en/chambres</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://atlantis12essaouira.com/chambres" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://atlantis12essaouira.com/en/chambres" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://atlantis12essaouira.com/chambres" />
+  </url>
+  <url>
+    <loc>https://atlantis12essaouira.com/chambres/la-plumeria</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://atlantis12essaouira.com/chambres/la-plumeria" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://atlantis12essaouira.com/en/chambres/la-plumeria" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://atlantis12essaouira.com/chambres/la-plumeria" />
+  </url>
+  <url>
+    <loc>https://atlantis12essaouira.com/en/chambres/la-plumeria</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://atlantis12essaouira.com/chambres/la-plumeria" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://atlantis12essaouira.com/en/chambres/la-plumeria" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://atlantis12essaouira.com/chambres/la-plumeria" />
+  </url>
+  <url>
+    <loc>https://atlantis12essaouira.com/chambres/l-ipomea</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://atlantis12essaouira.com/chambres/l-ipomea" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://atlantis12essaouira.com/en/chambres/l-ipomea" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://atlantis12essaouira.com/chambres/l-ipomea" />
+  </url>
+  <url>
+    <loc>https://atlantis12essaouira.com/en/chambres/l-ipomea</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://atlantis12essaouira.com/chambres/l-ipomea" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://atlantis12essaouira.com/en/chambres/l-ipomea" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://atlantis12essaouira.com/chambres/l-ipomea" />
+  </url>
+  <url>
+    <loc>https://atlantis12essaouira.com/chambres/l-agave</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://atlantis12essaouira.com/chambres/l-agave" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://atlantis12essaouira.com/en/chambres/l-agave" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://atlantis12essaouira.com/chambres/l-agave" />
+  </url>
+  <url>
+    <loc>https://atlantis12essaouira.com/en/chambres/l-agave</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://atlantis12essaouira.com/chambres/l-agave" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://atlantis12essaouira.com/en/chambres/l-agave" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://atlantis12essaouira.com/chambres/l-agave" />
+  </url>
+  <url>
+    <loc>https://atlantis12essaouira.com/chambres/la-coquelicot</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://atlantis12essaouira.com/chambres/la-coquelicot" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://atlantis12essaouira.com/en/chambres/la-coquelicot" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://atlantis12essaouira.com/chambres/la-coquelicot" />
+  </url>
+  <url>
+    <loc>https://atlantis12essaouira.com/en/chambres/la-coquelicot</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://atlantis12essaouira.com/chambres/la-coquelicot" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://atlantis12essaouira.com/en/chambres/la-coquelicot" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://atlantis12essaouira.com/chambres/la-coquelicot" />
+  </url>
+  <url>
+    <loc>https://atlantis12essaouira.com/chambres/l-orchis</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://atlantis12essaouira.com/chambres/l-orchis" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://atlantis12essaouira.com/en/chambres/l-orchis" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://atlantis12essaouira.com/chambres/l-orchis" />
+  </url>
+  <url>
+    <loc>https://atlantis12essaouira.com/en/chambres/l-orchis</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://atlantis12essaouira.com/chambres/l-orchis" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://atlantis12essaouira.com/en/chambres/l-orchis" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://atlantis12essaouira.com/chambres/l-orchis" />
+  </url>
+  <url>
     <loc>https://atlantis12essaouira.com/table-dhotes</loc>
-    <lastmod>2026-08-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://atlantis12essaouira.com/table-dhotes" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://atlantis12essaouira.com/en/table-dhotes" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://atlantis12essaouira.com/table-dhotes" />
+  </url>
+  <url>
+    <loc>https://atlantis12essaouira.com/en/table-dhotes</loc>
     <xhtml:link rel="alternate" hreflang="fr" href="https://atlantis12essaouira.com/table-dhotes" />
     <xhtml:link rel="alternate" hreflang="en" href="https://atlantis12essaouira.com/en/table-dhotes" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://atlantis12essaouira.com/table-dhotes" />
   </url>
   <url>
     <loc>https://atlantis12essaouira.com/experiences</loc>
-    <lastmod>2026-08-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://atlantis12essaouira.com/experiences" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://atlantis12essaouira.com/en/experiences" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://atlantis12essaouira.com/experiences" />
+  </url>
+  <url>
+    <loc>https://atlantis12essaouira.com/en/experiences</loc>
     <xhtml:link rel="alternate" hreflang="fr" href="https://atlantis12essaouira.com/experiences" />
     <xhtml:link rel="alternate" hreflang="en" href="https://atlantis12essaouira.com/en/experiences" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://atlantis12essaouira.com/experiences" />
   </url>
   <url>
     <loc>https://atlantis12essaouira.com/contact</loc>
-    <lastmod>2026-08-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://atlantis12essaouira.com/contact" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://atlantis12essaouira.com/en/contact" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://atlantis12essaouira.com/contact" />
+  </url>
+  <url>
+    <loc>https://atlantis12essaouira.com/en/contact</loc>
     <xhtml:link rel="alternate" hreflang="fr" href="https://atlantis12essaouira.com/contact" />
     <xhtml:link rel="alternate" hreflang="en" href="https://atlantis12essaouira.com/en/contact" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://atlantis12essaouira.com/contact" />
   </url>
   <url>
     <loc>https://atlantis12essaouira.com/maison-dart</loc>
-    <lastmod>2026-08-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://atlantis12essaouira.com/maison-dart" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://atlantis12essaouira.com/en/maison-dart" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://atlantis12essaouira.com/maison-dart" />
+  </url>
+  <url>
+    <loc>https://atlantis12essaouira.com/en/maison-dart</loc>
     <xhtml:link rel="alternate" hreflang="fr" href="https://atlantis12essaouira.com/maison-dart" />
     <xhtml:link rel="alternate" hreflang="en" href="https://atlantis12essaouira.com/en/maison-dart" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://atlantis12essaouira.com/maison-dart" />
   </url>
   <url>
     <loc>https://atlantis12essaouira.com/essaouira</loc>
-    <lastmod>2026-08-27</lastmod>
     <xhtml:link rel="alternate" hreflang="fr" href="https://atlantis12essaouira.com/essaouira" />
     <xhtml:link rel="alternate" hreflang="en" href="https://atlantis12essaouira.com/en/essaouira" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://atlantis12essaouira.com/essaouira" />
   </url>
   <url>
-    <loc>https://atlantis12essaouira.com/en</loc>
-    <lastmod>2026-08-27</lastmod>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://atlantis12essaouira.com/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://atlantis12essaouira.com/en" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://atlantis12essaouira.com/" />
-  </url>
-  <url>
-    <loc>https://atlantis12essaouira.com/en/la-maison</loc>
-    <lastmod>2026-08-27</lastmod>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://atlantis12essaouira.com/la-maison" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://atlantis12essaouira.com/en/la-maison" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://atlantis12essaouira.com/la-maison" />
-  </url>
-  <url>
-    <loc>https://atlantis12essaouira.com/en/chambres</loc>
-    <lastmod>2026-08-27</lastmod>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://atlantis12essaouira.com/chambres" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://atlantis12essaouira.com/en/chambres" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://atlantis12essaouira.com/chambres" />
-  </url>
-  <url>
-    <loc>https://atlantis12essaouira.com/en/table-dhotes</loc>
-    <lastmod>2026-08-27</lastmod>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://atlantis12essaouira.com/table-dhotes" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://atlantis12essaouira.com/en/table-dhotes" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://atlantis12essaouira.com/table-dhotes" />
-  </url>
-  <url>
-    <loc>https://atlantis12essaouira.com/en/experiences</loc>
-    <lastmod>2026-08-27</lastmod>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://atlantis12essaouira.com/experiences" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://atlantis12essaouira.com/en/experiences" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://atlantis12essaouira.com/experiences" />
-  </url>
-  <url>
-    <loc>https://atlantis12essaouira.com/en/contact</loc>
-    <lastmod>2026-08-27</lastmod>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://atlantis12essaouira.com/contact" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://atlantis12essaouira.com/en/contact" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://atlantis12essaouira.com/contact" />
-  </url>
-  <url>
-    <loc>https://atlantis12essaouira.com/en/maison-dart</loc>
-    <lastmod>2026-08-27</lastmod>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://atlantis12essaouira.com/maison-dart" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://atlantis12essaouira.com/en/maison-dart" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://atlantis12essaouira.com/maison-dart" />
-  </url>
-  <url>
     <loc>https://atlantis12essaouira.com/en/essaouira</loc>
-    <lastmod>2026-08-27</lastmod>
     <xhtml:link rel="alternate" hreflang="fr" href="https://atlantis12essaouira.com/essaouira" />
     <xhtml:link rel="alternate" hreflang="en" href="https://atlantis12essaouira.com/en/essaouira" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://atlantis12essaouira.com/essaouira" />

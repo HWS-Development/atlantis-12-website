@@ -38,12 +38,14 @@
     "explorer": {
       "house": "La Maison",
       "rooms": "Les Chambres",
-      "table": "La Table",
+      "table": "Table d'hôtes",
       "art": "L'Art"
     },
     "essaouiraLine1": "Ce qu'on aime (vraiment !)",
     "essaouiraLine2": "à Essaouira",
-    "tagline": "Maison d'hôtes & d'art"
+    "tagline": "Maison d'hôtes & d'art",
+    "legalMentions": "Mentions légales",
+    "cgv": "Conditions générales de vente"
   },
   "googleBadge": {
     "title": "Atlantis 12, maison d’hôtes"
@@ -61,7 +63,8 @@
       },
       "search": "Réserver",
       "eyebrow": "Proche d'Essaouira, Maroc",
-      "scrollDown": "Défiler vers le bas"
+      "scrollDown": "Défiler vers le bas",
+      "seoHeading": "Atlantis 12, maison d'hôtes et d'art à Essaouira"
     },
     "booking": {
       "title": "Réserver votre séjour",
@@ -294,12 +297,12 @@
       "adults": "• 2 adultes",
       "intro": "La plus grande chambre de la maison. Un espace fait pour ceux qui cherchent l'absolu."
     },
-    "lipomea": {
+    "l-ipomea": {
       "category": "Suite Junior",
       "adults": "• 2 adultes",
       "intro": "L'Ipoméa tire son nom de la fleur grimpante qui habille les murs du Maroc. Une chambre lumineuse, enveloppée de bleu indigo, où la nature entre par chaque fenêtre."
     },
-    "lagave": {
+    "l-agave": {
       "category": "Suite Junior",
       "adults": "• 2 adultes",
       "intro": "Nommée d'après l'agave sauvage qui ponctue le paysage atlantique, cette chambre conjugue minéralité et douceur. Ses lignes épurées et sa palette naturelle invitent au silence."
@@ -309,7 +312,7 @@
       "adults": "• 2 adultes",
       "intro": "La Coquelicot porte en elle l'éclat rouge d'un champ au printemps. Une chambre vibrante et intime, aux détails soignés, où la couleur dialogue avec les œuvres exposées."
     },
-    "lorchis": {
+    "l-orchis": {
       "category": "Suite Junior",
       "adults": "• 2 adultes",
       "intro": "Discrète et raffinée comme l'orchidée sauvage de la forêt de thuyas, ses matières nobles, bois, coton naturel, tadelakt, composent un espace hors du temps."

@@ -41,12 +41,14 @@
     "explorer": {
       "house": "The House",
       "rooms": "The Rooms",
-      "table": "The Table",
+      "table": "Table d'hôtes",
       "art": "The Art"
     },
     "essaouiraLine1": "What we (truly!) love",
     "essaouiraLine2": "in Essaouira",
-    "tagline": "maison d'hôtes & d'art"
+    "tagline": "maison d'hôtes & d'art",
+    "legalMentions": "Legal Notice",
+    "cgv": "Terms & Conditions"
   },
   "home": {
     "hero": {
@@ -61,7 +63,8 @@
       },
       "search": "Book now",
       "eyebrow": "Near Essaouira, Morocco",
-      "scrollDown": "Scroll down"
+      "scrollDown": "Scroll down",
+      "seoHeading": "Atlantis 12, guesthouse and art house near Essaouira"
     },
     "booking": {
       "title": "Book your stay",
@@ -294,12 +297,12 @@
       "adults": "• 2 adults",
       "intro": "The largest room in the house. A space made for those who seek the absolute."
     },
-    "lipomea": {
+    "l-ipomea": {
       "category": "Junior Suite",
       "adults": "• 2 adults",
       "intro": "Ipomea takes its name from the climbing flower that drapes the walls of Morocco. A luminous room, wrapped in indigo blue, where nature enters through every window."
     },
-    "lagave": {
+    "l-agave": {
       "category": "Junior Suite",
       "adults": "• 2 adults",
       "intro": "Named after the wild agave that punctuates the Atlantic landscape, this room blends mineral textures and softness. Its clean lines and natural palette invite silence."
@@ -309,7 +312,7 @@
       "adults": "• 2 adults",
       "intro": "Coquelicot carries within it the red brilliance of a spring field. A vibrant and intimate room with refined details, where colour converses with the artworks on display."
     },
-    "lorchis": {
+    "l-orchis": {
       "category": "Junior Suite",
       "adults": "• 2 adults",
       "intro": "Discreet and refined like the wild orchid of the thuya forest, its noble materials - wood, natural cotton, tadelakt - compose a space outside of time."

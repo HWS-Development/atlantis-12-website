@@ -36,14 +36,14 @@ const ChevronRight = ({ className }) => (
   </svg>
 );
 
-export default function RoomDetailModal({ room, onClose }) {
+export default function RoomDetailModal({ room, onClose, isPage = false }) {
   const { t } = useTranslation();
   const [idx, setIdx] = useState(0);
   const artworkRef = useRef(null);
 
   useEffect(() => {
     const prev = document.body.style.overflow;
-    document.body.style.overflow = "hidden";
+    if (!isPage) document.body.style.overflow = "hidden";
     const onKey = (e) => {
       if (e.key === "Escape") onClose?.();
       if (e.key === "ArrowLeft") setIdx((i) => (i - 1 + room.images.length) % room.images.length);
@@ -51,10 +51,10 @@ export default function RoomDetailModal({ room, onClose }) {
     };
     window.addEventListener("keydown", onKey);
     return () => {
-      document.body.style.overflow = prev;
+      if (!isPage) document.body.style.overflow = prev;
       window.removeEventListener("keydown", onKey);
     };
-  }, [room, onClose]);
+  }, [isPage, room, onClose]);
 
   if (!room) return null;
   const current = room.images[idx];
@@ -67,6 +67,7 @@ export default function RoomDetailModal({ room, onClose }) {
 
   const prev = () => setIdx((i) => (i - 1 + room.images.length) % room.images.length);
   const next = () => setIdx((i) => (i + 1) % room.images.length);
+  const Heading = isPage ? "h1" : "h2";
   const scrollToArtwork = () =>
     artworkRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
   const openBooking = () => {
@@ -75,7 +76,10 @@ export default function RoomDetailModal({ room, onClose }) {
   };
 
   return (
-    <div className="fixed inset-0 z-50 bg-background overflow-y-auto" style={{ opacity: 1 }}>
+    <div
+      className={isPage ? "bg-background min-h-screen pt-16" : "fixed inset-0 z-50 bg-background overflow-y-auto"}
+      style={{ opacity: 1 }}
+    >
 
       <div className="max-w-6xl mx-auto px-6 md:px-12 py-20 md:py-24">
         <button
@@ -98,9 +102,9 @@ export default function RoomDetailModal({ room, onClose }) {
           </p>
         </div>
 
-        <h2 className="font-display text-4xl md:text-7xl text-foreground mb-8 break-words">
+        <Heading className="font-display text-4xl md:text-7xl text-foreground mb-8 break-words">
           {room.name}
-        </h2>
+        </Heading>
 
         <div className="grid md:grid-cols-2 gap-8 md:gap-16 mb-12">
           <div className="space-y-3 min-w-0">

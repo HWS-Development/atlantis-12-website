@@ -6,13 +6,12 @@ import Reveal from "../Common/Reveal";
 const EMAIL = "contact@atlantis12essaouira.com";
 const WHATSAPP = "https://wa.me/212666292285";
 
-const accent = "rgb(143, 175, 126)";        // labels + body text on dark green (#8FAF7E)
-const cream  = "rgb(245, 240, 232)";        // headings
-const cream45 = "rgba(245, 240, 232, 0.45)";
-const cream55 = "rgba(143, 175, 126, 0.85)"; // nav links
-const cream65 = "rgb(143, 175, 126)";        // body text → sage green per G7
-const cream25 = "rgba(245, 240, 232, 0.25)";
-const cream40 = "rgba(143, 175, 126, 0.7)";  // secondary text
+const cream  = "rgb(245, 240, 232)";
+const accent = cream;
+const cream45 = cream;
+const cream55 = cream;
+const cream65 = cream;
+const cream40 = cream;
 const cream10 = "rgba(245, 240, 232, 0.1)";
 
 const WX_URL =
@@ -156,10 +155,10 @@ export default function Footer() {
           className="mt-8 md:mt-10 pt-6 flex flex-col md:flex-row justify-between items-center gap-4"
           style={{ borderTop: `1px solid ${cream10}` }}
         >
-          <p className="font-body text-xs text-center md:text-left" style={{ color: cream25 }}>
+          <p className="font-body text-xs text-center md:text-left" style={{ color: cream }}>
             © 2026 Atlantis 12 - {t("footer.tagline", "Maison d'hôtes & d'art")}
           </p>
-          <div className="flex items-center gap-4 font-body text-xs" style={{ color: cream25 }}>
+          <div className="flex items-center gap-4 font-body text-xs" style={{ color: cream }}>
             <LangLink to="/mentions-legales" className="hover:opacity-80 transition-opacity">
               {t("footer.legalMentions", "Mentions légales")}
             </LangLink>

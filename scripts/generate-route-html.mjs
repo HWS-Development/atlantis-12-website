@@ -1,5 +1,6 @@
 import { mkdir, readFile, writeFile } from "node:fs/promises";
 import { dirname, resolve } from "node:path";
+import { pathToFileURL } from "node:url";
 import { HTML_ENTRY_PATHS, SEO_PAGES, getSeoMetadata } from "../src/seo/metadata.js";
 
 const DIST_DIR = resolve(process.cwd(), "dist");
@@ -34,7 +35,7 @@ function extractAssetTags(distIndexHtml) {
   return Array.from(new Set(tags));
 }
 
-function buildHtml({ lang, title, description, canonical, hreflang, ogImage }, assetTags) {
+function buildHtml({ lang, title, description, canonical, hreflang, ogImage }, assetTags, bodyHtml) {
   const indent = "    ";
   const assetBlock = assetTags.map((t) => indent + t).join("\n");
   return `<!doctype html>
@@ -57,11 +58,12 @@ function buildHtml({ lang, title, description, canonical, hreflang, ogImage }, a
     <link rel="canonical" href="${canonical}" />
     <link rel="alternate" hreflang="fr" href="${hreflang.fr}" />
     <link rel="alternate" hreflang="en" href="${hreflang.en}" />
+    <link rel="alternate" hreflang="x-default" href="${hreflang.fr}" />
 ${FONT_LINKS}
 ${assetBlock}
   </head>
   <body>
-    <div id="root"></div>
+    <div id="root">${bodyHtml}</div>
   </body>
 </html>
 `;
@@ -90,14 +92,16 @@ function getEntryConfig(filePath) {
 
 const distIndex = await readFile(resolve(DIST_DIR, "index.html"), "utf8");
 const assetTags = extractAssetTags(distIndex);
+const { render } = await import(pathToFileURL(resolve(process.cwd(), "dist-ssr/entry-server.js")));
 
 for (const filePath of HTML_ENTRY_PATHS) {
   const { routeKey, lang } = getEntryConfig(filePath);
   const metadata = getSeoMetadata(routeKey, lang);
   const targetPath = resolve(DIST_DIR, filePath);
+  const bodyHtml = await render(metadata.path, lang);
 
   await mkdir(dirname(targetPath), { recursive: true });
-  await writeFile(targetPath, buildHtml({ lang, ...metadata }, assetTags), "utf8");
+  await writeFile(targetPath, buildHtml({ lang, ...metadata }, assetTags, bodyHtml), "utf8");
   console.log(`  wrote dist/${filePath}`);
 }
 

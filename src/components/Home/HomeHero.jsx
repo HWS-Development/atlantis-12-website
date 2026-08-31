@@ -19,6 +19,9 @@ export default function HomeHero() {
       className="relative w-full h-screen overflow-hidden"
       style={{ height: "100svh", minHeight: "100svh" }}
     >
+      <h1 className="sr-only">
+        {t("home.hero.seoHeading", "Atlantis 12, maison d'hôtes et d'art à Essaouira")}
+      </h1>
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none px-6">
         <Reveal className="relative flex flex-col items-center hero-logo-in w-full max-w-[440px]">
           <img

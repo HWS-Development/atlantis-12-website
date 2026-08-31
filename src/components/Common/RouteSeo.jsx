@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import { getSeoMetadata, normalizeSeoLanguage } from "../../seo/metadata";
+import { getSeoMetadata, normalizeSeoLanguage, SEO_PAGES } from "../../seo/metadata";
 
 const ROUTE_KEYS = {
   "/": "home",
@@ -17,7 +17,16 @@ const ROUTE_KEYS = {
   "/maison-dart": "gallery",
   "/gallery": "gallery",
   "/essaouira": "essaouira",
+  "/terms": "terms",
+  "/cancellation": "cancellation",
+  "/mentions-legales": "legalNotice",
+  "/cgv": "salesTerms",
+  "/politique-de-confidentialite": "privacy",
 };
+
+Object.entries(SEO_PAGES).forEach(([key, page]) => {
+  ROUTE_KEYS[page.path] = key;
+});
 
 function ensureTag(selector, create) {
   let el = document.querySelector(selector);
@@ -36,6 +45,19 @@ function setMeta(selector, attr, name, content) {
     return meta;
   });
   el.setAttribute("content", content);
+}
+
+function setLink(hreflang, href) {
+  const selector = hreflang
+    ? `link[rel="alternate"][hreflang="${hreflang}"]`
+    : 'link[rel="canonical"]';
+  const link = ensureTag(selector, () => {
+    const element = document.createElement("link");
+    element.setAttribute("rel", hreflang ? "alternate" : "canonical");
+    if (hreflang) element.setAttribute("hreflang", hreflang);
+    return element;
+  });
+  link.setAttribute("href", href);
 }
 
 export default function RouteSeo() {
@@ -61,6 +83,10 @@ export default function RouteSeo() {
     setMeta('meta[name="twitter:title"]', "name", "twitter:title", metadata.title);
     setMeta('meta[name="twitter:description"]', "name", "twitter:description", metadata.description);
     setMeta('meta[name="twitter:image"]', "name", "twitter:image", metadata.ogImage);
+    setLink(null, metadata.canonical);
+    setLink("fr", metadata.hreflang.fr);
+    setLink("en", metadata.hreflang.en);
+    setLink("x-default", metadata.hreflang.fr);
   }, [i18n.language, location.pathname]);
 
   return null;

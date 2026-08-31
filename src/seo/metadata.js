@@ -45,6 +45,66 @@ export const SEO_PAGES = {
         "Five distinctive rooms and suites with fireplace and private terrace, between garden and Atlantic. Adults-only guesthouse, 15 min from Essaouira.",
     },
   },
+  roomPlumeria: {
+    path: "/chambres/la-plumeria",
+    ogImage: "/images/rooms/plumeria-vaste-espace-chambre-colonnes-atlantis12-essaouira.webp",
+    fr: {
+      title: "La Pluméria · Suite supérieure · Atlantis 12 Essaouira",
+      description: "Découvrez La Pluméria, suite supérieure de 50 m² avec lit king size, vaste salon, cheminée, terrasse privée et salle de bain, près d'Essaouira.",
+    },
+    en: {
+      title: "La Pluméria · Superior Suite · Atlantis 12 Essaouira",
+      description: "Discover La Pluméria, a 50 m² superior suite with king-size bed, spacious lounge, fireplace, private terrace and bathroom near Essaouira.",
+    },
+  },
+  roomIpomea: {
+    path: "/chambres/l-ipomea",
+    ogImage: "/images/rooms/ipomea-chambre-lit-bleu-indigo-murs-pierre-atlantis12-essaouira.webp",
+    fr: {
+      title: "L'Ipoméa · Suite junior · Atlantis 12 Essaouira",
+      description: "Découvrez L'Ipoméa, suite junior lumineuse de 25 m² aux tons indigo, avec lit queen size, salon avec cheminée et salle de bain privative.",
+    },
+    en: {
+      title: "L'Ipoméa · Junior Suite · Atlantis 12 Essaouira",
+      description: "Discover L'Ipoméa, a bright 25 m² indigo junior suite with queen-size bed, private lounge with fireplace and private bathroom.",
+    },
+  },
+  roomAgave: {
+    path: "/chambres/l-agave",
+    ogImage: "/images/rooms/agave-chambre-lit-vert-murs-pierre-lumiere-atlantis12-essaouira.webp",
+    fr: {
+      title: "L'Agave · Suite junior · Atlantis 12 Essaouira",
+      description: "Découvrez L'Agave, suite junior de 25 m² entre pierre et matières naturelles, avec lit queen size, cheminée et salle de bain privative.",
+    },
+    en: {
+      title: "L'Agave · Junior Suite · Atlantis 12 Essaouira",
+      description: "Discover L'Agave, a 25 m² junior suite of stone and natural textures, with queen-size bed, fireplace and private bathroom near Essaouira.",
+    },
+  },
+  roomCoquelicot: {
+    path: "/chambres/la-coquelicot",
+    ogImage: "/images/rooms/coquelicot-chambre-lit-queen-coussins-rouges-lampes-raphia-murs-pierre-atlantis12-essaouira.webp",
+    fr: {
+      title: "La Coquelicot · Suite junior · Atlantis 12 Essaouira",
+      description: "Découvrez La Coquelicot, suite junior intime de 25 m² avec lit queen size, salon avec cheminée, salle de bain et œuvres originales.",
+    },
+    en: {
+      title: "La Coquelicot · Junior Suite · Atlantis 12 Essaouira",
+      description: "Discover La Coquelicot, an intimate 25 m² junior suite with queen-size bed, lounge with fireplace, private bathroom and original artworks.",
+    },
+  },
+  roomOrchis: {
+    path: "/chambres/l-orchis",
+    ogImage: "/images/rooms/orchis-chambre-lit-queen-couvre-lit-mauve-cheminee-murs-pierre-atlantis12-essaouira.webp",
+    fr: {
+      title: "L'Orchis · Suite junior · Atlantis 12 Essaouira",
+      description: "Découvrez L'Orchis, suite junior raffinée de 25 m² en pierre, bois et tadelakt, avec lit queen size, cheminée et salle de bain privative.",
+    },
+    en: {
+      title: "L'Orchis · Junior Suite · Atlantis 12 Essaouira",
+      description: "Discover L'Orchis, a refined 25 m² junior suite of stone, wood and tadelakt, with queen-size bed, fireplace and private bathroom.",
+    },
+  },
   table: {
     path: "/table-dhotes",
     ogImage: "/images/table-dhotes/entree-artichaut-poulpe-crevette-table-dhotes-atlantis12-essaouira.webp",
@@ -115,6 +175,31 @@ export const SEO_PAGES = {
         "Our favourite addresses in Essaouira: medina, beaches, restaurants, cooperatives and tips, shared by Atlantis 12 as we would with friends.",
     },
   },
+  terms: {
+    path: "/terms",
+    fr: { title: "Conditions d'utilisation · Atlantis 12", description: "Conditions d'utilisation du site Atlantis 12, maison d'hôtes et d'art près d'Essaouira." },
+    en: { title: "Terms of Use · Atlantis 12", description: "Terms of use for the Atlantis 12 guesthouse and art house website near Essaouira." },
+  },
+  cancellation: {
+    path: "/cancellation",
+    fr: { title: "Politique d'annulation · Atlantis 12", description: "Politique d'annulation des réservations de la maison d'hôtes Atlantis 12 près d'Essaouira." },
+    en: { title: "Cancellation Policy · Atlantis 12", description: "Cancellation policy for bookings at Atlantis 12 guesthouse near Essaouira." },
+  },
+  legalNotice: {
+    path: "/mentions-legales",
+    fr: { title: "Mentions légales · Atlantis 12", description: "Mentions légales du site Atlantis 12 : éditeur, publication, hébergement et informations réglementaires." },
+    en: { title: "Legal Notice · Atlantis 12", description: "Legal notice for Atlantis 12: publisher, publication, hosting and regulatory information." },
+  },
+  salesTerms: {
+    path: "/cgv",
+    fr: { title: "Conditions générales de vente · Atlantis 12", description: "Conditions générales de vente applicables aux réservations et séjours à Atlantis 12." },
+    en: { title: "Terms & Conditions · Atlantis 12", description: "Terms and conditions applicable to bookings and stays at Atlantis 12." },
+  },
+  privacy: {
+    path: "/politique-de-confidentialite",
+    fr: { title: "Politique de confidentialité · Atlantis 12", description: "Politique de confidentialité et traitement des données personnelles sur le site Atlantis 12." },
+    en: { title: "Privacy Policy · Atlantis 12", description: "Privacy policy and personal data processing information for the Atlantis 12 website." },
+  },
 };
 
 export function normalizeSeoLanguage(lng) {
@@ -148,21 +233,13 @@ export function getSeoMetadata(routeKey, lng = "fr") {
   };
 }
 
-export const HTML_ENTRY_PATHS = [
-  "index.html",
-  "la-maison/index.html",
-  "chambres/index.html",
-  "table-dhotes/index.html",
-  "experiences/index.html",
-  "contact/index.html",
-  "maison-dart/index.html",
-  "essaouira/index.html",
-  "en/index.html",
-  "en/la-maison/index.html",
-  "en/chambres/index.html",
-  "en/table-dhotes/index.html",
-  "en/experiences/index.html",
-  "en/contact/index.html",
-  "en/maison-dart/index.html",
-  "en/essaouira/index.html",
-];
+const routeToEntry = (path, language) => {
+  const route = path === "/" ? "" : path.slice(1);
+  const prefix = language === "en" ? "en/" : "";
+  return `${prefix}${route ? `${route}/` : ""}index.html`;
+};
+
+export const HTML_ENTRY_PATHS = Object.values(SEO_PAGES).flatMap((page) => [
+  routeToEntry(page.path, "fr"),
+  routeToEntry(page.path, "en"),
+]);
