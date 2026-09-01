@@ -4,8 +4,6 @@ import Reveal from "../Common/Reveal";
 
 const PLACE_ID = "ChIJH19_ZnqbrQ0RnQFpcNhP6cs"; // Atlantis 12 Essaouira
 const API_KEY = import.meta.env.VITE_GOOGLE_MAPS_API_KEY || "";
-const FALLBACK_RATING = 4.8;
-const FALLBACK_REVIEW_COUNT = 74;
 
 const GOOGLE_REVIEWS_URL =
   `https://search.google.com/local/reviews?placeid=${PLACE_ID}`;
@@ -79,26 +77,17 @@ function getInitials(name) {
   return (parts[0][0] + parts[parts.length - 1][0]).toUpperCase();
 }
 
-let mapsPromise = null;
-function loadGoogleMapsAPI() {
-  if (mapsPromise) return mapsPromise;
-  if (!API_KEY) return Promise.reject(new Error("No Google Maps API key"));
-  if (window.google?.maps?.importLibrary) return Promise.resolve(window.google.maps);
+async function loadGooglePlace(language) {
+  if (!API_KEY) throw new Error("No Google Places API key");
 
-  mapsPromise = new Promise((resolve, reject) => {
-    const callbackName = "__initAtlantisGoogleMaps";
-    const script = document.createElement("script");
-    window[callbackName] = () => {
-      delete window[callbackName];
-      resolve(window.google.maps);
-    };
-    script.src = `https://maps.googleapis.com/maps/api/js?key=${API_KEY}&loading=async&v=weekly&callback=${callbackName}`;
-    script.async = true;
-    script.onerror = () => reject(new Error("Failed to load Google Maps API"));
-    document.head.appendChild(script);
+  const params = new URLSearchParams({
+    fields: "rating,userRatingCount,reviews",
+    languageCode: language,
+    key: API_KEY,
   });
-
-  return mapsPromise;
+  const response = await fetch(`https://places.googleapis.com/v1/places/${PLACE_ID}?${params}`);
+  if (!response.ok) throw new Error("Google Places request failed");
+  return response.json();
 }
 
 export default function ReviewsSection() {
@@ -108,25 +97,22 @@ export default function ReviewsSection() {
   const staticReviews = Array.isArray(reviewsRaw) ? reviewsRaw : [];
 
   const [liveReviews, setLiveReviews] = useState(null); // null = not loaded yet
-  const [rating, setRating] = useState(FALLBACK_RATING);
-  const [reviewCount, setReviewCount] = useState(FALLBACK_REVIEW_COUNT);
-  const [hasLiveRating, setHasLiveRating] = useState(false);
+  const [rating, setRating] = useState(null);
+  const [reviewCount, setReviewCount] = useState(null);
 
   useEffect(() => {
     let ignore = false;
 
-    loadGoogleMapsAPI()
-      .then(async (maps) => {
-        const { Place } = await maps.importLibrary("places");
-        const place = new Place({ id: PLACE_ID });
-        await place.fetchFields({ fields: ["rating", "userRatingCount", "reviews"] });
+    setLiveReviews(null);
+    setRating(null);
+    setReviewCount(null);
+
+    loadGooglePlace(i18n.language?.startsWith("en") ? "en" : "fr")
+      .then((place) => {
         if (ignore) return;
 
         if (typeof place.rating === "number") setRating(place.rating);
         if (typeof place.userRatingCount === "number") setReviewCount(place.userRatingCount);
-        if (typeof place.rating === "number" && typeof place.userRatingCount === "number") {
-          setHasLiveRating(true);
-        }
         if (Array.isArray(place.reviews) && place.reviews.length > 0) {
           const mapped = place.reviews
             .filter((review) => review.rating >= 4)
@@ -136,7 +122,7 @@ export default function ReviewsSection() {
               return {
                 name,
                 initials: getInitials(name),
-                quote: review.text || "",
+                quote: review.text?.text || "",
                 rating: review.rating,
                 photo: review.authorAttribution?.photoURI || null,
                 relativeTime: review.relativePublishTimeDescription || "",
@@ -153,6 +139,7 @@ export default function ReviewsSection() {
   }, [i18n.language]);
 
   const isLive = liveReviews && liveReviews.length > 0;
+  const hasLiveRating = typeof rating === "number" && typeof reviewCount === "number";
   const reviewItems = isLive
     ? liveReviews
     : staticReviews.map((r, i) => ({
@@ -183,33 +170,30 @@ export default function ReviewsSection() {
           </Reveal>
         </div>
 
-        <Reveal
-          delay={2}
-          className="flex items-center gap-5 bg-background border border-primary/15 px-6 py-4 self-start md:self-auto"
-        >
-          <div className="text-center">
-            <p className="font-display text-5xl text-foreground leading-none">{rating.toFixed(1)}</p>
-            <p className="font-body text-xs text-foreground/40 mt-1">/ 5</p>
-          </div>
-          <div className="space-y-1.5">
-            <div className="flex gap-0.5">
-              {[0, 1, 2, 3, 4].map((i) => (
-                <StarIcon key={i} filled={i < Math.round(rating)} />
-              ))}
+        {hasLiveRating && (
+          <Reveal
+            delay={2}
+            className="flex items-center gap-5 bg-background border border-primary/15 px-6 py-4 self-start md:self-auto"
+          >
+            <div className="text-center">
+              <p className="font-display text-5xl text-foreground leading-none">{rating.toFixed(1)}</p>
+              <p className="font-body text-xs text-foreground/40 mt-1">/ 5</p>
             </div>
-            <p className="font-body text-xs text-foreground/50">
-              {reviewCount} {t("home.reviews.verified", "avis vérifiés")}
-            </p>
-            {!hasLiveRating && (
-              <p className="font-body text-[10px] text-foreground/40">
-                {t("home.reviews.lastKnown", "Dernière valeur connue")}
+            <div className="space-y-1.5">
+              <div className="flex gap-0.5">
+                {[0, 1, 2, 3, 4].map((i) => (
+                  <StarIcon key={i} filled={i < Math.round(rating)} />
+                ))}
+              </div>
+              <p className="font-body text-xs text-foreground/50">
+                {reviewCount} {t("home.reviews.verified", "avis vérifiés")}
               </p>
-            )}
-            <p className="font-body text-xs tracking-[0.15em] uppercase text-primary/70">
-              {t("home.reviews.recommend", "100 % recommandent")}
-            </p>
-          </div>
-        </Reveal>
+              <p className="font-body text-xs tracking-[0.15em] uppercase text-primary/70">
+                {t("home.reviews.recommend", "100 % recommandent")}
+              </p>
+            </div>
+          </Reveal>
+        )}
       </div>
 
       <div className="relative">

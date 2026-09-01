@@ -24,6 +24,14 @@
   "googleBadge": {
     "title": "Atlantis 12, guest house"
   },
+  "cookieConsent": {
+    "label": "Privacy preferences",
+    "title": "Your privacy",
+    "text": "With your consent, we use Google Analytics to measure website traffic.",
+    "learnMore": "Learn more",
+    "accept": "Accept",
+    "decline": "Decline"
+  },
   "footer": {
     "rights": "All rights reserved.",
     "address": "Douar Laariach, Ounagha, Essaouira, Morocco",
@@ -228,8 +236,7 @@
       "placeholder": "Add your reviews in locales/en.json → home.reviews.items[].quote",
       "prev": "Previous review",
       "next": "Next review",
-      "googleCta": "See all our Google reviews",
-      "lastKnown": "Last known value"
+      "googleCta": "See all our Google reviews"
     },
     "rooms": {
       "eyebrow": "The 5 rooms",

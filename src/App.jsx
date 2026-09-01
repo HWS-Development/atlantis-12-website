@@ -8,6 +8,7 @@ import ScrollToTop from "./components/UI/ScrollToTop";
 import LangLink from "./components/Common/LangLink";
 import RouteSeo from "./components/Common/RouteSeo";
 import GoogleAnalytics from "./components/Common/GoogleAnalytics";
+import CookieConsent from "./components/Common/CookieConsent";
 
 import Home from "./pages/Home";
 import Rooms from "./pages/Rooms";
@@ -66,6 +67,7 @@ export function AppContent() {
       </main>
       <Footer />
       <BottomReservationBar />
+      <CookieConsent />
     </div>
   );
 }

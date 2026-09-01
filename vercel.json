@@ -7,14 +7,10 @@
     { "source": "/experiences", "has": [{ "type": "query", "key": "lng", "value": "en" }], "destination": "/en/experiences", "permanent": true },
     { "source": "/contact", "has": [{ "type": "query", "key": "lng", "value": "en" }], "destination": "/en/contact", "permanent": true },
     { "source": "/maison-dart", "has": [{ "type": "query", "key": "lng", "value": "en" }], "destination": "/en/maison-dart", "permanent": true },
-    { "source": "/essaouira", "has": [{ "type": "query", "key": "lng", "value": "en" }], "destination": "/en/essaouira", "permanent": true },
-    { "source": "/chambres", "has": [{ "type": "query", "key": "room", "value": "la-plumeria" }], "destination": "/chambres/la-plumeria", "permanent": true },
-    { "source": "/chambres", "has": [{ "type": "query", "key": "room", "value": "lipomea" }], "destination": "/chambres/l-ipomea", "permanent": true },
-    { "source": "/chambres", "has": [{ "type": "query", "key": "room", "value": "lagave" }], "destination": "/chambres/l-agave", "permanent": true },
-    { "source": "/chambres", "has": [{ "type": "query", "key": "room", "value": "la-coquelicot" }], "destination": "/chambres/la-coquelicot", "permanent": true },
-    { "source": "/chambres", "has": [{ "type": "query", "key": "room", "value": "lorchis" }], "destination": "/chambres/l-orchis", "permanent": true }
+    { "source": "/essaouira", "has": [{ "type": "query", "key": "lng", "value": "en" }], "destination": "/en/essaouira", "permanent": true }
   ],
   "rewrites": [
+    { "source": "/chambres", "has": [{ "type": "query", "key": "room" }], "destination": "/api/room-redirect" },
     { "source": "/", "destination": "/index.html" },
     { "source": "/la-maison", "destination": "/la-maison/index.html" },
     { "source": "/chambres", "destination": "/chambres/index.html" },

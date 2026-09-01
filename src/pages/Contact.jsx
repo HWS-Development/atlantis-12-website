@@ -3,7 +3,6 @@ import { useTranslation } from "react-i18next";
 import Reveal from "../components/Common/Reveal";
 
 const FORMSPREE_ENDPOINT = import.meta.env.VITE_FORMSPREE_ENDPOINT || "https://formspree.io/f/mvzjqwyo";
-const GOOGLE_MAPS_API_KEY = import.meta.env.VITE_GOOGLE_MAPS_API_KEY || "";
 
 const Icon = ({ d, className = "w-4 h-4 mt-1 text-primary flex-shrink-0" }) => (
   <svg
@@ -190,7 +189,7 @@ export default function Contact() {
           <div className="w-full aspect-[4/3] overflow-hidden relative border border-border">
             <iframe
               title="Atlantis 12 - Google Maps"
-              src={`https://www.google.com/maps/embed/v1/place?key=${GOOGLE_MAPS_API_KEY}&q=Atlantis+12+maison+d'hÃ´tes+et+d'art,Essaouira,Morocco&zoom=15`}
+              src="https://www.google.com/maps?q=Atlantis+12+Essaouira+Morocco&output=embed"
               width="100%"
               height="100%"
               style={{ border: 0 }}

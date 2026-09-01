@@ -21,6 +21,14 @@
     "experiences": "Expériences",
     "art": "La maison d'art"
   },
+  "cookieConsent": {
+    "label": "Préférences de confidentialité",
+    "title": "Votre vie privée",
+    "text": "Avec votre accord, nous utilisons Google Analytics pour mesurer la fréquentation du site.",
+    "learnMore": "En savoir plus",
+    "accept": "Accepter",
+    "decline": "Refuser"
+  },
   "footer": {
     "rights": "Tous droits réservés.",
     "address": "Douar Laariach, Ounagha, Essaouira, Maroc",
@@ -228,8 +236,7 @@
       "placeholder": "Ajoutez vos avis dans locales/fr.json → home.reviews.items[].quote",
       "prev": "Avis précédent",
       "next": "Avis suivant",
-      "googleCta": "Voir tous nos avis Google",
-      "lastKnown": "Dernière valeur connue"
+      "googleCta": "Voir tous nos avis Google"
     },
     "rooms": {
       "eyebrow": "Les 5 chambres",
