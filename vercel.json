@@ -12,7 +12,12 @@
     { "source": "/chambres", "has": [{ "type": "query", "key": "room", "value": "lipomea" }], "destination": "/api/room-redirect", "permanent": true },
     { "source": "/chambres", "has": [{ "type": "query", "key": "room", "value": "lagave" }], "destination": "/api/room-redirect", "permanent": true },
     { "source": "/chambres", "has": [{ "type": "query", "key": "room", "value": "la-coquelicot" }], "destination": "/api/room-redirect", "permanent": true },
-    { "source": "/chambres", "has": [{ "type": "query", "key": "room", "value": "lorchis" }], "destination": "/api/room-redirect", "permanent": true }
+    { "source": "/chambres", "has": [{ "type": "query", "key": "room", "value": "lorchis" }], "destination": "/api/room-redirect", "permanent": true },
+    { "source": "/chambres/la-plumeria", "has": [{ "type": "query", "key": "room", "value": "la-plumeria" }], "destination": "/api/room-redirect", "permanent": true },
+    { "source": "/chambres/l-ipomea", "has": [{ "type": "query", "key": "room", "value": "lipomea" }], "destination": "/api/room-redirect", "permanent": true },
+    { "source": "/chambres/l-agave", "has": [{ "type": "query", "key": "room", "value": "lagave" }], "destination": "/api/room-redirect", "permanent": true },
+    { "source": "/chambres/la-coquelicot", "has": [{ "type": "query", "key": "room", "value": "la-coquelicot" }], "destination": "/api/room-redirect", "permanent": true },
+    { "source": "/chambres/l-orchis", "has": [{ "type": "query", "key": "room", "value": "lorchis" }], "destination": "/api/room-redirect", "permanent": true }
   ],
   "rewrites": [
     { "source": "/", "destination": "/index.html" },
