@@ -10,7 +10,11 @@
     { "source": "/essaouira", "has": [{ "type": "query", "key": "lng", "value": "en" }], "destination": "/en/essaouira", "permanent": true }
   ],
   "rewrites": [
-    { "source": "/chambres", "has": [{ "type": "query", "key": "room" }], "destination": "/api/room-redirect" },
+    { "source": "/chambres", "has": [{ "type": "query", "key": "room", "value": "la-plumeria" }], "destination": "/api/room-redirect" },
+    { "source": "/chambres", "has": [{ "type": "query", "key": "room", "value": "lipomea" }], "destination": "/api/room-redirect" },
+    { "source": "/chambres", "has": [{ "type": "query", "key": "room", "value": "lagave" }], "destination": "/api/room-redirect" },
+    { "source": "/chambres", "has": [{ "type": "query", "key": "room", "value": "la-coquelicot" }], "destination": "/api/room-redirect" },
+    { "source": "/chambres", "has": [{ "type": "query", "key": "room", "value": "lorchis" }], "destination": "/api/room-redirect" },
     { "source": "/", "destination": "/index.html" },
     { "source": "/la-maison", "destination": "/la-maison/index.html" },
     { "source": "/chambres", "destination": "/chambres/index.html" },
