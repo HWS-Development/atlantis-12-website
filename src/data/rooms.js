@@ -72,7 +72,7 @@ const ROOMS = [
       { src: `${ROOMS_PATH}/ipomea-salon-prive-cheminee-pierre-baies-vitrees-atlantis12-essaouira.webp`, alt: "L'Ipoméa, Le salon" },
       { src: `${ROOMS_PATH}/ipomea-detail-vase-ambre-fleurs-sechees-pierre-atlantis12-essaouira.webp`, alt: "L'Ipoméa, Détail décoration" },
       { src: `${ROOMS_PATH}/ipomea-salle-de-bain-voute-bleue-verriere-tadelakt-atlantis12-essaouira.webp`, alt: "L'Ipoméa, La voûte bleue" },
-      { src: `${ROOMS_PATH}/ipomea-patio-hamac-pergola-pierre-atlantis12-essaouirajpg.webp`, alt: "L'Ipoméa, Le patio" },
+      { src: `${ROOMS_PATH}/ipomea-patio-hamac-pergola-pierre-atlantis12-essaouira.webp`, alt: "L'Ipoméa, Le patio" },
     ],
     artwork: { src: `${GALLERY_PATH}/oeuvre-russe-peinture-atelier-atlantis12-essaouira.webp`, alt: "Œuvre dans la chambre" },
     artworkStatus: "permanent",

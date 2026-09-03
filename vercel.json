@@ -34,6 +34,7 @@
     { "source": "/mentions-legales", "destination": "/mentions-legales/index.html" },
     { "source": "/cgv", "destination": "/cgv/index.html" },
     { "source": "/politique-de-confidentialite", "destination": "/politique-de-confidentialite/index.html" },
+    { "source": "/apercu-photos-chambres", "destination": "/index.html" },
     { "source": "/en", "destination": "/en/index.html" },
     { "source": "/en/la-maison", "destination": "/en/la-maison/index.html" },
     { "source": "/en/chambres", "destination": "/en/chambres/index.html" },
@@ -52,5 +53,13 @@
     { "source": "/robots.txt", "destination": "/robots.txt" },
     { "source": "/sitemap.xml", "destination": "/sitemap.xml" },
     { "source": "/(.*)", "destination": "/index.html" }
+  ],
+  "headers": [
+    {
+      "source": "/apercu-photos-chambres",
+      "headers": [
+        { "key": "X-Robots-Tag", "value": "noindex, nofollow, noarchive" }
+      ]
+    }
   ]
 }

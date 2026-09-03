@@ -23,6 +23,7 @@ import Essaouira from "./pages/Essaouira";
 import MentionsLegales from "./pages/MentionsLegales";
 import CGV from "./pages/CGV";
 import PolitiqueConfidentialite from "./pages/PolitiqueConfidentialite";
+import PhotoSelectionPreview from "./pages/PhotoSelectionPreview";
 
 export function AppContent() {
   return (
@@ -54,6 +55,7 @@ export function AppContent() {
           <Route path="/mentions-legales" element={<MentionsLegales />} />
           <Route path="/cgv" element={<CGV />} />
           <Route path="/politique-de-confidentialite" element={<PolitiqueConfidentialite />} />
+          <Route path="/apercu-photos-chambres" element={<PhotoSelectionPreview />} />
           <Route
             path="*"
             element={

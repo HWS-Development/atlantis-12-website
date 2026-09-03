@@ -132,32 +132,32 @@
         {
           "key": "breakfast",
           "title": "Petit-déjeuner",
-          "image": "/images/services/Screenshot 2026-02-19 154841.png"
+          "image": "/images/services/screenshot-2026-02-19-154841.png"
         },
         {
           "key": "nature",
           "title": "Parc naturel",
-          "image": "/images/services/Screenshot 2026-02-19 154858.png"
+          "image": "/images/services/screenshot-2026-02-19-154858.png"
         },
         {
           "key": "pool",
           "title": "Piscine",
-          "image": "/images/services/Screenshot 2026-02-19 154850.png"
+          "image": "/images/services/screenshot-2026-02-19-154850.png"
         },
         {
           "key": "wifi",
           "title": "Wifi gratuit",
-          "image": "/images/services/Screenshot 2026-02-19 154831.png"
+          "image": "/images/services/screenshot-2026-02-19-154831.png"
         },
         {
           "key": "concierge",
           "title": "Conciergerie",
-          "image": "/images/services/Screenshot 2026-02-19 154909.png"
+          "image": "/images/services/screenshot-2026-02-19-154909.png"
         },
         {
           "key": "table",
           "title": "Table d’hôtes",
-          "image": "/images/services/Screenshot 2026-02-19 154919.png"
+          "image": "/images/services/screenshot-2026-02-19-154919.png"
         }
       ]
     },

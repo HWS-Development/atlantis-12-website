@@ -6,18 +6,18 @@ const ESS_PATH = "/images/essaouira";
 const HERO = `${ESS_PATH}/asmae-lahcen-dar-lawama-coucher-soleil-essaouira.webp`;
 
 const GRID_IMAGES = [
-  { src: `${ESS_PATH}/1remparts-essaouira-skala-du-port.webp`, alt: "Remparts d'Essaouira et Skala du Port" },
-  { src: `${ESS_PATH}/2port-essaouira-barques-bleues-mouette.webp`, alt: "Port d'Essaouira" },
-  { src: `${ESS_PATH}/3port-essaouira-bateaux-bleus.webp`, alt: "Bateaux bleus" },
-  { src: `${ESS_PATH}/4coucher-soleil-plage-essaouira-atlantique.webp`, alt: "Coucher de soleil" },
-  { src: `${ESS_PATH}/5coucher-soleil-essaouira-palmier.webp`, alt: "Palmier" },
-  { src: `${ESS_PATH}/6marche-medina-essaouira-homme-djellaba.webp`, alt: "Marché Médina" },
-  { src: `${ESS_PATH}/7velo-chat-medina-essaouira-bleu.webp`, alt: "Vélo bleu" },
-  { src: `${ESS_PATH}/8porte-ancienne-medina-essaouira.webp`, alt: "Porte ancienne" },
-  { src: `${ESS_PATH}/9luminaires-cuir-artisanat-essaouira.webp`, alt: "Luminaires en cuir" },
-  { src: `${ESS_PATH}/10musicienne-gnaoua-essaouirappg.webp`, alt: "Musicienne Gnaoua" },
-  { src: `${ESS_PATH}/11epices-marche-essaouira.webp`, alt: "Épices" },
-  { src: `${ESS_PATH}/12bijoux-berberes-ambre-essaouira.webp`, alt: "Bijoux berbères" },
+  { src: `${ESS_PATH}/1-remparts-essaouira-skala-du-port.webp`, alt: "Remparts d'Essaouira et Skala du Port" },
+  { src: `${ESS_PATH}/2-port-essaouira-barques-bleues-mouette.webp`, alt: "Port d'Essaouira" },
+  { src: `${ESS_PATH}/3-port-essaouira-bateaux-bleus.webp`, alt: "Bateaux bleus" },
+  { src: `${ESS_PATH}/4-coucher-soleil-plage-essaouira-atlantique.webp`, alt: "Coucher de soleil" },
+  { src: `${ESS_PATH}/5-coucher-soleil-essaouira-palmier.webp`, alt: "Palmier" },
+  { src: `${ESS_PATH}/6-marche-medina-essaouira-homme-djellaba.webp`, alt: "Marché Médina" },
+  { src: `${ESS_PATH}/7-velo-chat-medina-essaouira-bleu.webp`, alt: "Vélo bleu" },
+  { src: `${ESS_PATH}/8-porte-ancienne-medina-essaouira.webp`, alt: "Porte ancienne" },
+  { src: `${ESS_PATH}/9-luminaires-cuir-artisanat-essaouira.webp`, alt: "Luminaires en cuir" },
+  { src: `${ESS_PATH}/10-musicienne-gnaoua-essaouira.webp`, alt: "Musicienne Gnaoua" },
+  { src: `${ESS_PATH}/11-epices-marche-essaouira.webp`, alt: "Épices" },
+  { src: `${ESS_PATH}/12-bijoux-berberes-ambre-essaouira.webp`, alt: "Bijoux berbères" },
 ];
 
 const PIN = (

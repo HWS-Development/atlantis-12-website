@@ -19,7 +19,7 @@ export const SEO_PAGES = {
   },
   about: {
     path: "/la-maison",
-    ogImage: "/images/about/salon1.webp",
+    ogImage: "/images/about/salon-1.webp",
     fr: {
       title: "La Maison · Atlantis 12, maison d'hôtes à Essaouira",
       description:
@@ -121,7 +121,7 @@ export const SEO_PAGES = {
   },
   experiences: {
     path: "/experiences",
-    ogImage: "/images/essaouira/4coucher-soleil-plage-essaouira-atlantique.webp",
+    ogImage: "/images/essaouira/4-coucher-soleil-plage-essaouira-atlantique.webp",
     fr: {
       title: "Expériences · massage, yoga, art & nature · Atlantis 12",
       description:
@@ -163,7 +163,7 @@ export const SEO_PAGES = {
   },
   essaouira: {
     path: "/essaouira",
-    ogImage: "/images/essaouira/1remparts-essaouira-skala-du-port.webp",
+    ogImage: "/images/essaouira/1-remparts-essaouira-skala-du-port.webp",
     fr: {
       title: "Ce qu'on aime à Essaouira · le guide d'Atlantis 12",
       description:

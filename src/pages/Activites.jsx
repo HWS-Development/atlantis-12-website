@@ -29,7 +29,7 @@ const HOUSE_META = [
     accent: "rgb(143, 175, 126)",
   },
   {
-    img: `${EXP_PATH}/yoga-terrasse-atlantis12-essaouira-foretjpg.webp`,
+    img: `${EXP_PATH}/yoga-terrasse-atlantis12-essaouira-foret.webp`,
     bg: "white",
     titleColor: "#333333",
     bodyColor: "#333333",
@@ -40,7 +40,7 @@ const HOUSE_META = [
 
 const PARTNER_IMGS = [
   `${EXP_PATH}/balade-cheval-plage-coucher-soleil-essaouira.webp`,
-  `${EXP_PATH}/kitesurf-coucher-soleil-atlantique-essaouirajpg.webp`,
+  `${EXP_PATH}/kitesurf-coucher-soleil-atlantique-essaouira.webp`,
   `${EXP_PATH}/quad-dunes-plage-sauvage-essaouira.webp`,
   `${EXP_PATH}/hammam-traditionnel-soins-essaouira.webp`,
   `${EXP_PATH}/excursions-moto-electrique-arganiers-essaouira-v1.webp`,
