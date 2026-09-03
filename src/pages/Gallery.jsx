@@ -4,16 +4,16 @@ import LangLink from "../components/Common/LangLink";
 import Reveal from "../components/Common/Reveal";
 
 const GALLERY_PATH = "/images/gallery";
-const HERO_IMG = `${GALLERY_PATH}/galerie-salon-panorama-atlantis12-essaouira.webp`;
-const ATELIER_IMG = `${GALLERY_PATH}/atelier-lahcen-fikri-atlantis12-essaouira.webp`;
+const HERO_IMG = `${GALLERY_PATH}/galerie-salon-vue-densemble-oeuvres-atlantis12-essaouira.webp`;
+const ATELIER_IMG = `${GALLERY_PATH}/objet-dart-sphere-verre-platine-vinyle-atlantis12-essaouira.webp`;
 
 const WORKS_META = [
-  { img: `${GALLERY_PATH}/oeuvre-lahcen-fikri-1-peinture-atlantis12-essaouira.webp`, badge: "available", meta: "canvas", size: "70 x 120 cm" },
-  { img: `${GALLERY_PATH}/oeuvre-russe-peinture-atelier-atlantis12-essaouira.webp`, badge: "permanent", meta: "permanent" },
-  { img: `${GALLERY_PATH}/oeuvre-christina-peinture-atelier-atlantis12-essaouira.webp`, badge: "permanent", meta: "permanent" },
-  { img: `${GALLERY_PATH}/oeuvre-lahcen-fikri-3-peinture-atlantis12-essaouira.webp`, badge: "available", meta: "canvas", size: "100 x 70 cm" },
-  { img: `${GALLERY_PATH}/oeuvre-lahcen-fikri-4-peinture-atlantis12-essaouira.webp`, badge: "available", meta: "canvas", size: "70 x 120 cm" },
-  { img: `${GALLERY_PATH}/sculpture-sphere-metal-atlantis12-essaouira.webp`, badge: "permanent", meta: "metal" },
+  { img: `${GALLERY_PATH}/oeuvre-lahcen-fikri-visages-ocre-atlantis12-essaouira.webp`, badge: "available", meta: "canvas", size: "70 x 120 cm" },
+  { img: `${GALLERY_PATH}/oeuvre-artiste-russe-nature-morte-fleurs-rouges-verre-atlantis12-essaouira.webp`, badge: "permanent", meta: "permanent" },
+  { img: `${GALLERY_PATH}/oeuvre-christina-nature-morte-vases-plantes-atlantis12-essaouira.webp`, badge: "permanent", meta: "permanent" },
+  { img: `${GALLERY_PATH}/oeuvre-lahcen-fikri-personnages-allonges-atlantis12-essaouira.webp`, badge: "available", meta: "canvas", size: "100 x 70 cm" },
+  { img: `${GALLERY_PATH}/oeuvre-lahcen-fikri-personnages-rouges-atlantis12-essaouira.webp`, badge: "available", meta: "canvas", size: "70 x 120 cm" },
+  { img: `${GALLERY_PATH}/sculpture-musicien-metal-cercle-suspendu-atlantis12-essaouira.webp`, badge: "permanent", meta: "metal" },
 ];
 
 export default function Gallery() {

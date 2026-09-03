@@ -70,7 +70,7 @@ export default function Contact() {
     <div className="bg-background min-h-screen text-foreground">
       <div className="w-full flex items-center justify-center pt-28 pb-4 bg-white" style={{ lineHeight: 0 }}>
         <img
-          src="/images/logo/logo-aquarelle-maison-hotes-art-atlantis12-essaouira.png"
+          src="/images/logo/logo-aquarelle-maison-dhotes-art-atlantis12-essaouira.png"
           alt={t("contactPage.logoAlt")}
           className="w-[220px] md:w-[260px] h-auto object-contain block"
         />

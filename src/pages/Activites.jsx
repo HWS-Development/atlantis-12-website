@@ -3,7 +3,7 @@ import Reveal from "../components/Common/Reveal";
 import LangLink from "../components/Common/LangLink";
 
 const EXP_PATH = "/images/experiences";
-const HERO = `${EXP_PATH}/balade-cheval-coucher-soleil-plage-atlantis12-essaouira.webp`;
+const HERO = `${EXP_PATH}/balade-a-cheval-deux-chevaux-plage-coucher-soleil-atlantis12-essaouira.webp`;
 
 const HOUSE_META = [
   {
@@ -22,7 +22,7 @@ const HOUSE_META = [
     reverse: true,
   },
   {
-    img: `${EXP_PATH}/balade-dromadaire-depart-atlantis12-essaouira.webp`,
+    img: `${EXP_PATH}/balade-a-dos-de-dromadaire-depart-atlantis12-essaouira.webp`,
     bg: "rgb(44, 62, 37)",
     titleColor: "rgb(245, 240, 232)",
     bodyColor: "rgb(143, 175, 126)",
@@ -39,11 +39,11 @@ const HOUSE_META = [
 ];
 
 const PARTNER_IMGS = [
-  `${EXP_PATH}/balade-cheval-plage-coucher-soleil-atlantis12-essaouira.webp`,
+  `${EXP_PATH}/balade-a-cheval-cavaliers-plage-coucher-soleil-atlantis12-essaouira.webp`,
   `${EXP_PATH}/kitesurf-coucher-soleil-atlantique-atlantis12-essaouira.webp`,
   `${EXP_PATH}/quad-dunes-plage-sauvage-atlantis12-essaouira.webp`,
   `${EXP_PATH}/hammam-traditionnel-soins-atlantis12-essaouira.webp`,
-  `${EXP_PATH}/excursions-moto-electrique-arganiers-atlantis12-essaouira.webp`,
+  `${EXP_PATH}/excursion-en-moto-electrique-foret-darganiers-atlantis12-essaouira.webp`,
 ];
 
 export default function Activites() {

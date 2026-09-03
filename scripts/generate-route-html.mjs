@@ -43,7 +43,7 @@ function buildHtml({ lang, title, description, canonical, hreflang, ogImage }, a
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="/images/logo/logo-atlantis12-simplifie.png" />
+    <link rel="icon" href="/images/logo/logo-simplifie-atlantis12-essaouira.png" />
     <title>${title}</title>
     <meta name="description" content="${description}" />
     <meta property="og:type" content="website" />

@@ -8,29 +8,29 @@ import RoomDetailModal from "../components/Rooms/RoomDetailModal";
 import ROOMS, { getRoomBySlug } from "../data/rooms";
 
 const ROOMS_PATH = "/images/rooms";
-const HERO = `${ROOMS_PATH}/plumeria-suite-superieure-atlantis12-essaouira.webp`;
+const HERO = `${ROOMS_PATH}/plumeria-suite-chambre-salon-poutres-vue-large-atlantis12-essaouira.webp`;
 
 const CARD_IMG = {
   "la-plumeria": {
-    img: `${ROOMS_PATH}/plumeria-lit-baldaquin-suite-atlantis12-essaouira.webp`,
+    img: `${ROOMS_PATH}/plumeria-chambre-lit-blanc-oeuvres-vue-frontale-atlantis12-essaouira.webp`,
     altKey: "rooms.altPlumeria",
     altDefault: "La Pluméria, le lit - Atlantis 12, Essaouira",
     label: "labelSuperior",
   },
   "l-ipomea": {
-    img: `${ROOMS_PATH}/ipomea-chambre-vue-principale-atlantis12-essaouira.webp`,
+    img: `${ROOMS_PATH}/ipomea-chambre-lit-bleu-porte-turquoise-vue-frontale-atlantis12-essaouira.webp`,
     altKey: "rooms.altIpomea",
     altDefault: "L’Ipoméa, chambre avec lit bleu indigo - Atlantis 12, Essaouira",
     label: "labelJunior",
   },
   "l-agave": {
-    img: `${ROOMS_PATH}/agave-chambre-vue-panoramique-atlantis12-essaouira.webp`,
+    img: `${ROOMS_PATH}/agave-chambre-lit-vert-murs-pierre-vue-frontale-atlantis12-essaouira.webp`,
     altKey: "rooms.altAgave",
     altDefault: "Agave, chambre avec lit vert - Atlantis 12, Essaouira",
     label: "labelJunior",
   },
   "la-coquelicot": {
-    img: `${ROOMS_PATH}/coquelicot-chambre-principale-atlantis12-essaouira.webp`,
+    img: `${ROOMS_PATH}/coquelicot-chambre-lit-double-coussins-rouges-vue-frontale-atlantis12-essaouira.webp`,
     altKey: "rooms.altCoquelicot",
     altDefault: "Coquelicot, chambre principale - Atlantis 12, Essaouira",
     label: "labelJunior",

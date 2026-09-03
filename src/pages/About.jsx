@@ -3,20 +3,20 @@ import LangLink from "../components/Common/LangLink";
 import Reveal from "../components/Common/Reveal";
 
 const ABOUT_PATH = "/images/about";
-const HERO_IMG = `${ABOUT_PATH}/maison-vue-jardin-atlantis12-essaouira.webp`;
-const FOUNDERS_IMG = `${ABOUT_PATH}/asmae-lahcen-portrait-atlantis12-essaouira.webp`;
+const HERO_IMG = `${ABOUT_PATH}/toit-terrasse-salon-bois-coucher-soleil-foret-atlantis12-essaouira.webp`;
+const FOUNDERS_IMG = `${ABOUT_PATH}/portrait-asmae-lahcen-maison-dhotes-atlantis12-essaouira.webp`;
 
 const GALLERY_SRCS = [
-  `${ABOUT_PATH}/entree-maison-atlantis12-essaouira.webp`,
-  `${ABOUT_PATH}/patio-atlantis12-essaouira.webp`,
+  `${ABOUT_PATH}/maison-facade-pierre-allee-jardin-atlantis12-essaouira.webp`,
+  `${ABOUT_PATH}/patio-salon-jardin-mobilier-bois-atlantis12-essaouira.webp`,
   `${ABOUT_PATH}/patio-de-nuit-atlantis12-essaouira.webp`,
-  `${ABOUT_PATH}/piscine-atlantis12-essaouira.webp`,
-  `${ABOUT_PATH}/rooftop-de-nuit-atlantis12-essaouira.webp`,
-  `${ABOUT_PATH}/salon-atlantis12-essaouira.webp`,
+  `${ABOUT_PATH}/piscine-vue-frontale-transats-foret-atlantis12-essaouira.webp`,
+  `${ABOUT_PATH}/toit-terrasse-crepuscule-vue-foret-atlantis12-essaouira.webp`,
+  `${ABOUT_PATH}/salon-cheminee-oeuvres-jukebox-atlantis12-essaouira.webp`,
   `${ABOUT_PATH}/salon-oeuvres-atlantis12-essaouira.webp`,
   `${ABOUT_PATH}/chevalet-salon-atlantis12-essaouira.webp`,
-  `${ABOUT_PATH}/coquillage-detail-sonore-atlantis12-essaouira.webp`,
-  `${ABOUT_PATH}/petit-dejeuner-atlantis12-essaouira.webp`,
+  `${ABOUT_PATH}/mobile-coquillages-terrasse-jardin-atlantis12-essaouira.webp`,
+  `${ABOUT_PATH}/petit-dejeuner-tartines-avocat-oeufs-pains-marocains-atlantis12-essaouira.webp`,
   `${ABOUT_PATH}/cafe-terrasse-atlantis12-essaouira.webp`,
   `${ABOUT_PATH}/the-a-la-menthe-atlantis12-essaouira.webp`,
 ];

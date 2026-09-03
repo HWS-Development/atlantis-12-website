@@ -1,8 +1,9 @@
-import { readFile } from "node:fs/promises";
+import { access, readFile } from "node:fs/promises";
 import { resolve } from "node:path";
 import { HTML_ENTRY_PATHS } from "../src/seo/metadata.js";
 
 const failures = [];
+const imageReferences = new Set();
 
 for (const filePath of HTML_ENTRY_PATHS) {
   const html = await readFile(resolve(process.cwd(), "dist", filePath), "utf8");
@@ -18,6 +19,18 @@ for (const filePath of HTML_ENTRY_PATHS) {
   for (const [check, passed] of Object.entries(checks)) {
     if (!passed) failures.push(`${filePath}: ${check}`);
   }
+
+  for (const match of html.matchAll(/\/images\/[a-z0-9./-]+\.(?:png|webp)/g)) {
+    imageReferences.add(match[0]);
+  }
+}
+
+for (const reference of imageReferences) {
+  try {
+    await access(resolve(process.cwd(), "dist", reference.slice(1)));
+  } catch {
+    failures.push(`missing image reference: ${reference}`);
+  }
 }
 
 const sitemap = await readFile(resolve(process.cwd(), "dist/sitemap.xml"), "utf8");
@@ -28,4 +41,6 @@ if (failures.length) {
   throw new Error(`Prerender audit failed:\n${failures.join("\n")}`);
 }
 
-console.log(`Prerender audit passed for ${HTML_ENTRY_PATHS.length} pages and ${sitemapUrlCount} sitemap URLs.`);
+console.log(
+  `Prerender audit passed for ${HTML_ENTRY_PATHS.length} pages, ${sitemapUrlCount} sitemap URLs, and ${imageReferences.size} image references.`,
+);

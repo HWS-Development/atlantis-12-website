@@ -3,19 +3,19 @@ import { useTranslation } from "react-i18next";
 import Reveal from "../Common/Reveal";
 
 const ROOMS_PATH = "/images/rooms";
-const FAKE = {
-  ipomea:     `${ROOMS_PATH}/ipomea-vue-panorama-atlantis12-essaouira.webp`,
-  agave:      `${ROOMS_PATH}/agave-chambre-vue-panoramique-atlantis12-essaouira.webp`,
-  coquelicot: `${ROOMS_PATH}/coquelicot-vue-patio-atlantis12-essaouira.webp`,
+const ROOM_CARD_IMAGES = {
+  ipomea:     `${ROOMS_PATH}/ipomea-chambre-lit-bleu-porte-turquoise-vue-frontale-atlantis12-essaouira.webp`,
+  agave:      `${ROOMS_PATH}/agave-chambre-lit-vert-murs-pierre-vue-frontale-atlantis12-essaouira.webp`,
+  coquelicot: `${ROOMS_PATH}/coquelicot-chambre-lit-double-coussins-rouges-vue-frontale-atlantis12-essaouira.webp`,
   orchis:     `${ROOMS_PATH}/orchis-chambre-lit-mauve-murs-pierre-arche-atlantis12-essaouira.webp`,
-  plumeria:   `${ROOMS_PATH}/plumeria-vue-suite-atlantis12-essaouira.webp`,
+  plumeria:   `${ROOMS_PATH}/plumeria-chambre-lit-blanc-oeuvres-vue-frontale-atlantis12-essaouira.webp`,
 };
 
 const JUNIORS = [
-  { key: "ipomea",     to: "/chambres/l-ipomea",      name: "L'Ipoméa",     type: "Suite Junior", img: FAKE.ipomea },
-  { key: "agave",      to: "/chambres/l-agave",       name: "L'Agave",      type: "Suite Junior", img: FAKE.agave },
-  { key: "coquelicot", to: "/chambres/la-coquelicot", name: "La Coquelicot",type: "Suite Junior", img: FAKE.coquelicot },
-  { key: "orchis",     to: "/chambres/l-orchis",      name: "L'Orchis",     type: "Suite Junior", img: FAKE.orchis },
+  { key: "ipomea",     to: "/chambres/l-ipomea",      name: "L'Ipoméa",     type: "Suite Junior", img: ROOM_CARD_IMAGES.ipomea },
+  { key: "agave",      to: "/chambres/l-agave",       name: "L'Agave",      type: "Suite Junior", img: ROOM_CARD_IMAGES.agave },
+  { key: "coquelicot", to: "/chambres/la-coquelicot", name: "La Coquelicot",type: "Suite Junior", img: ROOM_CARD_IMAGES.coquelicot },
+  { key: "orchis",     to: "/chambres/l-orchis",      name: "L'Orchis",     type: "Suite Junior", img: ROOM_CARD_IMAGES.orchis },
 ];
 
 function RoomCard({ to, name, type, img, alt, wide = false }) {
@@ -96,7 +96,7 @@ export default function RoomsHomeSection() {
         to="/chambres/la-plumeria"
         name="La Pluméria"
         type="Suite Supérieure"
-        img={FAKE.plumeria}
+        img={ROOM_CARD_IMAGES.plumeria}
         alt="La Pluméria, suite supérieure - Atlantis 12, Essaouira"
       />
 

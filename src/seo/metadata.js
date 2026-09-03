@@ -1,11 +1,11 @@
 export const SITE_URL = "https://atlantis12essaouira.com";
 
-export const DEFAULT_OG_IMAGE = "/images/about/patio-atlantis12-essaouira.webp";
+export const DEFAULT_OG_IMAGE = "/images/about/patio-salon-jardin-mobilier-bois-atlantis12-essaouira.webp";
 
 export const SEO_PAGES = {
   home: {
     path: "/",
-    ogImage: "/images/about/patio-atlantis12-essaouira.webp",
+    ogImage: "/images/about/patio-salon-jardin-mobilier-bois-atlantis12-essaouira.webp",
     fr: {
       title: "Atlantis 12 · Maison d'hôtes & d'art · Essaouira, Maroc",
       description:
@@ -19,7 +19,7 @@ export const SEO_PAGES = {
   },
   about: {
     path: "/la-maison",
-    ogImage: "/images/about/salon-atlantis12-essaouira.webp",
+    ogImage: "/images/about/salon-cheminee-oeuvres-jukebox-atlantis12-essaouira.webp",
     fr: {
       title: "La Maison · Atlantis 12, maison d'hôtes à Essaouira",
       description:
@@ -33,7 +33,7 @@ export const SEO_PAGES = {
   },
   rooms: {
     path: "/chambres",
-    ogImage: "/images/rooms/plumeria-suite-superieure-atlantis12-essaouira.webp",
+    ogImage: "/images/rooms/plumeria-suite-chambre-salon-poutres-vue-large-atlantis12-essaouira.webp",
     fr: {
       title: "Chambres & Suites · Atlantis 12, Essaouira (adultes)",
       description:
@@ -47,7 +47,7 @@ export const SEO_PAGES = {
   },
   roomPlumeria: {
     path: "/chambres/la-plumeria",
-    ogImage: "/images/rooms/plumeria-vaste-espace-chambre-colonnes-atlantis12-essaouira.webp",
+    ogImage: "/images/rooms/plumeria-suite-chambre-colonnes-vue-frontale-atlantis12-essaouira.webp",
     fr: {
       title: "La Pluméria · Suite supérieure · Atlantis 12 Essaouira",
       description: "Découvrez La Pluméria, suite supérieure de 50 m² avec lit king size, vaste salon, cheminée, terrasse privée et salle de bain, près d'Essaouira.",
@@ -83,7 +83,7 @@ export const SEO_PAGES = {
   },
   roomCoquelicot: {
     path: "/chambres/la-coquelicot",
-    ogImage: "/images/rooms/coquelicot-chambre-lit-queen-coussins-rouges-lampes-raphia-murs-pierre-atlantis12-essaouira.webp",
+    ogImage: "/images/rooms/coquelicot-chambre-grand-lit-coussins-rouges-lampes-raphia-murs-pierre-atlantis12-essaouira.webp",
     fr: {
       title: "La Coquelicot · Suite junior · Atlantis 12 Essaouira",
       description: "Découvrez La Coquelicot, suite junior intime de 25 m² avec lit queen size, salon avec cheminée, salle de bain et œuvres originales.",
@@ -95,7 +95,7 @@ export const SEO_PAGES = {
   },
   roomOrchis: {
     path: "/chambres/l-orchis",
-    ogImage: "/images/rooms/orchis-chambre-lit-queen-couvre-lit-mauve-cheminee-murs-pierre-atlantis12-essaouira.webp",
+    ogImage: "/images/rooms/orchis-chambre-grand-lit-couvre-lit-mauve-cheminee-murs-pierre-atlantis12-essaouira.webp",
     fr: {
       title: "L'Orchis · Suite junior · Atlantis 12 Essaouira",
       description: "Découvrez L'Orchis, suite junior raffinée de 25 m² en pierre, bois et tadelakt, avec lit queen size, cheminée et salle de bain privative.",
@@ -107,7 +107,7 @@ export const SEO_PAGES = {
   },
   table: {
     path: "/table-dhotes",
-    ogImage: "/images/table-dhotes/entree-artichaut-poulpe-crevette-table-dhotes-atlantis12-essaouira.webp",
+    ogImage: "/images/table-dhotes/table-dhotes-entree-artichaut-poulpe-crevettes-atlantis12-essaouira.webp",
     fr: {
       title: "Table d'hôtes · cuisine maison · Atlantis 12 Essaouira",
       description:
@@ -135,7 +135,7 @@ export const SEO_PAGES = {
   },
   contact: {
     path: "/contact",
-    ogImage: "/images/about/patio-atlantis12-essaouira.webp",
+    ogImage: "/images/about/patio-salon-jardin-mobilier-bois-atlantis12-essaouira.webp",
     fr: {
       title: "Contact & réservation · Atlantis 12, Essaouira",
       description:
@@ -149,7 +149,7 @@ export const SEO_PAGES = {
   },
   gallery: {
     path: "/maison-dart",
-    ogImage: "/images/gallery/oeuvre-lahcen-fikri-1-peinture-atlantis12-essaouira.webp",
+    ogImage: "/images/gallery/oeuvre-lahcen-fikri-visages-ocre-atlantis12-essaouira.webp",
     fr: {
       title: "Maison d'art · galerie & résidence · Atlantis 12 Essaouira",
       description:

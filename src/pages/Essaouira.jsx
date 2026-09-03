@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 import Reveal from "../components/Common/Reveal";
 
 const ESS_PATH = "/images/essaouira";
-const HERO = `${ESS_PATH}/asmae-lahcen-dar-lawama-coucher-soleil-atlantis12-essaouira.webp`;
+const HERO = `${ESS_PATH}/portrait-asmae-lahcen-dar-lawama-coucher-soleil-atlantis12-essaouira.webp`;
 
 const GRID_IMAGES = [
   { src: `${ESS_PATH}/remparts-skala-du-port-atlantis12-essaouira.webp`, alt: "Remparts d'Essaouira et Skala du Port" },
