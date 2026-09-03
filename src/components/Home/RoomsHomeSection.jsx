@@ -4,11 +4,11 @@ import Reveal from "../Common/Reveal";
 
 const ROOMS_PATH = "/images/rooms";
 const ROOM_CARD_IMAGES = {
-  ipomea:     `${ROOMS_PATH}/ipomea-chambre-lit-bleu-porte-turquoise-vue-frontale-atlantis12-essaouira.webp`,
+  ipomea:     `${ROOMS_PATH}/ipomea-chambre-lit-bleu-vue-laterale-atlantis12-essaouira.webp`,
   agave:      `${ROOMS_PATH}/agave-chambre-lit-vert-murs-pierre-vue-frontale-atlantis12-essaouira.webp`,
   coquelicot: `${ROOMS_PATH}/coquelicot-chambre-lit-double-coussins-rouges-vue-frontale-atlantis12-essaouira.webp`,
   orchis:     `${ROOMS_PATH}/orchis-chambre-lit-mauve-murs-pierre-arche-atlantis12-essaouira.webp`,
-  plumeria:   `${ROOMS_PATH}/plumeria-chambre-lit-blanc-oeuvres-vue-frontale-atlantis12-essaouira.webp`,
+  plumeria:   `${ROOMS_PATH}/plumeria-chambre-lit-blanc-poutres-bois-atlantis12-essaouira.webp`,
 };
 
 const JUNIORS = [

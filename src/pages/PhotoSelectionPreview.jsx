@@ -1,36 +1,36 @@
 import { useEffect } from "react";
 
 const IPOMEA_PHOTOS = [
-  { original: "_DSC8325-HDR.webp", filename: "ipomea-salon-banquette-arche-bleue-atlantis12-essaouira.webp" },
+  { original: "_DSC8325-HDR.webp", path: "/images/rooms/ipomea-salon-banquette-arche-bleue-atlantis12-essaouira.webp" },
   { original: "_DSC8328-HDR-Panorama.webp", filename: "ipomea-salon-cheminee-banquette-pierre-atlantis12-essaouira.webp" },
-  { original: "_DSC8340-HDR-Panorama.webp", filename: "ipomea-salon-cheminee-fauteuil-baroque-atlantis12-essaouira.webp" },
+  { original: "_DSC8340-HDR-Panorama.webp", path: "/images/rooms/ipomea-salon-cheminee-fauteuil-baroque-atlantis12-essaouira.webp" },
   { original: "_DSC8349-HDR.webp", filename: "ipomea-chambre-lit-bleu-vue-frontale-atlantis12-essaouira.webp" },
   { original: "_DSC8352-HDR-Panorama.webp", filename: "ipomea-chambre-lit-bleu-porte-turquoise-atlantis12-essaouira.webp" },
-  { original: "_DSC8361-HDR.webp", filename: "ipomea-chambre-lit-bleu-vue-laterale-atlantis12-essaouira.webp" },
+  { original: "_DSC8361-HDR.webp", path: "/images/rooms/ipomea-chambre-lit-bleu-vue-laterale-atlantis12-essaouira.webp" },
   { original: "_DSC8364-HDR.webp", filename: "ipomea-salle-de-bains-double-vasque-miroir-atlantis12-essaouira.webp" },
-  { original: "_DSC8367-HDR-Panorama.webp", filename: "ipomea-salle-de-bains-douche-etageres-atlantis12-essaouira.webp" },
+  { original: "_DSC8367-HDR-Panorama.webp", path: "/images/rooms/ipomea-salle-de-bains-douche-etageres-atlantis12-essaouira.webp" },
   { original: "_DSC8379-HDR.webp", filename: "ipomea-salle-de-bains-double-vasque-verriere-atlantis12-essaouira.webp" },
-  { original: "_DSC8388-HDR.webp", filename: "ipomea-patio-prive-hamac-pergola-atlantis12-essaouira.webp" },
+  { original: "_DSC8388-HDR.webp", path: "/images/rooms/ipomea-patio-prive-hamac-pergola-atlantis12-essaouira.webp" },
 ];
 
 const PLUMERIA_PHOTOS = [
   { original: "_DSC8231-HDR.webp", filename: "plumeria-chambre-lit-blanc-oeuvres-atlantis12-essaouira.webp" },
-  { original: "_DSC8234-HDR.webp", filename: "plumeria-chambre-lit-blanc-poutres-bois-atlantis12-essaouira.webp" },
+  { original: "_DSC8234-HDR.webp", path: "/images/rooms/plumeria-chambre-lit-blanc-poutres-bois-atlantis12-essaouira.webp" },
   { original: "_DSC8243-HDR-Panorama.webp", filename: "plumeria-suite-espace-colonnes-bureau-atlantis12-essaouira.webp" },
   { original: "_DSC8249-HDR-Panorama.webp", filename: "plumeria-suite-salon-canape-cheminee-atlantis12-essaouira.webp" },
   { original: "_DSC8270-HDR-Panorama.webp", filename: "plumeria-suite-chambre-salon-colonnes-atlantis12-essaouira.webp" },
-  { original: "_DSC8273-HDR.webp", filename: "plumeria-chambre-bouquet-roses-tableau-atlantis12-essaouira.webp" },
+  { original: "_DSC8273-HDR.webp", path: "/images/rooms/plumeria-chambre-bouquet-roses-tableau-atlantis12-essaouira.webp" },
   { original: "_DSC8276-HDR.webp", filename: "plumeria-salle-de-bains-double-vasque-zellige-atlantis12-essaouira.webp" },
   { original: "_DSC8279-HDR.webp", filename: "plumeria-salle-de-bains-douche-zellige-atlantis12-essaouira.webp" },
   { original: "_DSC8282-HDR-Panorama.webp", filename: "plumeria-chambre-lit-colonnes-vue-frontale-atlantis12-essaouira.webp" },
   { original: "_DSC8291-HDR.webp", filename: "plumeria-terrasse-privee-fauteuil-suspendu-atlantis12-essaouira.webp" },
-  { original: "_DSC8297-HDR.webp", filename: "plumeria-facade-suite-terrasse-pergola-atlantis12-essaouira.webp" },
-  { original: "_DSC8300-HDR.webp", filename: "plumeria-terrasse-salon-exterieur-pergola-atlantis12-essaouira.webp" },
+  { original: "_DSC8297-HDR.webp", path: "/images/rooms/plumeria-facade-suite-terrasse-pergola-atlantis12-essaouira.webp" },
+  { original: "_DSC8300-HDR.webp", path: "/images/rooms/plumeria-terrasse-salon-exterieur-pergola-atlantis12-essaouira.webp" },
   { original: "_DSC8303.webp", filename: "plumeria-decoration-tableau-vert-bouquet-roses-atlantis12-essaouira.webp" },
-  { original: "_DSC8304.webp", filename: "plumeria-decoration-niche-fenetre-vase-blanc-atlantis12-essaouira.webp" },
+  { original: "_DSC8304.webp", path: "/images/rooms/plumeria-decoration-niche-fenetre-vase-blanc-atlantis12-essaouira.webp" },
   { original: "_DSC8305.webp", filename: "plumeria-chambre-detail-oreillers-lampe-atlantis12-essaouira.webp" },
   { original: "_DSC8306.webp", filename: "plumeria-salon-bouquet-roses-table-atlantis12-essaouira.webp" },
-  { original: "_DSC8307.webp", filename: "plumeria-cheminee-suspendue-mur-pierre-atlantis12-essaouira.webp" },
+  { original: "_DSC8307.webp", path: "/images/rooms/plumeria-cheminee-suspendue-mur-pierre-atlantis12-essaouira.webp" },
   { original: "_DSC8308.webp", filename: "plumeria-decoration-coquillages-vitrine-atlantis12-essaouira.webp" },
   { original: "_DSC8310.webp", filename: "plumeria-cheminee-tableau-rouge-atlantis12-essaouira.webp" },
   { original: "_DSC8311.webp", filename: "plumeria-salle-de-bains-miroir-vasque-atlantis12-essaouira.webp" },
@@ -52,9 +52,9 @@ function PhotoGroup({ title, slug, photos }) {
       </div>
 
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        {photos.map(({ original, filename }, index) => {
+        {photos.map(({ original, filename, path }, index) => {
           const number = String(index + 1).padStart(2, "0");
-          const src = `/images/photo-selection/${slug}/${filename}`;
+          const src = path || `/images/photo-selection/${slug}/${filename}`;
 
           return (
             <a

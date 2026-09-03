@@ -113,7 +113,7 @@ export default function RoomDetailModal({ room, onClose, isPage = false }) {
                 key={current.src}
                 src={current.src}
                 alt={`${current.alt} - Atlantis 12, Essaouira`}
-                className="w-full h-full object-cover absolute inset-0"
+                className={`w-full h-full absolute inset-0 ${current.fit === "contain" ? "object-contain" : "object-cover"}`}
                 style={{ objectPosition: current.position || "center", opacity: 1 }}
               />
               <button

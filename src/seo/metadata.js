@@ -33,7 +33,7 @@ export const SEO_PAGES = {
   },
   rooms: {
     path: "/chambres",
-    ogImage: "/images/rooms/plumeria-suite-chambre-salon-poutres-vue-large-atlantis12-essaouira.webp",
+    ogImage: "/images/rooms/plumeria-facade-suite-terrasse-pergola-atlantis12-essaouira.webp",
     fr: {
       title: "Chambres & Suites · Atlantis 12, Essaouira (adultes)",
       description:
@@ -47,7 +47,7 @@ export const SEO_PAGES = {
   },
   roomPlumeria: {
     path: "/chambres/la-plumeria",
-    ogImage: "/images/rooms/plumeria-suite-chambre-colonnes-vue-frontale-atlantis12-essaouira.webp",
+    ogImage: "/images/rooms/plumeria-chambre-lit-blanc-poutres-bois-atlantis12-essaouira.webp",
     fr: {
       title: "La Pluméria · Suite supérieure · Atlantis 12 Essaouira",
       description: "Découvrez La Pluméria, suite supérieure de 50 m² avec lit king size, vaste salon, cheminée, terrasse privée et salle de bain, près d'Essaouira.",
@@ -59,7 +59,7 @@ export const SEO_PAGES = {
   },
   roomIpomea: {
     path: "/chambres/l-ipomea",
-    ogImage: "/images/rooms/ipomea-chambre-lit-bleu-indigo-murs-pierre-atlantis12-essaouira.webp",
+    ogImage: "/images/rooms/ipomea-chambre-lit-bleu-vue-laterale-atlantis12-essaouira.webp",
     fr: {
       title: "L'Ipoméa · Suite junior · Atlantis 12 Essaouira",
       description: "Découvrez L'Ipoméa, suite junior lumineuse de 25 m² aux tons indigo, avec lit queen size, salon avec cheminée et salle de bain privative.",
