@@ -43,7 +43,7 @@ const PARTNER_IMGS = [
   `${EXP_PATH}/kitesurf-coucher-soleil-atlantique-essaouira.webp`,
   `${EXP_PATH}/quad-dunes-plage-sauvage-essaouira.webp`,
   `${EXP_PATH}/hammam-traditionnel-soins-essaouira.webp`,
-  `${EXP_PATH}/excursions-moto-electrique-arganiers-essaouira-v1.webp`,
+  `${EXP_PATH}/excursions-moto-electrique-arganiers-essaouira.webp`,
 ];
 
 export default function Activites() {

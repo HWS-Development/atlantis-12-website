@@ -132,32 +132,32 @@
         {
           "key": "breakfast",
           "title": "Petit-déjeuner",
-          "image": "/images/services/screenshot-2026-02-19-154841.png"
+          "image": "/images/services/petit-dejeuner-terrasse-atlantis12-essaouira.png"
         },
         {
           "key": "nature",
           "title": "Parc naturel",
-          "image": "/images/services/screenshot-2026-02-19-154858.png"
+          "image": "/images/services/parc-naturel-arganiers-atlantis12-essaouira.png"
         },
         {
           "key": "pool",
           "title": "Piscine",
-          "image": "/images/services/screenshot-2026-02-19-154850.png"
+          "image": "/images/services/piscine-coucher-soleil-atlantis12-essaouira.png"
         },
         {
           "key": "wifi",
           "title": "Wifi gratuit",
-          "image": "/images/services/screenshot-2026-02-19-154831.png"
+          "image": "/images/services/wifi-gratuit-chambre-atlantis12-essaouira.png"
         },
         {
           "key": "concierge",
           "title": "Conciergerie",
-          "image": "/images/services/screenshot-2026-02-19-154909.png"
+          "image": "/images/services/conciergerie-reception-atlantis12-essaouira.png"
         },
         {
           "key": "table",
           "title": "Table d’hôtes",
-          "image": "/images/services/screenshot-2026-02-19-154919.png"
+          "image": "/images/services/table-dhotes-diner-marocain-atlantis12-essaouira.png"
         }
       ]
     },
@@ -295,7 +295,7 @@
         "desc": "Chambre empreinte de douceur, où la pierre et le coton s’unissent dans une harmonie apaisante.Idéale pour un séjour à deux, entre calme et lumière"
       },
       "plumeria": {
-        "title": "La Plumeria",
+        "title": "La Pluméria",
         "desc": "Suite supérieure avec salon, cheminée et terrasse privée.Spacieuse et élégante, elle offre une parenthèse de sérénité et de raffinement à deux pas d’Essaouira."
       }
     },
@@ -652,7 +652,7 @@
     "heroEyebrow": "Les chambres & suites - Essaouira",
     "heroTitle1": "Cinq espaces,",
     "heroTitle2": "cinq univers",
-    "heroAlt": "Plumeria, la suite - Atlantis 12, Essaouira",
+    "heroAlt": "La Pluméria, la suite - Atlantis 12, Essaouira",
     "intro1": "Cinq chambres, cinq univers, chacun nommé d'après une plante sauvage",
     "intro2": "du littoral atlantique.",
     "intro3": "Murs de pierre, tadelakt, bois brut de thuyas, lumière douce d'Essaouira : les espaces d'Atlantis 12 sont des sanctuaires de matières et de silence, ouverts",

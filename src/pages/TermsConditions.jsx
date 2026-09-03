@@ -32,7 +32,7 @@ export default function TermsConditions() {
   return (
     <>
       <PageHero
-        image="/images/misc/view.webp"
+        image="/images/misc/terrasse-vue-foret-atlantis12-essaouira.webp"
         align="left"
         height="md"
         overlay="dark"

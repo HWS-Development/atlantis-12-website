@@ -97,7 +97,7 @@ export default function RoomsHomeSection() {
         name="La Pluméria"
         type="Suite Supérieure"
         img={FAKE.plumeria}
-        alt="Plumeria, suite supérieure - Atlantis 12, Essaouira"
+        alt="La Pluméria, suite supérieure - Atlantis 12, Essaouira"
       />
 
       <div className="mt-8 text-center">

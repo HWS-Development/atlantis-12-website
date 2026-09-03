@@ -125,32 +125,32 @@
         {
           "key": "breakfast",
           "title": "Breakfast",
-          "image": "/images/services/screenshot-2026-02-19-154841.png"
+          "image": "/images/services/petit-dejeuner-terrasse-atlantis12-essaouira.png"
         },
         {
           "key": "nature",
           "title": "Nature park",
-          "image": "/images/services/screenshot-2026-02-19-154858.png"
+          "image": "/images/services/parc-naturel-arganiers-atlantis12-essaouira.png"
         },
         {
           "key": "pool",
           "title": "Swimming pool",
-          "image": "/images/services/screenshot-2026-02-19-154850.png"
+          "image": "/images/services/piscine-coucher-soleil-atlantis12-essaouira.png"
         },
         {
           "key": "wifi",
           "title": "Free Wifi",
-          "image": "/images/services/screenshot-2026-02-19-154831.png"
+          "image": "/images/services/wifi-gratuit-chambre-atlantis12-essaouira.png"
         },
         {
           "key": "concierge",
           "title": "Concierge",
-          "image": "/images/services/screenshot-2026-02-19-154909.png"
+          "image": "/images/services/conciergerie-reception-atlantis12-essaouira.png"
         },
         {
           "key": "table",
           "title": "Table d'hôtes",
-          "image": "/images/services/screenshot-2026-02-19-154919.png"
+          "image": "/images/services/table-dhotes-diner-marocain-atlantis12-essaouira.png"
         }
       ]
     },
@@ -295,7 +295,7 @@
         "desc": "A room imbued with serenity, where stone and cotton blend in soothing harmony.Ideal for a couple's getaway, offering tranquility and light."
       },
       "plumeria": {
-        "title": "La Plumeria",
+        "title": "La Pluméria",
         "desc": "Superior suite with living room, fireplace, and private terrace.Spacious and elegant, it offers a haven of serenity and refinement just a stone's throw from Essaouira."
       }
     },
@@ -307,7 +307,7 @@
     "l-ipomea": {
       "category": "Junior Suite",
       "adults": "• 2 adults",
-      "intro": "Ipomea takes its name from the climbing flower that drapes the walls of Morocco. A luminous room, wrapped in indigo blue, where nature enters through every window."
+      "intro": "L’Ipoméa takes its name from the climbing flower that drapes the walls of Morocco. A luminous room, wrapped in indigo blue, where nature enters through every window."
     },
     "l-agave": {
       "category": "Junior Suite",
@@ -652,7 +652,7 @@
     "heroEyebrow": "Rooms & suites - Essaouira",
     "heroTitle1": "Five spaces,",
     "heroTitle2": "five worlds",
-    "heroAlt": "Plumeria, the suite - Atlantis 12, Essaouira",
+    "heroAlt": "La Pluméria, the suite - Atlantis 12, Essaouira",
     "intro1": "Five rooms, five worlds, each named after a wild plant",
     "intro2": "of the Atlantic coast.",
     "intro3": "Stone walls, tadelakt, raw thuya wood, Essaouira's soft light: the spaces of Atlantis 12 are sanctuaries of materials and silence, opening",

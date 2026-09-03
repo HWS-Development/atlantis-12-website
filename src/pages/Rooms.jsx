@@ -14,13 +14,13 @@ const CARD_IMG = {
   "la-plumeria": {
     img: `${ROOMS_PATH}/plumeria-lit-baldaquin-suite-atlantis12-essaouira.webp`,
     altKey: "rooms.altPlumeria",
-    altDefault: "Plumeria, le lit - Atlantis 12, Essaouira",
+    altDefault: "La Pluméria, le lit - Atlantis 12, Essaouira",
     label: "labelSuperior",
   },
   "l-ipomea": {
     img: `${ROOMS_PATH}/ipomea-chambre-vue-principale-atlantis12-essaouira.webp`,
     altKey: "rooms.altIpomea",
-    altDefault: "Ipomea, chambre avec lit bleu indigo - Atlantis 12, Essaouira",
+    altDefault: "L’Ipoméa, chambre avec lit bleu indigo - Atlantis 12, Essaouira",
     label: "labelJunior",
   },
   "l-agave": {

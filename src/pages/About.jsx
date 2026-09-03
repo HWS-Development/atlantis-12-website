@@ -4,7 +4,7 @@ import Reveal from "../components/Common/Reveal";
 
 const ABOUT_PATH = "/images/about";
 const HERO_IMG = `${ABOUT_PATH}/maison-vue-jardin-atlantis12-essaouira.webp`;
-const FOUNDERS_IMG = `${ABOUT_PATH}/img-3456.webp`;
+const FOUNDERS_IMG = `${ABOUT_PATH}/asmae-lahcen-portrait-atlantis12-essaouira.webp`;
 
 const GALLERY_SRCS = [
   `${ABOUT_PATH}/entree.webp`,
@@ -17,7 +17,7 @@ const GALLERY_SRCS = [
   `${ABOUT_PATH}/chevalet-salon.webp`,
   `${ABOUT_PATH}/coquillage.webp`,
   `${ABOUT_PATH}/petit-dejeuner.webp`,
-  `${ABOUT_PATH}/cafe.webp`,
+  `${ABOUT_PATH}/cafe-terrasse-atlantis12-essaouira.webp`,
   `${ABOUT_PATH}/the-a-la-menthe.webp`,
 ];
 
