@@ -2,7 +2,7 @@
 import LangLink from "../Common/LangLink";
 import { useTranslation } from "react-i18next";
 
-const LOGO = "/images/logo/logo-atlantis12-simplifie.png";
+const LOGO = "/images/logo/logo-simplifie-atlantis12-essaouira.png";
 
 export default function Navbar() {
   const { t, i18n } = useTranslation();

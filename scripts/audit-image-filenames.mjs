@@ -4,8 +4,10 @@ import { basename, extname, join, relative, sep } from "node:path";
 const IMAGE_ROOT = join(process.cwd(), "public/images");
 const VALID_DIRECTORY = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
 const VALID_FILENAME = /^[a-z0-9]+(?:-[a-z0-9]+)*\.(?:png|webp)$/;
+const REQUIRED_SUFFIX = /-atlantis12-essaouira$/;
 const EMBEDDED_EXTENSION = /(?:jpe?g|png|webp|avif|ppg)$/;
 const NON_DESCRIPTIVE_PREFIX = /^(?:dsc|img|screenshot)(?:-|$)/;
+const NUMERIC_PREFIX = /^\d+(?:-|$)/;
 
 async function collectFiles(directory) {
   const entries = await readdir(directory, { withFileTypes: true });
@@ -36,6 +38,10 @@ for (const file of files) {
     invalid.push(`${relative(process.cwd(), file)} (embedded or malformed extension)`);
   } else if (NON_DESCRIPTIVE_PREFIX.test(stem)) {
     invalid.push(`${relative(process.cwd(), file)} (non-descriptive source filename)`);
+  } else if (NUMERIC_PREFIX.test(stem)) {
+    invalid.push(`${relative(process.cwd(), file)} (numeric export prefix)`);
+  } else if (!REQUIRED_SUFFIX.test(stem)) {
+    invalid.push(`${relative(process.cwd(), file)} (missing -atlantis12-essaouira suffix)`);
   }
 }
 

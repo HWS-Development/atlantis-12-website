@@ -1,7 +1,7 @@
 import { useTranslation } from "react-i18next";
 import Reveal from "../Common/Reveal";
 
-const HERO_LOGO = "/images/logo/logo-atlantis12-aquarelle-maison-hotes-art-essaouira.png";
+const HERO_LOGO = "/images/logo/logo-aquarelle-maison-hotes-art-atlantis12-essaouira.png";
 
 export default function HomeHero() {
   const { t } = useTranslation();

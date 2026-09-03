@@ -3,7 +3,7 @@ import Reveal from "../components/Common/Reveal";
 import LangLink from "../components/Common/LangLink";
 
 const EXP_PATH = "/images/experiences";
-const HERO = `${EXP_PATH}/balade-cheval-coucher-soleil-plage-essaouira.webp`;
+const HERO = `${EXP_PATH}/balade-cheval-coucher-soleil-plage-atlantis12-essaouira.webp`;
 
 const HOUSE_META = [
   {
@@ -29,7 +29,7 @@ const HOUSE_META = [
     accent: "rgb(143, 175, 126)",
   },
   {
-    img: `${EXP_PATH}/yoga-terrasse-atlantis12-essaouira-foret.webp`,
+    img: `${EXP_PATH}/yoga-terrasse-foret-atlantis12-essaouira.webp`,
     bg: "white",
     titleColor: "#333333",
     bodyColor: "#333333",
@@ -39,11 +39,11 @@ const HOUSE_META = [
 ];
 
 const PARTNER_IMGS = [
-  `${EXP_PATH}/balade-cheval-plage-coucher-soleil-essaouira.webp`,
-  `${EXP_PATH}/kitesurf-coucher-soleil-atlantique-essaouira.webp`,
-  `${EXP_PATH}/quad-dunes-plage-sauvage-essaouira.webp`,
-  `${EXP_PATH}/hammam-traditionnel-soins-essaouira.webp`,
-  `${EXP_PATH}/excursions-moto-electrique-arganiers-essaouira.webp`,
+  `${EXP_PATH}/balade-cheval-plage-coucher-soleil-atlantis12-essaouira.webp`,
+  `${EXP_PATH}/kitesurf-coucher-soleil-atlantique-atlantis12-essaouira.webp`,
+  `${EXP_PATH}/quad-dunes-plage-sauvage-atlantis12-essaouira.webp`,
+  `${EXP_PATH}/hammam-traditionnel-soins-atlantis12-essaouira.webp`,
+  `${EXP_PATH}/excursions-moto-electrique-arganiers-atlantis12-essaouira.webp`,
 ];
 
 export default function Activites() {

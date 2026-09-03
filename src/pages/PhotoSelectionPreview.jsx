@@ -1,60 +1,60 @@
 import { useEffect } from "react";
 
-const IPOMEA_ORIGINALS = [
-  "_DSC8325-HDR.webp",
-  "_DSC8328-HDR-Panorama.webp",
-  "_DSC8340-HDR-Panorama.webp",
-  "_DSC8349-HDR.webp",
-  "_DSC8352-HDR-Panorama.webp",
-  "_DSC8361-HDR.webp",
-  "_DSC8364-HDR.webp",
-  "_DSC8367-HDR-Panorama.webp",
-  "_DSC8379-HDR.webp",
-  "_DSC8388-HDR.webp",
+const IPOMEA_PHOTOS = [
+  { original: "_DSC8325-HDR.webp", filename: "ipomea-salon-banquette-arche-bleue-atlantis12-essaouira.webp" },
+  { original: "_DSC8328-HDR-Panorama.webp", filename: "ipomea-salon-cheminee-banquette-pierre-atlantis12-essaouira.webp" },
+  { original: "_DSC8340-HDR-Panorama.webp", filename: "ipomea-salon-cheminee-fauteuil-baroque-atlantis12-essaouira.webp" },
+  { original: "_DSC8349-HDR.webp", filename: "ipomea-chambre-lit-bleu-vue-frontale-atlantis12-essaouira.webp" },
+  { original: "_DSC8352-HDR-Panorama.webp", filename: "ipomea-chambre-lit-bleu-porte-turquoise-atlantis12-essaouira.webp" },
+  { original: "_DSC8361-HDR.webp", filename: "ipomea-chambre-lit-bleu-vue-laterale-atlantis12-essaouira.webp" },
+  { original: "_DSC8364-HDR.webp", filename: "ipomea-salle-de-bain-double-vasque-miroir-atlantis12-essaouira.webp" },
+  { original: "_DSC8367-HDR-Panorama.webp", filename: "ipomea-salle-de-bain-douche-etageres-atlantis12-essaouira.webp" },
+  { original: "_DSC8379-HDR.webp", filename: "ipomea-salle-de-bain-double-vasque-verriere-atlantis12-essaouira.webp" },
+  { original: "_DSC8388-HDR.webp", filename: "ipomea-patio-prive-hamac-pergola-atlantis12-essaouira.webp" },
 ];
 
-const PLUMERIA_ORIGINALS = [
-  "_DSC8231-HDR.webp",
-  "_DSC8234-HDR.webp",
-  "_DSC8243-HDR-Panorama.webp",
-  "_DSC8249-HDR-Panorama.webp",
-  "_DSC8270-HDR-Panorama.webp",
-  "_DSC8273-HDR.webp",
-  "_DSC8276-HDR.webp",
-  "_DSC8279-HDR.webp",
-  "_DSC8282-HDR-Panorama.webp",
-  "_DSC8291-HDR.webp",
-  "_DSC8297-HDR.webp",
-  "_DSC8300-HDR.webp",
-  "_DSC8303.webp",
-  "_DSC8304.webp",
-  "_DSC8305.webp",
-  "_DSC8306.webp",
-  "_DSC8307.webp",
-  "_DSC8308.webp",
-  "_DSC8310.webp",
-  "_DSC8311.webp",
-  "_DSC8313.webp",
-  "_DSC8314.webp",
-  "_DSC8317.webp",
-  "_DSC8318.webp",
-  "_DSC8319.webp",
-  "_DSC8321.webp",
-  "_DSC8323.webp",
+const PLUMERIA_PHOTOS = [
+  { original: "_DSC8231-HDR.webp", filename: "plumeria-chambre-lit-blanc-oeuvres-atlantis12-essaouira.webp" },
+  { original: "_DSC8234-HDR.webp", filename: "plumeria-chambre-lit-blanc-poutres-bois-atlantis12-essaouira.webp" },
+  { original: "_DSC8243-HDR-Panorama.webp", filename: "plumeria-suite-espace-colonnes-bureau-atlantis12-essaouira.webp" },
+  { original: "_DSC8249-HDR-Panorama.webp", filename: "plumeria-suite-salon-canape-cheminee-atlantis12-essaouira.webp" },
+  { original: "_DSC8270-HDR-Panorama.webp", filename: "plumeria-suite-chambre-salon-colonnes-atlantis12-essaouira.webp" },
+  { original: "_DSC8273-HDR.webp", filename: "plumeria-chambre-bouquet-roses-tableau-atlantis12-essaouira.webp" },
+  { original: "_DSC8276-HDR.webp", filename: "plumeria-salle-de-bain-double-vasque-zellige-atlantis12-essaouira.webp" },
+  { original: "_DSC8279-HDR.webp", filename: "plumeria-salle-de-bain-douche-zellige-atlantis12-essaouira.webp" },
+  { original: "_DSC8282-HDR-Panorama.webp", filename: "plumeria-chambre-lit-colonnes-vue-frontale-atlantis12-essaouira.webp" },
+  { original: "_DSC8291-HDR.webp", filename: "plumeria-terrasse-privee-fauteuil-suspendu-atlantis12-essaouira.webp" },
+  { original: "_DSC8297-HDR.webp", filename: "plumeria-facade-suite-terrasse-pergola-atlantis12-essaouira.webp" },
+  { original: "_DSC8300-HDR.webp", filename: "plumeria-terrasse-salon-exterieur-pergola-atlantis12-essaouira.webp" },
+  { original: "_DSC8303.webp", filename: "plumeria-decoration-tableau-vert-bouquet-roses-atlantis12-essaouira.webp" },
+  { original: "_DSC8304.webp", filename: "plumeria-decoration-niche-fenetre-vase-blanc-atlantis12-essaouira.webp" },
+  { original: "_DSC8305.webp", filename: "plumeria-chambre-detail-oreillers-lampe-atlantis12-essaouira.webp" },
+  { original: "_DSC8306.webp", filename: "plumeria-salon-bouquet-roses-table-atlantis12-essaouira.webp" },
+  { original: "_DSC8307.webp", filename: "plumeria-cheminee-suspendue-mur-pierre-atlantis12-essaouira.webp" },
+  { original: "_DSC8308.webp", filename: "plumeria-decoration-coquillages-vitrine-atlantis12-essaouira.webp" },
+  { original: "_DSC8310.webp", filename: "plumeria-cheminee-tableau-rouge-atlantis12-essaouira.webp" },
+  { original: "_DSC8311.webp", filename: "plumeria-salle-de-bain-miroir-vasque-atlantis12-essaouira.webp" },
+  { original: "_DSC8313.webp", filename: "plumeria-bureau-ordinateur-fenetre-atlantis12-essaouira.webp" },
+  { original: "_DSC8314.webp", filename: "plumeria-terrasse-mobile-coquillages-atlantis12-essaouira.webp" },
+  { original: "_DSC8317.webp", filename: "plumeria-terrasse-luminaire-rotin-atlantis12-essaouira.webp" },
+  { original: "_DSC8318.webp", filename: "plumeria-table-accueil-douceurs-bouquet-atlantis12-essaouira.webp" },
+  { original: "_DSC8319.webp", filename: "plumeria-table-bouquet-roses-douceurs-atlantis12-essaouira.webp" },
+  { original: "_DSC8321.webp", filename: "plumeria-table-bouquet-roses-canape-atlantis12-essaouira.webp" },
+  { original: "_DSC8323.webp", filename: "plumeria-decoration-vase-blanc-fleurs-sechees-atlantis12-essaouira.webp" },
 ];
 
-function PhotoGroup({ title, slug, originals }) {
+function PhotoGroup({ title, slug, photos }) {
   return (
     <section className="mb-20">
       <div className="flex items-end justify-between gap-6 mb-8 border-b border-primary/20 pb-4">
         <h2 className="font-display text-3xl md:text-5xl text-foreground">{title}</h2>
-        <p className="font-body text-sm text-foreground/60">{originals.length} photographies</p>
+        <p className="font-body text-sm text-foreground/60">{photos.length} photographies</p>
       </div>
 
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        {originals.map((original, index) => {
+        {photos.map(({ original, filename }, index) => {
           const number = String(index + 1).padStart(2, "0");
-          const src = `/images/photo-selection/${slug}/${slug}-${number}.webp`;
+          const src = `/images/photo-selection/${slug}/${filename}`;
 
           return (
             <a
@@ -121,8 +121,8 @@ export default function PhotoSelectionPreview() {
         </p>
       </header>
 
-      <PhotoGroup title="L’Ipoméa" slug="ipomea" originals={IPOMEA_ORIGINALS} />
-      <PhotoGroup title="La Pluméria" slug="plumeria" originals={PLUMERIA_ORIGINALS} />
+      <PhotoGroup title="L’Ipoméa" slug="ipomea" photos={IPOMEA_PHOTOS} />
+      <PhotoGroup title="La Pluméria" slug="plumeria" photos={PLUMERIA_PHOTOS} />
     </div>
   );
 }

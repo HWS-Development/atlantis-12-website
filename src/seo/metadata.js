@@ -1,11 +1,11 @@
 export const SITE_URL = "https://atlantis12essaouira.com";
 
-export const DEFAULT_OG_IMAGE = "/images/about/patio.webp";
+export const DEFAULT_OG_IMAGE = "/images/about/patio-atlantis12-essaouira.webp";
 
 export const SEO_PAGES = {
   home: {
     path: "/",
-    ogImage: "/images/about/patio.webp",
+    ogImage: "/images/about/patio-atlantis12-essaouira.webp",
     fr: {
       title: "Atlantis 12 · Maison d'hôtes & d'art · Essaouira, Maroc",
       description:
@@ -19,7 +19,7 @@ export const SEO_PAGES = {
   },
   about: {
     path: "/la-maison",
-    ogImage: "/images/about/salon-1.webp",
+    ogImage: "/images/about/salon-atlantis12-essaouira.webp",
     fr: {
       title: "La Maison · Atlantis 12, maison d'hôtes à Essaouira",
       description:
@@ -121,7 +121,7 @@ export const SEO_PAGES = {
   },
   experiences: {
     path: "/experiences",
-    ogImage: "/images/essaouira/4-coucher-soleil-plage-essaouira-atlantique.webp",
+    ogImage: "/images/essaouira/coucher-soleil-plage-atlantique-atlantis12-essaouira.webp",
     fr: {
       title: "Expériences · massage, yoga, art & nature · Atlantis 12",
       description:
@@ -135,7 +135,7 @@ export const SEO_PAGES = {
   },
   contact: {
     path: "/contact",
-    ogImage: "/images/about/patio.webp",
+    ogImage: "/images/about/patio-atlantis12-essaouira.webp",
     fr: {
       title: "Contact & réservation · Atlantis 12, Essaouira",
       description:
@@ -163,7 +163,7 @@ export const SEO_PAGES = {
   },
   essaouira: {
     path: "/essaouira",
-    ogImage: "/images/essaouira/1-remparts-essaouira-skala-du-port.webp",
+    ogImage: "/images/essaouira/remparts-skala-du-port-atlantis12-essaouira.webp",
     fr: {
       title: "Ce qu'on aime à Essaouira · le guide d'Atlantis 12",
       description:

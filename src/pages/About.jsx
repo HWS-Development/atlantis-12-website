@@ -7,18 +7,18 @@ const HERO_IMG = `${ABOUT_PATH}/maison-vue-jardin-atlantis12-essaouira.webp`;
 const FOUNDERS_IMG = `${ABOUT_PATH}/asmae-lahcen-portrait-atlantis12-essaouira.webp`;
 
 const GALLERY_SRCS = [
-  `${ABOUT_PATH}/entree.webp`,
-  `${ABOUT_PATH}/patio.webp`,
-  `${ABOUT_PATH}/patio-de-nuit.webp`,
-  `${ABOUT_PATH}/piscine.webp`,
-  `${ABOUT_PATH}/rooftop-de-nuit.webp`,
-  `${ABOUT_PATH}/salon-1.webp`,
-  `${ABOUT_PATH}/salon-2.webp`,
-  `${ABOUT_PATH}/chevalet-salon.webp`,
-  `${ABOUT_PATH}/coquillage.webp`,
-  `${ABOUT_PATH}/petit-dejeuner.webp`,
+  `${ABOUT_PATH}/entree-maison-atlantis12-essaouira.webp`,
+  `${ABOUT_PATH}/patio-atlantis12-essaouira.webp`,
+  `${ABOUT_PATH}/patio-de-nuit-atlantis12-essaouira.webp`,
+  `${ABOUT_PATH}/piscine-atlantis12-essaouira.webp`,
+  `${ABOUT_PATH}/rooftop-de-nuit-atlantis12-essaouira.webp`,
+  `${ABOUT_PATH}/salon-atlantis12-essaouira.webp`,
+  `${ABOUT_PATH}/salon-oeuvres-atlantis12-essaouira.webp`,
+  `${ABOUT_PATH}/chevalet-salon-atlantis12-essaouira.webp`,
+  `${ABOUT_PATH}/coquillage-detail-sonore-atlantis12-essaouira.webp`,
+  `${ABOUT_PATH}/petit-dejeuner-atlantis12-essaouira.webp`,
   `${ABOUT_PATH}/cafe-terrasse-atlantis12-essaouira.webp`,
-  `${ABOUT_PATH}/the-a-la-menthe.webp`,
+  `${ABOUT_PATH}/the-a-la-menthe-atlantis12-essaouira.webp`,
 ];
 
 export default function About() {

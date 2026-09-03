@@ -3,21 +3,21 @@ import { useTranslation } from "react-i18next";
 import Reveal from "../components/Common/Reveal";
 
 const ESS_PATH = "/images/essaouira";
-const HERO = `${ESS_PATH}/asmae-lahcen-dar-lawama-coucher-soleil-essaouira.webp`;
+const HERO = `${ESS_PATH}/asmae-lahcen-dar-lawama-coucher-soleil-atlantis12-essaouira.webp`;
 
 const GRID_IMAGES = [
-  { src: `${ESS_PATH}/1-remparts-essaouira-skala-du-port.webp`, alt: "Remparts d'Essaouira et Skala du Port" },
-  { src: `${ESS_PATH}/2-port-essaouira-barques-bleues-mouette.webp`, alt: "Port d'Essaouira" },
-  { src: `${ESS_PATH}/3-port-essaouira-bateaux-bleus.webp`, alt: "Bateaux bleus" },
-  { src: `${ESS_PATH}/4-coucher-soleil-plage-essaouira-atlantique.webp`, alt: "Coucher de soleil" },
-  { src: `${ESS_PATH}/5-coucher-soleil-essaouira-palmier.webp`, alt: "Palmier" },
-  { src: `${ESS_PATH}/6-marche-medina-essaouira-homme-djellaba.webp`, alt: "Marché Médina" },
-  { src: `${ESS_PATH}/7-velo-chat-medina-essaouira-bleu.webp`, alt: "Vélo bleu" },
-  { src: `${ESS_PATH}/8-porte-ancienne-medina-essaouira.webp`, alt: "Porte ancienne" },
-  { src: `${ESS_PATH}/9-luminaires-cuir-artisanat-essaouira.webp`, alt: "Luminaires en cuir" },
-  { src: `${ESS_PATH}/10-musicienne-gnaoua-essaouira.webp`, alt: "Musicienne Gnaoua" },
-  { src: `${ESS_PATH}/11-epices-marche-essaouira.webp`, alt: "Épices" },
-  { src: `${ESS_PATH}/12-bijoux-berberes-ambre-essaouira.webp`, alt: "Bijoux berbères" },
+  { src: `${ESS_PATH}/remparts-skala-du-port-atlantis12-essaouira.webp`, alt: "Remparts d'Essaouira et Skala du Port" },
+  { src: `${ESS_PATH}/port-barques-bleues-mouette-atlantis12-essaouira.webp`, alt: "Port d'Essaouira" },
+  { src: `${ESS_PATH}/port-bateaux-bleus-atlantis12-essaouira.webp`, alt: "Bateaux bleus" },
+  { src: `${ESS_PATH}/coucher-soleil-plage-atlantique-atlantis12-essaouira.webp`, alt: "Coucher de soleil" },
+  { src: `${ESS_PATH}/coucher-soleil-palmier-atlantis12-essaouira.webp`, alt: "Palmier" },
+  { src: `${ESS_PATH}/marche-medina-homme-djellaba-atlantis12-essaouira.webp`, alt: "Marché Médina" },
+  { src: `${ESS_PATH}/velo-chat-medina-bleue-atlantis12-essaouira.webp`, alt: "Vélo bleu" },
+  { src: `${ESS_PATH}/porte-ancienne-medina-atlantis12-essaouira.webp`, alt: "Porte ancienne" },
+  { src: `${ESS_PATH}/luminaires-cuir-artisanat-atlantis12-essaouira.webp`, alt: "Luminaires en cuir" },
+  { src: `${ESS_PATH}/musicienne-gnaoua-atlantis12-essaouira.webp`, alt: "Musicienne Gnaoua" },
+  { src: `${ESS_PATH}/epices-marche-atlantis12-essaouira.webp`, alt: "Épices" },
+  { src: `${ESS_PATH}/bijoux-berberes-ambre-atlantis12-essaouira.webp`, alt: "Bijoux berbères" },
 ];
 
 const PIN = (
