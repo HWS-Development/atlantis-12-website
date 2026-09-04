@@ -16,6 +16,7 @@ export default function PolitiqueConfidentialite() {
         </h1>
 
         <P>{t("privacy.intro")}</P>
+        <P className="mt-2">{t("privacy.controller")}</P>
 
         {/* 1. Data Collected */}
         <Section n="1" title={t("privacy.s1Title")}>
@@ -33,6 +34,7 @@ export default function PolitiqueConfidentialite() {
             <li>{t("privacy.s1li10")}</li>
           </Ul>
           <P>{t("privacy.s1p2")}</P>
+          <P>{t("privacy.s1p3")}</P>
         </Section>
 
         {/* 2. Purposes */}
@@ -74,6 +76,7 @@ export default function PolitiqueConfidentialite() {
         {/* 5. Data Retention */}
         <Section n="5" title={t("privacy.s5Title")}>
           <P>{t("privacy.s5p1")}</P>
+          <P>{t("privacy.s5p2")}</P>
         </Section>
 
         {/* 6. Data Security */}
@@ -90,6 +93,9 @@ export default function PolitiqueConfidentialite() {
             <li>{t("privacy.s7li3")}</li>
             <li>{t("privacy.s7li4")}</li>
             <li>{t("privacy.s7li5")}</li>
+            <li>{t("privacy.s7li6")}</li>
+            <li>{t("privacy.s7li7")}</li>
+            <li>{t("privacy.s7li8")}</li>
           </Ul>
           <P>
             {t("privacy.s7p2")}{" "}
@@ -99,15 +105,21 @@ export default function PolitiqueConfidentialite() {
           </P>
         </Section>
 
-        {/* 8. Amendments */}
+        {/* 8. International transfers */}
         <Section n="8" title={t("privacy.s8Title")}>
           <P>{t("privacy.s8p1")}</P>
+          <P>{t("privacy.s8p2")}</P>
         </Section>
 
-        {/* 9. Contact */}
+        {/* 9. Amendments */}
         <Section n="9" title={t("privacy.s9Title")}>
+          <P>{t("privacy.s9p1")}</P>
+        </Section>
+
+        {/* 10. Contact */}
+        <Section n="10" title={t("privacy.s10Title")}>
           <P>
-            {t("privacy.s9p1")}{" "}
+            {t("privacy.s10p1")}{" "}
             <a href="mailto:contact@atlantis12essaouira.com" className="underline hover:text-primary transition-colors">
               contact@atlantis12essaouira.com
             </a>

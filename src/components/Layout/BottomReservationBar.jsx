@@ -122,7 +122,7 @@ export default function BottomReservationBar() {
           <div className="pointer-events-none absolute bottom-full right-0 left-0 flex justify-end px-4 md:px-10 pb-[6px]">
             <div className="pointer-events-auto w-full max-w-[448px] md:mr-[18vw] rounded-[3px] bg-white px-8 pt-8 pb-7 shadow-[0_18px_40px_rgba(0,0,0,0.12)]">
               <div className="mb-6 flex items-start justify-between gap-4">
-                <p className="font-body text-[24px] font-semibold leading-none text-primary">
+                <p className="font-display text-[24px] leading-none text-primary">
                   {t("bottomBar.why.title", "Pourquoi réserver avec nous ?")}
                 </p>
                 <button
@@ -165,7 +165,7 @@ export default function BottomReservationBar() {
         <div className="max-h-[calc(100dvh-64px)] overflow-y-auto overscroll-contain bg-white border-t border-black/5 shadow-[0_-4px_20px_rgba(0,0,0,0.04)]">
           <div className="max-w-5xl mx-auto px-6 md:px-10 py-7 md:py-9">
             <div className="flex items-start justify-between mb-5">
-              <p className="font-body text-2xl md:text-3xl font-semibold text-foreground">
+              <p className="font-display text-2xl md:text-3xl text-foreground">
                 {t("bottomBar.reserve.title", "Réserver un séjour")}
               </p>
               <button
@@ -238,8 +238,8 @@ export default function BottomReservationBar() {
           }}
         >
           <span
-            className="font-body whitespace-nowrap overflow-hidden text-ellipsis"
-            style={{ fontSize: "clamp(13px, 2vw, 16px)", color: "#ffffff", fontWeight: 600 }}
+            className="font-display whitespace-nowrap overflow-hidden text-ellipsis"
+            style={{ fontSize: "clamp(17px, 3vw, 19px)", color: "#ffffff", fontWeight: 400 }}
           >
             {t("bottomBar.bar.why", "pourquoi réserver sur notre site ?")}
           </span>
