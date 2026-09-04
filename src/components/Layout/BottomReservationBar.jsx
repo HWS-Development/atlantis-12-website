@@ -207,8 +207,9 @@ export default function BottomReservationBar() {
           <span
             className="font-display whitespace-nowrap md:hidden"
             style={{
-              fontSize: "clamp(20px, 5.2vw, 22px)",
-              fontWeight: 600,
+              fontSize: "clamp(24px, 6vw, 26px)",
+              fontWeight: 700,
+              lineHeight: 1.1,
               color: "#ffffff",
             }}
           >
@@ -217,8 +218,9 @@ export default function BottomReservationBar() {
           <span
             className="font-display whitespace-nowrap overflow-hidden text-ellipsis hidden md:inline"
             style={{
-              fontSize: "23px",
-              fontWeight: 600,
+              fontSize: "28px",
+              fontWeight: 700,
+              lineHeight: 1.1,
               color: "#ffffff",
             }}
           >
