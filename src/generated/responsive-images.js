@@ -561,6 +561,66 @@ export default {
       }
     ]
   },
+  "/images/logo/logo-aquarelle-maison-dhotes-art-atlantis12-essaouira.png": {
+    "width": 866,
+    "height": 1024,
+    "sources": [
+      {
+        "src": "/responsive-images/64/logo/logo-aquarelle-maison-dhotes-art-atlantis12-essaouira.png",
+        "width": 64
+      },
+      {
+        "src": "/responsive-images/128/logo/logo-aquarelle-maison-dhotes-art-atlantis12-essaouira.png",
+        "width": 128
+      },
+      {
+        "src": "/responsive-images/256/logo/logo-aquarelle-maison-dhotes-art-atlantis12-essaouira.png",
+        "width": 256
+      },
+      {
+        "src": "/responsive-images/384/logo/logo-aquarelle-maison-dhotes-art-atlantis12-essaouira.png",
+        "width": 384
+      },
+      {
+        "src": "/responsive-images/480/logo/logo-aquarelle-maison-dhotes-art-atlantis12-essaouira.png",
+        "width": 480
+      },
+      {
+        "src": "/responsive-images/800/logo/logo-aquarelle-maison-dhotes-art-atlantis12-essaouira.png",
+        "width": 800
+      }
+    ]
+  },
+  "/images/logo/logo-blanc-atlantis12-essaouira.png": {
+    "width": 1540,
+    "height": 777,
+    "sources": [
+      {
+        "src": "/responsive-images/64/logo/logo-blanc-atlantis12-essaouira.png",
+        "width": 64
+      },
+      {
+        "src": "/responsive-images/128/logo/logo-blanc-atlantis12-essaouira.png",
+        "width": 128
+      },
+      {
+        "src": "/responsive-images/256/logo/logo-blanc-atlantis12-essaouira.png",
+        "width": 256
+      },
+      {
+        "src": "/responsive-images/384/logo/logo-blanc-atlantis12-essaouira.png",
+        "width": 384
+      },
+      {
+        "src": "/responsive-images/480/logo/logo-blanc-atlantis12-essaouira.png",
+        "width": 480
+      },
+      {
+        "src": "/responsive-images/800/logo/logo-blanc-atlantis12-essaouira.png",
+        "width": 800
+      }
+    ]
+  },
   "/images/logo/logo-horizontal-vert-atlantis12-essaouira.webp": {
     "width": 1600,
     "height": 800,
@@ -576,6 +636,36 @@ export default {
       {
         "src": "/responsive-images/1200/logo/logo-horizontal-vert-atlantis12-essaouira.webp",
         "width": 1200
+      }
+    ]
+  },
+  "/images/logo/logo-simplifie-atlantis12-essaouira.png": {
+    "width": 991,
+    "height": 1024,
+    "sources": [
+      {
+        "src": "/responsive-images/64/logo/logo-simplifie-atlantis12-essaouira.png",
+        "width": 64
+      },
+      {
+        "src": "/responsive-images/128/logo/logo-simplifie-atlantis12-essaouira.png",
+        "width": 128
+      },
+      {
+        "src": "/responsive-images/256/logo/logo-simplifie-atlantis12-essaouira.png",
+        "width": 256
+      },
+      {
+        "src": "/responsive-images/384/logo/logo-simplifie-atlantis12-essaouira.png",
+        "width": 384
+      },
+      {
+        "src": "/responsive-images/480/logo/logo-simplifie-atlantis12-essaouira.png",
+        "width": 480
+      },
+      {
+        "src": "/responsive-images/800/logo/logo-simplifie-atlantis12-essaouira.png",
+        "width": 800
       }
     ]
   },
@@ -833,16 +923,6 @@ export default {
     "sources": [
       {
         "src": "/responsive-images/480/rooms/ipomea-detail-vase-ambre-fleurs-sechees-pierre-atlantis12-essaouira.webp",
-        "width": 480
-      }
-    ]
-  },
-  "/images/rooms/ipomea-patio-hamac-pergola-pierre-atlantis12-essaouira.webp": {
-    "width": 717,
-    "height": 1024,
-    "sources": [
-      {
-        "src": "/responsive-images/480/rooms/ipomea-patio-hamac-pergola-pierre-atlantis12-essaouira.webp",
         "width": 480
       }
     ]
@@ -1350,6 +1430,162 @@ export default {
       {
         "src": "/responsive-images/1600/rooms/plumeria-terrasse-salon-exterieur-pergola-atlantis12-essaouira.webp",
         "width": 1600
+      }
+    ]
+  },
+  "/images/services/conciergerie-reception-atlantis12-essaouira.png": {
+    "width": 753,
+    "height": 709,
+    "sources": [
+      {
+        "src": "/responsive-images/64/services/conciergerie-reception-atlantis12-essaouira.png",
+        "width": 64
+      },
+      {
+        "src": "/responsive-images/128/services/conciergerie-reception-atlantis12-essaouira.png",
+        "width": 128
+      },
+      {
+        "src": "/responsive-images/256/services/conciergerie-reception-atlantis12-essaouira.png",
+        "width": 256
+      },
+      {
+        "src": "/responsive-images/384/services/conciergerie-reception-atlantis12-essaouira.png",
+        "width": 384
+      },
+      {
+        "src": "/responsive-images/480/services/conciergerie-reception-atlantis12-essaouira.png",
+        "width": 480
+      }
+    ]
+  },
+  "/images/services/jardin-arganier-nature-atlantis12-essaouira.png": {
+    "width": 745,
+    "height": 703,
+    "sources": [
+      {
+        "src": "/responsive-images/64/services/jardin-arganier-nature-atlantis12-essaouira.png",
+        "width": 64
+      },
+      {
+        "src": "/responsive-images/128/services/jardin-arganier-nature-atlantis12-essaouira.png",
+        "width": 128
+      },
+      {
+        "src": "/responsive-images/256/services/jardin-arganier-nature-atlantis12-essaouira.png",
+        "width": 256
+      },
+      {
+        "src": "/responsive-images/384/services/jardin-arganier-nature-atlantis12-essaouira.png",
+        "width": 384
+      },
+      {
+        "src": "/responsive-images/480/services/jardin-arganier-nature-atlantis12-essaouira.png",
+        "width": 480
+      }
+    ]
+  },
+  "/images/services/petit-dejeuner-terrasse-atlantis12-essaouira.png": {
+    "width": 749,
+    "height": 750,
+    "sources": [
+      {
+        "src": "/responsive-images/64/services/petit-dejeuner-terrasse-atlantis12-essaouira.png",
+        "width": 64
+      },
+      {
+        "src": "/responsive-images/128/services/petit-dejeuner-terrasse-atlantis12-essaouira.png",
+        "width": 128
+      },
+      {
+        "src": "/responsive-images/256/services/petit-dejeuner-terrasse-atlantis12-essaouira.png",
+        "width": 256
+      },
+      {
+        "src": "/responsive-images/384/services/petit-dejeuner-terrasse-atlantis12-essaouira.png",
+        "width": 384
+      },
+      {
+        "src": "/responsive-images/480/services/petit-dejeuner-terrasse-atlantis12-essaouira.png",
+        "width": 480
+      }
+    ]
+  },
+  "/images/services/piscine-coucher-soleil-atlantis12-essaouira.png": {
+    "width": 746,
+    "height": 742,
+    "sources": [
+      {
+        "src": "/responsive-images/64/services/piscine-coucher-soleil-atlantis12-essaouira.png",
+        "width": 64
+      },
+      {
+        "src": "/responsive-images/128/services/piscine-coucher-soleil-atlantis12-essaouira.png",
+        "width": 128
+      },
+      {
+        "src": "/responsive-images/256/services/piscine-coucher-soleil-atlantis12-essaouira.png",
+        "width": 256
+      },
+      {
+        "src": "/responsive-images/384/services/piscine-coucher-soleil-atlantis12-essaouira.png",
+        "width": 384
+      },
+      {
+        "src": "/responsive-images/480/services/piscine-coucher-soleil-atlantis12-essaouira.png",
+        "width": 480
+      }
+    ]
+  },
+  "/images/services/table-dhotes-diner-marocain-atlantis12-essaouira.png": {
+    "width": 747,
+    "height": 721,
+    "sources": [
+      {
+        "src": "/responsive-images/64/services/table-dhotes-diner-marocain-atlantis12-essaouira.png",
+        "width": 64
+      },
+      {
+        "src": "/responsive-images/128/services/table-dhotes-diner-marocain-atlantis12-essaouira.png",
+        "width": 128
+      },
+      {
+        "src": "/responsive-images/256/services/table-dhotes-diner-marocain-atlantis12-essaouira.png",
+        "width": 256
+      },
+      {
+        "src": "/responsive-images/384/services/table-dhotes-diner-marocain-atlantis12-essaouira.png",
+        "width": 384
+      },
+      {
+        "src": "/responsive-images/480/services/table-dhotes-diner-marocain-atlantis12-essaouira.png",
+        "width": 480
+      }
+    ]
+  },
+  "/images/services/wifi-gratuit-chambre-atlantis12-essaouira.png": {
+    "width": 660,
+    "height": 651,
+    "sources": [
+      {
+        "src": "/responsive-images/64/services/wifi-gratuit-chambre-atlantis12-essaouira.png",
+        "width": 64
+      },
+      {
+        "src": "/responsive-images/128/services/wifi-gratuit-chambre-atlantis12-essaouira.png",
+        "width": 128
+      },
+      {
+        "src": "/responsive-images/256/services/wifi-gratuit-chambre-atlantis12-essaouira.png",
+        "width": 256
+      },
+      {
+        "src": "/responsive-images/384/services/wifi-gratuit-chambre-atlantis12-essaouira.png",
+        "width": 384
+      },
+      {
+        "src": "/responsive-images/480/services/wifi-gratuit-chambre-atlantis12-essaouira.png",
+        "width": 480
       }
     ]
   },

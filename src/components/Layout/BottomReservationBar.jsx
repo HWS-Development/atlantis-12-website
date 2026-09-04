@@ -205,22 +205,22 @@ export default function BottomReservationBar() {
         >
           <CalendarIcon />
           <span
-            className="font-display whitespace-nowrap md:hidden"
+            className="font-body whitespace-nowrap md:hidden"
             style={{
-              fontSize: "clamp(24px, 6vw, 26px)",
-              fontWeight: 700,
-              lineHeight: 1.1,
+              fontSize: "clamp(16px, 4.2vw, 18px)",
+              fontWeight: 600,
+              letterSpacing: "0.04em",
               color: "#ffffff",
             }}
           >
             {t("bottomBar.bar.ctaMobile", "Réserver")}
           </span>
           <span
-            className="font-display whitespace-nowrap overflow-hidden text-ellipsis hidden md:inline"
+            className="font-body whitespace-nowrap overflow-hidden text-ellipsis hidden md:inline"
             style={{
-              fontSize: "28px",
-              fontWeight: 700,
-              lineHeight: 1.1,
+              fontSize: "18px",
+              fontWeight: 600,
+              letterSpacing: "0.04em",
               color: "#ffffff",
             }}
           >

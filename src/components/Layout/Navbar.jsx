@@ -1,6 +1,7 @@
 ﻿import { useEffect, useRef, useState } from "react";
 import LangLink from "../Common/LangLink";
 import { useTranslation } from "react-i18next";
+import ResponsiveImage from "../Common/ResponsiveImage";
 
 const LOGO = "/images/logo/logo-simplifie-atlantis12-essaouira.png";
 
@@ -50,9 +51,13 @@ export default function Navbar() {
           aria-label="Atlantis 12 - accueil"
           onClick={() => window.scrollTo({ top: 0, left: 0, behavior: "smooth" })}
         >
-          <img
+          <ResponsiveImage
             src={LOGO}
             alt="Atlantis 12"
+            sizes="48px"
+            width="48"
+            height="50"
+            loading="eager"
             className="h-10 md:h-12 w-auto object-contain"
             style={{ mixBlendMode: "multiply" }}
           />

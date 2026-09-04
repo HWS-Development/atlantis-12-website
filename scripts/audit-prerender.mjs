@@ -4,7 +4,11 @@ import { HTML_ENTRY_PATHS } from "../src/seo/metadata.js";
 
 const failures = [];
 const imageReferences = new Set();
-const forbiddenImageReferences = ["/images/about/patio.webp", "essaouirajpg.webp"];
+const forbiddenImageReferences = [
+  "/images/about/patio.webp",
+  "essaouirajpg.webp",
+  "ipomea-patio-hamac-pergola-pierre",
+];
 
 for (const filePath of HTML_ENTRY_PATHS) {
   const html = await readFile(resolve(process.cwd(), "dist", filePath), "utf8");

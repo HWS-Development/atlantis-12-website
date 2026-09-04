@@ -1,5 +1,6 @@
 import { useTranslation } from "react-i18next";
 import Reveal from "../Common/Reveal";
+import ResponsiveImage from "../Common/ResponsiveImage";
 
 const HERO_LOGO = "/images/logo/logo-aquarelle-maison-dhotes-art-atlantis12-essaouira.png";
 
@@ -24,11 +25,14 @@ export default function HomeHero() {
       </h1>
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none px-6">
         <Reveal className="relative flex flex-col items-center hero-logo-in w-full max-w-[440px]">
-          <img
+          <ResponsiveImage
             src={HERO_LOGO}
             alt="Atlantis 12"
             width={440}
             height={440}
+            sizes="(min-width: 1024px) 440px, (min-width: 768px) 380px, (min-width: 640px) 300px, 260px"
+            loading="eager"
+            fetchPriority="high"
             className="w-[260px] sm:w-[300px] md:w-[380px] lg:w-[440px] object-contain hero-logo-img mx-auto"
             style={{ mixBlendMode: "multiply" }}
           />
