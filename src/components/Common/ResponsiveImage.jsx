@@ -9,10 +9,11 @@ export default function ResponsiveImage({ src, sizes = "100vw", ...props }) {
     ...image.sources.map((source) => `${source.src} ${source.width}w`),
     `${src} ${image.width}w`,
   ].join(", ");
+  const fallbackSrc = image.sources[0]?.src || src;
 
   return (
     <img
-      src={src}
+      src={fallbackSrc}
       srcSet={srcSet}
       sizes={sizes}
       loading="lazy"
