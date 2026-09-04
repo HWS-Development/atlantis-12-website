@@ -1,3 +1,5 @@
+import ResponsiveImage from "./ResponsiveImage";
+
 export default function PageHero({
   image,                 // string: background image URL
   title,                 // string or node
@@ -27,9 +29,10 @@ export default function PageHero({
 
   return (
     <section className={`relative w-full ${hMap[height]} overflow-hidden`}>
-      <img
+      <ResponsiveImage
         src={image}
         alt=""
+        sizes="100vw"
         className="absolute inset-0 w-full h-full object-cover"
         loading="eager"
         fetchPriority="high"

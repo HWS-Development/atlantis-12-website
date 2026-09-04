@@ -1,6 +1,7 @@
 import { useTranslation } from "react-i18next";
 import Reveal from "../components/Common/Reveal";
 import LangLink from "../components/Common/LangLink";
+import ResponsiveImage from "../components/Common/ResponsiveImage";
 
 const EXP_PATH = "/images/experiences";
 const HERO = `${EXP_PATH}/balade-a-cheval-deux-chevaux-plage-coucher-soleil-atlantis12-essaouira.webp`;
@@ -55,9 +56,12 @@ export default function Activites() {
   return (
     <div className="bg-white min-h-screen text-foreground">
       <div className="relative h-[70vh] overflow-hidden">
-        <img
+        <ResponsiveImage
           src={HERO}
           alt={t("activitesPg.heroAlt")}
+          sizes="100vw"
+          loading="eager"
+          fetchPriority="high"
           className="w-full h-full object-cover"
           style={{ objectPosition: "center 40%" }}
         />
@@ -108,7 +112,7 @@ export default function Activites() {
               style={{ backgroundColor: meta.bg }}
             >
               <div className="w-full md:w-[46%] flex-shrink-0">
-                <img src={meta.img} alt={row.title} className="w-full h-[280px] md:h-[360px] object-cover" />
+                <ResponsiveImage src={meta.img} alt={row.title} sizes="(min-width: 768px) 42vw, 100vw" className="w-full h-[280px] md:h-[360px] object-cover" />
               </div>
               <div className="flex-1 flex flex-col justify-center">
                 <p className="font-body text-[10px] tracking-[4px] uppercase" style={{ color: meta.accent }}>
@@ -151,9 +155,10 @@ export default function Activites() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-px" style={{ backgroundColor: "rgba(74, 103, 65, 0.12)" }}>
           {partners.map((p, i) => (
             <Reveal key={i} className="bg-white p-4 md:p-[36px]" delay={(i % 3) + 1}>
-              <img
+              <ResponsiveImage
                 src={PARTNER_IMGS[i]}
                 alt={p.title}
+                sizes="(min-width: 768px) 33vw, 100vw"
                 className="w-full h-[200px] md:h-[280px] object-cover rounded-sm mb-3 md:mb-[24px]"
               />
               <p className="font-body text-[10px] tracking-[3px] uppercase" style={{ color: "rgb(74, 103, 65)" }}>

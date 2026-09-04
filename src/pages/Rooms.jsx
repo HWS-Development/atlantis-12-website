@@ -4,11 +4,12 @@ import { useNavigate, useParams, useSearchParams } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import Reveal from "../components/Common/Reveal";
 import LangLink from "../components/Common/LangLink";
+import ResponsiveImage from "../components/Common/ResponsiveImage";
 import RoomDetailModal from "../components/Rooms/RoomDetailModal";
 import ROOMS, { getRoomBySlug } from "../data/rooms";
 
 const ROOMS_PATH = "/images/rooms";
-const HERO = `${ROOMS_PATH}/plumeria-facade-suite-terrasse-pergola-atlantis12-essaouira.webp`;
+const HERO = `${ROOMS_PATH}/plumeria-suite-chambre-salon-poutres-vue-large-atlantis12-essaouira.webp`;
 
 const CARD_IMG = {
   "la-plumeria": {
@@ -75,9 +76,10 @@ function RoomCard({
       to={to}
       className={`group relative overflow-hidden cursor-pointer block ${aspect}`}
     >
-      <img
+      <ResponsiveImage
         src={img}
         alt={alt}
+        sizes={aspect === "aspect-[16/9]" ? "(min-width: 768px) 80vw, 84vw" : "(min-width: 768px) 39vw, 84vw"}
         loading="lazy"
         decoding="async"
         className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
@@ -130,13 +132,16 @@ export default function Rooms() {
   }
 
   return (
-    <div className="bg-background min-h-screen text-foreground overflow-x-hidden">
+    <div className="bg-background min-h-screen text-foreground overflow-x-clip touch-pan-y">
       <div className="relative h-[70vh] overflow-hidden">
-        <img
+        <ResponsiveImage
           src={HERO}
           alt={t("roomsPage.heroAlt")}
           width="1600"
           height="900"
+          sizes="100vw"
+          loading="eager"
+          fetchPriority="high"
           className="w-full h-full object-cover"
           style={{ objectPosition: "center 60%" }}
         />
@@ -172,7 +177,7 @@ export default function Rooms() {
         </Reveal>
       </div>
 
-      <section className="px-[8vw] md:px-[10vw] pb-4 md:pb-16 overflow-x-hidden">
+      <section className="px-[8vw] md:px-[10vw] pb-4 md:pb-16 overflow-x-clip">
         <div className="mb-4 md:mb-6">
           <Reveal>
             <RoomCard

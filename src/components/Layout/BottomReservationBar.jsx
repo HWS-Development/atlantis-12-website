@@ -197,7 +197,7 @@ export default function BottomReservationBar() {
       >
         <button
           type="button"
-          className="flex items-center gap-[10px] min-w-0"
+          className="flex flex-shrink-0 items-center gap-[10px]"
           onClick={() => {
             setReserveOpen((v) => !v);
             setWhyOpen(false);
@@ -205,20 +205,22 @@ export default function BottomReservationBar() {
         >
           <CalendarIcon />
           <span
-            className="font-display whitespace-nowrap overflow-hidden text-ellipsis md:hidden"
+            className="font-body whitespace-nowrap md:hidden"
             style={{
-              fontSize: "clamp(17px, 3vw, 19px)",
-              fontWeight: 400,
+              fontSize: "clamp(16px, 4.2vw, 18px)",
+              fontWeight: 600,
+              letterSpacing: "0.04em",
               color: "#ffffff",
             }}
           >
             {t("bottomBar.bar.ctaMobile", "Réserver")}
           </span>
           <span
-            className="font-display whitespace-nowrap overflow-hidden text-ellipsis hidden md:inline"
+            className="font-body whitespace-nowrap overflow-hidden text-ellipsis hidden md:inline"
             style={{
-              fontSize: "clamp(17px, 3vw, 19px)",
-              fontWeight: 400,
+              fontSize: "18px",
+              fontWeight: 600,
+              letterSpacing: "0.04em",
               color: "#ffffff",
             }}
           >
@@ -229,14 +231,14 @@ export default function BottomReservationBar() {
 
         <button
           type="button"
-          className="flex items-center justify-center gap-2 md:gap-3 px-2 md:px-4 py-2 hover:bg-white/10 transition-colors ml-auto flex-shrink-0"
+          className="flex min-w-0 items-center justify-end gap-2 md:gap-3 px-1 md:px-4 py-2 hover:bg-white/10 transition-colors ml-auto"
           onClick={() => {
             setWhyOpen((v) => !v);
             setReserveOpen(false);
           }}
         >
           <span
-            className="font-display whitespace-nowrap"
+            className="font-display whitespace-nowrap overflow-hidden text-ellipsis"
             style={{ fontSize: "clamp(17px, 3vw, 19px)", color: "#ffffff", fontWeight: 400 }}
           >
             {t("bottomBar.bar.why", "pourquoi réserver sur notre site ?")}

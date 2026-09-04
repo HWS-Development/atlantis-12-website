@@ -1,6 +1,7 @@
 ﻿import LangLink from "../Common/LangLink";
 import { useTranslation } from "react-i18next";
 import Reveal from "../Common/Reveal";
+import ResponsiveImage from "../Common/ResponsiveImage";
 
 const ROOMS_PATH = "/images/rooms";
 const ROOM_CARD_IMAGES = {
@@ -28,9 +29,10 @@ function RoomCard({ to, name, type, img, alt, wide = false }) {
         wide ? "aspect-[16/9] mt-6" : "aspect-[4/3]"
       }`}
     >
-      <img
+      <ResponsiveImage
         src={img}
         alt={alt}
+        sizes={wide ? "(min-width: 768px) 80vw, 84vw" : "(min-width: 768px) 19vw, 84vw"}
         width={wide ? 1600 : 800}
         height={wide ? 900 : 600}
         loading="lazy"

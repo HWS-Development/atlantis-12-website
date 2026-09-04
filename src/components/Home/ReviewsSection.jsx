@@ -26,7 +26,7 @@ function StarIcon({ size = "w-5 h-5", filled = true }) {
   );
 }
 
-function QuoteIcon() {
+function QuoteIcon({ closing = false }) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -36,7 +36,7 @@ function QuoteIcon() {
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
-      className="w-8 h-8 text-primary/20"
+      className={`w-8 h-8 text-primary/20 ${closing ? "ml-auto rotate-180" : ""}`}
       aria-hidden
     >
       <path d="M16 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z" />
@@ -203,6 +203,7 @@ export default function ReviewsSection() {
             <p className="font-body text-lg md:text-2xl text-foreground/80 leading-relaxed italic">
               {current.quote || t("home.reviews.placeholder", "Chargement des avis...")}
             </p>
+            <QuoteIcon closing />
             <div className="flex items-center gap-4 pt-2">
               <div
                 className="w-12 h-12 rounded-full flex items-center justify-center bg-primary/10 border border-primary/20 flex-shrink-0 overflow-hidden"

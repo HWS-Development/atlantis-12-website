@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { OPEN_BOOKING_EVENT } from "../../data/rooms";
+import ResponsiveImage from "../Common/ResponsiveImage";
 
 const ChevronLeft = ({ className }) => (
   <svg
@@ -109,10 +110,13 @@ export default function RoomDetailModal({ room, onClose, isPage = false }) {
         <div className="grid md:grid-cols-2 gap-8 md:gap-16 mb-12">
           <div className="space-y-3 min-w-0">
             <div className="relative overflow-hidden aspect-[4/3]">
-              <img
+              <ResponsiveImage
                 key={current.src}
                 src={current.src}
                 alt={`${current.alt} - Atlantis 12, Essaouira`}
+                sizes="(min-width: 768px) 42vw, 88vw"
+                loading="eager"
+                fetchPriority="high"
                 className={`w-full h-full absolute inset-0 ${current.fit === "contain" ? "object-contain" : "object-cover"}`}
                 style={{ objectPosition: current.position || "center", opacity: 1 }}
               />
@@ -141,7 +145,7 @@ export default function RoomDetailModal({ room, onClose, isPage = false }) {
                     i === idx ? "border-primary" : "border-transparent"
                   }`}
                 >
-                  <img src={img.src} alt={img.alt} className="w-full h-full object-cover" style={{ objectPosition: img.position || "center" }} />
+                  <ResponsiveImage src={img.src} alt={img.alt} sizes="64px" className="w-full h-full object-cover" style={{ objectPosition: img.position || "center" }} />
                 </button>
               ))}
             </div>
@@ -182,13 +186,14 @@ export default function RoomDetailModal({ room, onClose, isPage = false }) {
           id="room-artwork"
           className="border-t border-border pt-10 grid md:grid-cols-3 gap-8 items-center"
         >
-          <img
+          <ResponsiveImage
             src={room.artwork.src}
             alt={room.artwork.alt}
             width="600"
             height="800"
             loading="lazy"
             decoding="async"
+            sizes="(min-width: 768px) 29vw, 88vw"
             className="w-full aspect-[3/4] object-cover"
           />
           <div className="md:col-span-2 space-y-4">

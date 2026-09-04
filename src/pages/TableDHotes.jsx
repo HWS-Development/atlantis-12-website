@@ -1,5 +1,6 @@
 ﻿import { useTranslation } from "react-i18next";
 import Reveal from "../components/Common/Reveal";
+import ResponsiveImage from "../components/Common/ResponsiveImage";
 
 const TABLE_PATH = "/images/table-dhotes";
 const HERO_IMG = `${TABLE_PATH}/table-dhotes-salle-commune-plafond-peint-sculptures-oeuvres-atlantis12-essaouira.webp`;
@@ -14,9 +15,12 @@ export default function TableDHotes() {
   return (
     <div className="bg-background min-h-screen text-foreground">
       <div className="relative h-[70vh] overflow-hidden">
-        <img
+        <ResponsiveImage
           src={HERO_IMG}
           alt={t("tablePg.heroAlt")}
+          sizes="100vw"
+          loading="eager"
+          fetchPriority="high"
           className="w-full h-full object-cover"
           style={{ objectPosition: "center 60%" }}
         />
@@ -41,7 +45,7 @@ export default function TableDHotes() {
           <p className="font-body text-sm leading-relaxed text-foreground">{t("tablePg.s1p3")}</p>
         </Reveal>
         <Reveal delay={1}>
-          <img src={TABLE_IMG} alt={t("tablePg.s1ImgAlt")} className="w-full aspect-[4/3] object-cover" />
+          <ResponsiveImage src={TABLE_IMG} alt={t("tablePg.s1ImgAlt")} sizes="(min-width: 768px) 36vw, 84vw" className="w-full aspect-[4/3] object-cover" />
         </Reveal>
       </section>
 
@@ -59,9 +63,10 @@ export default function TableDHotes() {
         <Reveal className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-6" delay={3}>
           <div className="flex flex-col items-center">
             <div className="w-full aspect-[3/4] overflow-hidden bg-background">
-              <img
+              <ResponsiveImage
                 src={ARTICHAUT_IMG}
                 alt={t("tablePg.s2ImgAlt")}
+                sizes="(min-width: 768px) 300px, 84vw"
                 className="w-full h-full object-cover"
                 style={{ objectPosition: "center center" }}
               />
@@ -70,9 +75,10 @@ export default function TableDHotes() {
           </div>
           <div className="flex flex-col items-center">
             <div className="w-full aspect-[3/4] overflow-hidden bg-background">
-              <img
+              <ResponsiveImage
                 src={COUSCOUS_IMG}
                 alt={t("tablePg.s2Img2Alt")}
+                sizes="(min-width: 768px) 300px, 84vw"
                 className="w-full h-full object-cover"
                 style={{ objectPosition: "center center" }}
               />
@@ -87,7 +93,7 @@ export default function TableDHotes() {
         style={{ backgroundColor: "rgb(245, 237, 224)" }}
       >
         <Reveal className="flex items-center">
-          <img src={JAOUHARA_IMG} alt={t("tablePg.s3ImgAlt")} className="w-full h-full object-cover" />
+          <ResponsiveImage src={JAOUHARA_IMG} alt={t("tablePg.s3ImgAlt")} sizes="(min-width: 768px) 36vw, 84vw" className="w-full h-full object-cover" />
         </Reveal>
         <Reveal className="space-y-5" delay={1}>
           <h2 className="font-display text-4xl md:text-5xl text-foreground">{t("tablePg.s3Title")}</h2>
@@ -100,7 +106,7 @@ export default function TableDHotes() {
 
       <section className="px-[8vw] md:px-[10vw] py-12 md:py-16 grid md:grid-cols-2 gap-12 md:gap-20">
         <Reveal className="flex items-center">
-          <img src={BREAKFAST_IMG} alt={t("tablePg.s4ImgAlt")} className="w-full h-full object-cover" />
+          <ResponsiveImage src={BREAKFAST_IMG} alt={t("tablePg.s4ImgAlt")} sizes="(min-width: 768px) 36vw, 84vw" className="w-full h-full object-cover" />
         </Reveal>
         <Reveal className="space-y-5" delay={1}>
           <p className="font-body text-xs tracking-[0.4em] uppercase text-primary">{t("tablePg.s4Eyebrow")}</p>

@@ -1,6 +1,7 @@
 ﻿import { useTranslation } from "react-i18next";
 import LangLink from "../components/Common/LangLink";
 import Reveal from "../components/Common/Reveal";
+import ResponsiveImage from "../components/Common/ResponsiveImage";
 
 const ABOUT_PATH = "/images/about";
 const HERO_IMG = `${ABOUT_PATH}/toit-terrasse-salon-bois-coucher-soleil-foret-atlantis12-essaouira.webp`;
@@ -30,7 +31,7 @@ export default function About() {
   return (
     <div className="bg-background min-h-screen text-foreground overflow-x-hidden">
       <div className="relative h-[70vh] overflow-hidden">
-        <img src={HERO_IMG} alt={t("aboutHero.heroAlt")} className="w-full h-full object-cover" />
+        <ResponsiveImage src={HERO_IMG} alt={t("aboutHero.heroAlt")} sizes="100vw" loading="eager" fetchPriority="high" className="w-full h-full object-cover" />
         <div className="absolute bottom-12 left-[8vw] md:left-[10vw]">
           <Reveal as="p" className="font-body text-xs tracking-[0.4em] uppercase text-white/70 mb-3 font-semibold hero-text-shadow">
             {t("aboutHero.eyebrow")}
@@ -60,9 +61,10 @@ export default function About() {
 
           <Reveal className="space-y-6" delay={1}>
             <div>
-              <img
+              <ResponsiveImage
                 src={FOUNDERS_IMG}
                 alt={t("aboutPg.foundersAlt")}
+                sizes="(min-width: 768px) 36vw, 84vw"
                 className="w-full aspect-[3/2] object-cover"
                 style={{ objectPosition: "center 15%" }}
               />
@@ -102,9 +104,10 @@ export default function About() {
           {GALLERY_SRCS.map((src, i) => (
             <Reveal key={src} delay={(i % 3) + 1}>
               <button className="block w-full overflow-hidden group relative aspect-[4/3]">
-                <img
+                <ResponsiveImage
                   src={src}
                   alt={galleryLabels[i] || ""}
+                  sizes="(min-width: 768px) 26vw, 42vw"
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-secondary/0 group-hover:bg-secondary/30 transition-colors duration-300 flex items-end">

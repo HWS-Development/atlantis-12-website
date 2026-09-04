@@ -4,6 +4,7 @@ import { HTML_ENTRY_PATHS } from "../src/seo/metadata.js";
 
 const failures = [];
 const imageReferences = new Set();
+const forbiddenImageReferences = ["/images/about/patio.webp", "essaouirajpg.webp"];
 
 for (const filePath of HTML_ENTRY_PATHS) {
   const html = await readFile(resolve(process.cwd(), "dist", filePath), "utf8");
@@ -18,6 +19,10 @@ for (const filePath of HTML_ENTRY_PATHS) {
 
   for (const [check, passed] of Object.entries(checks)) {
     if (!passed) failures.push(`${filePath}: ${check}`);
+  }
+
+  for (const reference of forbiddenImageReferences) {
+    if (html.includes(reference)) failures.push(`${filePath}: forbidden image reference ${reference}`);
   }
 
   for (const match of html.matchAll(/\/images\/[a-z0-9./-]+\.(?:png|webp)/g)) {
@@ -36,6 +41,12 @@ for (const reference of imageReferences) {
 const sitemap = await readFile(resolve(process.cwd(), "dist/sitemap.xml"), "utf8");
 const sitemapUrlCount = (sitemap.match(/<url>/g) || []).length;
 if (sitemapUrlCount !== 26) failures.push(`sitemap.xml: expected 26 URLs, found ${sitemapUrlCount}`);
+
+const homeHtml = await readFile(resolve(process.cwd(), "dist/index.html"), "utf8");
+const expectedShareImage = "/images/about/patio-salon-jardin-mobilier-bois-atlantis12-essaouira.webp";
+if ((homeHtml.match(new RegExp(expectedShareImage, "g")) || []).length < 2) {
+  failures.push("index.html: corrected sharing image is missing from Open Graph or Twitter metadata");
+}
 
 if (failures.length) {
   throw new Error(`Prerender audit failed:\n${failures.join("\n")}`);

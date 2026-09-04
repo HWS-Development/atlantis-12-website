@@ -1,6 +1,7 @@
 ﻿// /essaouira — rebuilt 1:1 from reference/essaouira/body.pretty.html
 import { useTranslation } from "react-i18next";
 import Reveal from "../components/Common/Reveal";
+import ResponsiveImage from "../components/Common/ResponsiveImage";
 
 const ESS_PATH = "/images/essaouira";
 const HERO = `${ESS_PATH}/portrait-asmae-lahcen-dar-lawama-coucher-soleil-atlantis12-essaouira.webp`;
@@ -137,9 +138,12 @@ export default function Essaouira() {
   return (
     <div className="bg-background min-h-screen text-foreground">
       <div className="relative h-[70vh] overflow-hidden">
-        <img
+        <ResponsiveImage
           src={HERO}
           alt={t("essaouiraPg.heroAlt")}
+          sizes="100vw"
+          loading="eager"
+          fetchPriority="high"
           className="w-full h-full object-cover"
           style={{ objectPosition: "center 35%" }}
         />
@@ -225,9 +229,10 @@ export default function Essaouira() {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-2 md:gap-3">
           {GRID_IMAGES.map((g, i) => (
             <Reveal key={i} className="cursor-pointer overflow-hidden group aspect-square" delay={(i % 4) + 1}>
-              <img
+              <ResponsiveImage
                 src={g.src}
                 alt={g.alt}
+                sizes="(min-width: 768px) 22vw, 46vw"
                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
               />
             </Reveal>

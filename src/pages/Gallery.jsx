@@ -2,6 +2,7 @@
 import { useTranslation } from "react-i18next";
 import LangLink from "../components/Common/LangLink";
 import Reveal from "../components/Common/Reveal";
+import ResponsiveImage from "../components/Common/ResponsiveImage";
 
 const GALLERY_PATH = "/images/gallery";
 const HERO_IMG = `${GALLERY_PATH}/galerie-salon-vue-densemble-oeuvres-atlantis12-essaouira.webp`;
@@ -33,7 +34,7 @@ export default function Gallery() {
   return (
     <div className="min-h-screen pb-0 font-body bg-white" style={{ color: "rgb(61, 92, 48)" }}>
       <div className="relative h-[70vh] overflow-hidden">
-        <img src={HERO_IMG} alt={t("galleryPg.heroAlt")} className="w-full h-full object-cover object-[center_15%]" />
+        <ResponsiveImage src={HERO_IMG} alt={t("galleryPg.heroAlt")} sizes="100vw" loading="eager" fetchPriority="high" className="w-full h-full object-cover object-[center_15%]" />
         <div className="absolute bottom-12 left-[8vw] md:left-[10vw]">
           <Reveal as="p" className="font-body text-xs tracking-[0.4em] uppercase text-white/70 mb-3 font-semibold hero-text-shadow">
             {t("galleryPg.heroEyebrow")}
@@ -59,7 +60,7 @@ export default function Gallery() {
           <p className="font-body text-sm leading-relaxed text-foreground">{t("galleryPg.s1p2")}</p>
         </Reveal>
         <Reveal delay={1} className="overflow-hidden flex items-end">
-          <img src={ATELIER_IMG} alt={t("galleryPg.s1ImgAlt")} className="w-full h-auto object-contain" />
+          <ResponsiveImage src={ATELIER_IMG} alt={t("galleryPg.s1ImgAlt")} sizes="(min-width: 768px) 36vw, 84vw" className="w-full h-auto object-contain" />
         </Reveal>
       </section>
 
@@ -83,9 +84,10 @@ export default function Gallery() {
                 onClick={() => setSelected(i)}
               >
                 <div className="relative overflow-hidden aspect-[4/3]">
-                  <img
+                  <ResponsiveImage
                     src={m.img}
                     alt={w.artist}
+                    sizes="(min-width: 768px) 39vw, 84vw"
                     className={`w-full h-full bg-white transition-transform duration-700 group-hover:scale-105 ${
                       i === 3
                         ? "object-cover object-top"
@@ -155,9 +157,10 @@ export default function Gallery() {
               </button>
               {/* Image */}
               <div className="md:w-1/2 bg-white flex items-center justify-center p-6 md:p-10">
-                <img
+                <ResponsiveImage
                   src={m.img}
                   alt={w.artist}
+                  sizes="(min-width: 768px) 42vw, 84vw"
                   className="w-full h-auto max-h-[70vh] object-contain"
                 />
               </div>
