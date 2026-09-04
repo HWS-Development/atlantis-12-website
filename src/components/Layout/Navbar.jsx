@@ -54,9 +54,9 @@ export default function Navbar() {
           <ResponsiveImage
             src={LOGO}
             alt="Atlantis 12"
-            sizes="48px"
-            width="48"
-            height="50"
+            sizes="(min-width: 768px) 47px, 39px"
+            width="991"
+            height="1024"
             loading="eager"
             className="h-10 md:h-12 w-auto object-contain"
             style={{ mixBlendMode: "multiply" }}

@@ -74,8 +74,8 @@ export default function Contact() {
           src="/images/logo/logo-aquarelle-maison-dhotes-art-atlantis12-essaouira.png"
           alt={t("contactPage.logoAlt")}
           sizes="(min-width: 768px) 260px, 220px"
-          width="260"
-          height="260"
+          width="866"
+          height="1024"
           loading="eager"
           className="w-[220px] md:w-[260px] h-auto object-contain block"
         />

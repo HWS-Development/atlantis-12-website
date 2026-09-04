@@ -28,12 +28,12 @@ export default function HomeHero() {
           <ResponsiveImage
             src={HERO_LOGO}
             alt="Atlantis 12"
-            width={440}
-            height={440}
+            width={866}
+            height={1024}
             sizes="(min-width: 1024px) 440px, (min-width: 768px) 380px, (min-width: 640px) 300px, 260px"
             loading="eager"
             fetchPriority="high"
-            className="w-[260px] sm:w-[300px] md:w-[380px] lg:w-[440px] object-contain hero-logo-img mx-auto"
+            className="w-[260px] sm:w-[300px] md:w-[380px] lg:w-[440px] h-auto object-contain hero-logo-img mx-auto"
             style={{ mixBlendMode: "multiply" }}
           />
           <p

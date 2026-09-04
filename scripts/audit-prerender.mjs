@@ -6,9 +6,9 @@ const failures = [];
 const imageReferences = new Set();
 const forbiddenImageReferences = [
   "/images/about/patio.webp",
-  "essaouirajpg.webp",
-  "ipomea-patio-hamac-pergola-pierre",
 ];
+const expectedIpomeaPatio =
+  "/images/rooms/ipomea-patio-prive-hamac-pergola-atlantis12-essaouira.webp";
 
 for (const filePath of HTML_ENTRY_PATHS) {
   const html = await readFile(resolve(process.cwd(), "dist", filePath), "utf8");
@@ -27,6 +27,12 @@ for (const filePath of HTML_ENTRY_PATHS) {
 
   for (const reference of forbiddenImageReferences) {
     if (html.includes(reference)) failures.push(`${filePath}: forbidden image reference ${reference}`);
+  }
+
+  for (const match of html.matchAll(/\/images\/rooms\/ipomea-patio-[a-z0-9.-]+\.webp/g)) {
+    if (match[0] !== expectedIpomeaPatio) {
+      failures.push(`${filePath}: unexpected Ipoméa patio reference ${match[0]}`);
+    }
   }
 
   for (const match of html.matchAll(/\/images\/[a-z0-9./-]+\.(?:png|webp)/g)) {
